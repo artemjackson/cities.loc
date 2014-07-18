@@ -34,9 +34,10 @@ class Route
 
         // Including file with class Controller
         $controller_file = $controller_name . '.php';
-        $controller_path = "app/controllers/" . $controller_file;
+        $controller_path = $_SERVER['DOCUMENT_ROOT']. "/app/controllers/" . $controller_file;
+
         if (file_exists($controller_path)) {
-            include "app/controllers/" . $controller_file;
+            include $controller_path;
         } else {
             /*
                 It's a temporary solution will be fixed in future
