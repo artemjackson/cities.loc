@@ -25,26 +25,25 @@ class Route
         $controllerName = 'Application\\Controllers\\' . ucfirst($controllerName) . 'Controller';
         $actionName = $actionName . 'Action';
 
-        if (class_exists($controllerName)) {
-            $controller = new $controllerName;
-        } else {
+        if (!class_exists($controllerName)) {
+            die ($controllerName);
+
+            Route::errorPage404();
+        }
+
+        //creating controller
+        $controller = new $controllerName;
+
+        if (!method_exists($controller, $actionName)) {
             /*
-                It's a temporary solution will be fixed in future
-                TODO: Exception throwing
+            It's a temporary solution will be fixed in future
+            TODO: Exception throwing
             */
             Route::errorPage404();
         }
 
-        if (method_exists($controller, $actionName)) {
-            // Calling controller action
-            $controller->$actionName();
-        } else {
-            /*
-                It's a temporary solution will be fixed in future
-                TODO: Exception throwing
-            */
-            Route::errorPage404();
-        }
+        // Calling controller action
+        $controller->$actionName();
     }
 
     function errorPage404()

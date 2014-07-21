@@ -1,5 +1,4 @@
 <?php
-
 /*
  * Enabling errors
  */

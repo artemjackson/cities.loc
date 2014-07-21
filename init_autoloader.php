@@ -14,7 +14,7 @@ spl_autoload_register(function ($className) {
     $file .= '.php';
 
     if (file_exists($file)) {
-        include_once $file;
+        include $file;
     } else {
         throw new Exception("Unable to load $file");
     }
