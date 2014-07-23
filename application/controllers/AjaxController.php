@@ -2,13 +2,13 @@
 
 namespace Application\Controllers;
 
-use Core\AbstractController;
+use Core\Controller\Controller;
 use Application\Managers\MapManager;
-use Application\Views\JsonView;
+use Core\View\JsonView;
 
-class AjaxController extends AbstractController
+class AjaxController extends Controller
 {
-    public function citiesAction()
+    public function updateCitiesAction()
     {
         $id = $_POST['id'];
 

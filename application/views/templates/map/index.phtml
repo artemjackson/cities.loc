@@ -2,8 +2,8 @@
     <div class="jumbotron">
         <p>Область</p>
         <select id="regions" class="selectpicker">
-            <?php if (!empty($this->regions)): ?>
-                <?php foreach ($this->regions as $region): ?>
+            <?php if (!empty($regions)): ?>
+                <?php foreach ($regions as $region): ?>
                     <option value="<?php echo $region['id']; ?>"><?php echo $region['name']; ?></option>
                 <?php endforeach; ?>
             <?php endif; ?>

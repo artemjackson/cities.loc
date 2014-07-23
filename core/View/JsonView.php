@@ -1,8 +1,8 @@
 <?php
 
-namespace Application\Views;
+namespace Core\View;
 
-use Core\AbstractView;
+use Core\View\View;
 
 class JsonView extends View
 {

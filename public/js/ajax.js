@@ -5,7 +5,7 @@ $(document).ready(function () {
         $.ajax({
             type: 'POST',
             dataType: 'json',
-            url: '/ajax/cities',
+            url: '/ajax/updateCities',
             data: {id: value},
             success: function (response) {
                 console.log(response);
@@ -14,7 +14,7 @@ $(document).ready(function () {
         });
     }).change();
 
-    $('#wowButon').click(function () {
+    $('#wowButton').click(function () {
         alert("Воу-воу, полегче!");
     });
 

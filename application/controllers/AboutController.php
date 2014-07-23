@@ -2,10 +2,10 @@
 
 namespace Application\Controllers;
 
-use Core\AbstractController;
-use Application\Views\View;
+use Core\Controller\Controller;
+use Core\View\View;
 
-class AboutController extends AbstractController
+class AboutController extends Controller
 {
     public function indexAction()
     {

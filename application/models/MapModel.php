@@ -1,9 +1,10 @@
 <?php
+
 namespace Application\Models;
 
-use Core\AbstractModel;
+use Core\Model\Model;
 
-class MapModel extends AbstractModel
+class MapModel extends Model
 {
     public function __construct()
     {
