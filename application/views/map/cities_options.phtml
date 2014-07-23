@@ -1,0 +1,5 @@
+<?php if (!empty($this->cities)): ?>
+    <?php foreach ($this->cities as $city): ?>
+        <option value="<?php echo $city['id']; ?>"> <?php echo $city['name']; ?> </option>
+    <?php endforeach; ?>
+<?php endif;

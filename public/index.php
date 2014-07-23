@@ -15,4 +15,5 @@ require_once 'init_autoloader.php';
 /*
  *  Application running
  */
-Core\Application::run();
+$application = new Core\Application(include_once "application/config/configuration.php");
+$application->run();

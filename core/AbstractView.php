@@ -3,5 +3,11 @@ namespace Core;
 
 abstract class AbstractView
 {
-    abstract function generate($content_view, $template_view, $data = null);
+    abstract public function __construct(array $data = array());
+
+    abstract function render();
+
+    protected $template = null;
+    protected $layout = 'layout';
+    protected $data = array();
 }

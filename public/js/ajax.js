@@ -5,7 +5,7 @@ $(document).ready(function () {
         $.ajax({
             type: 'POST',
             dataType: 'json',
-            url: 'application/controllers/ajax.php',
+            url: '/ajax/cities',
             data: {id: value},
             success: function (response) {
                 console.log(response);
@@ -13,4 +13,9 @@ $(document).ready(function () {
             }
         });
     }).change();
+
+    $('#wowButon').click(function () {
+        alert("Воу-воу, полегче!");
+    });
+
 });

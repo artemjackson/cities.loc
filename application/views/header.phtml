@@ -1,7 +1,13 @@
 <!DOCTYPE html>
+
 <html>
 <head>
-    <title>Cities.loc</title>
+    <?php
+    $rout = $_SERVER['REQUEST_URI'];
+    $currentPage = ucfirst(explode('/', $rout)[1]) ? : 'Home';
+
+    ?>
+    <title><?= "Cities.loc: " . $currentPage ?></title>
 
     <meta charset="utf-8">
     <meta name="description" content="Trying Twitter Bootstrap, AJAX, PHP, LAMP">
@@ -15,7 +21,7 @@
         body {
             padding-top: 20px;
             padding-bottom: 40px;
-            overflow-y: hidden;
+            overflow-y: scroll;
         }
 
         .container-narrow {

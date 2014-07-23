@@ -3,5 +3,4 @@ namespace Core;
 
 abstract class AbstractModel
 {
-
 }

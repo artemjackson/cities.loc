@@ -1,0 +1,20 @@
+<div class="container-narrow">
+    <div class="masthead">
+        <ul class="nav nav-pills pull-right">
+            <li <?php if ($currentPage == 'Home') {
+                echo 'class="active"';
+            } ?>><a href="/home/">Home</a></li>
+            <li <?php if ($currentPage == 'Map') {
+                echo 'class="active"';
+            } ?>><a href="/map/">Map</a></li>
+            <li <?php if ($currentPage == 'About') {
+                echo 'class="active"';
+            } ?>><a href="/about/">About</a></li>
+            <li <?php if ($currentPage == 'Contacts') {
+                echo 'class="active"';
+            } ?> ><a href="/contacts/">Contacts</a></li>
+        </ul>
+        <h3 class="muted"><?= $currentPage; ?> page</h3>
+    </div>
+    <hr>
+</div>
