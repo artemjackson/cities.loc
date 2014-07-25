@@ -6,15 +6,15 @@ use Core\Controller\Controller;
 use Core\View\View;
 
 /**
- * Class AboutController
+ * Class ErrorController
  * @package Application\Controllers
  */
-class AboutController extends Controller
+class ErrorsController extends Controller
 {
     /**
      * @return View
      */
-    public function indexAction()
+    public function error404Action()
     {
         return new View();
     }

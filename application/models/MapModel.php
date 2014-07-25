@@ -2,54 +2,68 @@
 
 namespace Application\Models;
 
+
+use Application\Models\Database\Database;
 use Core\Model\Model;
 
+/**
+ * Class MapModel
+ * @package Application\Models
+ */
 class MapModel extends Model
 {
+    /**
+     * @var
+     */
+    protected $database;
+
+    /**
+     *
+     */
     public function __construct()
     {
-        $this->connectDB('cities', 'jackson', '9951');
+        $this->databse = new Database();
+        $this->databse->connect();
     }
 
-    public function __destruct()
-    {
-        $this->unconnectDB();
-    }
 
+    /**
+     * @return mixed
+     */
     public function getRegions()
     {
-        $statementHandler = $this->databaseHandler->prepare('SELECT * FROM regions ORDER BY name;');
-
-        if ($statementHandler->execute()) {
-            return $statementHandler->fetchAll();
-        }
-    }
-
-    public function getCitiesByRegionId($region_id)
-    {
-        $statementHandler = $this->databaseHandler->prepare(
-            "SELECT id, name FROM cities WHERE region_id='{$region_id}' GROUP BY name;"
+        $query = array(
+            'select' => '*',
+            'from' => 'regions',
+            'orderBy' => 'name',
         );
-
-        if ($statementHandler->execute()) {
-            return $statementHandler->fetchAll();
-        }
+        // equivalent of SELECT * FROM region ORDER BY name;
+        return $this->databse->get($query);
     }
 
-    private function connectDB($dbname, $user, $pass)
+
+    /**
+     * @param $id
+     * @return mixed
+     */
+    public function getCitiesByRegionId($id)
     {
-        try {
-            $this->databaseHandler = new \PDO("mysql:host=localhost;dbname={$dbname}", $user, $pass);
-            $this->databaseHandler->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
-        } catch (\PDOException $e) {
-            die($e->errorInfo);
-        }
+        $query = array(
+            'select' => 'id, name',
+            'from' => 'cities',
+            'where' => 'region_id',
+            'whereValue' => $id,
+            'orderBy' => 'name',
+        );
+        // equivalent of SELECT * FROM region WHERE region_id = '$id' ORDER BY name;
+        return $this->databse->get($query);
     }
 
-    private function unconnectDB()
+    /**
+     *
+     */
+    public function __destruct()
     {
-        $this->databaseHandler = null;
+        $this->databse->disconnect();
     }
-
-    private $databaseHandler;
 }

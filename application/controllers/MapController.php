@@ -6,9 +6,15 @@ use Application\Managers\MapManager;
 use Core\Controller\Controller;
 use Core\View\View;
 
-
+/**
+ * Class MapController
+ * @package Application\Controllers
+ */
 class MapController extends Controller
 {
+    /**
+     * @return View
+     */
     public function indexAction()
     {
         $regions = MapManager::getRegions();

@@ -87,8 +87,8 @@ class Router
     public function run()
     {
         // Controller and action by default
-        $controllerName = $this->DEFAULT_CONTROLLER;
-        $actionName = $this->DEFAULT_ACTION;
+        $controllerName = $this->defaultController;
+        $actionName = $this->defaultAction;
 
         // Separating request URI
         $routes = explode('/', $_SERVER['REQUEST_URI']);
@@ -104,7 +104,7 @@ class Router
         }
 
         //  Recreating path to controllers into namespaces
-        $namespaces = explode('/', $this->CONTROLLERS_PATH);
+        $namespaces = explode('/', $this->controllersPath);
 
         // Namespaces should start from capital letter
         for ($i = 0, $size = count($namespaces); $i < $size; $i++) {

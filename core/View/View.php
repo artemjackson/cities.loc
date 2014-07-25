@@ -14,11 +14,6 @@ class View
     /**
      * @var
      */
-    protected $html;
-
-    /**
-     * @var
-     */
     protected $data = array();
 
     /**
@@ -32,25 +27,21 @@ class View
     protected $template;
 
     /**
-     * @var array
+     * @var
      */
-    protected static $configuration;
+    protected $html;
 
     /**
      *
      */
     public function __construct(array $data = array())
     {
-        /*
-         * Configuration is the same for all Views
-         */
-        if(is_null(self::$configuration)){
-            $conf = Application::getConfiguration()['VIEW_CONFIGURATION'];
-            if (!$conf) {
-                throw new ConfigurationException('No configuration were specified for ' . __CLASS__);
-            }
-            $this->setConfiguration($conf);
+        $configuration = Application::getConfiguration()['VIEW_CONFIGURATION'];
+        if (!$configuration) {
+            throw new ConfigurationException('No configuration were specified for ' . __CLASS__);
         }
+        $this->setConfiguration($configuration);
+
         $this->setData($data);
     }
 
@@ -58,16 +49,14 @@ class View
      * @param array $configuration
      * @return $this
      */
-    protected function setConfiguration($configuration)
+    protected function setConfiguration(array $configuration = array())
     {
-        self::$configuration = $configuration;
-
         // Creating variables into class
-        foreach($configuration as $key => $value) {
+        foreach ($configuration as $key => $value) {
             $this->$key = $value;
         }
 
-        $this->setLayout($this->DEFAULT_LAYOUT);
+        $this->setLayout($this->defaultLayout);
 
         return $this;
     }
@@ -78,7 +67,7 @@ class View
     public function render()
     {
         $this->html = $this->getHtml();
-        include $this->LAYOUTS_PATH . $this->getLayout() . $this->LAYOUT_EXTENSION;
+        include $this->layoutsPath . $this->getLayout() . $this->layoutExtension;
     }
 
     /**
@@ -92,7 +81,7 @@ class View
         extract($this->getData());
 
         ob_start();
-        include $this->TEMPLATES_PATH . $this->getTemplate() . $this->TEMPLATES_EXTENSION;
+        include $this->templatesPath . $this->getTemplate() . $this->templatesExtension;
         $html = ob_get_contents();
         ob_end_clean();
         return $html;
