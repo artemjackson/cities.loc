@@ -5,6 +5,7 @@ namespace Core;
 use Core\MVC\Router\Exceptions\ControllerException;
 use Core\MVC\Router\Router;
 
+//TODO rename to App because Application is too long and you need to write Application all the time
 /**
  * Class Application
  * @package Core
@@ -12,7 +13,7 @@ use Core\MVC\Router\Router;
 final class Application
 {
 
-    protected static $_instance;
+    protected static $_instance; //TODO it is not a PSR
 
     protected function __construct()
     {
@@ -30,6 +31,7 @@ final class Application
      */
     private static $configuration = array();
 
+    //TODO rename to getConfig getConfiguration is too long
     /**
      * @param null $confName
      * @param null $confOption
@@ -42,6 +44,8 @@ final class Application
         }
 
         if ($confOption === null) {
+
+            //TODO use ternary operator
             if (!empty(self::$configuration[$confName])) {
                 return self::$configuration[$confName];
             } else {
@@ -49,6 +53,7 @@ final class Application
             }
         }
 
+        //TODO use ternary operator
         if (!empty(self::$configuration[$confName][$confOption])) {
             return self::$configuration[$confName][$confOption];
         } else {
@@ -56,6 +61,7 @@ final class Application
         }
     }
 
+    //TODO rename to setConfig
     /**
      * @param array $configuration
      * @return \Core\Application
@@ -90,7 +96,7 @@ final class Application
     }
 
     /**
-     *
+     * //TODO needs a refactoring
      */
     private static function error404()
     {
@@ -109,6 +115,7 @@ final class Application
     {
         $controllerName = get_class($controller);
 
+        //TODO I think it can be done in more elegant way
         // Getting controller name without namespaces
         $controllerName = substr($controllerName, strripos($controllerName, "\\") + 1);
         $controllerName = substr($controllerName, 0, strripos($controllerName, "Controller"));

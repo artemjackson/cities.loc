@@ -17,7 +17,7 @@ class AjaxController extends Controller
      */
     public function updateCitiesAction()
     {
-        $id = $_POST['id'];
+        $id = $_POST['id']; //TODO always check whether variable is set f.e $id = isset($_POST['id']) ? $_POST['id'] : null;
 
         $cities = MapManager::getCitiesByRegionId($id);
 

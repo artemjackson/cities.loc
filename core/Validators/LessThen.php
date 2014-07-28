@@ -23,10 +23,10 @@ class LessThen extends AbstractValidator
             throw new ValidatorException("No max value was specified in LessThen validator.\n");
         }
 
-        $strlen = strlen($value);
+        $strlen = strlen($value); //TODO strLen
         $valid = $strlen < $max;
 
-        if ($valid === false) {
+        if ($valid === false) { //TODO false === $valid
             $this->setMessage("Length should be less then {$max} symbols ");
         }
 
