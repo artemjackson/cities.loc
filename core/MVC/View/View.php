@@ -1,9 +1,8 @@
 <?php
 
-namespace Core\View;
+namespace Core\MVC\View;
 
 use Core\Application;
-use Core\Exceptions\ConfigurationException;
 
 /**
  * Class View
@@ -36,29 +35,11 @@ class View
      */
     public function __construct(array $data = array())
     {
-        $configuration = Application::getConfiguration()['VIEW_CONFIGURATION'];
-        if (!$configuration) {
-            throw new ConfigurationException('No configuration were specified for ' . __CLASS__);
-        }
-        $this->setConfiguration($configuration);
+        $defaultLayout = Application::getConfiguration('view', 'defaultLayout');
+
+            $this->setLayout($defaultLayout);
 
         $this->setData($data);
-    }
-
-    /**
-     * @param array $configuration
-     * @return $this
-     */
-    protected function setConfiguration(array $configuration = array())
-    {
-        // Creating variables into class
-        foreach ($configuration as $key => $value) {
-            $this->$key = $value;
-        }
-
-        $this->setLayout($this->defaultLayout);
-
-        return $this;
     }
 
     /**
@@ -66,33 +47,42 @@ class View
      */
     public function render()
     {
-        $this->html = $this->getHtml();
-        include $this->layoutsPath . $this->getLayout() . $this->layoutExtension;
+        $layoutsPath = Application::getConfiguration('view', 'layoutsPath');
+        $layoutsExtension = Application::getConfiguration('view', 'layoutsExtension');
+
+        $this->setHtml($this->getHtml());
+        include $layoutsPath . $this->getLayout() . $layoutsExtension;
     }
 
     /**
      * @return string
      */
-    public function getHtml()
+    protected function getHtml()
     {
+        $templatesPath = Application::getConfiguration('view','templatesPath');
+        $templatesExtension = Application::getConfiguration('view','templatesExtension');
+
         /*
          * Extracting variables from $this->data
          */
         extract($this->getData());
 
         ob_start();
-        include $this->templatesPath . $this->getTemplate() . $this->templatesExtension;
+        include $templatesPath . $this->getTemplate() . $templatesExtension;
         $html = ob_get_contents();
         ob_end_clean();
         return $html;
     }
 
+
     /**
-     * @param mixed $html
+     * @param $html
+     * @return $this
      */
-    public function setHtml($html)
+    protected function setHtml($html)
     {
         $this->html = $html;
+        return $this;
     }
 
     /**

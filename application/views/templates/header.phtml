@@ -3,14 +3,13 @@
 <html>
 <head>
     <?php
-    $rout = $_SERVER['REQUEST_URI'];
-    $currentPage = ucfirst(explode('/', $rout)[1]) ? : 'Home';
-
+        $rout = $_SERVER['REQUEST_URI'];
+        $currentPage = ucfirst(explode('/', $rout)[1]) ? : 'Home';
     ?>
     <title><?= "Cities.loc: " . $currentPage ?></title>
 
     <meta charset="utf-8">
-    <meta name="description" content="Trying Twitter Bootstrap, AJAX, PHP, LAMP">
+    <meta name="description" content="Trying MVC, Twitter Bootstrap, AJAX, PHP, MySQL, Apache">
     <meta name="author" content="Artem Stepanishchev">
 
     <link href="/css/bootstrap.css" rel="stylesheet">
@@ -31,11 +30,11 @@
 
         .container-narrow >
         hr {
-            margin: 30px 0;
         }
 
         .jumbotron {
-            margin: 60px 0;
+            padding: 0;
+            background-color: #ffffff;
             text-align: center;
         }
 
@@ -61,3 +60,4 @@
     </style>
 </head>
 <body>
+<div class="container-narrow">

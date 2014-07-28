@@ -2,8 +2,8 @@
 
 namespace Application\Controllers;
 
-use Core\Controller\Controller;
-use Core\View\View;
+use Core\MVC\Controller\Controller;
+use Core\MVC\View\View;
 
 /**
  * Class HomeController

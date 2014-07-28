@@ -1,22 +1,17 @@
 <?php
 
-namespace Core\Router;
+namespace Core\MVC\Router;
 
 use Core\Application;
-use Core\Exceptions\ConfigurationException;
-use Core\Router\Exceptions\ControllerException;
+use Core\MVC\Router\Exceptions\ControllerException;
+
 
 /**
  * Class Router
- * @package Core\Router
+ * @package Core\MVC\Router
  */
 class Router
 {
-    /**
-     * @var
-     */
-    protected static $configuration;
-
     /**
      * @var
      */
@@ -26,44 +21,6 @@ class Router
      * @var
      */
     protected $currentControllerAction;
-
-    /**
-     *
-     */
-    public function __construct()
-    {
-        if (is_null(self::$configuration)) {
-            $conf = Application::getConfiguration()['CONTROLLER_CONFIGURATION'];
-
-            if (!$conf) {
-                throw new ConfigurationException('No configuration were specified for' . __CLASS__);
-            }
-            $this->setConfiguration($conf);
-        }
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getConfiguration()
-    {
-        return self::$configuration;
-    }
-
-    /**
-     * @param mixed
-     * @return $this
-     */
-    protected function setConfiguration($configuration)
-    {
-        self::$configuration = $configuration;
-
-        foreach ($configuration as $key => $value) {
-            $this->$key = $value;
-        }
-
-        return $this;
-    }
 
     /**
      * @return mixed
@@ -86,9 +43,13 @@ class Router
      */
     public function run()
     {
+        $defaultController = Application::getConfiguration('controller', 'defaultController');
+        $defaultAction = Application::getConfiguration('controller', 'defaultAction');
+        $controllersPath = Application::getConfiguration('controller', 'controllersPath');
+
         // Controller and action by default
-        $controllerName = $this->defaultController;
-        $actionName = $this->defaultAction;
+        $controllerName = $defaultController;
+        $actionName = $defaultAction;
 
         // Separating request URI
         $routes = explode('/', $_SERVER['REQUEST_URI']);
@@ -104,7 +65,7 @@ class Router
         }
 
         //  Recreating path to controllers into namespaces
-        $namespaces = explode('/', $this->controllersPath);
+        $namespaces = explode('/', $controllersPath);
 
         // Namespaces should start from capital letter
         for ($i = 0, $size = count($namespaces); $i < $size; $i++) {

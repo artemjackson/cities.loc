@@ -3,8 +3,8 @@
 namespace Application\Controllers;
 
 use Application\Managers\MapManager;
-use Core\Controller\Controller;
-use Core\View\JsonView;
+use Core\MVC\Controller\Controller;
+use Core\MVC\View\JsonView;
 
 /**
  * Class AjaxController

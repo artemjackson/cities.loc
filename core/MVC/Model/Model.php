@@ -1,10 +1,10 @@
 <?php
 
-namespace Core\Model;
+namespace Core\MVC\Model;
 
 /**
  * Class Model
- * @package Core\Model
+ * @package Core\MVC\Model
  */
 abstract class Model
 {

@@ -2,43 +2,58 @@
 
 namespace Core;
 
-use Core\Router\Exceptions\ControllerException;
-use Core\Router\Router;
+use Core\MVC\Router\Exceptions\ControllerException;
+use Core\MVC\Router\Router;
 
 /**
  * Class Application
  * @package Core
  */
-class Application
+final class Application
 {
-    /**
-     * @var
-     */
-    private static $_instance;
 
+    protected static $_instance;
+
+    protected function __construct()
+    {
+    }
+
+    public static function getInstance()
+    {
+        if (is_null(self::$_instance)) {
+            self::$_instance = new self;
+        }
+        return self::$_instance;
+    }
     /**
      * @var array
      */
     private static $configuration = array();
 
     /**
-     * @var
+     * @param null $confName
+     * @param null $confOption
+     * @return array|null
      */
-    private static $router;
-
-    /**
-     *  Singleton patter realization of Application
-     */
-    private function __construct()
+    public static function getConfiguration($confName = null, $confOption = null)
     {
-    }
+        if ($confName === null) {
+            return self::$configuration;
+        }
 
-    /**
-     * @return array
-     */
-    public static function getConfiguration()
-    {
-        return self::$configuration;
+        if ($confOption === null) {
+            if (!empty(self::$configuration[$confName])) {
+                return self::$configuration[$confName];
+            } else {
+                return null;
+            }
+        }
+
+        if (!empty(self::$configuration[$confName][$confOption])) {
+            return self::$configuration[$confName][$confOption];
+        } else {
+            return null;
+        }
     }
 
     /**
@@ -52,31 +67,19 @@ class Application
     }
 
     /**
-     * @return Application
-     */
-    public static function getInstance()
-    {
-        if (is_null(self::$_instance)) {
-            self::$_instance = new self();
-        }
-        return self::$_instance;
-    }
-
-    /**
      *  Runs application
      */
     public static function run()
     {
-        self::$router = new Router();
+        $router = new Router();
         try {
-            self::$router->run();
+            $router->run();
         } catch (ControllerException $e) {
             self::error404();
         }
 
-
-        $controller = self::$router->getController();
-        $controllerAction = self::$router->getControllerAction();
+        $controller = $router->getController();
+        $controllerAction = $router->getControllerAction();
         $view = $controller->$controllerAction();
 
         if (!$view->getTemplate()) {
@@ -89,7 +92,7 @@ class Application
     /**
      *
      */
-    protected static function error404()
+    private static function error404()
     {
         $host = 'http://' . $_SERVER['HTTP_HOST'] . '/';
         header('HTTP/1.1 404 Not Found');
@@ -102,7 +105,7 @@ class Application
      * @param $controllerAction
      * @return string
      */
-    protected static function getTemplateByController($controller, $controllerAction)
+    private static function getTemplateByController($controller, $controllerAction)
     {
         $controllerName = get_class($controller);
 

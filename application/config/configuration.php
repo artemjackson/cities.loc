@@ -1,26 +1,29 @@
 <?php
 return array(
-    'MODEL_CONFIGURATION' => array(
+    'model' => array(
         'modelsPath' => 'application/models/',
     ),
-    'VIEW_CONFIGURATION' => array(
+
+    'view' => array(
         'viewsPath' => 'application/views/',
         'layoutsPath' => 'application/views/layouts/',
-        'layoutExtension' => '.phtml',
+        'layoutsExtension' => '.phtml',
         'defaultLayout' => 'default',
         'templatesPath' => 'application/views/templates/',
         'templatesExtension' => '.phtml',
     ),
-    'CONTROLLER_CONFIGURATION' => array(
+
+    'controller' => array(
         'controllersPath' => 'application/controllers/',
         'defaultController' => 'home',
         'defaultAction' => 'index',
     ),
-    'DATABASE_CONFIGURATION' => array(
+
+    'database' => array(
         'databaseType' => 'mysql',
         'databaseName' => 'cities',
-        'hostName' => 'localhost',
-        'userName' => 'jackson',
+        'host' => 'localhost',
+        'user' => 'jackson',
         'password' => '9951',
     )
 );

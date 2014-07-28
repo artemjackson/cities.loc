@@ -2,9 +2,8 @@
 
 namespace Application\Models;
 
-
-use Application\Models\Database\Database;
-use Core\Model\Model;
+use Core\Database\Database;
+use Core\MVC\Model\Model;
 
 /**
  * Class MapModel
@@ -12,21 +11,6 @@ use Core\Model\Model;
  */
 class MapModel extends Model
 {
-    /**
-     * @var
-     */
-    protected $database;
-
-    /**
-     *
-     */
-    public function __construct()
-    {
-        $this->databse = new Database();
-        $this->databse->connect();
-    }
-
-
     /**
      * @return mixed
      */
@@ -38,9 +22,8 @@ class MapModel extends Model
             'orderBy' => 'name',
         );
         // equivalent of SELECT * FROM region ORDER BY name;
-        return $this->databse->get($query);
+        return Database::getConnection()->get($query);
     }
-
 
     /**
      * @param $id
@@ -56,14 +39,6 @@ class MapModel extends Model
             'orderBy' => 'name',
         );
         // equivalent of SELECT * FROM region WHERE region_id = '$id' ORDER BY name;
-        return $this->databse->get($query);
-    }
-
-    /**
-     *
-     */
-    public function __destruct()
-    {
-        $this->databse->disconnect();
+        return Database::getConnection()->get($query);
     }
 }

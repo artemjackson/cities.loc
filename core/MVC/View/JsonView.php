@@ -1,10 +1,10 @@
 <?php
 
-namespace Core\View;
+namespace Core\MVC\View;
 
 /**
  * Class JsonView
- * @package Core\View
+ * @package Core\MVC\View
  */
 class JsonView extends View
 {

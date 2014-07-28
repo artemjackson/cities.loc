@@ -1,0 +1,51 @@
+<!-- I have to use styles here :( -->
+<style type="text/css">
+    .form-signup {
+        max-width: 360px;
+        padding: 29px 29px 29px;
+        margin: 0 auto;;
+        background-color: #fff;
+        border: 1px solid #e5e5e5;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
+        -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
+        box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
+    }
+
+    .form-signup .form-signup-heading, .form-signup .checkbox {
+        margin-bottom: 10px;
+    }
+
+    .form-signup input[type="text"], .form-signup input[type="password"] {
+        font-size: 16px;
+        height: auto;
+        width: 300px;
+        margin-bottom: 15px;
+        padding: 7px 9px;
+    }
+</style>
+<div class="jumbotron">
+
+    <div class="infoMessage">
+        <?php if (isset($status)): ?>
+            <div class="alert alert-<?php echo $status; ?> alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <?php echo $message; ?>
+            </div>
+        <?php endif; ?>
+    </div>
+
+    <h2 class="form-signup-heading">Fill some personal information</h2>
+
+    <form method="POST" class="form-signup" action="/registration/">
+        <input name="first_name" type="text" class="input-block-level" placeholder="First name">
+        <input name="second_name" type="text" class="input-block-level" placeholder="Second name">
+        <input name="email" type="text" class="input-block-level" placeholder="Email">
+        <input name="password" type="password" class="input-block-level" placeholder="Password">
+        <input name="password_confirm" type="password" class="input-block-level" placeholder="Password confirm">
+        <button class="btn btn-large btn-primary" type="submit">Sing up</button>
+    </form>
+</div>

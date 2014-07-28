@@ -1,12 +1,12 @@
 <?php
 
-namespace Core\Router\Exceptions;
+namespace Core\Database\Exceptions;
 
 /**
- * Class ControllerException
- * @package Core\Router\Exceptions
+ * Class DatabaseException
+ * @package Application\Models\Database\Exceptions
  */
-class ControllerException extends \Exception
+class DatabaseException extends \Exception
 {
     /**
      * @param string $message
@@ -20,5 +20,4 @@ class ControllerException extends \Exception
             $this->message .= $this->getPrevious() . ' : ' . $this->getPrevious()->getMessage();
         }
     }
-
 }
