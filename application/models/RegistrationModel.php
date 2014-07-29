@@ -12,7 +12,8 @@ class RegistrationModel extends Model
         $firstName = $userData['first_name'];
         $secondName = $userData['second_name'];
         $email = $userData['email'];
-        $password = $userData['password'];
+        // hashing password
+        $password = password_hash($userData['password'], PASSWORD_DEFAULT);
 
         $query = array(
             'insertInto' => 'users',

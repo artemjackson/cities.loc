@@ -48,10 +48,10 @@ class RegistrationController extends Controller
                 );
             }
         } else {
-            $message = $form->getMessage();
+            $messages = $form->getMessage();
             $view->setData(
                 array(
-                    'message' => $message,
+                    'message' => implode("</br>",$messages),
                     'status' => 'warning'
                 )
             );

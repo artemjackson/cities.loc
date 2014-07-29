@@ -16,7 +16,7 @@ class Form
     /**
      * @var
      */
-    protected $message;
+    protected $message = array();
 
     /**
      * @param array $data
@@ -31,17 +31,19 @@ class Form
      */
     public function isValid()
     {
+        $valid = true;
         foreach ($this->data as $field) {
             foreach ($field['validators'] as $validator) {
                 if (!$validator->isValid($field['value'])) {
                     $message = $validator->getMessage();
                     $message .= "in " . $field['name'] . " field";
-                    $this->setMessage($message);
-                    return false;
+                    $this->addMessage($message);
+                    $valid = false;
+                    continue 2;      // skip other validators of this field if one is not valid
                 }
             }
         }
-        return true;
+        return $valid;
     }
 
 
@@ -92,7 +94,12 @@ class Form
      */
     protected function setMessage($message)
     {
-        $this->message = $message;
+        $this->message = null;
+        $this->message[] = $message;
         return $this;
+    }
+
+    protected function addMessage($message){
+        $this->message[] = $message;
     }
 }
