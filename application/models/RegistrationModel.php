@@ -9,12 +9,13 @@ class RegistrationModel extends Model
 {
     public function addUser(array $userData = array())
     {
-        $firstName = $userData['first_name'];
+        $firstName = $userData['first_name']; //TODO check variables
         $secondName = $userData['second_name'];
         $email = $userData['email'];
         // hashing password
         $password = password_hash($userData['password'], PASSWORD_DEFAULT);
 
+        //TODO your query builder is difficult to understand
         $query = array(
             'insertInto' => 'users',
             'columns' => array('first_name', 'second_name', 'email', 'password'),

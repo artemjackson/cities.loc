@@ -11,7 +11,7 @@ class JsonView extends View
     /**
      * @param array $data
      */
-    public function __construct(array $data = array())
+    public function __construct(array $data = array()) //TODO why do we need constructor here
     {
         parent::__construct($data);
     }

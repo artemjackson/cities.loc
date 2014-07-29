@@ -53,8 +53,8 @@ class Form
      */
     public function bindValidators($id, array $validators = array())
     {
-            $value = $this->data[$id];
-            $name = str_replace('_',' ', ucfirst($id));
+            $value = $this->data[$id]; //TODO check variables
+            $name = str_replace('_',' ', ucfirst($id)); //TODO why?
             $this->data[$id] = array(
                 'name' => $name,
                 'value' => $value,

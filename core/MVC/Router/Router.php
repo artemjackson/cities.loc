@@ -12,11 +12,13 @@ use Core\MVC\Router\Exceptions\ControllerException;
  */
 class Router
 {
+    //TODO why do name it $currentController but not just simple $controller
     /**
      * @var
      */
     protected $currentController;
 
+    //TODO the same as $currentController
     /**
      * @var
      */

@@ -29,7 +29,7 @@ class Request
      */
     public function __construct()
     {
-        $this->method = $_SERVER['REQUEST_METHOD'];
+        $this->method = $_SERVER['REQUEST_METHOD']; //TODO check variable
     }
 
     /**
@@ -79,6 +79,7 @@ class Request
             return $this->postParams;
         }
 
+        //TODO use ternary operator for that like return !empty($var) ? $var : null;
         if (!empty($this->postParams[$name])) {
             return $this->postParams[$name];
         } else {

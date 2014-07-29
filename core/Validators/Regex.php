@@ -18,7 +18,7 @@ class Regex extends AbstractValidator
         $regex = $this->getRegex();
         $valid = preg_match($regex, $value);
 
-        if ($valid === false) {
+        if ($valid === false) { //TODO false === $valid
             $this->setMessage("Invalid value ");
         }
 

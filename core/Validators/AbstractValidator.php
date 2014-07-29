@@ -6,21 +6,18 @@ namespace Core\Validators;
  * Class AbstractValidator
  * @package Core\Validators
  */
-/**
- * Class AbstractValidator
- * @package Core\Validators
- */
+//TODO you need to have an option to set validation message
 abstract class AbstractValidator implements ValidatorInterface
 {
     /**
      * @var
      */
     protected
-        $message;
+        $message; //TODO wtf???
     /**
      * @var array
      */
-    protected
+    protected //TODO wtf???
         $options = array();
 
     /**
@@ -37,6 +34,7 @@ abstract class AbstractValidator implements ValidatorInterface
      */
     public function getOption($option)
     {
+        //TODO use ternary operator
         if (!empty($this->options[$option])) {
             return $this->options[$option];
         } else {

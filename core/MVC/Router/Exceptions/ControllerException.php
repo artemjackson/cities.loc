@@ -17,7 +17,7 @@ class ControllerException extends \Exception
     {
         parent::__construct($message, $code, $previous);
         if (!is_null($previous)) {
-            $this->message .= $this->getPrevious() . ' : ' . $this->getPrevious()->getMessage();
+            $this->message .= $this->getPrevious() . ' : ' . $this->getPrevious()->getMessage(); //TODO why?
         }
     }
 

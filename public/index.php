@@ -18,7 +18,7 @@ $application = \Core\Application::getInstance();
 
 
 //  Setting configurations
-$application->setConfiguration(require "application/config/configuration.php");
+$application->setConfiguration(require "application/config/configuration.php"); //TODO App::init(require ...)->run(); or can we run application without setting a config? Will it work?
 
 //  Application running
 $application->run();

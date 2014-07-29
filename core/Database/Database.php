@@ -5,6 +5,7 @@ namespace Core\Database;
 use Core\Application;
 use Core\Database\Exceptions\DatabaseException;
 
+//TODO rename to Db because Database is too long and you need all the time write Database::blabla
 /**
  * Class Database
  * @package Core\Database
@@ -14,7 +15,7 @@ final class Database
     /**
      * @var
      */
-    protected static $_instance;
+    protected static $_instance; //TODO it is not PSR I mean naming protected property from _
     /**
      * @var
      */
@@ -63,6 +64,7 @@ final class Database
         }
     }
 
+    //TODO query builder wasn't a waste of time (maybe) because you have learnt something new while developing it but it all should be rewritten or aborted at all
     /**
      * @param array $array
      * @return mixed

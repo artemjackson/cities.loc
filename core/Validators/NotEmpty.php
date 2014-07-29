@@ -17,7 +17,7 @@ class NotEmpty extends AbstractValidator
     {
         $valid = !empty($value);
 
-        if ($valid === false) {
+        if ($valid === false) { //TODO false === $valid
             $this->setMessage("The value should not be empty ");
         }
 

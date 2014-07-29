@@ -63,7 +63,7 @@ class RegistrationForm extends Form
             )
         );
     }
-
+    // TODO you need to create a validator for that which will compare values from different inputs. And also don't forget to check whether variable is set. We don't need notices in our code
     public function isValid()
     {
         if(parent::isValid()){
