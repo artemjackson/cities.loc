@@ -4,6 +4,7 @@ namespace Core;
 
 use Core\MVC\Router\Exceptions\ControllerException;
 use Core\MVC\Router\Router;
+use Core\MVC\View\View;
 
 //TODO rename to App because Application is too long and you need to write Application all the time
 /**
@@ -26,6 +27,7 @@ final class Application
         }
         return self::$_instance;
     }
+
     /**
      * @var array
      */
@@ -78,10 +80,14 @@ final class Application
     public static function run()
     {
         $router = new Router();
+
         try {
             $router->run();
         } catch (ControllerException $e) {
-            self::error404();
+            $view = new View();
+            $view->setTemplate('errors/404');
+            $view->render();
+            exit;
         }
 
         $controller = $router->getController();
@@ -93,17 +99,6 @@ final class Application
             $view->setTemplate($template);
         }
         $view->render();
-    }
-
-    /**
-     * //TODO needs a refactoring
-     */
-    private static function error404()
-    {
-        $host = 'http://' . $_SERVER['HTTP_HOST'] . '/';
-        header('HTTP/1.1 404 Not Found');
-        header("Status: 404 Not Found");
-        header('Location:' . $host . 'errors/error404');
     }
 
     /**

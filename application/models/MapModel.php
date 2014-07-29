@@ -4,6 +4,7 @@ namespace Application\Models;
 
 use Core\Database\Database;
 use Core\MVC\Model\Model;
+
 //TODO this model works with regions so this must be RegionModel
 /**
  * Class MapModel

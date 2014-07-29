@@ -4,7 +4,6 @@ return array(
     'model' => array(
         'modelsPath' => 'application/models/',
     ),
-
     'view' => array(
         'viewsPath' => 'application/views/',
         'layoutsPath' => 'application/views/layouts/',
@@ -13,7 +12,6 @@ return array(
         'templatesPath' => 'application/views/templates/',
         'templatesExtension' => '.phtml',
     ),
-
     'controller' => array(
         'controllersPath' => 'application/controllers/',
         'defaultController' => 'home',
@@ -24,7 +22,7 @@ return array(
         'databaseType' => 'mysql',
         'databaseName' => 'cities',
         'host' => 'localhost',
-        'user' => 'root',
-        'password' => '',
+        'user' => 'jackson',
+        'password' => '9951',
     )
 );

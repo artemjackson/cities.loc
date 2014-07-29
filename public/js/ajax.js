@@ -18,7 +18,7 @@ $(document).ready(function () {
         alert("Воу-воу, полегче!");
     });
 
-    $('#submit').click(function() {
+    $('#submit').click(function () {
 
     });
 });

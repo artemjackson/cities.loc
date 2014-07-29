@@ -27,25 +27,24 @@
     }
 </style>
 <div class="jumbotron">
-
-    <div class="infoMessage">
-        <?php if (isset($status)): ?>
-            <div class="alert alert-<?php echo $status; ?> alert-dismissible" role="alert">
-                <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span
-                        class="sr-only">Close</span></button>
-                <?php echo $message; ?>
-            </div>
-        <?php endif; ?>
-    </div>
-
     <h2 class="form-signup-heading">Fill some personal information</h2>
-
+    <?php
+    $first_name = !empty($_POST['first_name']) ? $_POST['first_name'] : "";
+    $second_name = !empty($_POST['second_name']) ? $_POST['second_name'] : "";
+    $email = !empty($_POST['email']) ? $_POST['email'] : "";
+    $password = !empty($_POST['password']) ? $_POST['password'] : "";
+    $password_confirm = !empty($_POST['password_confirm']) ? $_POST['password_confirm'] : "";
+    ?>
     <form method="POST" class="form-signup" action="/registration/">
-        <input name="first_name" type="text" class="input-block-level" placeholder="First name">
-        <input name="second_name" type="text" class="input-block-level" placeholder="Second name">
-        <input name="email" type="text" class="input-block-level" placeholder="Email">
-        <input name="password" type="password" class="input-block-level" placeholder="Password">
-        <input name="password_confirm" type="password" class="input-block-level" placeholder="Password confirm">
+        <input name="first_name" type="text" class="input-block-level" placeholder="First name"
+               value="<?= $first_name ?>">
+        <input name="second_name" type="text" class="input-block-level" placeholder="Second name"
+               value="<?= $second_name ?>">
+        <input name="email" type="text" class="input-block-level" placeholder="Email" value="<?= $email ?>">
+        <input name="password" type="password" class="input-block-level" placeholder="Password"
+               value="<?= $password ?>">
+        <input name="password_confirm" type="password" class="input-block-level" placeholder="Password confirm"
+               value="<?= $password_confirm ?>">
         <button class="btn btn-large btn-primary" type="submit">Sing up</button>
     </form>
 </div>

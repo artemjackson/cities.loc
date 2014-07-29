@@ -39,7 +39,7 @@ class Form
                     $message .= "in " . $field['name'] . " field";
                     $this->addMessage($message);
                     $valid = false;
-                    continue 2;      // skip other validators of this field if one is not valid
+                    continue 2; // skip other validators of this field if one is not valid
                 }
             }
         }
@@ -53,13 +53,13 @@ class Form
      */
     public function bindValidators($id, array $validators = array())
     {
-            $value = $this->data[$id]; //TODO check variables
-            $name = str_replace('_',' ', ucfirst($id)); //TODO why?
-            $this->data[$id] = array(
-                'name' => $name,
-                'value' => $value,
-                'validators' => $validators
-            );
+        $value = $this->data[$id]; //TODO check variables
+        $name = str_replace('_', ' ', ucfirst($id)); //TODO why?
+        $this->data[$id] = array(
+            'name' => $name,
+            'value' => $value,
+            'validators' => $validators
+        );
     }
 
     /**
@@ -83,7 +83,7 @@ class Form
     /**
      * @return mixed
      */
-    public function getMessage()
+    public function getMessages()
     {
         return $this->message;
     }
@@ -99,7 +99,8 @@ class Form
         return $this;
     }
 
-    protected function addMessage($message){
+    protected function addMessage($message)
+    {
         $this->message[] = $message;
     }
 }

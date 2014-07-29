@@ -2,10 +2,10 @@
 
 namespace Core\Validators;
 
-/**
- * Class AbstractValidator
- * @package Core\Validators
- */
+    /**
+     * Class AbstractValidator
+     * @package Core\Validators
+     */
 //TODO you need to have an option to set validation message
 abstract class AbstractValidator implements ValidatorInterface
 {

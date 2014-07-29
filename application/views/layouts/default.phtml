@@ -2,5 +2,9 @@
 //TODO create view helper or method in View which will do something like this <?php echo $this->load('header',array('data'=>$data));// this load header.phtml template and pass $data to it
 include "application/views/templates/header.phtml";
 include "application/views/templates/menu.phtml";
+echo $this->flashMessages('error');
+echo $this->flashMessages('warning');
+echo $this->flashMessages('success');
+
 echo $this->html;
 include "application/views/templates/footer.phtml";

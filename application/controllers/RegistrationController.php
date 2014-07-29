@@ -2,11 +2,12 @@
 
 namespace Application\Controllers;
 
+
 use Application\Form\RegistrationForm;
+use Application\Managers\FlashMessagesManager;
 use Application\Managers\RegistrationManager;
 use Core\MVC\Controller\Controller;
 use Core\MVC\View\View;
-
 
 /**
  * Class RegistrationController
@@ -14,6 +15,19 @@ use Core\MVC\View\View;
  */
 class RegistrationController extends Controller
 {
+    /**
+     * @var \Application\Managers\FlashMessagesManager
+     */
+    protected $flashMessagesManager;
+
+    /**
+     *
+     */
+    public function __construct()
+    {
+        $this->flashMessagesManager = new FlashMessagesManager();
+    }
+
     /**
      * @return View
      */
@@ -31,30 +45,15 @@ class RegistrationController extends Controller
 
         if ($form->isValid()) {
             if (RegistrationManager::addUser($data)) {
-                $message = "Congratulations! You have successfully registered!\n";
-                $view->setData(
-                    array(
-                        'message' => $message,
-                        'status' => 'success'
-                    )
-                );
+                $this->flashMessagesManager->addSuccessMessage();
+
             } else {
-                $message = "Unfortunately this email is already in use.\n";
-                $view->setData(
-                    array(
-                        'message' => $message,
-                        'status' => 'success'
-                    )
-                );
+                $this->flashMessagesManager->addErrorMessage();
             }
         } else {
-            $messages = $form->getMessage();
-            $view->setData(
-                array(
-                    'message' => implode("</br>",$messages),
-                    'status' => 'warning'
-                )
-            );
+            foreach ($form->getMessages() as $warningText) {
+                $this->flashMessagesManager->addWarningMessage($warningText);
+            }
         }
 
         return $view;

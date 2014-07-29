@@ -3,12 +3,12 @@
 <html>
 <head>
     <?php
-        //TODO WTF?? use $this->headTitle(); helper so in templates you can set head title like $this->title('My title'); and it will be displayed
+    //TODO WTF?? use $this->headTitle(); helper so in templates you can set head title like $this->title('My title'); and it will be displayed
 
-        $rout = $_SERVER['REQUEST_URI'];
-        $currentPage = ucfirst(explode('/', $rout)[1]) ? : 'Home';
+    $rout = $_SERVER['REQUEST_URI'];
+    $currentPage = ucfirst(explode('/', $rout)[1]) ? : 'Home';
     ?>
-    <title><?= "Cities.loc: " . $currentPage;//TODO $this->headTitle(); ?></title>
+    <title><?= "Cities.loc: " . $currentPage; //TODO $this->headTitle(); ?></title>
 
     <meta charset="utf-8">
     <meta name="description" content="Trying MVC, Twitter Bootstrap, AJAX, PHP, MySQL, Apache">

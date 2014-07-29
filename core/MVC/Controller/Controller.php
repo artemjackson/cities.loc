@@ -14,6 +14,32 @@ abstract class Controller
      * @var
      */
     protected $request;
+    /**
+     * @var array
+     */
+    protected $messages = array();
+
+
+    public function addMessage($message)
+    {
+        $this->messages[] = $message;
+    }
+
+    /**
+     * @return array
+     */
+    public function getMessages()
+    {
+        return $this->messages;
+    }
+
+    /**
+     * @param array $messages
+     */
+    public function setMessages(array $messages = array())
+    {
+        $this->messages = $messages;
+    }
 
     /**
      * @return Request
@@ -24,6 +50,15 @@ abstract class Controller
             $this->request = new Request();
         }
         return $this->request;
+    }
+
+    /**
+     * @param $location
+     */
+    public function redirect($location)
+    {
+        $host = 'http://' . $_SERVER['HTTP_HOST'] . '/';
+        header('Location:' . $host . $location);
     }
 }
 

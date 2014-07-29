@@ -15,6 +15,6 @@ class ValidatorException extends \Exception
      */
     public function __construct($message, $code = 0, \Exception $previous = null)
     {
-        parent::__construct($message, $code, $previous);//TODO why do we need this constructor?
+        parent::__construct($message, $code, $previous); //TODO why do we need this constructor?
     }
 }

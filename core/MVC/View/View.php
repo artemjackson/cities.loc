@@ -37,9 +37,34 @@ class View
     {
         $defaultLayout = Application::getConfiguration('view', 'defaultLayout');
 
-            $this->setLayout($defaultLayout);
+        $this->setLayout($defaultLayout);
 
         $this->setData($data);
+    }
+
+    /**
+     * @param $messagesType
+     * @return string
+     */
+    public function flashMessages($messagesType)
+    {
+        $html = "";
+        $messagesType .= "Messages";
+        if (!empty($_SESSION[$messagesType])) {
+            $templatesPath = Application::getConfiguration('view', 'templatesPath');
+            $templatesExtension = Application::getConfiguration('view', 'templatesExtension');
+
+            foreach ($_SESSION[$messagesType] as $infoMessage) {
+                $type = $infoMessage->getType();
+                $message = $infoMessage->getMessage();
+                ob_start();
+                include $templatesPath . "registration/message" . $templatesExtension;
+                $html .= ob_get_contents();
+                ob_end_clean();
+            }
+            $_SESSION[$messagesType] = null;
+        }
+        return $html;
     }
 
     /**
@@ -59,8 +84,8 @@ class View
      */
     protected function getHtml()
     {
-        $templatesPath = Application::getConfiguration('view','templatesPath');
-        $templatesExtension = Application::getConfiguration('view','templatesExtension');
+        $templatesPath = Application::getConfiguration('view', 'templatesPath');
+        $templatesExtension = Application::getConfiguration('view', 'templatesExtension');
 
         /*
          * Extracting variables from $this->data
@@ -73,7 +98,6 @@ class View
         ob_end_clean();
         return $html;
     }
-
 
     /**
      * @param $html
