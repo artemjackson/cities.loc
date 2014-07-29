@@ -3,6 +3,7 @@
 namespace Core\MVC\Controller;
 
 use Core\HTTP\Request;
+use Core\Managers\FlashMessagesManager;
 
 /**
  * Class Controller
@@ -19,26 +20,17 @@ abstract class Controller
      */
     protected $messages = array();
 
-
-    public function addMessage($message)
-    {
-        $this->messages[] = $message;
-    }
+    /**
+     * @var
+     */
+    protected $flashMessager;
 
     /**
-     * @return array
+     *
      */
-    public function getMessages()
+    public function __construct()
     {
-        return $this->messages;
-    }
-
-    /**
-     * @param array $messages
-     */
-    public function setMessages(array $messages = array())
-    {
-        $this->messages = $messages;
+        $this->flashMessager = new FlashMessagesManager();
     }
 
     /**
@@ -59,6 +51,8 @@ abstract class Controller
     {
         $host = 'http://' . $_SERVER['HTTP_HOST'] . '/';
         header('Location:' . $host . $location);
+        //session_write_close();
+        exit();
     }
 }
 

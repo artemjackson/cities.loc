@@ -14,26 +14,22 @@ use Core\MVC\View\View;
 final class Application
 {
 
+    /**
+     * @var
+     */
     protected static $_instance; //TODO it is not a PSR
-
-    protected function __construct()
-    {
-    }
-
-    public static function getInstance()
-    {
-        if (is_null(self::$_instance)) {
-            self::$_instance = new self;
-        }
-        return self::$_instance;
-    }
-
     /**
      * @var array
      */
     private static $configuration = array();
 
-    //TODO rename to getConfig getConfiguration is too long
+    /**
+     *
+     */
+    protected function __construct()
+    {
+    }
+
     /**
      * @param null $confName
      * @param null $confOption
@@ -63,7 +59,8 @@ final class Application
         }
     }
 
-    //TODO rename to setConfig
+    //TODO rename to getConfig getConfiguration is too long
+
     /**
      * @param array $configuration
      * @return \Core\Application
@@ -72,6 +69,19 @@ final class Application
     {
         self::$configuration = $configuration;
         return self::getInstance();
+    }
+
+    //TODO rename to setConfig
+
+    /**
+     * @return Application
+     */
+    public static function getInstance()
+    {
+        if (is_null(self::$_instance)) {
+            self::$_instance = new self;
+        }
+        return self::$_instance;
     }
 
     /**

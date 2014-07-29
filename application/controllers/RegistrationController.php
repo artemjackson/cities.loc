@@ -4,7 +4,6 @@ namespace Application\Controllers;
 
 
 use Application\Form\RegistrationForm;
-use Application\Managers\FlashMessagesManager;
 use Application\Managers\RegistrationManager;
 use Core\MVC\Controller\Controller;
 use Core\MVC\View\View;
@@ -15,19 +14,6 @@ use Core\MVC\View\View;
  */
 class RegistrationController extends Controller
 {
-    /**
-     * @var \Application\Managers\FlashMessagesManager
-     */
-    protected $flashMessagesManager;
-
-    /**
-     *
-     */
-    public function __construct()
-    {
-        $this->flashMessagesManager = new FlashMessagesManager();
-    }
-
     /**
      * @return View
      */
@@ -45,17 +31,16 @@ class RegistrationController extends Controller
 
         if ($form->isValid()) {
             if (RegistrationManager::addUser($data)) {
-                $this->flashMessagesManager->addSuccessMessage();
-
+                $this->flashMessager->addSuccessMessage("Congratulations! You have successfully registered!\n");
+                //$this->redirect('registration');
             } else {
-                $this->flashMessagesManager->addErrorMessage();
+                $this->flashMessager->addErrorMessage("Unfortunately this email is already in use!\n");
             }
         } else {
             foreach ($form->getMessages() as $warningText) {
-                $this->flashMessagesManager->addWarningMessage($warningText);
+                $this->flashMessager->addWarningMessage($warningText);
             }
         }
-
         return $view;
     }
 }

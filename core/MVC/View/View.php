@@ -3,6 +3,7 @@
 namespace Core\MVC\View;
 
 use Core\Application;
+use Core\Session\Session;
 
 /**
  * Class View
@@ -10,6 +11,10 @@ use Core\Application;
  */
 class View
 {
+    const SUCCESS = 'success';
+    const WARNING = 'warning';
+    const ERROR = 'error';
+
     /**
      * @var
      */
@@ -49,12 +54,12 @@ class View
     public function flashMessages($messagesType)
     {
         $html = "";
-        $messagesType .= "Messages";
-        if (!empty($_SESSION[$messagesType])) {
+        $session = new Session();
+        if (!$session->isEmpty($messagesType)) {
             $templatesPath = Application::getConfiguration('view', 'templatesPath');
             $templatesExtension = Application::getConfiguration('view', 'templatesExtension');
 
-            foreach ($_SESSION[$messagesType] as $infoMessage) {
+            foreach ($session->get($messagesType) as $infoMessage) {
                 $type = $infoMessage->getType();
                 $message = $infoMessage->getMessage();
                 ob_start();
@@ -62,7 +67,7 @@ class View
                 $html .= ob_get_contents();
                 ob_end_clean();
             }
-            $_SESSION[$messagesType] = null;
+            $session->destroy($messagesType);
         }
         return $html;
     }
