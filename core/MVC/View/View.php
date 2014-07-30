@@ -13,7 +13,7 @@ class View
 {
     const SUCCESS = 'success';
     const WARNING = 'warning';
-    const ERROR = 'error';
+    const ERROR = 'danger';
 
     /**
      * @var

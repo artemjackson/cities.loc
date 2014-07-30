@@ -102,6 +102,7 @@ class RegistrationForm extends Form
                     )
                 ),
                 new ExactlyEqual(array(
+                    'pattern' => $this->data['password'],
                     'message' => "Password and Password confirm do not match each other"
                 ))
             )

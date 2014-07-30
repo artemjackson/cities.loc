@@ -6,12 +6,21 @@ namespace Core\Form;
  * Class Form
  * @package Core\Form
  */
+/**
+ * Class Form
+ * @package Core\Form
+ */
 class Form
 {
     /**
      * @var array
      */
     protected $data = array();
+
+    /**
+     * @var array
+     */
+    protected $bindData = array(); // data with validators on it
 
     /**
      * @var
@@ -32,7 +41,7 @@ class Form
     public function isValid()
     {
         $valid = true;
-        foreach ($this->data as $field) {
+        foreach ($this->bindData as $field) {
             foreach ($field['validators'] as $validator) {
                 if (!$validator->isValid($field['value'])) {
                     $this->addMessage($validator->getMessage());
@@ -44,6 +53,13 @@ class Form
         return $valid;
     }
 
+    /**
+     * @param $message
+     */
+    protected function addMessage($message)
+    {
+        $this->message[] = $message;
+    }
 
     /**
      * @param $id
@@ -52,7 +68,7 @@ class Form
     public function bindValidators($id, array $validators = array())
     {
         $value = !empty($this->data[$id]) ? $this->data[$id] : null;
-        $this->data[$id] = array(
+        $this->bindData[$id] = array(
             'value' => $value,
             'validators' => $validators
         );
@@ -82,21 +98,5 @@ class Form
     public function getMessages()
     {
         return $this->message;
-    }
-
-    /**
-     * @param $message
-     * @return $this
-     */
-    protected function setMessage($message)
-    {
-        $this->message = null;
-        $this->message[] = $message;
-        return $this;
-    }
-
-    protected function addMessage($message)
-    {
-        $this->message[] = $message;
     }
 }

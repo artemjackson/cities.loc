@@ -2,10 +2,10 @@
 
 namespace Core\Validators;
 
-    /**
-     * Class AbstractValidator
-     * @package Core\Validators
-     */
+/**
+ * Class AbstractValidator
+ * @package Core\Validators
+ */
 abstract class AbstractValidator implements ValidatorInterface
 {
     protected $defaultMessage;
@@ -57,7 +57,7 @@ abstract class AbstractValidator implements ValidatorInterface
     public function  __construct(array $options = array())
     {
         $this->options = $options;
-        if(!is_null($this->getOption('message'))){
+        if (!is_null($this->getOption('message'))) {
             $this->setMessage($this->getOption('message'));
         }
     }

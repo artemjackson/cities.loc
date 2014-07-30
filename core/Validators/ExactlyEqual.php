@@ -9,6 +9,7 @@ class ExactlyEqual extends AbstractValidator
         parent::__construct($options);
         $this->setDefaultMessage("The values are different");
     }
+
     /**
      * @param $value
      * @return bool
@@ -19,7 +20,7 @@ class ExactlyEqual extends AbstractValidator
         $valid = $this->getOption('pattern') === $value;
 
         if (false === $valid) {
-            if(is_null( $this->getMessage())){
+            if (is_null($this->getMessage())) {
                 $this->setMessage($this->getDefaultMessage());
             }
         }

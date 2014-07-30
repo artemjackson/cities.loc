@@ -17,7 +17,9 @@ require_once 'init_autoloader.php';
 $app = \Core\App::getInstance();
 
 //  Setting default configurations
-$app->setConfig(require "app/config/config.php");  //TODO App::init(require ...)->run(); or can we run application without setting a config? Will it work?
+$app->setConfig(
+    require "app/config/config.php"
+); //TODO App::init(require ...)->run(); or can we run application without setting a config? Will it work?
 
 //  Setting local database configuration
 $app->setConfig(require "app/config/dbConfig.local.php");
