@@ -49,9 +49,8 @@ abstract class Controller
      */
     public function redirect($location)
     {
-        $host = 'http://' . $_SERVER['HTTP_HOST'] . '/';
+        $host =  "http://" . $_SERVER['HTTP_HOST'] . '/';
         header('Location:' . $host . $location);
-        //session_write_close();
         exit();
     }
 }

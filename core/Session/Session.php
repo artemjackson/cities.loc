@@ -8,15 +8,16 @@ namespace Core\Session;
  */
 class Session
 {
-    /**
-     * @return $this|bool
-     */
-    public function start()
+    public function __construct()
     {
-        if (!session_start()) {
-            return false;
+        if(PHP_SESSION_DISABLED === session_status() || PHP_SESSION_NONE === session_status()){
+            session_start();
         }
-        return $this;
+    }
+
+    public function __destruct()
+    {
+        session_write_close();
     }
 
     /**
@@ -32,10 +33,10 @@ class Session
      * @param $id
      * @return $this
      */
-    public function destroy($id)
+    public function remove($id)
     {
         if (!empty($_SESSION[$id])) {
-            $_SESSION[$id] = null;
+            unset($_SESSION[$id]);
         }
         return $this;
     }
@@ -45,7 +46,7 @@ class Session
      * @param $data
      * @return $this
      */
-    public function addTo($id, $data)
+    public function set($id, $data)
     {
         if (!empty($_SESSION[$id]) && is_array($_SESSION[$id])) {
             $_SESSION[$id][] = $data;

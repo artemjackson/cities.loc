@@ -10,7 +10,7 @@ class UserModel extends Model
     public function saveUser(array $userData = array())
     {
         $firstName = !empty($userData['first_name']) ? $userData['first_name'] : null;
-        $secondName = !empty($userData['second_name']) ? $userData['second_name'] : null;
+        $lastName = !empty($userData['last_name']) ? $userData['last_name'] : null;
         $email = !empty($userData['email']) ? $userData['email'] : null;
 
         // hashing password
@@ -20,8 +20,8 @@ class UserModel extends Model
         //  What should I do whit this?
         $query = array(
             'insertInto' => 'users',
-            'columns' => array('first_name', 'second_name', 'email', 'password'),
-            'values' => array($firstName, $secondName, $email, $password)
+            'columns' => array('first_name', 'last_name', 'email', 'password'),
+            'values' => array($firstName, $lastName, $email, $password)
         );
 
         return Db::getConnection()->add($query);

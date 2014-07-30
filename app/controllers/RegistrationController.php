@@ -32,7 +32,7 @@ class RegistrationController extends Controller
         if ($form->isValid()) {
             if (RegistrationManager::saveUser($data)) {
                 $this->flashMessager->addSuccessMessage("Congratulations! You have successfully registered!\n");
-                //$this->redirect('registration');
+                $this->redirect('registration');
             } else {
                 $this->flashMessager->addErrorMessage("Unfortunately this email is already in use!\n");
             }

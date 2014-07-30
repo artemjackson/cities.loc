@@ -30,21 +30,17 @@
     <h2 class="form-signup-heading">Fill some personal information</h2>
     <?php
     $first_name = !empty($_POST['first_name']) ? $_POST['first_name'] : "";
-    $second_name = !empty($_POST['second_name']) ? $_POST['second_name'] : "";
+    $last_name = !empty($_POST['last_name']) ? $_POST['last_name'] : "";
     $email = !empty($_POST['email']) ? $_POST['email'] : "";
-    $password = !empty($_POST['password']) ? $_POST['password'] : "";
-    $password_confirm = !empty($_POST['password_confirm']) ? $_POST['password_confirm'] : "";
     ?>
-    <form method="POST" class="form-signup" action="/registration/">
+    <form method="POST" class="form-signup" id="registerForm" action="/registration/">
         <input name="first_name" type="text" class="input-block-level" placeholder="First name"
                value="<?= $first_name ?>">
-        <input name="second_name" type="text" class="input-block-level" placeholder="Second name"
-               value="<?= $second_name ?>">
+        <input name="last_name" type="text" class="input-block-level" placeholder="Last name"
+               value="<?= $last_name ?>">
         <input name="email" type="text" class="input-block-level" placeholder="Email" value="<?= $email ?>">
-        <input name="password" type="password" class="input-block-level" placeholder="Password"
-               value="<?= $password ?>">
-        <input name="password_confirm" type="password" class="input-block-level" placeholder="Password confirm"
-               value="<?= $password_confirm ?>">
-        <button class="btn btn-large btn-primary" type="submit">Sing up</button>
+        <input name="password" id="password" type="password" class="input-block-level" placeholder="Password">
+        <input name="password_confirm" type="password" class="input-block-level" placeholder="Password confirm">
+        <button class="btn btn-large btn-primary" id="registrationSubmit" type="submit">Sing up</button>
     </form>
 </div>

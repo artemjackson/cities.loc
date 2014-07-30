@@ -40,18 +40,18 @@ class RegistrationForm extends Form
         );
 
         $this->bindValidators(
-            'second_name',
+            'last_name',
             array(
                 new NotEmpty(array(
-                    'message' => "Second name should not be empty!"
+                    'message' => "Last name should not be empty!"
                 )),
                 new StringLength(array(
-                    'message' => "Second name should be more the 1 and less then 32 symbols",
+                    'message' => "Last name should be more the 1 and less then 32 symbols",
                     'min' => 1,
                     'max' => 32
                 )),
                 new Regex(array(
-                    'message' => "Second name is incorrect",
+                    'message' => "Last name is incorrect",
                     'regex' => "/^[A-Za-zА-Яа-я]+$/ui"
                 )),
             )
