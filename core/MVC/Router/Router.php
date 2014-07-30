@@ -2,7 +2,7 @@
 
 namespace Core\MVC\Router;
 
-use Core\Application;
+use Core\App;
 use Core\MVC\Router\Exceptions\ControllerException;
 
 
@@ -12,32 +12,60 @@ use Core\MVC\Router\Exceptions\ControllerException;
  */
 class Router
 {
-    //TODO why do name it $currentController but not just simple $controller
     /**
      * @var
      */
-    protected $currentController;
+    protected $controller;
 
-    //TODO the same as $currentController
     /**
      * @var
      */
-    protected $currentControllerAction;
+    protected $controllerShortName;
+
+    /**
+     * @var
+     */
+    protected $action;
+
+    /**
+     * @var
+     */
+    protected $actionShortName;
 
     /**
      * @return mixed
      */
     public function getController()
     {
-        return $this->currentController;
+        return $this->controller;
+    }
+
+    /**
+     * @param $controller
+     * @return $this
+     */
+    public function setController($controller)
+    {
+        $this->controller = $controller;
+        return $this;
     }
 
     /**
      * @return mixed
      */
-    public function getControllerAction()
+    public function getAction()
     {
-        return $this->currentControllerAction;
+        return $this->action;
+    }
+
+    /**
+     * @param $action
+     * @return $this
+     */
+    public function setAction($action)
+    {
+        $this->action = $action;
+        return $this;
     }
 
     /**
@@ -45,25 +73,25 @@ class Router
      */
     public function run()
     {
-        $defaultController = Application::getConfiguration('controller', 'defaultController');
-        $defaultAction = Application::getConfiguration('controller', 'defaultAction');
-        $controllersPath = Application::getConfiguration('controller', 'controllersPath');
+        $defaultController = App::getConfig('controller', 'defaultController');
+        $defaultAction = App::getConfig('controller', 'defaultAction');
+        $controllersPath = App::getConfig('controller', 'controllersPath');
 
         // Controller and action by default
-        $controllerName = $defaultController;
-        $actionName = $defaultAction;
+        $this->setControllerShortName($defaultController);
+        $this->setActionShortName($defaultAction);
 
         // Separating request URI
         $routes = explode('/', $_SERVER['REQUEST_URI']);
 
         // Getting the name of controller if it exists
         if (!empty($routes[1])) {
-            $controllerName = $routes[1];
+            $this->setControllerShortName($routes[1]);
         }
 
         // Getting the name of action if it exists
         if (!empty($routes[2])) {
-            $actionName = $routes[2];
+            $this->setActionShortName($routes[2]);
         }
 
         //  Recreating path to controllers into namespaces
@@ -77,21 +105,59 @@ class Router
         $prefix = implode('\\', $namespaces);
 
         // Prefixes addition and taking upper case first letter in controller name
-        $controllerName = $prefix . ucfirst($controllerName) . 'Controller';
-        $actionName = $actionName . 'Action';
+        $controllerName = $prefix . ucfirst($this->getControllerShortName()) . 'Controller';
+        $actionName = $this->getActionShortName() . 'Action';
 
         //creating controller
         try {
-            $this->currentController = new $controllerName;
+            $this->setController(new $controllerName);
 
-            if (!method_exists($controllerName, $actionName)) {
+            if (!method_exists($this->getController(), $actionName)) {
                 throw new  ControllerException(
-                    "Undefined controller action: {$actionName} of {$controllerName}."
+                    "Undefined controller action: {$actionName} in {$controllerName}.\n"
                 );
             }
-            $this->currentControllerAction = $actionName;
+
+            $this->action = $actionName;
+
         } catch (\AutoloaderException $e) {
-            throw new  ControllerException("Undefined controller: {$controllerName}.", 404, $e);
+            throw new  ControllerException("Undefined controller: {$controllerName}.\n", 404, $e);
         }
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getControllerShortName()
+    {
+        return $this->controllerShortName;
+    }
+
+    /**
+     * @param $controllerShortName
+     * @return $this
+     */
+    public function setControllerShortName($controllerShortName)
+    {
+        $this->controllerShortName = $controllerShortName;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getActionShortName()
+    {
+        return $this->actionShortName;
+    }
+
+    /**
+     * @param $actionShortName
+     * @return $this
+     */
+    public function setActionShortName($actionShortName)
+    {
+        $this->actionShortName = $actionShortName;
+        return $this;
     }
 }

@@ -35,9 +35,7 @@ class Form
         foreach ($this->data as $field) {
             foreach ($field['validators'] as $validator) {
                 if (!$validator->isValid($field['value'])) {
-                    $message = $validator->getMessage();
-                    $message .= "in " . $field['name'] . " field";
-                    $this->addMessage($message);
+                    $this->addMessage($validator->getMessage());
                     $valid = false;
                     continue 2; // skip other validators of this field if one is not valid
                 }
@@ -53,10 +51,8 @@ class Form
      */
     public function bindValidators($id, array $validators = array())
     {
-        $value = $this->data[$id]; //TODO check variables
-        $name = str_replace('_', ' ', ucfirst($id)); //TODO why?
+        $value = !empty($this->data[$id]) ? $this->data[$id] : null;
         $this->data[$id] = array(
-            'name' => $name,
             'value' => $value,
             'validators' => $validators
         );

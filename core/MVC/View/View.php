@@ -2,7 +2,7 @@
 
 namespace Core\MVC\View;
 
-use Core\Application;
+use Core\App;
 use Core\Session\Session;
 
 /**
@@ -40,7 +40,7 @@ class View
      */
     public function __construct(array $data = array())
     {
-        $defaultLayout = Application::getConfiguration('view', 'defaultLayout');
+        $defaultLayout = App::getConfig('view', 'defaultLayout');
 
         $this->setLayout($defaultLayout);
 
@@ -56,8 +56,8 @@ class View
         $html = "";
         $session = new Session();
         if (!$session->isEmpty($messagesType)) {
-            $templatesPath = Application::getConfiguration('view', 'templatesPath');
-            $templatesExtension = Application::getConfiguration('view', 'templatesExtension');
+            $templatesPath = App::getConfig('view', 'templatesPath');
+            $templatesExtension = App::getConfig('view', 'templatesExtension');
 
             foreach ($session->get($messagesType) as $infoMessage) {
                 $type = $infoMessage->getType();
@@ -77,8 +77,8 @@ class View
      */
     public function render()
     {
-        $layoutsPath = Application::getConfiguration('view', 'layoutsPath');
-        $layoutsExtension = Application::getConfiguration('view', 'layoutsExtension');
+        $layoutsPath = App::getConfig('view', 'layoutsPath');
+        $layoutsExtension = App::getConfig('view', 'layoutsExtension');
 
         $this->setHtml($this->getHtml());
         include $layoutsPath . $this->getLayout() . $layoutsExtension;
@@ -89,8 +89,8 @@ class View
      */
     protected function getHtml()
     {
-        $templatesPath = Application::getConfiguration('view', 'templatesPath');
-        $templatesExtension = Application::getConfiguration('view', 'templatesExtension');
+        $templatesPath = App::getConfig('view', 'templatesPath');
+        $templatesExtension = App::getConfig('view', 'templatesExtension');
 
         /*
          * Extracting variables from $this->data

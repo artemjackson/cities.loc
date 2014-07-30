@@ -8,9 +8,15 @@ use Core\Validators\Exceptions\ValidatorException;
  * Class Between
  * @package Core\Validators
  */
-//TODO if you use this validator for string length then it is not clear from the name. You need validator something like StringLength with options min and max
-class Between extends AbstractValidator
+class StringLength extends AbstractValidator
 {
+    public function __construct(array $options = array())
+    {
+        parent::__construct($options);
+        $max = $this->getMax();
+        $min = $this->getMin();
+        $this->setDefaultMessage("Length should be more then {$min} and less then {$max} symbols ");
+    }
     /**
      * @param $value
      * @return bool
@@ -29,11 +35,13 @@ class Between extends AbstractValidator
             throw new ValidatorException("No max value was specified in Between validator.\n");
         }
 
-        $strlen = strlen($value); //TODO it is not PSR use camel style $strLen
-        $valid = $strlen > $min && $strlen < $max;
+        $strLen = strlen($value);
+        $valid = $strLen > $min && $strLen < $max;
 
-        if ($valid === false) { //TODO false === $valid
-            $this->setMessage("Length should be more then {$min} and less then {$max} symbols ");
+        if (false === $valid) {
+            if (is_null($this->getMessage())) {
+                $this->setMessage($this->getDefaultMessage());
+            }
         }
 
         return $valid;

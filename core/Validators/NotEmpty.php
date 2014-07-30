@@ -8,6 +8,12 @@ namespace Core\Validators;
  */
 class NotEmpty extends AbstractValidator
 {
+    public function __construct(array $options = array())
+    {
+        parent::__construct($options);
+        $this->setDefaultMessage("The value is empty");
+    }
+
     /**
      * @param $value
      * @return bool
@@ -17,8 +23,10 @@ class NotEmpty extends AbstractValidator
     {
         $valid = !empty($value);
 
-        if ($valid === false) { //TODO false === $valid
-            $this->setMessage("The value should not be empty ");
+        if (false === $valid) {
+            if (is_null($this->getMessage())) {
+                $this->setMessage($this->getDefaultMessage());
+            }
         }
 
         return $valid;

@@ -1,25 +1,24 @@
 <?php
 
-namespace Core\Database;
+namespace Core\Db;
 
-use Core\Application;
-use Core\Database\Exceptions\DatabaseException;
+use Core\App;
+use Core\Db\Exceptions\DbException;
 
-//TODO rename to Db because Database is too long and you need all the time write Database::blabla
 /**
- * Class Database
- * @package Core\Database
+ * Class Db
+ * @package Core\Db
  */
-final class Database
+final class Db
 {
     /**
      * @var
      */
-    protected static $_instance; //TODO it is not PSR I mean naming protected property from _
+    protected static $_instance; //TODO it is not PSR I mean naming protected property from _ Question: How should i name it? simply 'instance' - is reserved word
     /**
      * @var
      */
-    protected static $databaseHandler;
+    protected static $DbHandler;
 
     /**
      *
@@ -41,30 +40,31 @@ final class Database
     }
 
     /**
-     * @throws \Core\Database\Exceptions\DatabaseException
+     * @throws \Core\Db\Exceptions\DbException
      */
     protected static function init()
     {
-        $databaseType = Application::getConfiguration('database', 'databaseType');
-        $databaseName = Application::getConfiguration('database', 'databaseName');
-        $host = Application::getConfiguration('database', 'host');
-        $user = Application::getConfiguration('database', 'user');
-        $password = Application::getConfiguration('database', 'password');
+        $dbType = App::getConfig('db', 'dbType');
+        $dbName = App::getConfig('db', 'dbName');
+        $host = App::getConfig('db', 'host');
+        $user = App::getConfig('db', 'user');
+        $password = App::getConfig('db', 'password');
 
 
-        $db = $databaseType . ":dbname=" . $databaseName . ";";
+        $db = $dbType . ":dbname=" . $dbName . ";";
         $host = "host=" . $host;
         $dsn = $db . $host;
 
         try {
-            self::$databaseHandler = new \PDO($dsn, $user, $password);
-            self::$databaseHandler->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
+            self::$DbHandler = new \PDO($dsn, $user, $password);
+            self::$DbHandler->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
         } catch (\PDOException $e) {
-            throw new DatabaseException("Failed to connect to '{$databaseName}' database", 403, $e);
+            throw new DbException("Failed to connect to '{$DbName}' Db", 403, $e);
         }
     }
 
     //TODO query builder wasn't a waste of time (maybe) because you have learnt something new while developing it but it all should be rewritten or aborted at all
+    // What should I do with this?
     /**
      * @param array $array
      * @return mixed
@@ -93,7 +93,7 @@ final class Database
             $query .= " ORDER BY " . $array['orderBy'];
         }
 
-        $statementHandler = self::$databaseHandler->prepare($query);
+        $statementHandler = self::$DbHandler->prepare($query);
 
         if (!empty($array['whereValue'])) {
             $statementHandler->bindValue(":whereValue", $array['whereValue']);
@@ -129,7 +129,7 @@ final class Database
         $query .= "?)";
 
 
-        $statementHandler = self::$databaseHandler->prepare($query);
+        $statementHandler = self::$DbHandler->prepare($query);
         //$statementHandler->debugDumpParams();
 
         if ($statementHandler->execute($array['values'])) {

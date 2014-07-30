@@ -1,28 +1,30 @@
 <?php
 
-namespace Application\Models;
+namespace App\Models;
 
-use Core\Database\Database;
+use Core\Db\Db;
 use Core\MVC\Model\Model;
 
-class RegistrationModel extends Model
+class UserModel extends Model
 {
-    public function addUser(array $userData = array())
+    public function saveUser(array $userData = array())
     {
-        $firstName = $userData['first_name']; //TODO check variables
-        $secondName = $userData['second_name'];
-        $email = $userData['email'];
+        $firstName = !empty($userData['first_name']) ? $userData['first_name'] : null;
+        $secondName = !empty($userData['second_name']) ? $userData['second_name'] : null;
+        $email = !empty($userData['email']) ? $userData['email'] : null;
+
         // hashing password
         $password = password_hash($userData['password'], PASSWORD_DEFAULT);
 
         //TODO your query builder is difficult to understand
+        //  What should I do whit this?
         $query = array(
             'insertInto' => 'users',
             'columns' => array('first_name', 'second_name', 'email', 'password'),
             'values' => array($firstName, $secondName, $email, $password)
         );
 
-        return Database::getConnection()->add($query);
+        return Db::getConnection()->add($query);
     }
 
     public function findUserByEmail($email)
@@ -34,6 +36,6 @@ class RegistrationModel extends Model
             'whereValue' => $email,
         );
 
-        return Database::getConnection()->get($query);
+        return Db::getConnection()->get($query);
     }
 }

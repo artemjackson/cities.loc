@@ -1,16 +1,15 @@
 <?php
 
-namespace Application\Models;
+namespace App\Models;
 
-use Core\Database\Database;
+use Core\Db\Db;
 use Core\MVC\Model\Model;
 
-//TODO this model works with regions so this must be RegionModel
 /**
  * Class MapModel
- * @package Application\Models
+ * @package App\Models
  */
-class MapModel extends Model
+class RegionModel extends Model
 {
     /**
      * @return mixed
@@ -23,7 +22,7 @@ class MapModel extends Model
             'orderBy' => 'name',
         );
         // equivalent of SELECT * FROM region ORDER BY name;
-        return Database::getConnection()->get($query);
+        return Db::getConnection()->get($query);
     }
 
     /**
@@ -40,6 +39,6 @@ class MapModel extends Model
             'orderBy' => 'name',
         );
         // equivalent of SELECT * FROM region WHERE region_id = '$id' ORDER BY name;
-        return Database::getConnection()->get($query);
+        return Db::getConnection()->get($query);
     }
 }

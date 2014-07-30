@@ -1,14 +1,14 @@
 <?php
 
-namespace Application\Controllers;
+namespace App\Controllers;
 
-use Application\Managers\MapManager;
+use App\Managers\MapManager;
 use Core\MVC\Controller\Controller;
 use Core\MVC\View\View;
 
 /**
  * Class MapController
- * @package Application\Controllers
+ * @package App\Controllers
  */
 class MapController extends Controller
 {

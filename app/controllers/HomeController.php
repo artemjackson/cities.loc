@@ -1,13 +1,13 @@
 <?php
 
-namespace Application\Controllers;
+namespace App\Controllers;
 
 use Core\MVC\Controller\Controller;
 use Core\MVC\View\View;
 
 /**
  * Class HomeController
- * @package Application\Controllers
+ * @package App\Controllers
  */
 class HomeController extends Controller
 {

@@ -6,19 +6,50 @@ namespace Core\Validators;
      * Class AbstractValidator
      * @package Core\Validators
      */
-//TODO you need to have an option to set validation message
 abstract class AbstractValidator implements ValidatorInterface
 {
+    protected $defaultMessage;
+
+    /**
+     * @param mixed $defaultMessage
+     */
+    public function setDefaultMessage($defaultMessage)
+    {
+        $this->defaultMessage = $defaultMessage;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDefaultMessage()
+    {
+        return $this->defaultMessage;
+    }
+
+    /**
+     * @param array $options
+     */
+    public function setOptions($options)
+    {
+        $this->options = $options;
+    }
+
+    /**
+     * @return array
+     */
+    public function getOptions()
+    {
+        return $this->options;
+    }
+
     /**
      * @var
      */
-    protected
-        $message; //TODO wtf???
+    protected $message;
     /**
      * @var array
      */
-    protected //TODO wtf???
-        $options = array();
+    protected $options = array();
 
     /**
      * @param array $options
@@ -26,6 +57,9 @@ abstract class AbstractValidator implements ValidatorInterface
     public function  __construct(array $options = array())
     {
         $this->options = $options;
+        if(!is_null($this->getOption('message'))){
+            $this->setMessage($this->getOption('message'));
+        }
     }
 
     /**
@@ -34,12 +68,7 @@ abstract class AbstractValidator implements ValidatorInterface
      */
     public function getOption($option)
     {
-        //TODO use ternary operator
-        if (!empty($this->options[$option])) {
-            return $this->options[$option];
-        } else {
-            return null;
-        }
+        return !empty($this->options[$option]) ? $this->options[$option] : null;
     }
 
     /**
@@ -54,7 +83,7 @@ abstract class AbstractValidator implements ValidatorInterface
      * @param $message
      * @return $this
      */
-    protected function setMessage($message)
+    public function setMessage($message)
     {
         $this->message = $message;
         return $this;

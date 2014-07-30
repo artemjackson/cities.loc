@@ -2,18 +2,13 @@
 
 namespace Core\Validators;
 
-/**
- * Class Regex
- * @package Core\Validators
- */
-class Regex extends AbstractValidator
+class ExactlyEqual extends AbstractValidator
 {
     public function __construct(array $options = array())
     {
         parent::__construct($options);
-        $this->setDefaultMessage("Value does not match regular expression.");
+        $this->setDefaultMessage("The values are different");
     }
-
     /**
      * @param $value
      * @return bool
@@ -21,23 +16,14 @@ class Regex extends AbstractValidator
      */
     public function isValid($value)
     {
-        $regex = $this->getRegex();
-        $valid = preg_match($regex, $value);
+        $valid = $this->getOption('pattern') === $value;
 
         if (false === $valid) {
-            if (is_null($this->getMessage())) {
+            if(is_null( $this->getMessage())){
                 $this->setMessage($this->getDefaultMessage());
             }
         }
 
         return $valid;
-    }
-
-    /**
-     * @return null
-     */
-    public function getRegex()
-    {
-        return $this->getOption('regex');
     }
 }

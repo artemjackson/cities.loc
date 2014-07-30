@@ -1,16 +1,16 @@
 <?php
 
-namespace Application\Controllers;
+namespace App\Controllers;
 
 
-use Application\Form\RegistrationForm;
-use Application\Managers\RegistrationManager;
+use App\Form\RegistrationForm;
+use App\Managers\RegistrationManager;
 use Core\MVC\Controller\Controller;
 use Core\MVC\View\View;
 
 /**
  * Class RegistrationController
- * @package Application\Controllers
+ * @package App\Controllers
  */
 class RegistrationController extends Controller
 {
@@ -30,7 +30,7 @@ class RegistrationController extends Controller
         $form = new RegistrationForm($data);
 
         if ($form->isValid()) {
-            if (RegistrationManager::addUser($data)) {
+            if (RegistrationManager::saveUser($data)) {
                 $this->flashMessager->addSuccessMessage("Congratulations! You have successfully registered!\n");
                 //$this->redirect('registration');
             } else {

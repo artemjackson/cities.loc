@@ -1,14 +1,14 @@
 <?php
 
-namespace Application\Controllers;
+namespace App\Controllers;
 
-use Application\Managers\MapManager;
+use App\Managers\MapManager;
 use Core\MVC\Controller\Controller;
 use Core\MVC\View\JsonView;
 
 /**
  * Class AjaxController
- * @package Application\Controllers
+ * @package App\Controllers
  */
 class AjaxController extends Controller
 {
@@ -17,7 +17,7 @@ class AjaxController extends Controller
      */
     public function updateCitiesAction()
     {
-        $id = $_POST['id']; //TODO always check whether variable is set f.e $id = isset($_POST['id']) ? $_POST['id'] : null;
+        $id = isset($_POST['id']) ? $_POST['id'] : null;
 
         $cities = MapManager::getCitiesByRegionId($id);
 

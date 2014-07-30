@@ -1,13 +1,13 @@
 <?php
 
-namespace Application\Managers;
+namespace App\Managers;
 
-use Application\Models\MapModel;
+use App\Models\RegionModel;
 
 
 /**
  * Class MapManager
- * @package Application\Managers
+ * @package App\Managers
  */
 class MapManager
 {
@@ -16,7 +16,7 @@ class MapManager
      */
     public static function getRegions()
     {
-        $model = new MapModel();
+        $model = new RegionModel();
         return $model->getRegions();
     }
 
@@ -26,7 +26,7 @@ class MapManager
      */
     public static function getCitiesByRegionId($id)
     {
-        $model = new MapModel();
+        $model = new RegionModel();
         return $model->getCitiesByRegionId($id);
     }
 }
