@@ -3,19 +3,10 @@
 
     <p class="lead">Cities.loc greets you!</p>
 
-    <p>Sing in to your account</p>
+    <?php if(null != ($userData = $this->session->get('user'))): ?>
+        <p>Goo day to you, <?php echo $userData['firstName'] . " " . $userData['lastName']; ?>!</p>
+    <?php else: ?>
+        <p><a href="/user/login">Sing in</a> to your account</p>
+    <?php endif; ?>
 
-    <div class="jumbotron">
-        <?php
-        $email = !empty($_POST['email']) ? $_POST['email'] : "";
-        ?>
-        <form method="POST" class="signForm" id="singInForm" action="/home/">
-            <input name="email" type="text" class="input-block-level" placeholder="Email" value="<?php echo $email; ?>">
-            <input name="password" id="password" type="password" class="input-block-level" placeholder="Password">
-            </br><button class="btn btn-large btn-primary" id="registrationSubmit" type="submit">Sing in</button>
-        </form>
-    </div>
-    <p class="lead">Still not registered?</p>
-
-    <p class="lead"><a href="/registration/">Sing up</a> on our site!</p>
 </div>

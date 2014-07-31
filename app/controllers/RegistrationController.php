@@ -37,10 +37,9 @@ class RegistrationController extends Controller
                 $this->flashMessager->addErrorMessage("Unfortunately this email is already in use!\n");
             }
         } else {
-            foreach ($form->getMessages() as $warningText) {
-                $this->flashMessager->addWarningMessage($warningText);
-            }
+            $this->flashMessager->addWarningMessages($form->getMessages());
         }
+
         return $view;
     }
 }

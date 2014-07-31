@@ -1,0 +1,15 @@
+<div class="jumbotron">
+    <?php
+    $email = !empty($_POST['email']) ? $_POST['email'] : "";
+    ?>
+    <p class = "lead">Sing in to your account</p>
+    <form method="POST" class="signForm" id="singInForm" action="/user/login">
+        <input name="email" type="text" class="input-block-level" placeholder="Email" value="<?php echo $email; ?>">
+        <input name="password" id="password" type="password" class="input-block-level" placeholder="Password">
+        </br><button class="btn btn-large btn-primary" id="registrationSubmit" type="submit">Sing in</button>
+    </form>
+    </br>
+    <p class="lead">Still not registered?</p>
+    <p class="lead"><a href="/registration/">Sing up</a> on our site!</p>
+</div>
+

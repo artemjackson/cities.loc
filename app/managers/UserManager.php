@@ -11,29 +11,12 @@ class UserManager
         $model = new UserModel();
         $userEmail = isset($userData['email']) ? $userData['email'] : null;
 
-        if (false == $model->findUserByEmail($userEmail)) {
+        if (false == $model->emailExists($userEmail)) {
             $model->saveUser($userData);
             return true;
         }
 
         return false;
-    }
-
-    public static function userExist(array $userData = array())
-    {
-        $model = new UserModel();
-        $userEmail = isset($userData['email']) ? $userData['email'] : null;
-
-        return $model->findUserByEmail($userEmail);
-    }
-
-    public static function checkPassword(array $data = array())
-    {
-        $email = !empty($data['email']) ? $data['email'] : null;
-        $password = !empty($data['password']) ? $data['password'] : null;
-
-        $model = new UserModel();
-        return $model->checkUserPassword($email, $password);
     }
 
     public static function getUser(array $data = array())

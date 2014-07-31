@@ -59,5 +59,13 @@ class FlashMessagesManager
         return $this;
     }
 
+    public function addWarningMessages(array $messages = array())
+    {
+        foreach ($messages as $warningText) {
+            $this->addWarningMessage($warningText);
+        }
+        return $this;
+    }
+
     protected $session;
 }

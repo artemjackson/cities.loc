@@ -8,14 +8,17 @@ namespace Core\Session;
  */
 class Session
 {
+    /**
+     *
+     */
     public function __construct()
     {
-        if(!session_id()){
+        if (!session_id()) {
             session_start();
         }
     }
 
-    /**
+     /**
      * @param $id
      * @return null
      */
@@ -51,6 +54,11 @@ class Session
         return $this;
     }
 
+    /**
+     * @param $id
+     * @param $data
+     * @return $this
+     */
     public function addToArray($id, $data)
     {
         $_SESSION[$id][] = $data;

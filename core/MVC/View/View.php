@@ -14,22 +14,20 @@ class View
     const SUCCESS = 'success';
     const WARNING = 'warning';
     const ERROR = 'danger';
-
+    protected $session;
+    protected $viewHelper;
     /**
      * @var
      */
     protected $data = array();
-
     /**
      * @var
      */
     protected $layout = null;
-
     /**
      * @var
      */
     protected $template;
-
     /**
      * @var
      */
@@ -40,11 +38,20 @@ class View
      */
     public function __construct(array $data = array())
     {
+        $this->session = new Session();
         $defaultLayout = App::getConfig('view', 'defaultLayout');
 
         $this->setLayout($defaultLayout);
 
         $this->setData($data);
+    }
+
+    /**
+     * @param mixed $viewHelper
+     */
+    public function setViewHelper($viewHelper)
+    {
+        $this->viewHelper = $viewHelper;
     }
 
     /**
@@ -56,20 +63,56 @@ class View
         $html = "";
         $session = new Session();
         if (!$session->isEmpty($messagesType)) {
-            $templatesPath = App::getConfig('view', 'templatesPath');
-            $templatesExtension = App::getConfig('view', 'templatesExtension');
 
             foreach ($session->get($messagesType) as $infoMessage) {
-                $type = $infoMessage->getType();
-                $message = $infoMessage->getMessage();
-                ob_start();
-                include $templatesPath . "registration/message" . $templatesExtension;
-                $html .= ob_get_contents();
-                ob_end_clean();
+                $html .= $this->exportFrom(
+                    "registration/message",
+                    array(
+                        'type' => $infoMessage->getType(),
+                        'message' => $infoMessage->getMessage()
+                    )
+                );
             }
+            $session->remove($messagesType);
         }
-        $session->remove($messagesType);
         return $html;
+    }
+
+    public function exportFrom($path, array $data = array())
+    {
+        $html = "";
+        $templatesPath = App::getConfig('view', 'templatesPath');
+        $templatesExtension = App::getConfig('view', 'templatesExtension');
+
+        $file = $templatesPath . $path . $templatesExtension;
+
+        if (file_exists($file)) {
+            extract($data);
+            ob_start();
+            include $file;
+            $html .= ob_get_contents();
+            ob_end_clean();
+        }
+        return $html;
+    }
+
+    public function userField()
+    {
+        $userData = $this->session->get('user');
+
+        $firstName = !empty($userData['firstName']) ? $userData['firstName'] : null;
+        $lastName = !empty($userData['lastName']) ? $userData['lastName'] : null;
+
+        if ($firstName && $lastName) {
+            return $this->exportFrom(
+                "user/userField",
+                array(
+                    'firstName' => $firstName,
+                    'lastName' => $lastName
+                )
+            );
+        }
+        return null;
     }
 
     /**
@@ -89,19 +132,7 @@ class View
      */
     protected function getHtml()
     {
-        $templatesPath = App::getConfig('view', 'templatesPath');
-        $templatesExtension = App::getConfig('view', 'templatesExtension');
-
-        /*
-         * Extracting variables from $this->data
-         */
-        extract($this->getData());
-
-        ob_start();
-        include $templatesPath . $this->getTemplate() . $templatesExtension;
-        $html = ob_get_contents();
-        ob_end_clean();
-        return $html;
+        return $this->exportFrom($this->getTemplate(), $this->getData());
     }
 
     /**
@@ -111,24 +142,6 @@ class View
     protected function setHtml($html)
     {
         $this->html = $html;
-        return $this;
-    }
-
-    /**
-     * @return array
-     */
-    public function getData()
-    {
-        return $this->data;
-    }
-
-    /**
-     * @param array $data
-     * @return $this
-     */
-    public function setData($data)
-    {
-        $this->data = $data;
         return $this;
     }
 
@@ -147,6 +160,24 @@ class View
     public function setTemplate($template)
     {
         $this->template = $template;
+        return $this;
+    }
+
+    /**
+     * @return array
+     */
+    public function getData()
+    {
+        return $this->data;
+    }
+
+    /**
+     * @param array $data
+     * @return $this
+     */
+    public function setData($data)
+    {
+        $this->data = $data;
         return $this;
     }
 

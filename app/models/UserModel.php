@@ -5,8 +5,16 @@ namespace App\Models;
 use Core\Db\Db;
 use Core\MVC\Model\Model;
 
+/**
+ * Class UserModel
+ * @package App\Models
+ */
 class UserModel extends Model
 {
+    /**
+     * @param array $userData
+     * @return bool
+     */
     public function saveUser(array $userData = array())
     {
         $firstName = !empty($userData['first_name']) ? $userData['first_name'] : null;
@@ -27,7 +35,27 @@ class UserModel extends Model
         return Db::getConnection()->add($query);
     }
 
-    public function findUserByEmail($email)
+    /**
+     * @param $email
+     * @return bool
+     */
+    public function emailExists($email)
+    {
+        $query = array(
+            'select' => 'email',
+            'from' => 'users',
+            'where' => 'email',
+            'whereValue' => $email,
+        );
+
+        return !is_null(Db::getConnection()->get($query));
+    }
+
+    /**
+     * @param $email
+     * @return null
+     */
+    public function getUserByEmail($email)
     {
         $query = array(
             'select' => '*',
@@ -36,34 +64,7 @@ class UserModel extends Model
             'whereValue' => $email,
         );
 
-        return Db::getConnection()->get($query);
-    }
-
-    public function checkUserPassword($email, $password)
-    {
-        $query = array(
-            'select' => 'password',
-            'from' => 'users',
-            'where' => 'email',
-            'whereValue' => $email,
-        );
-
         $result = Db::getConnection()->get($query);
-        $hash = $result[0]['password'];
-
-        return true === password_verify($password, $hash) ;
-    }
-
-    public function getUserByEmail($email)
-    {
-        $query = array(
-            'select' => 'first_name, last_name',
-            'from' => 'users',
-            'where' => 'email',
-            'whereValue' => $email,
-        );
-
-        $result = Db::getConnection()->get($query);
-        return $result[0];
+        return !empty($result[0]) ? $result[0] : null;
     }
 }

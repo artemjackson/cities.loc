@@ -1,5 +1,8 @@
 <?php //TODO create view helper for menu render?>
 <div class="masthead">
+    <?php
+    $logged = $this->session->get('user');
+    ?>
     <ul class="nav nav-pills pull-right">
         <li <?php if ($currentPage == 'Home') {
             echo 'class="active"';
@@ -16,11 +19,21 @@
         <li <?php if ($currentPage == 'Contacts') {
             echo 'class="active"';
         } ?> ><a href="/contacts/">Contacts</a></li>
-<!--
+
         <li <?php if ($currentPage == 'Registration') {
             echo 'class="active"';
         } ?> ><a href="/registration/">Registration</a></li>
--->
+
+        <?php if (!$logged): ?>
+            <li <?php if ($currentPage == 'User') {
+                echo 'class="active"';
+            } ?> ><a href="/user/login">Login</a></li>
+        <?php else : ?>
+            <li <?php if ($currentPage == 'User') {
+                echo 'class="active"';
+            } ?> ><a href="/user/logout">Logout</a></li>
+        <?php endif; ?>
+
     </ul>
     <h3 class="muted"><?= $currentPage; ?> page</h3>
 </div>
