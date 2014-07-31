@@ -1,35 +1,21 @@
 <div class="jumbotron">
-    <h1>Супер-пупер сайт!</h1>
+    <h1>Welcome!</h1>
 
-    <p class="lead">Тут типа всякий текст о сайте :)</p>
+    <p class="lead">Cities.loc greets you!</p>
 
-    <p>Ну и кнопка, конечно же</p>
-    <a class="btn btn-large btn-success" id="wowButton" href="#">Кнопка, че</a>
-</div>
-<hr>
-<div class="row-fluid marketing">
-    <div class="span6">
-        <h4>Subheading</h4>
+    <p>Sing in to your account</p>
 
-        <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
-        <h4>Subheading</h4>
-
-        <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet
-            fermentum.</p>
-        <h4>Subheading</h4>
-
-        <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+    <div class="jumbotron">
+        <?php
+        $email = !empty($_POST['email']) ? $_POST['email'] : "";
+        ?>
+        <form method="POST" class="signForm" id="singInForm" action="/home/">
+            <input name="email" type="text" class="input-block-level" placeholder="Email" value="<?php echo $email; ?>">
+            <input name="password" id="password" type="password" class="input-block-level" placeholder="Password">
+            </br><button class="btn btn-large btn-primary" id="registrationSubmit" type="submit">Sing in</button>
+        </form>
     </div>
-    <div class="span6">
-        <h4>Subheading</h4>
+    <p class="lead">Still not registered?</p>
 
-        <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
-        <h4>Subheading</h4>
-
-        <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet
-            fermentum.</p>
-        <h4>Subheading</h4>
-
-        <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-    </div>
+    <p class="lead"><a href="/registration/">Sing up</a> on our site!</p>
 </div>

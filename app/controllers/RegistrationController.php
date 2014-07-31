@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 
 use App\Form\RegistrationForm;
-use App\Managers\RegistrationManager;
+use App\Managers\UserManager;
 use Core\MVC\Controller\Controller;
 use Core\MVC\View\View;
 
@@ -30,7 +30,7 @@ class RegistrationController extends Controller
         $form = new RegistrationForm($data);
 
         if ($form->isValid()) {
-            if (RegistrationManager::saveUser($data)) {
+            if (UserManager::saveUser($data)) {
                 $this->flashMessager->addSuccessMessage("Congratulations! You have successfully registered!\n");
                 $this->redirect('registration');
             } else {

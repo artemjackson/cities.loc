@@ -10,14 +10,9 @@ class Session
 {
     public function __construct()
     {
-        if(PHP_SESSION_DISABLED === session_status() || PHP_SESSION_NONE === session_status()){
+        if(!session_id()){
             session_start();
         }
-    }
-
-    public function __destruct()
-    {
-        session_write_close();
     }
 
     /**

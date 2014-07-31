@@ -100,7 +100,7 @@ final class Db
         }
 
         if ($statementHandler->execute()) {
-            return $statementHandler->fetchAll();
+            return $statementHandler->fetchAll(\PDO::FETCH_ASSOC);
         }
     }
 

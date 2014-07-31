@@ -73,7 +73,6 @@ final class App
      */
     public static function run()
     {
-
         $router = new Router();
 
         try {

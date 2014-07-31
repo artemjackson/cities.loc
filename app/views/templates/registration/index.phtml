@@ -1,39 +1,12 @@
-<!-- I have to use styles here :( -->
-<style type="text/css">
-    .form-signup {
-        max-width: 360px;
-        padding: 29px 29px 29px;
-        margin: 0 auto;;
-        background-color: #fff;
-        border: 1px solid #e5e5e5;
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        border-radius: 5px;
-        -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
-        -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
-        box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
-    }
-
-    .form-signup .form-signup-heading, .form-signup .checkbox {
-        margin-bottom: 10px;
-    }
-
-    .form-signup input[type="text"], .form-signup input[type="password"] {
-        font-size: 16px;
-        height: auto;
-        width: 300px;
-        margin-bottom: 15px;
-        padding: 7px 9px;
-    }
-</style>
 <div class="jumbotron">
-    <h2 class="form-signup-heading">Fill some personal information</h2>
+    <h2 class="form-signup-heading">You can join us right now!</h2>
+    <p class="lead">Fill some personal information</p>
     <?php
     $first_name = !empty($_POST['first_name']) ? $_POST['first_name'] : "";
     $last_name = !empty($_POST['last_name']) ? $_POST['last_name'] : "";
     $email = !empty($_POST['email']) ? $_POST['email'] : "";
     ?>
-    <form method="POST" class="form-signup" id="registerForm" action="/registration/">
+    <form method="POST" class="signForm" id="registerForm" action="/registration/">
         <input name="first_name" type="text" class="input-block-level" placeholder="First name"
                value="<?= $first_name ?>">
         <input name="last_name" type="text" class="input-block-level" placeholder="Last name"
@@ -41,6 +14,7 @@
         <input name="email" type="text" class="input-block-level" placeholder="Email" value="<?= $email ?>">
         <input name="password" id="password" type="password" class="input-block-level" placeholder="Password">
         <input name="password_confirm" type="password" class="input-block-level" placeholder="Password confirm">
+        </br>
         <button class="btn btn-large btn-primary" id="registrationSubmit" type="submit">Sing up</button>
     </form>
 </div>

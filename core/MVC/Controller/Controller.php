@@ -4,6 +4,7 @@ namespace Core\MVC\Controller;
 
 use Core\HTTP\Request;
 use Core\Managers\FlashMessagesManager;
+use Core\Session\Session;
 
 /**
  * Class Controller
@@ -26,11 +27,25 @@ abstract class Controller
     protected $flashMessager;
 
     /**
+     * @var \Core\Session\Session
+     */
+    protected $session;
+
+    /**
      *
      */
     public function __construct()
     {
         $this->flashMessager = new FlashMessagesManager();
+        $this->session = new Session();
+    }
+
+    /**
+     * @return \Core\Session\Session
+     */
+    public function getSession()
+    {
+        return $this->session;
     }
 
     /**
@@ -49,7 +64,7 @@ abstract class Controller
      */
     public function redirect($location)
     {
-        $host =  "http://" . $_SERVER['HTTP_HOST'] . '/';
+        $host = "http://" . $_SERVER['HTTP_HOST'] . '/';
         header('Location:' . $host . $location);
         exit();
     }

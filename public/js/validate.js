@@ -58,6 +58,35 @@
                     form.submit();
                 }
             });
+
+            $("#singInForm").validate({
+                rules: {
+                    email: {
+                        maxlength: 64,
+                        required: true,
+                        email: true
+                    },
+                    password: {
+                        minlength: 8,
+                        required: true,
+                    }
+                },
+
+                messages: {
+                    password: {
+                        required: "Please enter a password",
+                        minlength: "Your password must be at least 8 characters long"
+                    },
+                    email: {
+                        maxlength: "Email length should be less then 64 symbols",
+                        required: "Please enter a valid email address"
+                    }
+                },
+
+                submitHandler: function (form) {
+                    form.submit();
+                }
+            });
         }
     }
 

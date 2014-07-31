@@ -110,7 +110,8 @@ class Router
 
         //creating controller
         try {
-            $this->setController(new $controllerName);
+            $testController = new $controllerName;
+            $this->setController($testController);
 
             if (!method_exists($this->getController(), $actionName)) {
                 throw new  ControllerException(

@@ -38,4 +38,32 @@ class UserModel extends Model
 
         return Db::getConnection()->get($query);
     }
+
+    public function checkUserPassword($email, $password)
+    {
+        $query = array(
+            'select' => 'password',
+            'from' => 'users',
+            'where' => 'email',
+            'whereValue' => $email,
+        );
+
+        $result = Db::getConnection()->get($query);
+        $hash = $result[0]['password'];
+
+        return true === password_verify($password, $hash) ;
+    }
+
+    public function getUserByEmail($email)
+    {
+        $query = array(
+            'select' => 'first_name, last_name',
+            'from' => 'users',
+            'where' => 'email',
+            'whereValue' => $email,
+        );
+
+        $result = Db::getConnection()->get($query);
+        return $result[0];
+    }
 }
