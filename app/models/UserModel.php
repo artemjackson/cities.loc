@@ -24,15 +24,17 @@ class UserModel extends Model
         // hashing password
         $password = password_hash($userData['password'], PASSWORD_DEFAULT);
 
-        //TODO your query builder is difficult to understand
-        //  What should I do whit this?
-        $query = array(
-            'insertInto' => 'users',
-            'columns' => array('first_name', 'last_name', 'email', 'password'),
-            'values' => array($firstName, $lastName, $email, $password)
-        );
+        $sql = "INSERT INTO users (first_name, last_name, email, password) VALUES (:first_name, :last_name, :email, :password)";
 
-        return Db::getConnection()->add($query);
+        Db::prepare($sql);
+        return Db::execute(
+            array(
+                ':first_name' => $firstName,
+                ':last_name' => $lastName,
+                ':email' => $email,
+                ':password' => $password
+            )
+        );
     }
 
     /**
@@ -41,14 +43,11 @@ class UserModel extends Model
      */
     public function emailExists($email)
     {
-        $query = array(
-            'select' => 'email',
-            'from' => 'users',
-            'where' => 'email',
-            'whereValue' => $email,
-        );
+        $sql = "SELECT user_id FROM users WHERE email = :email";
 
-        return !is_null(Db::getConnection()->get($query));
+        Db::prepare($sql);
+
+        return Db::execute(array(':email' => $email));
     }
 
     /**
@@ -57,14 +56,10 @@ class UserModel extends Model
      */
     public function getUserByEmail($email)
     {
-        $query = array(
-            'select' => '*',
-            'from' => 'users',
-            'where' => 'email',
-            'whereValue' => $email,
-        );
+        $sql = "SELECT * FROM users WHERE email = :email";
 
-        $result = Db::getConnection()->get($query);
+        Db::prepare($sql);
+        $result = Db::execute(array(':email' => $email));
         return !empty($result[0]) ? $result[0] : null;
     }
 }

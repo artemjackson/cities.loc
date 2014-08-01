@@ -16,13 +16,9 @@ class RegionModel extends Model
      */
     public function getRegions()
     {
-        $query = array(
-            'select' => '*',
-            'from' => 'regions',
-            'orderBy' => 'name',
-        );
-        // equivalent of SELECT * FROM region ORDER BY name;
-        return Db::getConnection()->get($query);
+        $sql = "SELECT * FROM regions ORDER BY name";
+        Db::prepare($sql);
+        return Db::execute();
     }
 
     /**
@@ -31,14 +27,12 @@ class RegionModel extends Model
      */
     public function getCitiesByRegionId($id)
     {
-        $query = array(
-            'select' => 'id, name',
-            'from' => 'cities',
-            'where' => 'region_id',
-            'whereValue' => $id,
-            'orderBy' => 'name',
+        $sql = "SELECT * FROM cities WHERE region_id = :id ORDER BY name";
+        Db::prepare($sql);
+        return Db::execute(
+            array(
+                ':id' => $id
+            )
         );
-        // equivalent of SELECT * FROM region WHERE region_id = '$id' ORDER BY name;
-        return Db::getConnection()->get($query);
     }
 }

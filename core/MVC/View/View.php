@@ -15,19 +15,22 @@ class View
     const WARNING = 'warning';
     const ERROR = 'danger';
     protected $session;
-    protected $viewHelper;
+
     /**
      * @var
      */
     protected $data = array();
+
     /**
      * @var
      */
     protected $layout = null;
+
     /**
      * @var
      */
     protected $template;
+
     /**
      * @var
      */
@@ -44,14 +47,6 @@ class View
         $this->setLayout($defaultLayout);
 
         $this->setData($data);
-    }
-
-    /**
-     * @param mixed $viewHelper
-     */
-    public function setViewHelper($viewHelper)
-    {
-        $this->viewHelper = $viewHelper;
     }
 
     /**
@@ -96,9 +91,32 @@ class View
         return $html;
     }
 
+    public function adminDashboard()
+    {
+        $logged = $this->session->get('loggedIn');
+
+        if (null == $logged) {
+            return "";
+        }
+
+        if(!$logged->hasRole('admin'))
+        {
+            return "";
+        }
+
+        return $this->exportFrom("admin/dashboard");
+
+    }
+
     public function userField()
     {
-        $userData = $this->session->get('user');
+        $logged = $this->session->get('loggedIn');
+
+        if (null == $logged) {
+            return "";
+        }
+
+        $userData = $logged->getData();
 
         $firstName = !empty($userData['firstName']) ? $userData['firstName'] : null;
         $lastName = !empty($userData['lastName']) ? $userData['lastName'] : null;

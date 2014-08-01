@@ -72,7 +72,7 @@ class RegistrationForm extends Form
                 )),
                 new Regex(array(
                     'message' => "Email is incorrect",
-                    'regex' => "/^[A-Za-z]+[A-Za-z0-9]*@[A-Za-z]+[A-Za-z0-9]*[.][A-Za-z]+[A-Za-z0-9]*/"
+                    'regex' => "/^[A-Za-z]+[A-Za-z0-9_]*@[A-Za-z]+[A-Za-z0-9]*[.][A-Za-z]+[A-Za-z0-9]*/"
                 )),
             )
         );

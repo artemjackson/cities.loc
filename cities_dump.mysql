@@ -44,6 +44,29 @@ INSERT INTO `cities` VALUES (1,1,'Борисов'),(2,1,'Вилейка'),(3,1,'
 UNLOCK TABLES;
 
 --
+-- Table structure for table `permissions`
+--
+
+DROP TABLE IF EXISTS `permissions`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `permissions` (
+  `perm_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `perm_desc` varchar(32) NOT NULL,
+  PRIMARY KEY (`perm_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `permissions`
+--
+
+LOCK TABLES `permissions` WRITE;
+/*!40000 ALTER TABLE `permissions` DISABLE KEYS */;
+/*!40000 ALTER TABLE `permissions` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `regions`
 --
 
@@ -68,6 +91,56 @@ INSERT INTO `regions` VALUES (1,'Минская'),(2,'Брестская'),(3,'�
 UNLOCK TABLES;
 
 --
+-- Table structure for table `role_perm`
+--
+
+DROP TABLE IF EXISTS `role_perm`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `role_perm` (
+  `role_id` int(10) unsigned NOT NULL,
+  `perm_id` int(10) unsigned NOT NULL,
+  KEY `role_id` (`role_id`),
+  KEY `perm_id` (`perm_id`),
+  CONSTRAINT `role_perm_ibfk_1` FOREIGN KEY (`role_id`) REFERENCES `roles` (`role_id`),
+  CONSTRAINT `role_perm_ibfk_2` FOREIGN KEY (`perm_id`) REFERENCES `permissions` (`perm_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `role_perm`
+--
+
+LOCK TABLES `role_perm` WRITE;
+/*!40000 ALTER TABLE `role_perm` DISABLE KEYS */;
+/*!40000 ALTER TABLE `role_perm` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `roles`
+--
+
+DROP TABLE IF EXISTS `roles`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `roles` (
+  `role_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `role_name` varchar(32) NOT NULL,
+  PRIMARY KEY (`role_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `roles`
+--
+
+LOCK TABLES `roles` WRITE;
+/*!40000 ALTER TABLE `roles` DISABLE KEYS */;
+INSERT INTO `roles` VALUES (1,'admin'),(2,'editor');
+/*!40000 ALTER TABLE `roles` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `users`
 --
 
@@ -75,13 +148,13 @@ DROP TABLE IF EXISTS `users`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `users` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `first_name` varchar(32) NOT NULL,
-  `second_name` varchar(32) NOT NULL,
+  `last_name` varchar(32) NOT NULL,
   `email` varchar(64) NOT NULL,
   `password` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+  PRIMARY KEY (`user_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -90,8 +163,35 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'Вася','Пупкин','vasya@gmail.com','barcelona'),(2,'Петр','Петров','petrov@rambler.ru','зуекщмеруиуые'),(3,'Алеша','Попович','alesha@mail.ru','aleshalesh'),(4,'Змей','Горыныч','chetkiipocik@gmail.com','firefire'),(5,'Artem','Jackson','artemjackson95@gmail.com','qwertyui'),(6,'Василий','Васильев','vasilek@gmail.com','12345678');
+INSERT INTO `users` VALUES (1,'Пробный','Персонаж','hashmypassbaby@gmail.com','$2y$10$1U1y8QD36pWfmcVBzKoule2m6vp.aGTwLj/PFGvbIKh46OkVJvDT.'),(2,'Иван','Ивано','vanek@mail.ru','$2y$10$6/iBv9YancBoYETbNmtYV.OBtC93.5Sf4hSB2NsJ6nA0Fy3eg8pzW'),(3,'ПорольКакУ','ПробныйПерсонаж','doubleit@double.com','$2y$10$USPD1WFP9Avx2UiJPIYZLO0aRC/Ny7MrisA4uyVc7u3r5vUEEk6KW'),(4,'qwe','qwe','qwe@qwe.qwe','$2y$10$EQlWLRVgTg3L4RRib2u/X.M65Q752ssIrle8mITgWKh6lwq7F4JXq'),(5,'ffffff','fffff','fghjk@jhdd.lo','$2y$10$Kag4tn5/dpgi0rT7aiBMj.ZH7v.lNHJpRVQ1uwdSPDhG7PAp7v9wW'),(6,'Артем','Эдуардович','artemjackson95@gmail.com','$2y$10$8e7LiSpUw165RvzvMRaZEOR4EuoniaYSxw3nmsOaFRNoWNKUJOONu'),(7,'Oleg','Khvedkovich','test@example.com','$2y$10$Cv/PFCGPW5YV2Lor4mAhTOPWHt7305tnSmRpXkldVhJOpPEnpABd6'),(8,'Nadya','Vsya','nadya54@gmail.com','$2y$10$z0MdZzrqpBbfLb7nNXEf3OLO481SIKC9qii6COOSLGvzec3xJhWpa'),(9,'Ndaya','Vasilevskaya','nadyalove@gmail.com','$2y$10$zvhBarIueTzAGeFDXOKlkefQ0roKIoT6sKR/AmV1Zcfo7lO1t1ByG'),(10,'qwdqw','qwdqwd','ex@ex.ex','$2y$10$O8J4oxEpwAEhQIcgTIy8M.G/wOeoCPtNjYvVLFyib8Re/mjDP59s2'),(11,'qwdqw','qwdqwd','exa@ex.ex','$2y$10$g8aBVKJO6dqLH./gjFsb0.KVO2Gx6GrBWPKF9m5s5kr0bpzzOOd3C'),(12,'example','exampl','example@ex.ex','$2y$10$4iKJgG5Iok0qFYUw0EtK0.UUCekpI.f4O5d7cudFSOyX9DtjW2tCS'),(13,'CitiesLoc','Administrator','cities_admin@gmail.com','$2y$10$K.Hsz5qRtoc9DRKiHiqVq.jTGrcWqH86mFtk6YTe9Hke/ZptcY3YW');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `users_roles`
+--
+
+DROP TABLE IF EXISTS `users_roles`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `users_roles` (
+  `user_id` int(10) unsigned NOT NULL,
+  `role_id` int(10) unsigned NOT NULL,
+  KEY `user_id` (`user_id`),
+  KEY `role_id` (`role_id`),
+  CONSTRAINT `users_roles_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`),
+  CONSTRAINT `users_roles_ibfk_2` FOREIGN KEY (`role_id`) REFERENCES `roles` (`role_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `users_roles`
+--
+
+LOCK TABLES `users_roles` WRITE;
+/*!40000 ALTER TABLE `users_roles` DISABLE KEYS */;
+INSERT INTO `users_roles` VALUES (13,1),(13,1);
+/*!40000 ALTER TABLE `users_roles` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -103,4 +203,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-07-28 17:31:10
+-- Dump completed on 2014-08-01 17:36:09

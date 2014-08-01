@@ -3,6 +3,7 @@
 namespace App\Managers;
 
 use Core\Session\Session;
+use Core\User\User;
 
 /**
  * Class AuthManager
@@ -50,20 +51,24 @@ class AuthManager
         $valid = password_verify($password, $hash);
 
         if ($valid) {
-            $firstName = $userData['first_name'];
-            $lastName = $userData['last_name'];
-
-            $id = $userData['id'];
-
-            $session = new Session();
-            $session->set(
-                'user',
+            /* getting user and it's properties*/
+            $user = new User();
+            $user->setData(
                 array(
-                    'id' => $id,
-                    'firstName' => $firstName,
-                    'lastName' => $lastName
+                    'id' => $userData['user_id'],
+                    'firstName' => $userData['first_name'],
+                    'lastName' => $userData['last_name']
                 )
             );
+            $user->initRoles();
+
+            /* user registration at the session */
+            $session = new Session();
+            $session->set(
+                'loggedIn',
+                $user
+            );
+
             return true;
         } else {
             $this->setMessage("Incorrect password!");

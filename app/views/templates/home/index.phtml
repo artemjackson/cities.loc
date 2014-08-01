@@ -2,8 +2,9 @@
     <h1>Welcome!</h1>
 
     <p class="lead">Cities.loc greets you!</p>
-
-    <?php if(null != ($userData = $this->session->get('user'))): ?>
+    <?php $logged =  $this->session->get('loggedIn')?>
+    <?php if(null != $logged) : ?>
+        <?php $userData = $logged->getData(); ?>
         <p>Goo day to you, <?php echo $userData['firstName'] . " " . $userData['lastName']; ?>!</p>
     <?php else: ?>
         <p><a href="/user/login">Sing in</a> to your account</p>

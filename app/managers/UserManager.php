@@ -10,7 +10,7 @@ class UserManager
     {
         $model = new UserModel();
         $userEmail = isset($userData['email']) ? $userData['email'] : null;
-
+        
         if (false == $model->emailExists($userEmail)) {
             $model->saveUser($userData);
             return true;
