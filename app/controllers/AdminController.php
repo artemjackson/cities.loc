@@ -19,12 +19,12 @@ class AdminController extends Controller
     {
         $view = new View();
 
-        if ($this->session->get('loggedIn')) {
+        if (!$this->session->get('loggedIn')) {
             $view->setTemplate('errors/403');
             return $view;
         }
 
-        if ($this->session->get('loggedIn')->hasRole('admin')) {
+        if (!$this->session->get('loggedIn')->hasRole('admin')) {
             $view->setTemplate('errors/403');
             return $view;
         }
