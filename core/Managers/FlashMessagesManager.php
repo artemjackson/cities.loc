@@ -32,7 +32,10 @@ class FlashMessagesManager
         $message->setType(self::SUCCESS);
         $message->setMessage($messageText);
 
-        $this->session->addToArray(self::SUCCESS, $message);
+        $messages = isset($this->session->successMessages) ? $this->session->succesMessages : array();
+        array_push($messages, $message);
+
+        $this->session->successMessages = $messages;
         return $this;
     }
 
@@ -45,7 +48,10 @@ class FlashMessagesManager
         $message->setType(self::ERROR);
         $message->setMessage($messageText);
 
-        $this->session->addToArray(self::ERROR, $message);
+        $messages = isset($this->session->errorMessages) ? $this->session->errorMessages : array();
+        array_push($messages, $message);
+
+        $this->session->errorMessages = $messages;
         return $this;
     }
 
@@ -55,7 +61,10 @@ class FlashMessagesManager
         $message->setType(self::WARNING);
         $message->setMessage($messageText);
 
-        $this->session->addToArray(self::WARNING, $message);
+        $messages = isset($this->session->warningMessages) ? $this->session->warningMessages : array();
+        array_push($messages, $message);
+
+        $this->session->warningMessages = $messages;
         return $this;
     }
 

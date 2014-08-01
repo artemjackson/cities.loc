@@ -64,10 +64,7 @@ class AuthManager
 
             /* user registration at the session */
             $session = new Session();
-            $session->set(
-                'loggedIn',
-                $user
-            );
+            $session->loggedIn = $user;
 
             return true;
         } else {

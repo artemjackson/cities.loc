@@ -8,70 +8,58 @@ namespace Core\Session;
  */
 class Session
 {
+    const SESSION_STARTED = true;
+    const SESSION_NOT_STARTED = false;
+    private static $sessionState = self::SESSION_NOT_STARTED;
+
+    public  function __construct()
+    {
+        $this->startSession();
+    }
+
     /**
      *
      */
-    public function __construct()
+    public function __get($name)
     {
-        if (!session_id()) {
-            session_start();
+        if (isset($_SESSION[$name])) {
+            return $_SESSION[$name];
         }
     }
 
-     /**
-     * @param $id
-     * @return null
-     */
-    public function get($id)
+    public function __set($name, $value)
     {
-        return !empty($_SESSION[$id]) ? $_SESSION[$id] : null;
+        $_SESSION[$name] = $value;
     }
 
-    /**
-     * @param $id
-     * @return $this
-     */
-    public function remove($id)
+    public function startSession()
     {
-        if (!empty($_SESSION[$id])) {
-            unset($_SESSION[$id]);
+        if (self::$sessionState === self::SESSION_NOT_STARTED) {
+            self::$sessionState = session_start();
         }
-        return $this;
+
+        return self::$sessionState;
     }
 
-    /**
-     * @param $id
-     * @param $data
-     * @return $this
-     */
-    public function set($id, $data)
+    public function __unset($name)
     {
-        if (!empty($_SESSION[$id]) && is_array($_SESSION[$id])) {
-            $_SESSION[$id][] = $data;
-        } else {
-            $_SESSION[$id] = $data;
+        unset($_SESSION[$name]);
+    }
+
+    public function __isset($name)
+    {
+        return isset($_SESSION[$name]);
+    }
+
+    public function destroy()
+    {
+        if (self::$sessionState === self::SESSION_STARTED) {
+            self::$sessionState = !session_destroy();
+            unset($_SESSION);
+
+            return !self::$sessionState;
         }
-        return $this;
-    }
 
-    /**
-     * @param $id
-     * @param $data
-     * @return $this
-     */
-    public function addToArray($id, $data)
-    {
-        $_SESSION[$id][] = $data;
-        return $this;
-    }
-
-
-    /**
-     * @param $id
-     * @return bool
-     */
-    public function isEmpty($id)
-    {
-        return empty($_SESSION[$id]);
+        return false;
     }
 }

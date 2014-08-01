@@ -20,7 +20,7 @@ class UserController extends Controller
     {
         $view = new View();
         if (!$this->getRequest()->isPost()) {
-            if (null != $this->getSession()->get('user')) {
+            if (isset($this->session->loggedIn)) {
                 $this->redirect("home");
             }
             return $view;
@@ -49,12 +49,13 @@ class UserController extends Controller
     public function logoutAction()
     {
         $view = new View();
-        if (null == $this->getSession()->get('loggedIn')) {
+
+        if (!isset($this->session->loggedIn)) {
             $view->setTemplate("errors/404");
             return $view;
         }
 
-        $this->session->remove('loggedIn');
+        unset($this->session->loggedIn);
         $this->redirect("home");
     }
 }

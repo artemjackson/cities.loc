@@ -1,7 +1,7 @@
 <?php //TODO create view helper for menu render?>
 <div class="masthead">
     <?php
-    $logged = $this->session->get('loggedIn');
+    $logged = isset($this->session->loggedIn) ? true : false;
     ?>
     <ul class="nav nav-pills pull-right">
         <li <?php if ($currentPage == 'Home') {

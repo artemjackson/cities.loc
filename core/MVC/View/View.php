@@ -11,9 +11,9 @@ use Core\Session\Session;
  */
 class View
 {
-    const SUCCESS = 'success';
-    const WARNING = 'warning';
-    const ERROR = 'danger';
+    const SUCCESS = 'successMessages';
+    const WARNING = 'warningMessages';
+    const ERROR = 'errorMessages';
     protected $session;
 
     /**
@@ -49,6 +49,11 @@ class View
         $this->setData($data);
     }
 
+    public function __call($name, $arguments)
+    {
+
+    }
+
     /**
      * @param $messagesType
      * @return string
@@ -57,9 +62,8 @@ class View
     {
         $html = "";
         $session = new Session();
-        if (!$session->isEmpty($messagesType)) {
-
-            foreach ($session->get($messagesType) as $infoMessage) {
+        if (isset($session->$messagesType)) {
+            foreach ($session->$messagesType as $infoMessage) {
                 $html .= $this->exportFrom(
                     "registration/message",
                     array(
@@ -68,7 +72,7 @@ class View
                     )
                 );
             }
-            $session->remove($messagesType);
+            unset($session->$messagesType);
         }
         return $html;
     }
@@ -93,14 +97,12 @@ class View
 
     public function adminDashboard()
     {
-        $logged = $this->session->get('loggedIn');
 
-        if (null == $logged) {
+        if (!isset($this->session->loggedIn)) {
             return "";
         }
 
-        if(!$logged->hasRole('admin'))
-        {
+        if (!$this->session->loggedIn->hasRole('admin')) {
             return "";
         }
 
@@ -110,13 +112,11 @@ class View
 
     public function userField()
     {
-        $logged = $this->session->get('loggedIn');
-
-        if (null == $logged) {
+        if (!isset($this->session->loggedIn)) {
             return "";
         }
 
-        $userData = $logged->getData();
+        $userData = $this->session->loggedIn->getData();
 
         $firstName = !empty($userData['firstName']) ? $userData['firstName'] : null;
         $lastName = !empty($userData['lastName']) ? $userData['lastName'] : null;
