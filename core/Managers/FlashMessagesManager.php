@@ -76,5 +76,5 @@ class FlashMessagesManager
         return $this;
     }
 
-    protected $session;
+    protected $session; //TODO is it PSR position of a property?
 }

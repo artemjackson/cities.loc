@@ -25,7 +25,7 @@ class Form
     /**
      * @var
      */
-    protected $message = array();
+    protected $message = array(); // TODO it is array. it should be $messages
 
     /**
      * @param array $data
@@ -43,10 +43,11 @@ class Form
         $valid = true;
         foreach ($this->bindData as $field) {
             foreach ($field['validators'] as $validator) {
+                //TODO you must check if $validator instanceof Validator to be sure that it is a validator and has methods isValid and getMessage
                 if (!$validator->isValid($field['value'])) {
                     $this->addMessage($validator->getMessage());
                     $valid = false;
-                    continue 2; // skip other validators of this field if one is not valid
+                    continue 2; // skip other validators of this field if one is not valid TODO it should be configurable
                 }
             }
         }

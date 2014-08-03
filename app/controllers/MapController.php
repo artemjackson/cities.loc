@@ -19,7 +19,7 @@ class MapController extends Controller
     {
         $regions = MapManager::getRegions();
         return new View(array(
-            'regions' => $regions
+            'regions' => $regions //TODO why do we need a regions variable here?
         ));
     }
 }

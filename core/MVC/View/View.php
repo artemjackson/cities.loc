@@ -95,6 +95,7 @@ class View
         return $html;
     }
 
+    //TODO refactor
     public function adminDashboard()
     {
 
@@ -109,7 +110,7 @@ class View
         return $this->exportFrom("admin/dashboard");
 
     }
-
+//TODO refactor
     public function userField()
     {
         if (!isset($this->session->loggedIn)) {

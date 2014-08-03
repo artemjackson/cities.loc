@@ -22,7 +22,7 @@ class UserModel extends Model
         $email = !empty($userData['email']) ? $userData['email'] : null;
 
         // hashing password
-        $password = password_hash($userData['password'], PASSWORD_DEFAULT);
+        $password = password_hash($userData['password'], PASSWORD_DEFAULT); //TODO this must do PasswordManager. ( $passwordManager->hash($password) // something like that)
 
         $sql = "INSERT INTO users (first_name, last_name, email, password) VALUES (:first_name, :last_name, :email, :password)";
 

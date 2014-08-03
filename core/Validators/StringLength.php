@@ -15,7 +15,7 @@ class StringLength extends AbstractValidator
         parent::__construct($options);
         $max = $this->getMax();
         $min = $this->getMin();
-        $this->setDefaultMessage("Length should be more then {$min} and less then {$max} symbols ");
+        $this->setDefaultMessage("Length should be more then {$min} and less then {$max} symbols "); //TODO use sprintf
     }
 
     /**

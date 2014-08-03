@@ -8,6 +8,7 @@ class Role
 {
     protected $permissions = array();
 
+    //TODO move it RoleModel
     public static function getRole($role_id)
     {
 

@@ -31,7 +31,7 @@ spl_autoload_register(
         }
     }
 );
-
+//TODO move it to another file
 /**
  * Class AutoloaderException
  */

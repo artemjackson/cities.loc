@@ -46,7 +46,7 @@ class RegistrationForm extends Form
                     'message' => "Last name should not be empty!"
                 )),
                 new StringLength(array(
-                    'message' => "Last name should be more the 1 and less then 32 symbols",
+                    'message' => "Last name should be more the 1 and less then 32 symbols", // TODO use %s and sprintf for setting params to string. If you change min or max you need to change message as well
                     'min' => 1,
                     'max' => 32
                 )),

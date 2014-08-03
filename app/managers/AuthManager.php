@@ -19,7 +19,7 @@ class AuthManager
     /**
      * @return mixed
      */
-    public function getMessage()
+    public function getMessage() // TODO Is it only error message? Then call it getError to clarify what message
     {
         return $this->message;
     }
@@ -48,7 +48,7 @@ class AuthManager
         $hash = $userData['password'];
         $password = $data['password'];
 
-        $valid = password_verify($password, $hash);
+        $valid = password_verify($password, $hash); //TODO use password manager for that
 
         if ($valid) {
             /* getting user and it's properties*/

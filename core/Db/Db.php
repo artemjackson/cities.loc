@@ -40,7 +40,7 @@ final class Db
         if (self::$dbh !== null) {
             return;
         }
-
+//TODO getConfig get data from merged array
         $dbType = App::getConfig('db', 'dbType');
         $dbName = App::getConfig('db', 'dbName');
         $host = App::getConfig('db', 'host');

@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+//TODO create model for each table. So RegionModel responsive for return data about regions. CityModel - about cities
 use Core\Db\Db;
 use Core\MVC\Model\Model;
 

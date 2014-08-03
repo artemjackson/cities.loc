@@ -33,6 +33,7 @@ class User
         return $this->data;
     }
 
+    //TODO it must be in UserModel
     public static function getUserByEmail($email)
     {
         $sql = "SELECT * FROM users WHERE eamil = :email";
@@ -62,6 +63,7 @@ class User
         return $this;
     }
 
+    //TODO all queries in models
     public function initRoles()
     {
         $sql = "SELECT t1.role_id, t2.role_name FROM users_roles as t1

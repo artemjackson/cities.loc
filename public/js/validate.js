@@ -1,6 +1,6 @@
 (function ($, W, D) {
     var JQUERY4U = {};
-
+    //TODO separate to different files
     JQUERY4U.UTIL =
     {
         setupFormValidation: function () {
