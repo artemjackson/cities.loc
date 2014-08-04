@@ -1,40 +1,10 @@
-<?php //TODO create view helper for menu render?>
+<style>
+    .masthead {
+        height: 25px;
+    }
+</style>
+
 <div class="masthead">
-    <?php
-    $logged = isset($this->session->loggedIn) ? true : false;
-    ?>
-    <ul class="nav nav-pills pull-right">
-        <li <?php if ($currentPage == 'Home') {
-            echo 'class="active"';
-        } ?>><a href="/home/">Home</a></li>
-
-        <li <?php if ($currentPage == 'Map') {
-            echo 'class="active"';
-        } ?>><a href="/map/">Map</a></li>
-
-        <li <?php if ($currentPage == 'About') {
-            echo 'class="active"';
-        } ?>><a href="/about/">About</a></li>
-
-        <li <?php if ($currentPage == 'Contacts') {
-            echo 'class="active"';
-        } ?> ><a href="/contacts/">Contacts</a></li>
-
-        <li <?php if ($currentPage == 'Registration') {
-            echo 'class="active"';
-        } ?> ><a href="/registration/">Registration</a></li>
-
-        <?php if (!$logged): ?>
-            <li <?php if ($currentPage == 'User') {
-                echo 'class="active"';
-            } ?> ><a href="/user/login">Login</a></li>
-        <?php else : ?>
-            <li <?php if ($currentPage == 'User') {
-                echo 'class="active"';
-            } ?> ><a href="/user/logout">Logout</a></li>
-        <?php endif; ?>
-
-    </ul>
-    <h3 class="muted"><?= $currentPage; ?> page</h3>
+    <?php echo $this->menu(); ?>
 </div>
 <hr>

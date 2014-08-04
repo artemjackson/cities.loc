@@ -2,7 +2,8 @@
 
 namespace Core\MVC\View\Helpers;
 
-interface HelperInterface {
+interface HelperInterface
+{
     public function help();
 }
 

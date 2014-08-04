@@ -51,30 +51,9 @@ class View
 
     public function __call($name, $arguments)
     {
-
-    }
-
-    /**
-     * @param $messagesType
-     * @return string
-     */
-    public function flashMessages($messagesType)
-    {
-        $html = "";
-        $session = new Session();
-        if (isset($session->$messagesType)) {
-            foreach ($session->$messagesType as $infoMessage) {
-                $html .= $this->exportFrom(
-                    "registration/message",
-                    array(
-                        'type' => $infoMessage->getType(),
-                        'message' => $infoMessage->getMessage()
-                    )
-                );
-            }
-            unset($session->$messagesType);
-        }
-        return $html;
+        $helperName =  __NAMESPACE__ . "\\Helpers\\" . ucfirst($name);
+        $helper = new $helperName($arguments);
+        return $helper->help();
     }
 
     public function exportFrom($path, array $data = array())
@@ -93,44 +72,6 @@ class View
             ob_end_clean();
         }
         return $html;
-    }
-
-    public function adminDashboard()
-    {
-
-        if (!isset($this->session->loggedIn)) {
-            return "";
-        }
-
-        if (!$this->session->loggedIn->hasRole('admin')) {
-            return "";
-        }
-
-        return $this->exportFrom("admin/dashboard");
-
-    }
-
-    public function userField()
-    {
-        if (!isset($this->session->loggedIn)) {
-            return "";
-        }
-
-        $userData = $this->session->loggedIn->getData();
-
-        $firstName = !empty($userData['firstName']) ? $userData['firstName'] : null;
-        $lastName = !empty($userData['lastName']) ? $userData['lastName'] : null;
-
-        if ($firstName && $lastName) {
-            return $this->exportFrom(
-                "user/userField",
-                array(
-                    'firstName' => $firstName,
-                    'lastName' => $lastName
-                )
-            );
-        }
-        return null;
     }
 
     /**

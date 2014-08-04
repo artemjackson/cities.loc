@@ -25,14 +25,6 @@ class User
      */
     protected $data = array();
 
-    /**
-     * @return mixed
-     */
-    public function getData()
-    {
-        return $this->data;
-    }
-
     public static function getUserByEmail($email)
     {
         $sql = "SELECT * FROM users WHERE eamil = :email";
@@ -49,17 +41,6 @@ class User
         } else {
             return null;
         }
-    }
-
-    public function hasRole($name)
-    {
-        return isset($this->roles[$name]);
-    }
-
-    public function setData(array $data = array())
-    {
-        $this->data = $data;
-        return $this;
     }
 
     public function initRoles()
@@ -80,5 +61,32 @@ class User
     public function setRole($name, $role)
     {
         $this->roles[$name] = $role;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getData()
+    {
+        return $this->data;
+    }
+
+    public function setData(array $data = array())
+    {
+        $this->data = $data;
+        return $this;
+    }
+
+    public function hasRole($name)
+    {
+        return isset($this->roles[$name]);
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getRoles()
+    {
+        return $this->roles;
     }
 }

@@ -2,14 +2,8 @@
 
 <html>
 <head>
-    <?php
-    //TODO WTF?? use $this->headTitle(); helper so in templates you can set head title like $this->title('My title'); and it will be displayed
 
-    $rout = $_SERVER['REQUEST_URI'];
-    $currentPage = ucfirst(explode('/', $rout)[1]) ? : 'Home';
-    ?>
-    <title><?= "Cities.loc: " . $currentPage; //TODO $this->headTitle(); ?></title>
-
+    <?php echo $this->headerTitle(); ?>
     <meta charset="utf-8">
     <meta name="description" content="Trying MVC, Twitter Bootstrap, AJAX, PHP, MySQL, Apache">
     <meta name="author" content="Artem Stepanishchev">
@@ -61,6 +55,7 @@
         p + h4 {
             margin-top: 28px;
         }
+
         .signForm {
             max-width: 360px;
             padding: 29px 29px 29px;

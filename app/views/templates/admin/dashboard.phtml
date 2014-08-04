@@ -1,1 +1,20 @@
-<a href="/admin/">SuperUser</a>
+<style>
+    .user {
+        float: right;
+        margin: 0 10px;
+    }
+
+    .adminDashboard {
+        background: skyblue;
+    }
+
+    .adminDashboard {
+        height: 20px;
+    }
+</style>
+
+<div class="adminDashboard">
+    <a href="/admin/">SuperUser</a>
+    <p class="user"><?php echo $firstName .  " " . $lastName; ?></p>
+</div>
+<hr>
