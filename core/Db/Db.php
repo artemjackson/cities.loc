@@ -41,11 +41,12 @@ final class Db
             return;
         }
 
-        $dbType = App::getConfig('db', 'dbType');
-        $dbName = App::getConfig('db', 'dbName');
-        $host = App::getConfig('db', 'host');
-        $user = App::getConfig('db', 'user');
-        $password = App::getConfig('db', 'password');
+        $dbConfig = App::getConfig('db');
+        $dbType = isset($dbConfig['dbType']) ? $dbConfig['dbType'] : null;
+        $dbName = isset($dbConfig['dbName']) ? $dbConfig['dbName'] : null;
+        $host = isset($dbConfig['host']) ? $dbConfig['host'] : null;
+        $user = isset($dbConfig['user']) ? $dbConfig['user'] : null;
+        $password = isset($dbConfig['password']) ? $dbConfig['password'] : null;
 
 
         $db = $dbType . ":dbname=" . $dbName . ";";

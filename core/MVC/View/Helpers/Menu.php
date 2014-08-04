@@ -37,7 +37,7 @@ class Menu extends AbstractHelper
 
         foreach ($menu as $page => $link) {
             $html .= "<li ";
-            if ($currentPage == $page) {
+            if ($currentPage === $page) {
                 $html .= "class=\"active\"";
             }
             $html .= "><a href=\"" . $link . "\">$page</a></li>";
@@ -45,11 +45,5 @@ class Menu extends AbstractHelper
 
         $html .= "</ul>";
         return $html;
-    }
-
-    public function currentPage()
-    {
-        $rout = $_SERVER['REQUEST_URI'];
-        return ucfirst(explode('/', $rout)[1]) ? : 'Home';
     }
 }

@@ -24,7 +24,7 @@ abstract class Controller
     /**
      * @var
      */
-    protected $flashMessager;
+    protected $flashMessager; //TODO incorrect spelling (flashMessenger)
 
     /**
      * @var \Core\Session\Session
@@ -64,7 +64,7 @@ abstract class Controller
      */
     public function redirect($location)
     {
-        $host = "http://" . $_SERVER['HTTP_HOST'] . '/';
+        $host = "http://" . $_SERVER['HTTP_HOST'] . '/'; //TODO why do we need this?
         header('Location:' . $host . $location);
         exit();
     }

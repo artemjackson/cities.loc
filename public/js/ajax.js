@@ -1,7 +1,7 @@
 $(document).ready(function () {
     $('#regions').change(function () {
         var value = $(this).val();
-        console.log(value);
+        console.log(value); //TODO delete console log
         $.ajax({
             type: 'POST',
             dataType: 'json',

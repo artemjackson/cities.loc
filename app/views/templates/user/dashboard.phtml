@@ -9,7 +9,12 @@
     }
 </style>
 
+<?php use Core\Identifier\Identifier; ?>
+
 <div class="userDashboard">
+    <?php if(Identifier::identity() === 'admin'): ?>
+        <a href="/admin/">Administrator room</a>
+    <?php endif;?>
     <p class="user"><?php echo $firstName .  " " . $lastName; ?></p>
 </div>
 <hr>

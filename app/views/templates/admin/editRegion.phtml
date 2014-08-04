@@ -1,0 +1,13 @@
+<?php use App\Managers\MapManager; ?>
+<?php $regionName = MapManager::getRegionById($regionId)?>
+
+<div class="jumbotron">
+    <p class="lead">Region #<?php echo $regionId; ?> information editing </p>
+    <form method="POST" class="editionForm" id="editionForm" action="/admin/edit">
+        <input name="region_name" type="text" class="input-block-level" placeholder="Region name"
+               value="<?= $regionName ?>">
+        </br>
+        </br>
+        <button class="btn btn-primary" name="region_id" value="<?php echo $regionId; ?>" id="registrationSubmit" type="submit">Edit</button>
+    </form>
+</div>

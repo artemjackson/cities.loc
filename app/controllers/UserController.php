@@ -19,7 +19,7 @@ class UserController extends Controller
     public function loginAction()
     {
         $view = new View();
-        if (!$this->getRequest()->isPost()) {
+        if (!$this->getRequest()->isPost()) { //TODO what about if user logged in and send POST request?
             if (isset($this->session->loggedIn)) {
                 $this->redirect("home");
             }
@@ -32,7 +32,7 @@ class UserController extends Controller
 
         if ($form->isValid()) {
             $auth = new AuthManager();
-            if ($auth->authenticate($data)) {
+            if ($auth->authenticate($data)) { // TODO this method should take only email and password not array with params
                 $this->redirect("home");
             } else {
                 $this->flashMessager->addErrorMessage($auth->getMessage());

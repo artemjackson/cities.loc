@@ -3,6 +3,7 @@
 namespace Core\MVC\View;
 
 use Core\App;
+use Core\Identifier\Identifier;
 use Core\Session\Session;
 
 /**
@@ -44,6 +45,7 @@ class View
         $this->session = new Session();
         $defaultLayout = App::getConfig('view', 'defaultLayout');
 
+
         $this->setLayout($defaultLayout);
 
         $this->setData($data);
@@ -51,7 +53,7 @@ class View
 
     public function __call($name, $arguments)
     {
-        $helperName =  __NAMESPACE__ . "\\Helpers\\" . ucfirst($name);
+        $helperName = __NAMESPACE__ . "\\Helpers\\" . ucfirst($name);
         $helper = new $helperName($arguments);
         return $helper->help();
     }

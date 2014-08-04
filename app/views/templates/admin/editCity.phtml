@@ -1,0 +1,24 @@
+<?php use App\Managers\MapManager; ?>
+<?php $cityName = MapManager::getCityById($cityId); ?>
+<?php $regions = MapManager::getRegions(); ?>
+
+<div class="jumbotron">
+    <p class="lead">City #<?php echo $cityId; ?> information editing </p>
+    <form method="POST" class="editionForm" id="editionForm" action="/admin/edit">
+        <select name="region_id" class="selectpicker">
+            <?php if (!empty($regions)): ?>
+                <?php foreach ($regions as $region): ?>
+                    <option value="<?php echo $region['region_id']; ?>"><?php echo $region['region_name']; ?></option>
+                <?php endforeach; ?>
+            <?php endif; ?>
+        </select>
+        </br>
+        </br>
+
+        <input name="city_name" type="text" class="input-block-level" placeholder="City name"
+               value="<?= $cityName ?>">
+        </br>
+        </br>
+        <button class="btn btn-primary" name="city_id" value="<?php echo $cityId; ?>" id="registrationSubmit" type="submit">Edit</button>
+    </form>
+</div>

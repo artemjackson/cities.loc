@@ -16,5 +16,17 @@ return array(
         'controllersPath' => 'app/controllers/',
         'defaultController' => 'home',
         'defaultAction' => 'index',
-    )
+    ),
+    /**
+     *  FOR DB CONNECTION USE CONFIG SUCH THIS ONE
+     *
+     *  'db' => array(
+     *       'dbType' => 'mysql',
+     *       'dbName' => 'cities',
+     *       'host' => 'localhost',
+     *       'user' => 'jackson',
+     *       'password' => '9951',
+     *   )
+     *
+     */
 );

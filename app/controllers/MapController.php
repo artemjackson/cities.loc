@@ -17,9 +17,8 @@ class MapController extends Controller
      */
     public function indexAction()
     {
-        $regions = MapManager::getRegions();
         return new View(array(
-            'regions' => $regions
+            'regions' => MapManager::getRegions()
         ));
     }
 }

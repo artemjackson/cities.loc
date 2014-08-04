@@ -1,20 +1,34 @@
 <style>
-    .user {
-        float: right;
-        margin: 0 10px;
+    .adminDashboard {
+        background:  #f5f5f5;
+        width: 700px;
+        padding-top: 5px;
+        height: 50px;
+        position: fixed;
+        z-index: 10;
+        border-bottom-style: solid;
+        border-color: #c0c0c0;
+        border-radius: 0 0 20px 20px;
     }
 
-    .adminDashboard {
-        background: skyblue;
+    .adminDashboard p{
+        display: inline-block;
+        color: #428BCA;
+        padding-left: 40px;
+        margin-top: 10px;
     }
 
-    .adminDashboard {
-        height: 20px;
+    .adminDashboard ul{
+        margin-right: 10px;
     }
+
+
 </style>
 
 <div class="adminDashboard">
-    <a href="/admin/">SuperUser</a>
-    <p class="user"><?php echo $firstName .  " " . $lastName; ?></p>
+    <p><?php echo $firstName . " " . $lastName; ?></p>
+    <?php echo $this->menu(); ?>
 </div>
-<hr>
+</br>
+</br>
+</br>

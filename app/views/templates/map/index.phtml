@@ -3,7 +3,7 @@
     <select id="regions" class="selectpicker">
         <?php if (!empty($regions)): ?>
             <?php foreach ($regions as $region): ?>
-                <option value="<?php echo $region['id']; ?>"><?php echo $region['name']; ?></option>
+                <option value="<?php echo $region['region_id']; ?>"><?php echo $region['region_name']; ?></option>
             <?php endforeach; ?>
         <?php endif; ?>
     </select>

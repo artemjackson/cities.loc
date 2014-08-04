@@ -19,7 +19,6 @@ class User
      * @var
      */
     protected $roles = array();
-
     /**
      * @var
      */
@@ -66,6 +65,14 @@ class User
     /**
      * @return mixed
      */
+    public function getRoles()
+    {
+        return $this->roles;
+    }
+
+    /**
+     * @return mixed
+     */
     public function getData()
     {
         return $this->data;
@@ -80,13 +87,5 @@ class User
     public function hasRole($name)
     {
         return isset($this->roles[$name]);
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getRoles()
-    {
-        return $this->roles;
     }
 }

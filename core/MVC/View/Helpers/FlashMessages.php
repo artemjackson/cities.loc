@@ -6,9 +6,10 @@ class FlashMessages extends AbstractHelper
 {
     public function help()
     {
+        $messagesType = $this->data[0];
         $html = "";
-        if (isset($this->session->messagesType)) {
-            foreach ($this->session->messagesType as $infoMessage) {
+        if (isset($this->session->$messagesType)) {
+            foreach ($this->session->$messagesType as $infoMessage) {
                 $html .= $this->exportFrom(
                     "registration/message",
                     array(
@@ -17,7 +18,7 @@ class FlashMessages extends AbstractHelper
                     )
                 );
             }
-            unset($this->session->messagesType);
+            unset($this->session->$messagesType);
         }
         return $html;
     }

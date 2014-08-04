@@ -14,6 +14,7 @@ class FlashMessagesManager
     const SUCCESS = 'success';
     const WARNING = 'warning';
     const ERROR = 'danger';
+    protected $session;
 
     /**
      *
@@ -55,6 +56,14 @@ class FlashMessagesManager
         return $this;
     }
 
+    public function addWarningMessages(array $messages = array())
+    {
+        foreach ($messages as $warningText) {
+            $this->addWarningMessage($warningText);
+        }
+        return $this;
+    }
+
     public function addWarningMessage($messageText)
     {
         $message = new Message();
@@ -67,14 +76,4 @@ class FlashMessagesManager
         $this->session->warningMessages = $messages;
         return $this;
     }
-
-    public function addWarningMessages(array $messages = array())
-    {
-        foreach ($messages as $warningText) {
-            $this->addWarningMessage($warningText);
-        }
-        return $this;
-    }
-
-    protected $session;
 }

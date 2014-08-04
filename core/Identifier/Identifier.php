@@ -1,6 +1,6 @@
 <?php
 
-namespace Core;
+namespace Core\Identifier;
 
 use Core\Session\Session;
 

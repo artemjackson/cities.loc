@@ -29,7 +29,7 @@ class SingInForm extends Form
                     )
                 ),
                 new StringLength(array(
-                    'message' => "Email should be more the 5 and less then 64 symbols",
+                    'message' => "Email should be more the 5 and less then 64 symbols", //TODO see todo for Registration form
                     'min' => 5,
                     'max' => 64
                 )),

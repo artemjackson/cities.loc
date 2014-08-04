@@ -10,8 +10,17 @@ abstract class AbstractHelper implements HelperInterface
     protected $session;
     protected $data = array();
 
+    /**
+     * @param array $data
+     */
+    public function setData($data)
+    {
+        $this->data = $data;
+    }
+
     public function __construct(array $data = array())
     {
+        $this->setData($data);
         $this->session = new Session();
     }
 
@@ -33,5 +42,12 @@ abstract class AbstractHelper implements HelperInterface
             ob_end_clean();
         }
         return $html;
+    }
+
+    public function currentPage()
+    {
+        $rout = explode("/",$_SERVER['REQUEST_URI']);
+        $number = count($rout);
+        return ucfirst($rout[$number-2]) ? : 'Home';
     }
 }

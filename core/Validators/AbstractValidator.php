@@ -71,6 +71,7 @@ abstract class AbstractValidator implements ValidatorInterface
         return !empty($this->options[$option]) ? $this->options[$option] : null;
     }
 
+    //TODO what about to check if message is empty than use default message. So you don't need to check it in all validators
     /**
      * @return mixed
      */

@@ -15,7 +15,7 @@ final class App
     /**
      * @var
      */
-    protected static $_instance; //TODO it is not a PSR
+    protected static $instance;
     /**
      * @var array
      */
@@ -62,10 +62,10 @@ final class App
      */
     public static function getInstance()
     {
-        if (is_null(self::$_instance)) {
-            self::$_instance = new self;
+        if (is_null(self::$instance)) {
+            self::$instance = new self;
         }
-        return self::$_instance;
+        return self::$instance;
     }
 
     /**

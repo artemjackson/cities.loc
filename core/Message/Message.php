@@ -1,7 +1,6 @@
 <?php
-
+//TODO where do you use this class? Only with flash messages?  - Yes
 namespace Core\Message;
-
 
 /**
  * Class Message
