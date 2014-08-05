@@ -12,6 +12,7 @@ use Core\MVC\Model\Model;
  */
 class RegionModel extends Model
 {
+    //TODO by the name of this method i expect to get the whole info about region
     public function getRegionByID($id)
     {
         $sql = "SELECT region_name FROM regions WHERE region_id = :region_id";
@@ -58,13 +59,14 @@ class RegionModel extends Model
         return Db::execute(array('region_id' => $id, ':region_name' => $name));
     }
 
+
     public function safeRegion($name)
     {
         $sql = "INSERT INTO regions (region_name) VALUES (:region_name)";
         Db::prepare($sql);
         return Db::execute(array(':region_name' => $name));
     }
-
+     //TODO by the name of this method  I expect to get the whole info about the city
     public function getCityById($id)
     {
         $sql = "SELECT city_name FROM cities WHERE city_id = :city_id";

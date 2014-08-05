@@ -45,7 +45,7 @@ class AdminDashboard extends AbstractHelper
         $html = "<ul class=\"nav nav-pills pull-right\">";
 
         foreach ($this->menu as $page => $link) {
-            $html .= "<li ";
+            $html .= "<li "; //TODO why do use "" all the time?
             if ($currentPage === $page) {
                 $html .= "class=\"active\"";
             }

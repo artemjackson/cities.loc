@@ -25,8 +25,8 @@ class CityForm extends Form
                 )),
                 new StringLength(array(
                     'message' => "City name should be more the 1 and less then 32 symbols",
-                    'min' => 1,
-                    'max' => 32
+                    'min' => 1, //TODO use constants. Always encapsulate
+                    'max' => 32 //TODO use constants. Always encapsulate
                 )),
                 new Regex(array(
                     'message' => "City name is incorrect",

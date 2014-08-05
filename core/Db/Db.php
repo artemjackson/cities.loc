@@ -65,6 +65,6 @@ final class Db
     {
         self::init();
         $status = self::$sth->execute($input_parameters);
-        return substr(self::$query,0,6) === 'SELECT' ? self::$sth->fetchAll(\PDO::FETCH_ASSOC) : $status;
+        return substr(self::$query,0,6) === 'SELECT' ? self::$sth->fetchAll(\PDO::FETCH_ASSOC) : $status; //TODO refactor it
     }
 }

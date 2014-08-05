@@ -29,8 +29,8 @@ class RegistrationForm extends Form
                 )),
                 new StringLength(array(
                     'message' => "First name should be more the 1 and less then 32 symbols",
-                    'min' => 1,
-                    'max' => 32
+                    'min' => 1, //TODO use constants. Always encapsulate
+                    'max' => 32 //TODO use constants. Always encapsulate. You use it 2 times
                 )),
                 new Regex(array(
                     'message' => "First name is incorrect",

@@ -11,6 +11,7 @@ use App\Models\RegionModel;
  */
 class MapManager
 {
+    //TODO what does this method do? Returns the name of the region or the whole region info
     public static function getRegionByID($id)
     {
         $model = new RegionModel();
@@ -27,18 +28,19 @@ class MapManager
         return $model->getRegions();
     }
 
-    public static function safeRegion($name, $id = null)
+    public static function safeRegion($name, $id = null) //TODO safeRegion????
     {
         $model = new RegionModel();
         return $id ? $model->updateRegion($name, $id) : $model->safeRegion($name);
     }
 
-    public static function safeCity($cityName, $regionId, $cityId = null)
+    public static function safeCity($cityName, $regionId, $cityId = null) //TODO safeCity????
     {
         $model = new RegionModel();
         return $cityId ? $model->updateCity($cityName, $regionId, $cityId) : $model->safeCity($cityName, $regionId);
     }
 
+    //TODO see comment to getRegionByID
     public static function getCityById($id)
     {
         $model = new RegionModel();

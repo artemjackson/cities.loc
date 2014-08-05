@@ -8,7 +8,7 @@
     <meta name="description" content="Trying MVC, Twitter Bootstrap, AJAX, PHP, MySQL, Apache">
     <meta name="author" content="Artem Stepanishchev">
 
-
+    <?php //TODO why do you use jquery 2? What about IE? ?>
     <script src="/js/jquery-2.1.1.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
 
@@ -23,11 +23,12 @@
     <link href="/css/bootstrap-select.min.css" rel="stylesheet">
     <link href="/css/jquery-ui.min.css" rel="stylesheet">
     <script type="text/javascript">
+        //TODO do we need it on all pages?
         $(document).ready(function(e) {
             $('.selectpicker').selectpicker();
         });
     </script>
-
+    <?php //TODO move it to css file ?>
     <style type="text/css">
 
         body {
