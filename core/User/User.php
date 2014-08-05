@@ -19,11 +19,21 @@ class User
      * @var
      */
     protected $roles = array();
+
     /**
      * @var
      */
     protected $data = array();
 
+    /**
+     * @return mixed
+     */
+    public function getData()
+    {
+        return $this->data;
+    }
+
+    //TODO it must be in UserModel
     public static function getUserByEmail($email)
     {
         $sql = "SELECT * FROM users WHERE eamil = :email";
@@ -42,6 +52,18 @@ class User
         }
     }
 
+    public function hasRole($name)
+    {
+        return isset($this->roles[$name]);
+    }
+
+    public function setData(array $data = array())
+    {
+        $this->data = $data;
+        return $this;
+    }
+
+    //TODO all queries in models
     public function initRoles()
     {
         $sql = "SELECT t1.role_id, t2.role_name FROM users_roles as t1
@@ -68,24 +90,5 @@ class User
     public function getRoles()
     {
         return $this->roles;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getData()
-    {
-        return $this->data;
-    }
-
-    public function setData(array $data = array())
-    {
-        $this->data = $data;
-        return $this;
-    }
-
-    public function hasRole($name)
-    {
-        return isset($this->roles[$name]);
     }
 }

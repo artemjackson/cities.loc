@@ -3,7 +3,6 @@
 namespace Core\MVC\View;
 
 use Core\App;
-use Core\Identifier\Identifier;
 use Core\Session\Session;
 
 /**
@@ -44,7 +43,6 @@ class View
     {
         $this->session = new Session();
         $defaultLayout = App::getConfig('view', 'defaultLayout');
-
 
         $this->setLayout($defaultLayout);
 
