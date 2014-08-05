@@ -87,7 +87,7 @@ class RegionModel extends Model
         return Db::execute(array(':region_id' => $id));
     }
 
-        public function updateCity($cityName, $regionId, $cityId)
+    public function updateCity($cityName, $regionId, $cityId)
     {
         $sql = "UPDATE cities SET city_name = :city_name, region_id = :region_id  WHERE city_id = :city_id";
         Db::prepare($sql);
@@ -100,10 +100,16 @@ class RegionModel extends Model
         );
     }
 
-
-    public function safeCity($region)
+    public function safeCity($cityName, $regionId)
     {
-
+        $sql = "INSERT INTO cities (city_name, region_id) VALUES (:city_name, :region_id)";
+        Db::prepare($sql);
+        return Db::execute(
+            array(
+                ':city_name' => $cityName,
+                ':region_id' => $regionId,
+            )
+        );
     }
 
 }

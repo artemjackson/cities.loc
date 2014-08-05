@@ -23,14 +23,13 @@ DROP TABLE IF EXISTS `cities`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `cities` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `city_id` int(11) NOT NULL AUTO_INCREMENT,
   `region_id` int(11) NOT NULL,
-  `name` varchar(16) NOT NULL,
-  PRIMARY KEY (`id`),
+  `city_name` varchar(16) NOT NULL,
+  PRIMARY KEY (`city_id`),
   KEY `region_id` (`region_id`),
-  CONSTRAINT `cities_ibfk_1` FOREIGN KEY (`region_id`) REFERENCES `regions` (`id`),
-  CONSTRAINT `cities_ibfk_2` FOREIGN KEY (`region_id`) REFERENCES `regions` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=55 DEFAULT CHARSET=utf8;
+  CONSTRAINT `cities_ibfk_1` FOREIGN KEY (`region_id`) REFERENCES `regions` (`region_id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=57 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -39,7 +38,7 @@ CREATE TABLE `cities` (
 
 LOCK TABLES `cities` WRITE;
 /*!40000 ALTER TABLE `cities` DISABLE KEYS */;
-INSERT INTO `cities` VALUES (1,1,'Борисов'),(2,1,'Вилейка'),(3,1,'Воложин'),(4,1,'Дзержинск'),(5,1,'Клецк'),(6,1,'Копыль'),(7,1,'Логойск'),(8,1,'Любань'),(9,1,'Молодечно'),(10,1,'Несвеж'),(11,1,'Слуцк'),(12,1,'Смолевичи'),(13,1,'Солигорск'),(14,1,'Столбцы'),(15,1,'Узда'),(16,1,'Жодино'),(17,1,'Минск'),(18,2,'Барановичи'),(19,2,'Береза'),(20,2,'Ганцевичи'),(21,2,'Ивацевичи'),(22,2,'Каменец'),(23,2,'Лунинец'),(24,2,'Ляховичи'),(25,2,'Пинск'),(26,2,'Брест'),(27,3,'Браслав'),(28,3,'Лепель'),(29,3,'Орша'),(30,3,'Полоцк'),(31,3,'Поставы'),(32,3,'Витебск'),(33,4,'Добруш'),(34,4,'Ельск'),(35,4,'Жлобин'),(36,4,'Мозырь'),(37,4,'Речица'),(38,4,'Рогачев'),(39,4,'Светлогорск'),(40,4,'Гомель'),(41,5,'Волковыск'),(42,5,'Ивье'),(43,5,'Лида'),(44,5,'Новогрудок'),(45,5,'Островец'),(46,5,'Слоним'),(47,5,'Сморгонь'),(48,5,'Гродно'),(49,6,'Бобруйск'),(50,6,'Кличев'),(51,6,'Кричев'),(52,6,'Осиповичи'),(53,6,'Шклов'),(54,6,'Могилев');
+INSERT INTO `cities` VALUES (1,1,'Борисов'),(2,1,'Вилейка'),(3,1,'Воложин'),(4,1,'Дзержинск'),(5,1,'Клецк'),(6,1,'Копыль'),(7,1,'Логойск'),(8,1,'Любань'),(9,1,'Молодечно'),(10,1,'Несвеж'),(11,1,'Слуцк'),(12,1,'Смолевичи'),(13,1,'Солигорск'),(14,1,'Столбцы'),(15,1,'Узда'),(16,1,'Жодино'),(17,1,'Минск'),(19,2,'Береза'),(20,2,'Ганцевичи'),(21,2,'Ивацевичи'),(22,2,'Каменец'),(23,2,'Лунинец'),(24,2,'Ляховичи'),(25,2,'Пинск'),(26,2,'Брест'),(27,3,'Браслав'),(28,3,'Лепель'),(29,3,'Орша'),(30,3,'Полоцк'),(31,3,'Поставы'),(32,3,'Витебск'),(33,4,'Добруш'),(34,4,'Ельск'),(35,4,'Жлобин'),(36,4,'Мозырь'),(37,4,'Речица'),(38,4,'Рогачев'),(39,4,'Светлогорск'),(40,4,'Гомель'),(41,5,'Волковыск'),(42,5,'Ивье'),(43,5,'Лида'),(44,5,'Новогрудок'),(45,5,'Островец'),(46,5,'Слоним'),(47,5,'Сморгонь'),(48,5,'Гродно'),(49,6,'Бобруйск'),(50,6,'Кличев'),(51,6,'Кричев'),(52,6,'Осиповичи'),(53,6,'Шклов'),(54,6,'Могилев'),(55,2,'Барановичи');
 /*!40000 ALTER TABLE `cities` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -74,10 +73,10 @@ DROP TABLE IF EXISTS `regions`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `regions` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(16) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+  `region_id` int(11) NOT NULL AUTO_INCREMENT,
+  `region_name` varchar(16) NOT NULL,
+  PRIMARY KEY (`region_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -127,7 +126,7 @@ CREATE TABLE `roles` (
   `role_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `role_name` varchar(32) NOT NULL,
   PRIMARY KEY (`role_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -154,7 +153,7 @@ CREATE TABLE `users` (
   `email` varchar(64) NOT NULL,
   `password` varchar(255) NOT NULL,
   PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -163,7 +162,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'Пробный','Персонаж','hashmypassbaby@gmail.com','$2y$10$1U1y8QD36pWfmcVBzKoule2m6vp.aGTwLj/PFGvbIKh46OkVJvDT.'),(2,'Иван','Ивано','vanek@mail.ru','$2y$10$6/iBv9YancBoYETbNmtYV.OBtC93.5Sf4hSB2NsJ6nA0Fy3eg8pzW'),(3,'ПорольКакУ','ПробныйПерсонаж','doubleit@double.com','$2y$10$USPD1WFP9Avx2UiJPIYZLO0aRC/Ny7MrisA4uyVc7u3r5vUEEk6KW'),(4,'qwe','qwe','qwe@qwe.qwe','$2y$10$EQlWLRVgTg3L4RRib2u/X.M65Q752ssIrle8mITgWKh6lwq7F4JXq'),(5,'ffffff','fffff','fghjk@jhdd.lo','$2y$10$Kag4tn5/dpgi0rT7aiBMj.ZH7v.lNHJpRVQ1uwdSPDhG7PAp7v9wW'),(6,'Артем','Эдуардович','artemjackson95@gmail.com','$2y$10$8e7LiSpUw165RvzvMRaZEOR4EuoniaYSxw3nmsOaFRNoWNKUJOONu'),(7,'Oleg','Khvedkovich','test@example.com','$2y$10$Cv/PFCGPW5YV2Lor4mAhTOPWHt7305tnSmRpXkldVhJOpPEnpABd6'),(8,'Nadya','Vsya','nadya54@gmail.com','$2y$10$z0MdZzrqpBbfLb7nNXEf3OLO481SIKC9qii6COOSLGvzec3xJhWpa'),(9,'Ndaya','Vasilevskaya','nadyalove@gmail.com','$2y$10$zvhBarIueTzAGeFDXOKlkefQ0roKIoT6sKR/AmV1Zcfo7lO1t1ByG'),(10,'qwdqw','qwdqwd','ex@ex.ex','$2y$10$O8J4oxEpwAEhQIcgTIy8M.G/wOeoCPtNjYvVLFyib8Re/mjDP59s2'),(11,'qwdqw','qwdqwd','exa@ex.ex','$2y$10$g8aBVKJO6dqLH./gjFsb0.KVO2Gx6GrBWPKF9m5s5kr0bpzzOOd3C'),(12,'example','exampl','example@ex.ex','$2y$10$4iKJgG5Iok0qFYUw0EtK0.UUCekpI.f4O5d7cudFSOyX9DtjW2tCS'),(13,'CitiesLoc','Administrator','cities_admin@gmail.com','$2y$10$K.Hsz5qRtoc9DRKiHiqVq.jTGrcWqH86mFtk6YTe9Hke/ZptcY3YW');
+INSERT INTO `users` VALUES (1,'Пробный','Персонаж','hashmypassbaby@gmail.com','$2y$10$1U1y8QD36pWfmcVBzKoule2m6vp.aGTwLj/PFGvbIKh46OkVJvDT.'),(2,'Иван','Ивано','vanek@mail.ru','$2y$10$6/iBv9YancBoYETbNmtYV.OBtC93.5Sf4hSB2NsJ6nA0Fy3eg8pzW'),(3,'ПорольКакУ','ПробныйПерсонаж','doubleit@double.com','$2y$10$USPD1WFP9Avx2UiJPIYZLO0aRC/Ny7MrisA4uyVc7u3r5vUEEk6KW'),(4,'qwe','qwe','qwe@qwe.qwe','$2y$10$EQlWLRVgTg3L4RRib2u/X.M65Q752ssIrle8mITgWKh6lwq7F4JXq'),(5,'ffffff','fffff','fghjk@jhdd.lo','$2y$10$Kag4tn5/dpgi0rT7aiBMj.ZH7v.lNHJpRVQ1uwdSPDhG7PAp7v9wW'),(6,'Артем','Эдуардович','artemjackson95@gmail.com','$2y$10$8e7LiSpUw165RvzvMRaZEOR4EuoniaYSxw3nmsOaFRNoWNKUJOONu'),(7,'Oleg','Khvedkovich','test@example.com','$2y$10$Cv/PFCGPW5YV2Lor4mAhTOPWHt7305tnSmRpXkldVhJOpPEnpABd6'),(8,'Nadya','Vsya','nadya54@gmail.com','$2y$10$z0MdZzrqpBbfLb7nNXEf3OLO481SIKC9qii6COOSLGvzec3xJhWpa'),(9,'Ndaya','Vasilevskaya','nadyalove@gmail.com','$2y$10$zvhBarIueTzAGeFDXOKlkefQ0roKIoT6sKR/AmV1Zcfo7lO1t1ByG'),(10,'qwdqw','qwdqwd','ex@ex.ex','$2y$10$O8J4oxEpwAEhQIcgTIy8M.G/wOeoCPtNjYvVLFyib8Re/mjDP59s2'),(11,'qwdqw','qwdqwd','exa@ex.ex','$2y$10$g8aBVKJO6dqLH./gjFsb0.KVO2Gx6GrBWPKF9m5s5kr0bpzzOOd3C'),(12,'example','exampl','example@ex.ex','$2y$10$4iKJgG5Iok0qFYUw0EtK0.UUCekpI.f4O5d7cudFSOyX9DtjW2tCS'),(13,'CitiesLoc','Administrator','cities_admin@gmail.com','$2y$10$K.Hsz5qRtoc9DRKiHiqVq.jTGrcWqH86mFtk6YTe9Hke/ZptcY3YW'),(14,'Yuliya','Tsedric','yulia@gmail.com','$2y$10$DBdYA5ksiY2EQKbE1dEm7u/Oc1VSrSp8UO6UY/Myl.Kg1hpJHc3Yi');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -203,4 +202,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-08-01 17:36:09
+-- Dump completed on 2014-08-05 10:37:58

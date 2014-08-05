@@ -1,10 +1,9 @@
 <?php use App\Managers\MapManager; ?>
-<?php $cityName = MapManager::getCityById($cityId); ?>
 <?php $regions = MapManager::getRegions(); ?>
 
 <div class="jumbotron">
-    <p class="lead">City #<?php echo $cityId; ?> information editing </p>
-    <form method="POST" class="editionForm" id="editionForm" action="/admin/edit">
+    <p class="lead">New city addition</p>
+    <form method="POST" class="addForm" id="addForm" action="/admin/add">
         <select name="region_id" class="selectpicker">
             <?php if (!empty($regions)): ?>
                 <?php foreach ($regions as $region): ?>
@@ -15,10 +14,9 @@
         </br>
         </br>
 
-        <input name="city_name" type="text" class="input-block-level" placeholder="City name"
-               value="<?= $cityName ?>">
+        <input name="city_name" type="text" class="input-block-level" placeholder="City name">
         </br>
         </br>
-        <button class="btn btn-primary" name="city_id" value="<?php echo $cityId; ?>" id="editionSubmit" type="submit">Edit</button>
+        <button class="btn btn-info" id="additionSubmit" type="submit">Add</button>
     </form>
 </div>
