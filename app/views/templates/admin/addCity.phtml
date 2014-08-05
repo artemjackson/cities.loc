@@ -3,7 +3,7 @@
 
 <div class="jumbotron">
     <p class="lead">New city addition</p>
-    <form method="POST" class="addForm" id="addForm" action="/admin/add">
+    <form method="POST" class="cityForm" id="cityForm" action="/admin/add">
         <select name="region_id" class="selectpicker">
             <?php if (!empty($regions)): ?>
                 <?php foreach ($regions as $region): ?>
@@ -15,8 +15,8 @@
         </br>
 
         <input name="city_name" type="text" class="input-block-level" placeholder="City name">
+        <div id="errors"></div>
         </br>
-        </br>
-        <button class="btn btn-info" id="additionSubmit" type="submit">Add</button>
+        <button class="btn btn-primary" id="additionSubmit" type="submit">Add</button>
     </form>
 </div>

@@ -2,6 +2,8 @@
 
 namespace App\Controllers;
 
+use App\Form\CityForm;
+use App\Form\RegionForm;
 use App\Managers\MapManager;
 use App\Managers\UserManager;
 use Core\Identifier\Identifier;
@@ -31,18 +33,26 @@ class AdminController extends Controller
             $post = $this->getRequest()->getPost();
 
             if (isset($post['region_name'])) {
-                MapManager::safeRegion($post['region_name']) ?
-                    $this->flashMessager->addSuccessMessage("New region was successfully added\n") :
-                    $this->flashMessager->addErrorMessage("New region hasn't been added\n");
-
+                $form = new RegionForm($post);
+                if ($form->isValid()) {
+                    MapManager::safeRegion($post['region_name']) ?
+                        $this->flashMessager->addSuccessMessage("New region was successfully added\n") :
+                        $this->flashMessager->addErrorMessage("New region hasn't been added\n");
+                } else {
+                    $this->flashMessager->addWarningMessages($form->getMessages());
+                }
                 $this->redirect("admin/regions");
             }
 
             if (isset($post['city_name'])) {
-                MapManager::safeCity($post['city_name'], $post['region_id']) ?
-                    $this->flashMessager->addSuccessMessage("New city was successfully added\n") :
-                    $this->flashMessager->addErrorMessage("New city hasn't been added\n");
-
+                $form = new CityForm($post);
+                if ($form->isValid()) {
+                    MapManager::safeCity($post['city_name'], $post['region_id']) ?
+                        $this->flashMessager->addSuccessMessage("New city was successfully added\n") :
+                        $this->flashMessager->addErrorMessage("New city hasn't been added\n");
+                } else {
+                    $this->flashMessager->addWarningMessages($form->getMessages());
+                }
                 $this->redirect("admin/cities");
             }
         } else {
@@ -82,17 +92,27 @@ class AdminController extends Controller
             $post = $this->getRequest()->getPost();
 
             if (isset($post['region_name'])) {
-                MapManager::safeRegion($post['region_name'], $post['region_id']) ?
-                    $this->flashMessager->addSuccessMessage("Region name was changed successfully\n") :
-                    $this->flashMessager->addErrorMessage("Region name has not been changed\n");
+                $form = new RegionForm($post);
+                if ($form->isValid()) {
+
+                    MapManager::safeRegion($post['region_name'], $post['region_id']) ?
+                        $this->flashMessager->addSuccessMessage("Region name was changed successfully\n") :
+                        $this->flashMessager->addErrorMessage("Region name has not been changed\n");
+                } else {
+                    $this->flashMessager->addWarningMessages($form->getMessages());
+                }
                 $this->redirect("admin/regions");
             }
 
             if (isset($post['city_name'])) {
-                MapManager::safeCity($post['city_name'], $post['region_id'], $post['city_id']) ?
-                    $this->flashMessager->addSuccessMessage("City name was changed successfully\n") :
-                    $this->flashMessager->addErrorMessage("City name has not been changed\n");
-
+                $form = new CityForm($post);
+                if ($form->isValid()) {
+                    MapManager::safeCity($post['city_name'], $post['region_id'], $post['city_id']) ?
+                        $this->flashMessager->addSuccessMessage("City name was changed successfully\n") :
+                        $this->flashMessager->addErrorMessage("City name has not been changed\n");
+                } else {
+                    $this->flashMessager->addWarningMessages($form->getMessages());
+                }
                 $this->redirect("admin/cities");
             }
 

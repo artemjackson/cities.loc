@@ -13,12 +13,4 @@ $(document).ready(function () {
             }
         });
     }).change();
-
-    $('#wowButton').click(function () {
-        alert("Воу-воу, полегче!");
-    });
-
-    $('#submit').click(function () {
-
-    });
 });

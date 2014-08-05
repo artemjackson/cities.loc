@@ -62,8 +62,14 @@ abstract class Controller
     /**
      * @param $location
      */
-    public function redirect($location)
+    public function redirect($location = null)
     {
+        if(!$location){
+            $currentLocation = $_SERVER['REQUEST_URI'];
+            header('Location:' . $currentLocation);
+            exit();
+        }
+
         $host = "http://" . $_SERVER['HTTP_HOST'] . '/'; //TODO why do we need this?
         header('Location:' . $host . $location);
         exit();
