@@ -4,8 +4,8 @@
     ?>
     <p class = "lead">Sing in to your account</p>
     <form method="POST" class="signForm" id="singInForm" action="/user/login">
-        <input name="email" type="text" class="input-block-level" placeholder="Email" value="<?php echo $email; ?>">
-        <input name="password" id="password" type="password" class="input-block-level" placeholder="Password">
+        <input class="form-control input-block-level" name="email" type="text" placeholder="Email" value="<?php echo $email; ?>">
+        <input class="form-control input-block-level" name="password" id="password" type="password"  placeholder="Password">
         </br><button class="btn btn-large btn-primary" id="registrationSubmit" type="submit">Sing in</button>
     </form>
     </br>
