@@ -4,7 +4,7 @@
 
 <div class="jumbotron">
     <p class="lead">City #<?php echo $cityId; ?> information editing </p>
-    <form  method="POST" class="cityForm" id="cityForm" action="/admin/edit">
+    <form  method="POST" class="cityForm" id="cityForm" action="/admin/cities/edit/<?php echo $cityId; ?>">
         <select name="region_id" class="selectpicker">
             <?php if (!empty($regions)): ?>
                 <?php foreach ($regions as $region): ?>

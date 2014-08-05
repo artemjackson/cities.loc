@@ -3,6 +3,7 @@
 namespace Core\MVC\Router;
 
 use Core\App;
+use Core\Exceptions\ConfigurationException;
 use Core\MVC\Router\Exceptions\ControllerException;
 
 
@@ -32,23 +33,7 @@ class Router
      */
     protected $actionShortName;
 
-    /**
-     * @return mixed
-     */
-    public function getController()
-    {
-        return $this->controller;
-    }
-
-    /**
-     * @param $controller
-     * @return $this
-     */
-    public function setController($controller)
-    {
-        $this->controller = $controller;
-        return $this;
-    }
+    protected $params = array();
 
     /**
      * @return mixed
@@ -82,16 +67,24 @@ class Router
         $this->setActionShortName($defaultAction);
 
         // Separating request URI
-        $routes = explode('/', $_SERVER['REQUEST_URI']);
+        $uri = trim($_SERVER['REQUEST_URI'], '/');
+        $routes = explode('/', $uri);
 
         // Getting the name of controller if it exists
-        if (!empty($routes[1])) {
-            $this->setControllerShortName($routes[1]);
+        if (!empty($routes[0])) {
+            $this->setControllerShortName($routes[0]);
         }
 
         // Getting the name of action if it exists
-        if (!empty($routes[2])) {
-            $this->setActionShortName($routes[2]);
+        if (!empty($routes[1])) {
+            $this->setActionShortName($routes[1]);
+        }
+        // Checking if there are any params
+        if (isset($routes[2])) {
+            // Getting params
+            for ($i = 2, $size = count($routes); $i < $size; $i++) {
+                $this->addParam($routes[$i]);
+            }
         }
 
         //  Recreating path to controllers into namespaces
@@ -124,6 +117,19 @@ class Router
         } catch (\AutoloaderException $e) {
             throw new  ControllerException("Undefined controller: {$controllerName}.\n", 404, $e);
         }
+    }
+
+    public function addParam($param)
+    {
+        array_push($this->params, $param);
+    }
+
+    /**
+     * @return array
+     */
+    public function getParams()
+    {
+        return $this->params;
     }
 
     /**
@@ -159,6 +165,24 @@ class Router
     public function setActionShortName($actionShortName)
     {
         $this->actionShortName = $actionShortName;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getController()
+    {
+        return $this->controller;
+    }
+
+    /**
+     * @param $controller
+     * @return $this
+     */
+    public function setController($controller)
+    {
+        $this->controller = $controller;
         return $this;
     }
 }

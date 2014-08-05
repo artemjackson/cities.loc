@@ -3,7 +3,7 @@
 
 <div class="jumbotron">
     <p class="lead">Region #<?php echo $regionId; ?> information editing </p>
-    <form method="POST" class="regionForm" id="regionForm" action="/admin/edit">
+    <form method="POST" class="regionForm" id="regionForm" action="/admin/regions/edit/<?php echo $regionId; ?>">
         <input name="region_name" type="text" class="input-block-level" placeholder="Region name"
                value="<?= $regionName ?>">
         <div id="errors"></div>

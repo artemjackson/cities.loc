@@ -16,164 +16,6 @@ use Core\MVC\View\View;
  */
 class AdminController extends Controller
 {
-
-    public function addAction()
-    {
-        $view = new View();
-
-        if (Identifier::identity() !== 'admin') {
-            $view->setTemplate('errors/403');
-            return $view;
-        }
-
-        $view->setLayout('admin');
-
-        if ($this->getRequest()->isPost()) {
-
-            $post = $this->getRequest()->getPost();
-
-            if (isset($post['region_name'])) {
-                $form = new RegionForm($post);
-                if ($form->isValid()) {
-                    MapManager::safeRegion($post['region_name']) ?
-                        $this->flashMessager->addSuccessMessage("New region was successfully added\n") :
-                        $this->flashMessager->addErrorMessage("New region hasn't been added\n");
-                } else {
-                    $this->flashMessager->addWarningMessages($form->getMessages());
-                }
-                $this->redirect("admin/regions");
-            }
-
-            if (isset($post['city_name'])) {
-                $form = new CityForm($post);
-                if ($form->isValid()) {
-                    MapManager::safeCity($post['city_name'], $post['region_id']) ?
-                        $this->flashMessager->addSuccessMessage("New city was successfully added\n") :
-                        $this->flashMessager->addErrorMessage("New city hasn't been added\n");
-                } else {
-                    $this->flashMessager->addWarningMessages($form->getMessages());
-                }
-                $this->redirect("admin/cities");
-            }
-        } else {
-            $get = $this->getRequest()->getGet();
-
-            if (!$get) {
-                $view->setTemplate('errors/403');
-                return $view;
-            }
-
-            if (isset($get['region'])) {
-                $view->setTemplate("admin/addRegion");
-                return $view;
-            }
-
-            if (isset($get['city'])) {
-                $view->setTemplate("admin/addCity");
-                return $view;
-            }
-        }
-        var_dump($_REQUEST);
-    }
-
-    public function editAction()
-    {
-        $view = new View();
-
-        if (Identifier::identity() !== 'admin') {
-            $view->setTemplate('errors/403');
-            return $view;
-        }
-
-        $view->setLayout('admin');
-
-        if ($this->getRequest()->isPost()) {
-
-            $post = $this->getRequest()->getPost();
-
-            if (isset($post['region_name'])) {
-                $form = new RegionForm($post);
-                if ($form->isValid()) {
-
-                    MapManager::safeRegion($post['region_name'], $post['region_id']) ?
-                        $this->flashMessager->addSuccessMessage("Region name was changed successfully\n") :
-                        $this->flashMessager->addErrorMessage("Region name has not been changed\n");
-                } else {
-                    $this->flashMessager->addWarningMessages($form->getMessages());
-                }
-                $this->redirect("admin/regions");
-            }
-
-            if (isset($post['city_name'])) {
-                $form = new CityForm($post);
-                if ($form->isValid()) {
-                    MapManager::safeCity($post['city_name'], $post['region_id'], $post['city_id']) ?
-                        $this->flashMessager->addSuccessMessage("City name was changed successfully\n") :
-                        $this->flashMessager->addErrorMessage("City name has not been changed\n");
-                } else {
-                    $this->flashMessager->addWarningMessages($form->getMessages());
-                }
-                $this->redirect("admin/cities");
-            }
-
-        } else {
-            $get = $this->getRequest()->getGet();
-
-            if (!$get) {
-                $view->setTemplate('errors/403');
-                return $view;
-            }
-
-            if (isset($get['region'])) {
-                $view->setTemplate("admin/editRegion");
-                $view->setData(array('regionId' => $get['region']));
-                return $view;
-            }
-
-            if (isset($get['city'])) {
-                $view->setTemplate("admin/editCity");
-                $view->setData(array('cityId' => $get['city']));
-                return $view;
-            }
-        }
-    }
-
-    public function deleteAction()
-    {
-        $view = new View();
-
-        if (Identifier::identity() !== 'admin') {
-            $view->setTemplate('errors/403');
-            return $view;
-        }
-
-        $view->setLayout('admin');
-
-        if ($this->getRequest()->isPost()) {
-
-            $post = $this->getRequest()->getPost();
-
-            if (isset($post['region'])) {
-                MapManager::deleteRegion($post['region']) ?
-                    $this->flashMessager->addSuccessMessage("Region was successfully deleted\n") :
-                    $this->flashMessager->addErrorMessage("Region has not been deleted\n");
-
-                $this->redirect("admin/regions");
-            }
-
-            if (isset($post['city'])) {
-                MapManager::deleteCity($post['city']) ?
-                    $this->flashMessager->addSuccessMessage("City was successfully deleted\n") :
-                    $this->flashMessager->addErrorMessage("City  has not been changed\n");
-
-                $this->redirect("admin/cities");
-            }
-        }
-
-        $view->setTemplate('errors/403');
-        return $view;
-    }
-
     /**
      * @return View
      */
@@ -205,13 +47,24 @@ class AdminController extends Controller
         return $view;
     }
 
-    public function regionsAction()
+    public function regionsAction(array $params = array())
     {
         $view = new View();
 
         if (Identifier::identity() !== 'admin') {
             $view->setTemplate('errors/403');
             return $view;
+        }
+
+        if (isset($params[0])) {
+            switch ($params[0]) {
+                case 'edit':
+                    return $this->editRegion($params[1]);
+                case 'add':
+                    return $this->addRegion();
+                case 'delete':
+                    $this->deleteRegion();
+            }
         }
 
         $view->setLayout('admin');
@@ -220,7 +73,75 @@ class AdminController extends Controller
         return $view;
     }
 
-    public function citiesAction()
+    public function editRegion($regionId)
+    {
+        if ($this->getRequest()->isPost()) {
+
+            $post = $this->getRequest()->getPost();
+
+            if (isset($post['region_name'])) {
+                $form = new RegionForm($post);
+                if ($form->isValid()) {
+                    MapManager::safeRegion($post['region_name'], $post['region_id']) ?
+                        $this->flashMessager->addSuccessMessage("Region name was changed successfully\n") :
+                        $this->flashMessager->addErrorMessage("Region name has not been changed\n");
+                    $this->redirect("admin/regions");
+                } else {
+                    $this->flashMessager->addWarningMessages($form->getMessages());
+                }
+                $this->redirect();
+            }
+        }
+
+        $view = new View();
+        $view->setLayout('admin');
+        $view->setTemplate("admin/editRegion");
+        $view->setData(array('regionId' => $regionId));
+
+        return $view;
+    }
+
+    public function addRegion()
+    {
+        if ($this->getRequest()->isPost()) {
+            $post = $this->getRequest()->getPost();
+            if (isset($post['region_name'])) {
+                $form = new RegionForm($post);
+                if ($form->isValid()) {
+                    MapManager::safeRegion($post['region_name']) ?
+                        $this->flashMessager->addSuccessMessage("New region was successfully added\n") :
+                        $this->flashMessager->addErrorMessage("New region hasn't been added\n");
+                    $this->redirect("admin/regions");
+                } else {
+                    $this->flashMessager->addWarningMessages($form->getMessages());
+                }
+                $this->redirect();
+            }
+        }
+
+        $view = new View();
+        $view->setLayout('admin');
+        $view->setTemplate("admin/addRegion");
+        return $view;
+    }
+
+    public function deleteRegion()
+    {
+        if ($this->getRequest()->isPost()) {
+
+            $post = $this->getRequest()->getPost();
+
+            if (isset($post['region'])) {
+                MapManager::deleteRegion($post['region']) ?
+                    $this->flashMessager->addSuccessMessage("Region was successfully deleted\n") :
+                    $this->flashMessager->addErrorMessage("Region has not been deleted\n");
+
+                $this->redirect("admin/regions");
+            }
+        }
+    }
+
+    public function citiesAction(array $params = array())
     {
         $view = new View();
 
@@ -229,9 +150,90 @@ class AdminController extends Controller
             return $view;
         }
 
+        if (isset($params[0])) {
+            switch ($params[0]) {
+                case 'edit':
+                    return $this->editCity($params[1]);
+                case 'add':
+                    return $this->addCity();
+                case 'delete':
+                    return $this->deleteCity();
+            }
+        }
+
         $view->setLayout('admin');
         $view->setData(array('cities' => MapManager::getAllCities()));
 
         return $view;
+    }
+
+    public function editCity($cityId)
+    {
+        if ($this->getRequest()->isPost()) {
+            $post = $this->getRequest()->getPost();
+            if (isset($post['city_name'])) {
+                $form = new CityForm($post);
+                if ($form->isValid()) {
+                    MapManager::safeCity($post['city_name'], $post['region_id'], $post['city_id']) ?
+                        $this->flashMessager->addSuccessMessage("Region name was changed successfully\n") :
+                        $this->flashMessager->addErrorMessage("Region name has not been changed\n");
+                    $this->redirect("admin/cities");
+                } else {
+                    $this->flashMessager->addWarningMessages($form->getMessages());
+                }
+                $this->redirect();
+            }
+        }
+
+        $view = new View();
+        $view->setLayout('admin');
+        $view->setTemplate("admin/editCity");
+        $view->setData(array('cityId' => $cityId));
+
+        return $view;
+    }
+
+    public function addCity()
+    {
+        if ($this->getRequest()->isPost()) {
+
+            $post = $this->getRequest()->getPost();
+
+            if (isset($post['city_name'])) {
+
+                $form = new CityForm($post);
+                if ($form->isValid()) {
+                    MapManager::safeCity($post['city_name'], $post['region_id']) ?
+                        $this->flashMessager->addSuccessMessage("New city was successfully added\n") :
+                        $this->flashMessager->addErrorMessage("New city hasn't been added\n");
+                    $this->redirect("admin/cities");
+                } else {
+                    $this->flashMessager->addWarningMessages($form->getMessages());
+                    $this->redirect();
+                }
+
+            }
+        }
+
+        $view = new View();
+        $view->setLayout('admin');
+        $view->setTemplate("admin/addCity");
+        return $view;
+    }
+
+    public function deleteCity()
+    {
+        if ($this->getRequest()->isPost()) {
+
+            $post = $this->getRequest()->getPost();
+
+            if (isset($post['city'])) {
+
+                MapManager::deleteCity($post['city']) ?
+                    $this->flashMessager->addSuccessMessage("City was successfully deleted\n") :
+                    $this->flashMessager->addErrorMessage("City  has not been changed\n");
+                $this->redirect("admin/cities");
+            }
+        }
     }
 }

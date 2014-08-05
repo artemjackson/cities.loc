@@ -1,4 +1,4 @@
-<form  method="GET" action="/admin/add/">
+<form method="POST" action="/admin/cities/add/">
     <button style="float: right" class="btn btn-success" name="city" value="add">Add new</button>
 </form>
 </br>
@@ -21,15 +21,15 @@
                 <?php echo "<td>$data</td>"; ?>
             <?php endforeach; ?>
             <td>
-                <form method="GET" action="/admin/edit/">
+                <form method="POST" action="/admin/cities/edit/<?php echo $city['city_id']; ?>">
                     <button class="btn btn-info" name="city" value="<?php echo $city['city_id']; ?>">edit</button>
                 </form>
             </td>
             <td>
-                <form method="POST" action="/admin/delete/">
-                    <button class="btn btn-danger" name="city" value="<?php echo $city['city_id']; ?>">delete</button>
-                </form>
+                <button class="cityDelete btn btn-danger" name="city" value="<?php echo $city['city_id']; ?>">delete
+                </button>
             </td>
         </tr>
     <?php endforeach; ?>
+    <div id="deleteDialog"> Do you really want to delete this city?</div>
 </table>

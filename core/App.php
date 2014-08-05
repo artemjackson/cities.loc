@@ -86,7 +86,8 @@ final class App
 
         $controller = $router->getController();
         $action = $router->getAction();
-        $view = $controller->$action();
+        $params = $router->getParams();
+        $view = $controller->$action($params);
 
         if (!$view->getTemplate()) {
             $folder = $router->getControllerShortName();

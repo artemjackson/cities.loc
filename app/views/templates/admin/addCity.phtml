@@ -3,7 +3,7 @@
 
 <div class="jumbotron">
     <p class="lead">New city addition</p>
-    <form method="POST" class="cityForm" id="cityForm" action="/admin/add">
+    <form method="POST" class="cityForm" id="cityForm" action="/admin/cities/add">
         <select name="region_id" class="selectpicker">
             <?php if (!empty($regions)): ?>
                 <?php foreach ($regions as $region): ?>
