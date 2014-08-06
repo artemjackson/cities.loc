@@ -19,13 +19,16 @@ class RegionModel extends Model
         return Db::execute(array(':region_id' => $id));
     }
 
-    /**
-     * @return mixed
-     */
-    public function getRegions()
+    public function getRegions($shift = null, $count = null)
     {
         $sql = "SELECT * FROM regions ORDER BY region_name";
+
+        if ($shift !== null && $count !== null) {
+            $sql .= " LIMIT $shift, $count";
+        }
+
         Db::prepare($sql);
+
         return Db::execute();
     }
 
@@ -44,14 +47,34 @@ class RegionModel extends Model
         );
     }
 
-    public function getAllCities()
+    public function getCities($shift = null, $count = null)
     {
         $sql = "SELECT cities.city_id, regions.region_name, cities.city_name FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY cities.city_name";
+
+        if ($shift !== null && $count !== null) {
+            $sql .= " LIMIT $shift, $count";
+        }
+
+        Db::prepare($sql);
+
+        return Db::execute();
+    }
+
+    public function countRegions()
+    {
+        $sql = "SELECT COUNT(region_id) FROM regions";
         Db::prepare($sql);
         return Db::execute();
     }
 
-    public function updateRegion($name, $id)
+    public function countCities()
+    {
+        $sql = "SELECT COUNT(city_id) FROM cities";
+        Db::prepare($sql);
+        return Db::execute();
+    }
+
+        public function updateRegion($name, $id)
     {
         $sql = "UPDATE regions SET region_name = :region_name WHERE region_id = :region_id";
         Db::prepare($sql);

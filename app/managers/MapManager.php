@@ -18,13 +18,10 @@ class MapManager
         return $result ? $result[0]['region_name'] : null;
     }
 
-    /**
-     * @return mixed
-     */
-    public static function getRegions()
+    public static function getRegions($shift = null, $count = null)
     {
         $model = new RegionModel();
-        return $model->getRegions();
+        return $model->getRegions($shift,$count);
     }
 
     public static function safeRegion($name, $id = null)
@@ -58,7 +55,15 @@ class MapManager
         return $model->deleteRegion($id);
     }
 
+    public static function countRegions(){
+        $model = new RegionModel();
+        return current($model->countRegions()[0]);
+    }
 
+    public static function countCities(){
+        $model = new RegionModel();
+        return current($model->countCities()[0]);
+    }
         /**
      * @param $id
      * @return mixed
@@ -69,9 +74,9 @@ class MapManager
         return $model->getCitiesByRegionId($id);
     }
 
-    public static function getAllCities()
+    public static function getCities($shift = null, $count = null)
     {
         $model = new RegionModel();
-        return $model->getAllCities();
+        return $model->getCities($shift, $count);
     }
 }

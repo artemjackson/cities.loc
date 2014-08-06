@@ -49,15 +49,16 @@ class AdminController extends Controller
 
     public function regionsAction(array $params = array())
     {
-        $view = new View();
-
         if (Identifier::identity() !== 'admin') {
+            $view = new View();
             $view->setTemplate('errors/403');
             return $view;
         }
 
         if (isset($params[0])) {
             switch ($params[0]) {
+                case 'page':
+                    return $this->pageRegions($params[1]);
                 case 'edit':
                     return $this->editRegion($params[1]);
                 case 'add':
@@ -66,11 +67,7 @@ class AdminController extends Controller
                     $this->deleteRegion();
             }
         }
-
-        $view->setLayout('admin');
-        $view->setData(array('regions' => MapManager::getRegions()));
-
-        return $view;
+        $this->redirect("admin/regions/page/1");
     }
 
     public function editRegion($regionId)
@@ -143,27 +140,45 @@ class AdminController extends Controller
 
     public function citiesAction(array $params = array())
     {
-        $view = new View();
-
         if (Identifier::identity() !== 'admin') {
+            $view = new View();
             $view->setTemplate('errors/403');
             return $view;
         }
 
         if (isset($params[0])) {
             switch ($params[0]) {
+                case 'page':
+                    return $this->pageCities($params[1]);
                 case 'edit':
                     return $this->editCity($params[1]);
                 case 'add':
                     return $this->addCity();
                 case 'delete':
-                    return $this->deleteCity();
+                    $this->deleteCity(); break;
             }
         }
 
-        $view->setLayout('admin');
-        $view->setData(array('cities' => MapManager::getAllCities()));
+        $this->redirect("admin/cities/page/1");
+    }
 
+    public function pageCities($page)
+    {
+        $count = 10;
+        $shift = $count * ($page - 1);
+        $view = new View();
+        $view->setLayout('admin');
+        $view->setData(array('cities' => MapManager::getCities($shift, $count)));
+        return $view;
+    }
+
+    public function pageRegions($page)
+    {
+        $count = 10;
+        $shift = $count * ($page - 1);
+        $view = new View();
+        $view->setLayout('admin');
+        $view->setData(array('regions' => MapManager::getRegions($shift, $count)));
         return $view;
     }
 

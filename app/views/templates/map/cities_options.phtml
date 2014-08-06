@@ -1,5 +1,5 @@
 <?php if (!empty($cities)): ?>
-    <?php foreach ($cities as $city): ?>
-        <option value="<?php echo $city['city_id']; ?>"> <?php echo $city['city_name']; ?> </option>
-    <?php endforeach; ?>
+<?php foreach ($cities as $city): ?>
+<option value="<?php echo $city['city_id']; ?>"><?php echo $city['city_name']; ?></option>
+<?php endforeach; ?>
 <?php endif;

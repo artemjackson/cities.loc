@@ -18,8 +18,6 @@ class AjaxController extends Controller
      */
     public function updateCitiesAction()
     {
-
-
         if ($this->getRequest()->isAjax()) {
             $id = isset($_POST['id']) ? $_POST['id'] : null;
 
@@ -33,6 +31,7 @@ class AjaxController extends Controller
 
             $jsonView->setTemplate('map/cities_options');
             return $jsonView;
+
         } else {
             return $this->accessForbiddenPage();
         }

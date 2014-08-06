@@ -10,7 +10,9 @@ $(document).ready(function () {
             success: function (response) {
                 console.log(response);
                 $('#cities').html(response.html);
+                $('#cities.selectpicker').selectpicker("refresh");
             }
         });
+
     }).change();
 });

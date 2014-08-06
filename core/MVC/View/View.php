@@ -58,7 +58,7 @@ class View
 
     public function exportFrom($path, array $data = array())
     {
-        $html = "";
+        $html = null;
         $templatesPath = App::getConfig('view', 'templatesPath');
         $templatesExtension = App::getConfig('view', 'templatesExtension');
 
