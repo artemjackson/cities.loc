@@ -1,47 +1,24 @@
 $(document).ready(function () {
-    $('.regionDelete').click(function () {
-        var val = $(this).val();
-        $('.deleteDialog').dialog({
-            autoOpen: false,
-            modal: true,
-            buttons: {
-                "Yes": function () {
-                    var value = val;
-                    $.ajax({
-                        type: 'POST',
-                        url: '/ajax/regionDelete',
-                        data: {region: value}
-                    });
-                    $(this).dialog('close');
-                    location.reload();
-                },
-                "No": function () {
-                    $(this).dialog("close");
-                }
-            }
-        }).dialog('open');
+
+    $('#cities').on('click', '.cityDeletion',function () {
+        var value = $(this).val();
+        $.ajax({
+            type: 'POST',
+            url: '/ajax/cityDelete',
+            data: {city: value}
+        });
+        $('.modal').modal('hide');
+        location.reload();
     });
 
-    $('.cityDelete').click(function () {
-        var val = $(this).val();
-        $('.deleteDialog').dialog({
-            autoOpen: false,
-            modal: true,
-            buttons: {
-                "Yes": function () {
-                    var value = val;
-                    $.ajax({
-                        type: 'POST',
-                        url: '/ajax/cityDelete',
-                        data: {city: value}
-                    });
-                    $(this).dialog('close');
-                    location.reload();
-                },
-                "No": function () {
-                    $(this).dialog("close");
-                }
-            }
-        }).dialog('open');
+    $('#regions').on('click', '.regionDeletion', function () {
+        var value = $(this).val();
+        $.ajax({
+            type: 'POST',
+            url: '/ajax/regionDelete',
+            data: {city: value}
+        });
+        $('.modal').modal('hide');
+        location.reload();
     });
 });

@@ -1,0 +1,21 @@
+<?php
+
+$pagesNumber = 5;
+
+$available = ceil($itemsTotal / $itemsPerPage);
+$set = ceil($activePage / $pagesNumber);
+
+$previous = $activePage - 1 >= 1 ?  $activePage - 1 : 1;
+$next = $activePage + 1 <= $available? $activePage + 1 : $available;
+?>
+<ul class="nav nav-pills pull">
+    <li><a href="#" class="page" data-page=1><<</a></li>
+    <li><a href="#" class="page" data-page=<?php echo $previous; ?>><</a></li>
+    <?php for ($i = $set; ($i < $set + $pagesNumber) && ($i <= $available); $i++) : ?>
+        <li<?php if ($i == $activePage) {
+            echo " class=\"active\"";
+        } ?>><a href="#" class="page" data-page=<?php echo $i; ?>><?php echo $i; ?></a></li>
+    <?php endfor; ?>
+    <li><a href="#" class="page" data-page=<?php echo $next; ?>>></a></li>
+    <li><a href="#" class="page" data-page=<?php echo $available; ?>>>></a></li>
+</ul>

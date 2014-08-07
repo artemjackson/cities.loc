@@ -11,7 +11,7 @@ use Core\MVC\View\View;
 
 class CitiesActionController extends Controller
 {
-    const COUNT = 10;
+    const itemsPerPage = 10;
 
     public function index()
     {
@@ -20,8 +20,36 @@ class CitiesActionController extends Controller
             $view->setTemplate('errors/403');
             return $view;
         }
+        return $this->page(1);
+    }
 
-        return new AdminView(array('cities' => MapManager::getCities(0, self::COUNT)));
+    public function page($id = null)
+    {
+        if (Identifier::identity() !== 'admin') {
+            $view = new View();
+            $view->setTemplate('errors/403');
+            return $view;
+        }
+
+        $totalItems = MapManager::countCities();
+
+        if (ceil($totalItems / self::itemsPerPage) < $id) {
+            $view = new AdminView();
+            $view->setTemplate('errors/404');
+            return $view;
+        }
+
+        $id = $id > 0 ? $id : 1;
+
+        return new AdminView(array(
+            'cities' => MapManager::getCities(
+                    ($id - 1) * self::itemsPerPage,
+                    self::itemsPerPage
+                ),
+            'activePage' => $id,
+            'itemsTotal' => $totalItems,
+            'itemsPerPage' => self::itemsPerPage
+        ));
     }
 
     public function edit($cityId)

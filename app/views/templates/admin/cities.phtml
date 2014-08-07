@@ -1,12 +1,13 @@
 <form method="POST" action="/admin/cities/add/">
     <button style="float: right" class="btn btn-success" name="city" value="add">Add new</button>
 </form>
-</br>
-</br>
+<br>
+<br/>
 
 <div class="container-narrow" id="cities">
+    <?php require_once "cities_table.phtml"?>
 </div>
 
-<div class="pagination">
-    <?php echo $this->pagination(); ?>
+<div id="citiesPagination">
+    <?php require_once "pagination.phtml"?>
 </div>

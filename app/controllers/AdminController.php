@@ -2,12 +2,9 @@
 
 namespace App\Controllers;
 
-use App\Form\CityForm;
-use App\Form\RegionForm;
-use App\Managers\MapManager;
-use App\Managers\UserManager;
 use Core\Identifier\Identifier;
 use Core\MVC\Controller\Controller;
+use Core\MVC\View\AdminView;
 use Core\MVC\View\View;
 
 //TODO refactor this controller. It must be separated into different controllers (CityController, RegionController, UserController)
@@ -33,15 +30,28 @@ class AdminController extends Controller
         return $view;
     }
 
-    public function __call($name, array $arguments = array()){
+    public function __call($name, array $arguments = array())
+    {
         $helperName = __NAMESPACE__ . "\\Helpers\\" . ucfirst($name) . "Controller";
-        $helper = new $helperName();
+
+        try {
+            $helper = new $helperName();
+        } catch (\AutoloaderException $e) {
+            $view = new AdminView();
+            $view->setTemplate("errors/404");
+            return $view;
+        }
 
         $action = isset($arguments[0][0]) ? $arguments[0][0] : 'index';
         unset($arguments[0][0]);
         $args = isset($arguments[0][1]) ? $arguments[0][1] : null;
 
-        return $helper->$action($args);
+        if (method_exists($helper, $action)) {
+            return $helper->$action($args);
+        } else {
+            $view = new AdminView();
+            $view->setTemplate("errors/404");
+            return $view;
+        }
     }
-
 }

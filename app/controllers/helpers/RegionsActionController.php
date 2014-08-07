@@ -11,7 +11,36 @@ use Core\MVC\View\View;
 
 class RegionsActionController extends Controller
 {
-    const COUNT = 10;
+    const itemsPerPage = 3;
+
+    public function page($id = null)
+    {
+        if (Identifier::identity() !== 'admin') {
+            $view = new View();
+            $view->setTemplate('errors/403');
+            return $view;
+        }
+
+        $totalItems = MapManager::countRegions();
+
+        if (ceil($totalItems / self::itemsPerPage) < $id) {
+            $view = new AdminView();
+            $view->setTemplate('errors/404');
+            return $view;
+        }
+
+        $id = $id > 0 ? $id : 1;
+
+        return new AdminView(array(
+            'regions' => MapManager::getRegions(
+                    ($id - 1) * self::itemsPerPage,
+                    self::itemsPerPage
+                ),
+            'activePage' => $id,
+            'itemsTotal' => $totalItems,
+            'itemsPerPage' => self::itemsPerPage
+        ));
+    }
 
     public function index()
     {
@@ -21,7 +50,7 @@ class RegionsActionController extends Controller
             return $view;
         }
 
-        return new AdminView(array('regions' => MapManager::getRegions(0, self::COUNT)));
+        return $this->page(1);
     }
 
     public function edit($regionId)

@@ -8,9 +8,6 @@
     <meta name="description" content="Trying MVC, Twitter Bootstrap, AJAX, PHP, MySQL, Apache">
     <meta name="author" content="Artem Stepanishchev">
 
-    <?php //TODO why do you use jquery 2? What about IE? ?>
-    <script src="/js/jquery-2.1.1.min.js"></script>
-
     <script src="/js/jquery.min.js"></script>
     <?php //TODO why do you use jquery 2? What about IE? ?>
     <script src="/js/bootstrap.min.js"></script>
@@ -127,12 +124,13 @@
             padding: 7px 9px;
         }
 
-        .pagination {
-            margin: 0;
-            width: 450px;
+        #regionsPagination, #citiesPagination {
+            width: 400px;
+            margin: 0 auto;
         }
 
         .dark {
+            display: none;
             position:absolute;
             bottom:0;
             left:0;

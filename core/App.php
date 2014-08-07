@@ -4,6 +4,7 @@ namespace Core;
 
 use Core\MVC\Router\Exceptions\ControllerException;
 use Core\MVC\Router\Router;
+use Core\MVC\View\JsonView;
 use Core\MVC\View\View;
 
 /**
@@ -95,6 +96,7 @@ final class App
             $template = $folder . DIRECTORY_SEPARATOR . $file;
             $view->setTemplate($template);
         }
+
         $view->render();
     }
 }
