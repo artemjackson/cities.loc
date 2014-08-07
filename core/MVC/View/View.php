@@ -51,11 +51,12 @@ class View
 
     public function __call($name, $arguments)
     {
-        $helperName = __NAMESPACE__ . "\\Helpers\\" . ucfirst($name);
+        $helperName = __NAMESPACE__ . "\\Helpers\\" . ucfirst($name); //TODO what about checking is it exists or is it instance of HelperInterface for example
         $helper = new $helperName($arguments);
         return $helper->help();
     }
 
+    //TODO seems to me I saw it in AbstractHelper. You are duplicating code
     public function exportFrom($path, array $data = array())
     {
         $html = null;

@@ -26,8 +26,8 @@ class RegionForm extends Form
                 )),
                 new StringLength(array(
                     'message' => "Region name should be more the 1 and less then 32 symbols",
-                    'min' => 1,
-                    'max' => 32
+                    'min' => 1, //TODO use constants. Always encapsulate
+                    'max' => 32 //TODO use constants. Always encapsulate
                 )),
                 new Regex(array(
                     'message' => "Region name is incorrect",

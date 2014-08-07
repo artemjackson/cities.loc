@@ -37,6 +37,7 @@ class AjaxController extends Controller
         }
     }
 
+    //TODO move it to abstract controller. Something like forbiddenAction. As well as notFoundAction
     public function accessForbiddenPage()
     {
         $view = new View();
