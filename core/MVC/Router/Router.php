@@ -105,15 +105,7 @@ class Router
         try {
             $testController = new $controllerName;
             $this->setController($testController);
-
-            if (!method_exists($this->getController(), $actionName)) {
-                throw new  ControllerException(
-                    "Undefined controller action: {$actionName} in {$controllerName}.\n"
-                );
-            }
-
             $this->action = $actionName;
-
         } catch (\AutoloaderException $e) {
             throw new  ControllerException("Undefined controller: {$controllerName}.\n", 404, $e);
         }

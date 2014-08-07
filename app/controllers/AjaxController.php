@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Controllers\Helpers\CitiesActionController;
 use App\Managers\MapManager;
 use Core\MVC\Controller\Controller;
 use Core\MVC\View\JsonView;
@@ -13,6 +14,24 @@ use Core\MVC\View\View;
  */
 class AjaxController extends Controller
 {
+    public function loadCitiesAction(){
+        if ($this->getRequest()->isAjax()) {
+            $page = isset($_POST['page']) ? $_POST['page'] : null;
+            $count = CitiesActionController::COUNT;
+
+            $cities = MapManager::getCities(($page - 1) * $count, $count);
+            $jsonView = new JsonView(
+                array(
+                    'cities' => $cities
+                )
+            );
+            $jsonView->setTemplate('admin/cities_table');
+            return $jsonView;
+
+        } else {
+            return $this->accessForbiddenPage();
+        }
+    }
     /**
      * @return JsonView
      */

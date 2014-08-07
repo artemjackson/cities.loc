@@ -1,7 +1,7 @@
 $(document).ready(function () {
     $('.regionDelete').click(function () {
         var val = $(this).val();
-        $('#deleteDialog').dialog({
+        $('.deleteDialog').dialog({
             autoOpen: false,
             modal: true,
             buttons: {
@@ -24,7 +24,7 @@ $(document).ready(function () {
 
     $('.cityDelete').click(function () {
         var val = $(this).val();
-        $('#deleteDialog').dialog({
+        $('.deleteDialog').dialog({
             autoOpen: false,
             modal: true,
             buttons: {

@@ -10,14 +10,18 @@
 
     <?php //TODO why do you use jquery 2? What about IE? ?>
     <script src="/js/jquery-2.1.1.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
 
-    <script src="/js/bootstrap-select.js"></script>
+    <script src="/js/jquery.min.js"></script>
+    <?php //TODO why do you use jquery 2? What about IE? ?>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap-select.min.js"></script>
     <script src="/js/jquery.validate.min.js"></script>
     <script src="/js/jquery-ui.min.js"></script>
+
     <script src="/js/validate.js"></script>
-    <script src="/js/ajax.js"></script>
     <script src="/js/dialog.js"></script>
+    <script src="/js/ajax.js"></script>
+
 
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/bootstrap-select.min.css" rel="stylesheet">
@@ -37,11 +41,12 @@
         }
 
         .container-narrow {
+            position: relative;
             margin: 0 auto;
             max-width: 700px;
         }
 
-        #deleteDialog {
+        .deleteDialog {
             display: none;x
         }
 
@@ -121,6 +126,29 @@
             margin-bottom: 15px;
             padding: 7px 9px;
         }
+
+        .pagination {
+            margin: 0;
+            width: 450px;
+        }
+
+        .dark {
+            position:absolute;
+            bottom:0;
+            left:0;
+            top:0;
+            width:700px;
+            background-color: rgba(0,0,0,0.1);
+            z-index: 99999;
+        }
+
+        .loader {
+            width:10px;
+            height:10px;
+            position:absolute;
+            left:48%;
+            top:48%;
+            }
     </style>
 </head>
 <body>
