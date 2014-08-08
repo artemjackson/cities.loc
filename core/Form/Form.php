@@ -6,10 +6,6 @@ namespace Core\Form;
  * Class Form
  * @package Core\Form
  */
-/**
- * Class Form
- * @package Core\Form
- */
 class Form
 {
     /**
@@ -25,7 +21,7 @@ class Form
     /**
      * @var
      */
-    protected $message = array(); // TODO it is array. it should be $messages
+    protected $messages = array();
 
     /**
      * @param array $data
@@ -59,7 +55,7 @@ class Form
      */
     protected function addMessage($message)
     {
-        $this->message[] = $message;
+        $this->messages[] = $message;
     }
 
     /**
@@ -98,6 +94,6 @@ class Form
      */
     public function getMessages()
     {
-        return $this->message;
+        return $this->messages;
     }
 }

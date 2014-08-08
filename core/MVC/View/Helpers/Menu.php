@@ -5,8 +5,15 @@ namespace Core\MVC\View\Helpers;
 use Core\App;
 use Core\Session\Session;
 
+/**
+ * Class Menu
+ * @package Core\MVC\View\Helpers
+ */
 class Menu extends AbstractHelper
 {
+    /**
+     * @var array
+     */
     protected $menu = array(
         'Home' => '/home/',
         'Map' => '/map/',
@@ -16,11 +23,17 @@ class Menu extends AbstractHelper
         'Logout' => '/user/logout/'
     );
 
+    /**
+     *
+     */
     public function help()
     {
         include App::getConfig('view', 'templatesPath') . "menu.phtml";
     }
 
+    /**
+     * @return string
+     */
     public function menu()
     {
         $currentPage = $this->currentPage();

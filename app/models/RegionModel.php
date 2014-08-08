@@ -13,6 +13,10 @@ use Core\MVC\Model\Model;
 class RegionModel extends Model
 {
     //TODO by the name of this method i expect to get the whole info about region
+    /**
+     * @param $id
+     * @return mixed
+     */
     public function getRegionByID($id)
     {
         $sql = "SELECT region_name FROM regions WHERE region_id = :region_id";
@@ -20,6 +24,11 @@ class RegionModel extends Model
         return Db::execute(array(':region_id' => $id));
     }
 
+    /**
+     * @param null $shift
+     * @param null $count
+     * @return mixed
+     */
     public function getRegions($shift = null, $count = null)
     {
         $sql = "SELECT * FROM regions ORDER BY region_name";
@@ -48,6 +57,11 @@ class RegionModel extends Model
         );
     }
 
+    /**
+     * @param null $shift
+     * @param null $count
+     * @return mixed
+     */
     public function getCities($shift = null, $count = null)
     {
         $sql = "SELECT cities.city_id, regions.region_name, cities.city_name FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY cities.city_name";
@@ -61,6 +75,9 @@ class RegionModel extends Model
         return Db::execute();
     }
 
+    /**
+     * @return mixed
+     */
     public function countRegions()
     {
         $sql = "SELECT COUNT(region_id) FROM regions";
@@ -68,6 +85,9 @@ class RegionModel extends Model
         return Db::execute();
     }
 
+    /**
+     * @return mixed
+     */
     public function countCities()
     {
         $sql = "SELECT COUNT(city_id) FROM cities";
@@ -75,7 +95,12 @@ class RegionModel extends Model
         return Db::execute();
     }
 
-        public function updateRegion($name, $id)
+    /**
+     * @param $name
+     * @param $id
+     * @return mixed
+     */
+    public function updateRegion($name, $id)
     {
         $sql = "UPDATE regions SET region_name = :region_name WHERE region_id = :region_id";
         Db::prepare($sql);
@@ -83,13 +108,22 @@ class RegionModel extends Model
     }
 
 
-    public function safeRegion($name)
+    /**
+     * @param $name
+     * @return mixed
+     */
+    public function saveRegion($name)
     {
         $sql = "INSERT INTO regions (region_name) VALUES (:region_name)";
         Db::prepare($sql);
         return Db::execute(array(':region_name' => $name));
     }
-     //TODO by the name of this method  I expect to get the whole info about the city
+
+    //TODO by the name of this method  I expect to get the whole info about the city
+    /**
+     * @param $id
+     * @return mixed
+     */
     public function getCityById($id)
     {
         $sql = "SELECT city_name FROM cities WHERE city_id = :city_id";
@@ -98,6 +132,10 @@ class RegionModel extends Model
 
     }
 
+    /**
+     * @param $id
+     * @return mixed
+     */
     public function deleteCity($id)
     {
         $sql = "DELETE FROM cities WHERE city_id = :city_id";
@@ -105,6 +143,10 @@ class RegionModel extends Model
         return Db::execute(array(':city_id' => $id));
     }
 
+    /**
+     * @param $id
+     * @return mixed
+     */
     public function deleteRegion($id)
     {
         $sql = "DELETE FROM regions WHERE region_id = :region_id";
@@ -112,6 +154,12 @@ class RegionModel extends Model
         return Db::execute(array(':region_id' => $id));
     }
 
+    /**
+     * @param $cityName
+     * @param $regionId
+     * @param $cityId
+     * @return mixed
+     */
     public function updateCity($cityName, $regionId, $cityId)
     {
         $sql = "UPDATE cities SET city_name = :city_name, region_id = :region_id  WHERE city_id = :city_id";
@@ -125,7 +173,12 @@ class RegionModel extends Model
         );
     }
 
-    public function safeCity($cityName, $regionId)
+    /**
+     * @param $cityName
+     * @param $regionId
+     * @return mixed
+     */
+    public function saveCity($cityName, $regionId)
     {
         $sql = "INSERT INTO cities (city_name, region_id) VALUES (:city_name, :region_id)";
         Db::prepare($sql);

@@ -10,12 +10,31 @@ use Core\Validators\Exceptions\ValidatorException;
  */
 class StringLength extends AbstractValidator
 {
+    /**
+     * @param array $options
+     */
     public function __construct(array $options = array())
     {
         parent::__construct($options);
         $max = $this->getMax();
         $min = $this->getMin();
         $this->setDefaultMessage("Length should be more then {$min} and less then {$max} symbols "); //TODO use sprintf
+    }
+
+    /**
+     * @return null
+     */
+    public function getMax()
+    {
+        return $this->getOption('max');
+    }
+
+    /**
+     * @return null
+     */
+    public function getMin()
+    {
+        return $this->getOption('min');
     }
 
     /**
@@ -46,21 +65,5 @@ class StringLength extends AbstractValidator
         }
 
         return $valid;
-    }
-
-    /**
-     * @return null
-     */
-    public function getMax()
-    {
-        return $this->getOption('max');
-    }
-
-    /**
-     * @return null
-     */
-    public function getMin()
-    {
-        return $this->getOption('min');
     }
 }

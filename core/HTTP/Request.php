@@ -8,7 +8,13 @@ namespace Core\HTTP;
  */
 class Request
 {
+    /**
+     *
+     */
     const GET = 'GET';
+    /**
+     *
+     */
     const POST = 'POST';
 
     /**
@@ -82,11 +88,14 @@ class Request
         return !empty($this->postParams[$name]) ? $this->postParams[$name] : null;
     }
 
+    /**
+     * @return bool
+     */
     public function  isAjax()
     {
         return (isset($_SERVER['HTTP_X_REQUESTED_WITH']) &&
-               !empty($_SERVER['HTTP_X_REQUESTED_WITH']) &&
-               strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest');
+            !empty($_SERVER['HTTP_X_REQUESTED_WITH']) &&
+            strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest');
     }
 
     /**

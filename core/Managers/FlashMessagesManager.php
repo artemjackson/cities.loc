@@ -11,9 +11,21 @@ use Core\Session\Session;
  */
 class FlashMessagesManager
 {
+    /**
+     *
+     */
     const SUCCESS = 'success';
+    /**
+     *
+     */
     const WARNING = 'warning';
+    /**
+     *
+     */
     const ERROR = 'danger';
+    /**
+     * @var \Core\Session\Session
+     */
     protected $session;
 
     /**
@@ -56,6 +68,10 @@ class FlashMessagesManager
         return $this;
     }
 
+    /**
+     * @param array $messages
+     * @return $this
+     */
     public function addWarningMessages(array $messages = array())
     {
         foreach ($messages as $warningText) {
@@ -64,6 +80,10 @@ class FlashMessagesManager
         return $this;
     }
 
+    /**
+     * @param $messageText
+     * @return $this
+     */
     public function addWarningMessage($messageText)
     {
         $message = new Message();

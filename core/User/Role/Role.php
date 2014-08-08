@@ -4,11 +4,22 @@ namespace Core\User\Role;
 
 use Core\Db\Db;
 
+/**
+ * Class Role
+ * @package Core\User\Role
+ */
 class Role
 {
+    /**
+     * @var array
+     */
     protected $permissions = array();
 
     //TODO move it RoleModel
+    /**
+     * @param $role_id
+     * @return Role
+     */
     public static function getRole($role_id)
     {
 
@@ -29,11 +40,18 @@ class Role
         return $role;
     }
 
+    /**
+     * @param $name
+     */
     public function setPermission($name)
     {
         $this->permissions[$name] = true;
     }
 
+    /**
+     * @param $perm
+     * @return bool
+     */
     public function hasPermission($perm)
     {
         return isset($this->permissions[$perm]);

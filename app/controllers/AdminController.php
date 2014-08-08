@@ -7,7 +7,6 @@ use Core\MVC\Controller\Controller;
 use Core\MVC\View\AdminView;
 use Core\MVC\View\View;
 
-//TODO refactor this controller. It must be separated into different controllers (CityController, RegionController, UserController)
 /**
  * Class HomeController
  * @package App\Controllers
@@ -19,27 +18,27 @@ class AdminController extends Controller
      */
     public function indexAction()
     {
-        $view = new View();
-
-        if (Identifier::identity() !== 'admin') { //TODO move to constants. also you can create method isAdmin()
-            $view->setTemplate('errors/403');
-            return $view;
-        }
-
-        $view->setLayout('admin'); // TODO you are setting it in every action it must be refactored
-        return $view;
+        return Identifier::isAdmin() ? new AdminView() : $this->accessForbidden();
     }
 
+
+    /**
+     * @param $name
+     * @param array $arguments
+     * @return $this
+     */
     public function __call($name, array $arguments = array())
     {
+        if (!Identifier::isAdmin()) {
+            return $this->accessForbidden();
+        }
+
         $helperName = __NAMESPACE__ . "\\Helpers\\" . ucfirst($name) . "Controller";
 
         try {
             $helper = new $helperName();
         } catch (\AutoloaderException $e) {
-            $view = new AdminView();
-            $view->setTemplate("errors/404");
-            return $view;
+            return $this->notFound();
         }
 
         $action = isset($arguments[0][0]) ? $arguments[0][0] : 'index';
@@ -49,9 +48,7 @@ class AdminController extends Controller
         if (method_exists($helper, $action)) {
             return $helper->$action($args);
         } else {
-            $view = new AdminView();
-            $view->setTemplate("errors/404");
-            return $view;
+            return $this->notFound();
         }
     }
 }

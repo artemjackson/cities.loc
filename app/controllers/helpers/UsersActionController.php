@@ -8,16 +8,17 @@ use Core\MVC\Controller\Controller;
 use Core\MVC\View\AdminView;
 use Core\MVC\View\View;
 
+/**
+ * Class UsersActionController
+ * @package App\Controllers\Helpers
+ */
 class UsersActionController extends Controller
 {
+    /**
+     * @return AdminView
+     */
     public function index()
     {
-        if (Identifier::identity() !== 'admin') { //TODO move to constants. also you can create method isAdmin()
-            $view = new View();
-            $view->setTemplate('errors/403');
-            return $view;
-        }
-
         return new AdminView(array('users' => UserManager::getAllUsers()));
     }
 }

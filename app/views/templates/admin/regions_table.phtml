@@ -18,7 +18,7 @@
                 <?php echo "<td>$data</td>"; ?>
             <?php endforeach; ?>
             <td>
-                <form method="POST" action="/admin/cities/edit/<?php echo $region['region_id']; ?>">
+                <form method="POST" action="/admin/regions/edit/<?php echo $region['region_id']; ?>">
                     <button class="btn btn-info" name="city" value="<?php echo $region['region_id']; ?>">Edit</button>
                 </form>
             </td>
@@ -44,7 +44,7 @@
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
                                 <button type="button" class="regionDeletion btn btn-primary"
-                                        value="<?php echo $city['city_id']; ?>">Yes
+                                        value="<?php echo $region['region_id']; ?>">Yes
                                 </button>
                             </div>
                         </div>

@@ -8,8 +8,20 @@ use Core\Validators\Regex;
 use Core\Validators\StringLength;
 
 
+/**
+ * Class CityForm
+ * @package App\Form
+ */
 class CityForm extends Form
 {
+    /**
+     *
+     */
+    const MIN = 1;
+    /**
+     *
+     */
+    const MAX = 32;
     /**
      * @param array $data
      */
@@ -25,8 +37,8 @@ class CityForm extends Form
                 )),
                 new StringLength(array(
                     'message' => "City name should be more the 1 and less then 32 symbols",
-                    'min' => 1, //TODO use constants. Always encapsulate
-                    'max' => 32 //TODO use constants. Always encapsulate
+                    'min' => self::MIN,
+                    'max' => self::MAX
                 )),
                 new Regex(array(
                     'message' => "City name is incorrect",

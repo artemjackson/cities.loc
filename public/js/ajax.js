@@ -50,9 +50,8 @@ $(document).ready(function () {
         };
     })(jQuery);
 
-    $('#regions').change(function () {
+    $('.selectpicker#regions').change(function () {
         var value = $(this).val();
-        console.log(value); //TODO delete console log
         $.ajax({
             type: 'POST',
             dataType: 'json',

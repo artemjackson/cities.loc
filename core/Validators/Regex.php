@@ -8,6 +8,9 @@ namespace Core\Validators;
  */
 class Regex extends AbstractValidator
 {
+    /**
+     * @param array $options
+     */
     public function __construct(array $options = array())
     {
         parent::__construct($options);

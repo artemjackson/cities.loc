@@ -16,7 +16,7 @@ $(document).ready(function () {
         $.ajax({
             type: 'POST',
             url: '/ajax/regionDelete',
-            data: {city: value}
+            data: {region: value}
         });
         $('.modal').modal('hide');
         location.reload();

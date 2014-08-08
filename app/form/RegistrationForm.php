@@ -15,6 +15,33 @@ use Core\Validators\StringLength;
 class RegistrationForm extends Form
 {
     /**
+     *
+     */
+    const NAME_MIN = 1;
+    /**
+     *
+     */
+    const NAME_MAX = 32;
+
+    /**
+     *
+     */
+    const PASS_MIN = 7;
+    /**
+     *
+     */
+    const PASS_MAX = 255;
+
+    /**
+     *
+     */
+    const EMAIL_MIN = 5;
+    /**
+     *
+     */
+    const EMAIL_MAX = 64;
+
+    /**
      * @param array $data
      */
     public function __construct(array $data = array())
@@ -29,8 +56,8 @@ class RegistrationForm extends Form
                 )),
                 new StringLength(array(
                     'message' => "First name should be more the 1 and less then 32 symbols",
-                    'min' => 1, //TODO use constants. Always encapsulate
-                    'max' => 32 //TODO use constants. Always encapsulate. You use it 2 times
+                    'min' => self::NAME_MIN,
+                    'max' => self::NAME_MAX
                 )),
                 new Regex(array(
                     'message' => "First name is incorrect",
@@ -46,9 +73,10 @@ class RegistrationForm extends Form
                     'message' => "Last name should not be empty!"
                 )),
                 new StringLength(array(
-                    'message' => "Last name should be more the 1 and less then 32 symbols", // TODO use %s and sprintf for setting params to string. If you change min or max you need to change message as well
-                    'min' => 1,
-                    'max' => 32
+                    'message' => "Last name should be more the 1 and less then 32 symbols",
+                    // TODO use %s and sprintf for setting params to string. If you change min or max you need to change message as well
+                    'min' => self::NAME_MIN,
+                    'max' => self::NAME_MAX
                 )),
                 new Regex(array(
                     'message' => "Last name is incorrect",
@@ -67,8 +95,8 @@ class RegistrationForm extends Form
                 ),
                 new StringLength(array(
                     'message' => "Email should be more the 5 and less then 64 symbols",
-                    'min' => 5,
-                    'max' => 64
+                    'min' => self::EMAIL_MIN,
+                    'max' => self::EMAIL_MAX
                 )),
                 new Regex(array(
                     'message' => "Email is incorrect",
@@ -87,8 +115,8 @@ class RegistrationForm extends Form
                 ),
                 new StringLength(array(
                     'message' => "Password should be more the 7 and less then 255 symbols",
-                    'min' => 7,
-                    'max' => 255
+                    'min' => self::PASS_MIN,
+                    'max' => self::PASS_MAX
                 )),
             )
         );

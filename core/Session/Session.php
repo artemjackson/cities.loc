@@ -8,13 +8,37 @@ namespace Core\Session;
  */
 class Session
 {
+    /**
+     *
+     */
     const SESSION_STARTED = true;
+    /**
+     *
+     */
     const SESSION_NOT_STARTED = false;
+    /**
+     * @var bool
+     */
     private static $sessionState = self::SESSION_NOT_STARTED;
 
-    public  function __construct()
+    /**
+     *
+     */
+    public function __construct()
     {
         $this->startSession();
+    }
+
+    /**
+     * @return bool
+     */
+    public function startSession()
+    {
+        if (self::$sessionState === self::SESSION_NOT_STARTED) {
+            self::$sessionState = session_start();
+        }
+
+        return self::$sessionState;
     }
 
     /**
@@ -27,30 +51,35 @@ class Session
         }
     }
 
+    /**
+     * @param $name
+     * @param $value
+     */
     public function __set($name, $value)
     {
         $_SESSION[$name] = $value;
     }
 
-    public function startSession()
-    {
-        if (self::$sessionState === self::SESSION_NOT_STARTED) {
-            self::$sessionState = session_start();
-        }
-
-        return self::$sessionState;
-    }
-
+    /**
+     * @param $name
+     */
     public function __unset($name)
     {
         unset($_SESSION[$name]);
     }
 
+    /**
+     * @param $name
+     * @return bool
+     */
     public function __isset($name)
     {
         return isset($_SESSION[$name]);
     }
 
+    /**
+     * @return bool
+     */
     public function destroy()
     {
         if (self::$sessionState === self::SESSION_STARTED) {

@@ -3,14 +3,25 @@
 namespace App\Form;
 
 use Core\Form\Form;
-use Core\Validators\ExactlyEqual;
 use Core\Validators\NotEmpty;
 use Core\Validators\Regex;
 use Core\Validators\StringLength;
 
-
+/**
+ * Class RegionForm
+ * @package App\Form
+ */
 class RegionForm extends Form
 {
+    /**
+     *
+     */
+    const MIN = 1;
+    /**
+     *
+     */
+    const MAX = 32;
+
     /**
      * @param array $data
      */
@@ -26,8 +37,8 @@ class RegionForm extends Form
                 )),
                 new StringLength(array(
                     'message' => "Region name should be more the 1 and less then 32 symbols",
-                    'min' => 1, //TODO use constants. Always encapsulate
-                    'max' => 32 //TODO use constants. Always encapsulate
+                    'min' => self::MIN,
+                    'max' => self::MAX
                 )),
                 new Regex(array(
                     'message' => "Region name is incorrect",

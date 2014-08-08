@@ -4,6 +4,7 @@ namespace Core\MVC\Controller;
 
 use Core\HTTP\Request;
 use Core\Managers\FlashMessagesManager;
+use Core\MVC\View\View;
 use Core\Session\Session;
 
 /**
@@ -24,7 +25,7 @@ abstract class Controller
     /**
      * @var
      */
-    protected $flashMessager; //TODO incorrect spelling (flashMessenger)
+    protected $flashMessenger;
 
     /**
      * @var \Core\Session\Session
@@ -36,7 +37,7 @@ abstract class Controller
      */
     public function __construct()
     {
-        $this->flashMessager = new FlashMessagesManager();
+        $this->flashMessenger = new FlashMessagesManager();
         $this->session = new Session();
     }
 
@@ -46,6 +47,22 @@ abstract class Controller
     public function getSession()
     {
         return $this->session;
+    }
+
+    /**
+     * @return $this
+     */
+    public function accessForbidden()
+    {
+        return (new View())->setTemplate("errors/403");
+    }
+
+    /**
+     * @return $this
+     */
+    public function notFound()
+    {
+        return (new View())->setTemplate("errors/404");
     }
 
     /**
@@ -64,7 +81,7 @@ abstract class Controller
      */
     public function redirect($location = null)
     {
-        if(!$location){
+        if (!$location) {
             $currentLocation = $_SERVER['REQUEST_URI'];
             header('Location:' . $currentLocation);
             exit();

@@ -11,9 +11,21 @@ use Core\Session\Session;
  */
 class View
 {
+    /**
+     *
+     */
     const SUCCESS = 'successMessages';
+    /**
+     *
+     */
     const WARNING = 'warningMessages';
+    /**
+     *
+     */
     const ERROR = 'errorMessages';
+    /**
+     * @var \Core\Session\Session
+     */
     protected $session;
 
     /**
@@ -49,30 +61,18 @@ class View
         $this->setData($data);
     }
 
+    /**
+     * @param $name
+     * @param $arguments
+     * @return mixed
+     */
     public function __call($name, $arguments)
     {
-        $helperName = __NAMESPACE__ . "\\Helpers\\" . ucfirst($name); //TODO what about checking is it exists or is it instance of HelperInterface for example
+        $helperName = __NAMESPACE__ . "\\Helpers\\" . ucfirst(
+                $name
+            ); //TODO what about checking is it exists or is it instance of HelperInterface for example
         $helper = new $helperName($arguments);
         return $helper->help();
-    }
-
-    //TODO seems to me I saw it in AbstractHelper. You are duplicating code
-    public function exportFrom($path, array $data = array())
-    {
-        $html = null;
-        $templatesPath = App::getConfig('view', 'templatesPath');
-        $templatesExtension = App::getConfig('view', 'templatesExtension');
-
-        $file = $templatesPath . $path . $templatesExtension;
-
-        if (file_exists($file)) {
-            extract($data);
-            ob_start();
-            include $file;
-            $html .= ob_get_contents();
-            ob_end_clean();
-        }
-        return $html;
     }
 
     /**
@@ -103,6 +103,29 @@ class View
     {
         $this->html = $html;
         return $this;
+    }
+
+    /**
+     * @param $path
+     * @param array $data
+     * @return null|string
+     */
+    public function exportFrom($path, array $data = array())
+    {
+        $html = null;
+        $templatesPath = App::getConfig('view', 'templatesPath');
+        $templatesExtension = App::getConfig('view', 'templatesExtension');
+
+        $file = $templatesPath . $path . $templatesExtension;
+
+        if (file_exists($file)) {
+            extract($data);
+            ob_start();
+            include $file;
+            $html .= ob_get_contents();
+            ob_end_clean();
+        }
+        return $html;
     }
 
     /**

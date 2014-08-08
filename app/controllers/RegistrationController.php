@@ -20,26 +20,20 @@ class RegistrationController extends Controller
     public function indexAction()
     {
         $view = new View();
-
-        if (!$this->getRequest()->isPost()) {
-            return $view;
-        }
-
-        $data = $this->getRequest()->getPost();
-
-        $form = new RegistrationForm($data);
-
-        if ($form->isValid()) {
-            if (UserManager::saveUser($data)) {
-                $this->flashMessager->addSuccessMessage("Congratulations! You have successfully registered!\n");
-                $this->redirect('registration');
+        if ($this->getRequest()->isPost()) {
+            $data = $this->getRequest()->getPost();
+            $form = new RegistrationForm($data);
+            if ($form->isValid()) {
+                if (UserManager::saveUser($data)) {
+                    $this->flashMessenger->addSuccessMessage("Congratulations! You have successfully registered!\n");
+                    $this->redirect('registration');
+                } else {
+                    $this->flashMessenger->addErrorMessage("Unfortunately this email is already in use!\n");
+                }
             } else {
-                $this->flashMessager->addErrorMessage("Unfortunately this email is already in use!\n");
+                $this->flashMessenger->addWarningMessages($form->getMessages());
             }
-        } else {
-            $this->flashMessager->addWarningMessages($form->getMessages());
         }
-
         return $view;
     }
 }

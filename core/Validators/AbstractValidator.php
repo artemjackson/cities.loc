@@ -8,40 +8,10 @@ namespace Core\Validators;
  */
 abstract class AbstractValidator implements ValidatorInterface
 {
+    /**
+     * @var
+     */
     protected $defaultMessage;
-
-    /**
-     * @param mixed $defaultMessage
-     */
-    public function setDefaultMessage($defaultMessage)
-    {
-        $this->defaultMessage = $defaultMessage;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getDefaultMessage()
-    {
-        return $this->defaultMessage;
-    }
-
-    /**
-     * @param array $options
-     */
-    public function setOptions($options)
-    {
-        $this->options = $options;
-    }
-
-    /**
-     * @return array
-     */
-    public function getOptions()
-    {
-        return $this->options;
-    }
-
     /**
      * @var
      */
@@ -71,7 +41,40 @@ abstract class AbstractValidator implements ValidatorInterface
         return !empty($this->options[$option]) ? $this->options[$option] : null;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getDefaultMessage()
+    {
+        return $this->defaultMessage;
+    }
+
+    /**
+     * @param mixed $defaultMessage
+     */
+    public function setDefaultMessage($defaultMessage)
+    {
+        $this->defaultMessage = $defaultMessage;
+    }
+
+    /**
+     * @return array
+     */
+    public function getOptions()
+    {
+        return $this->options;
+    }
+
+    /**
+     * @param array $options
+     */
+    public function setOptions($options)
+    {
+        $this->options = $options;
+    }
+
     //TODO what about to check if message is empty than use default message. So you don't need to check it in all validators
+
     /**
      * @return mixed
      */

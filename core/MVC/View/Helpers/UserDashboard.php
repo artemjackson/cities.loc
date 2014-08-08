@@ -2,8 +2,15 @@
 
 namespace Core\MVC\View\Helpers;
 
+/**
+ * Class UserDashboard
+ * @package Core\MVC\View\Helpers
+ */
 class UserDashboard extends AbstractHelper
 {
+    /**
+     * @return null|string
+     */
     public function help()
     {
         if (!isset($this->session->loggedIn)) {

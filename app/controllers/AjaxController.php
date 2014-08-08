@@ -7,7 +7,6 @@ use App\Controllers\Helpers\RegionsActionController;
 use App\Managers\MapManager;
 use Core\MVC\Controller\Controller;
 use Core\MVC\View\JsonView;
-use Core\MVC\View\View;
 
 /**
  * Class AjaxController
@@ -15,54 +14,54 @@ use Core\MVC\View\View;
  */
 class AjaxController extends Controller
 {
+    /**
+     * @return $this
+     */
     public function loadCitiesAction()
     {
         if ($this->getRequest()->isAjax()) {
             $page = isset($_POST['activePage']) ? $_POST['activePage'] : null;
             $count = CitiesActionController::itemsPerPage;
-            $jsonView = new JsonView(
+            return (new JsonView(
                 array(
                     'cities' => MapManager::getCities(($page - 1) * $count, $count)
                 )
-            );
-            $jsonView->setTemplate('admin/cities_table');
-            return $jsonView;
-
+            ))->setTemplate('admin/cities_table');
         } else {
-            return $this->accessForbiddenPage();
+            return $this->accessForbidden();
         }
     }
 
-    public function accessForbiddenPage()
-    {
-        $view = new View();
-        $view->setTemplate("errors/403");
-        return $view;
-    }
-
+    /**
+     * @return $this
+     */
     public function loadRegionsAction()
     {
         if ($this->getRequest()->isAjax()) {
             $page = isset($_POST['activePage']) ? $_POST['activePage'] : null;
             $count = RegionsActionController::itemsPerPage;
-            $jsonView = new JsonView(
+            return (new JsonView(
                 array(
                     'regions' => MapManager::getRegions(($page - 1) * $count, $count),
                 )
-            );
-            $jsonView->setTemplate('admin/regions_table');
-            return $jsonView;
+            ))->setTemplate('admin/regions_table');
 
         } else {
-            return $this->accessForbiddenPage();
+            return $this->accessForbidden();
         }
     }
 
+    /**
+     * @return $this
+     */
     public function updatePaginationAction()
     {
         if ($this->getRequest()->isAjax()) {
             $page = isset($_POST['activePage']) ? $_POST['activePage'] : null;
             $type = isset($_POST['type']) ? $_POST['type'] : null;
+
+            $count = 0;
+            $itemsPerPage = 1;
 
             if ($type == 'cities') {
                 $count = MapManager::countCities();
@@ -72,25 +71,18 @@ class AjaxController extends Controller
                 $itemsPerPage = RegionsActionController::itemsPerPage;
             }
 
-
-            $jsonView = new JsonView();
-            $jsonView->setData(
+            return (new JsonView(
                 array(
                     'activePage' => $page,
                     'itemsTotal' => $count,
                     'itemsPerPage' => $itemsPerPage
                 )
-            );
-            $jsonView->setTemplate("admin/pagination");
-
-            return $jsonView;
+            ))->setTemplate("admin/pagination");
 
         } else {
-            return $this->accessForbiddenPage();
+            return $this->accessForbidden();
         }
     }
-
-    //TODO move it to abstract controller. Something like forbiddenAction. As well as notFoundAction
 
     /**
      * @return JsonView
@@ -100,49 +92,50 @@ class AjaxController extends Controller
         if ($this->getRequest()->isAjax()) {
             $id = isset($_POST['id']) ? $_POST['id'] : null;
 
-            $cities = MapManager::getCitiesByRegionId($id);
-
-            $jsonView = new JsonView(
+            return (new JsonView(
                 array(
-                    'cities' => $cities
+                    'cities' => MapManager::getCitiesByRegionId($id)
                 )
-            );
-
-            $jsonView->setTemplate('map/cities_options');
-            return $jsonView;
+            ))->setTemplate('map/cities_options');
 
         } else {
-            return $this->accessForbiddenPage();
+            return $this->accessForbidden();
         }
     }
 
+    /**
+     * @return $this|bool
+     */
     public function regionDeleteAction()
     {
         if ($this->getRequest()->isAjax()) {
             $post = $this->getRequest()->getPost();
             if (isset($post['region'])) {
                 MapManager::deleteRegion($post['region']) ?
-                    $this->flashMessager->addSuccessMessage("Region was successfully deleted\n") :
-                    $this->flashMessager->addErrorMessage("Region has not been deleted\n");
+                    $this->flashMessenger->addSuccessMessage("Region was successfully deleted\n") :
+                    $this->flashMessenger->addErrorMessage("Region has not been deleted\n");
                 return true;
             }
         } else {
-            return $this->accessForbiddenPage();
+            return $this->accessForbidden();
         }
     }
 
+    /**
+     * @return $this|bool
+     */
     public function cityDeleteAction()
     {
         if ($this->getRequest()->isAjax()) {
             $post = $this->getRequest()->getPost();
             if (isset($post['city'])) {
                 MapManager::deleteCity($post['city']) ?
-                    $this->flashMessager->addSuccessMessage("City was successfully deleted\n") :
-                    $this->flashMessager->addErrorMessage("City has not been deleted\n");
+                    $this->flashMessenger->addSuccessMessage("City was successfully deleted\n") :
+                    $this->flashMessenger->addErrorMessage("City has not been deleted\n");
                 return true;
             }
         } else {
-            return $this->accessForbiddenPage();
+            return $this->accessForbidden();
         }
     }
 }

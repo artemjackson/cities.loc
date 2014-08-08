@@ -15,7 +15,13 @@ final class Db
      * @var
      */
     protected static $dbh = null;
+    /**
+     * @var null
+     */
     protected static $sth = null;
+    /**
+     * @var null
+     */
     protected static $query = null;
 
     /**
@@ -25,6 +31,9 @@ final class Db
     {
     }
 
+    /**
+     * @param $query
+     */
     public static function prepare($query)
     {
         self::init();
@@ -61,10 +70,16 @@ final class Db
         }
     }
 
+    /**
+     * @param array $input_parameters
+     * @return mixed
+     */
     public static function execute(array $input_parameters = array())
     {
         self::init();
         $status = self::$sth->execute($input_parameters);
-        return substr(self::$query,0,6) === 'SELECT' ? self::$sth->fetchAll(\PDO::FETCH_ASSOC) : $status; //TODO refactor it
+        return substr(self::$query, 0, 6) === 'SELECT' ? self::$sth->fetchAll(
+            \PDO::FETCH_ASSOC
+        ) : $status; //TODO refactor it
     }
 }

@@ -2,16 +2,23 @@
 
 namespace Core\MVC\View\Helpers;
 
+/**
+ * Class AdminDashboard
+ * @package Core\MVC\View\Helpers
+ */
 class AdminDashboard extends AbstractHelper
 {
+    /**
+     * @return string
+     */
     public function help()
     {
         if (!isset($this->session->loggedIn)) {
-            return "";
+            return '';
         }
 
         if (!$this->session->loggedIn->hasRole('admin')) {
-            return "";
+            return '';
         }
 
         $adminData = $this->session->loggedIn->getData();
@@ -21,7 +28,7 @@ class AdminDashboard extends AbstractHelper
 
         if ($firstName && $lastName) {
             return $this->exportFrom(
-                "admin/dashboard",
+                'admin/dashboard',
                 array(
                     'firstName' => $firstName,
                     'lastName' => $lastName
@@ -30,6 +37,9 @@ class AdminDashboard extends AbstractHelper
         }
     }
 
+    /**
+     * @var array
+     */
     protected $menu = array(
         'Users' => '/admin/users/',
         'Regions' => '/admin/regions/',
@@ -38,21 +48,24 @@ class AdminDashboard extends AbstractHelper
         'Logout' => '/user/logout',
     );
 
+    /**
+     * @return string
+     */
     public function menu()
     {
         $currentPage = $this->currentPage();
 
-        $html = "<ul class=\"nav nav-pills pull-right\">";
+        $html = '<ul class="nav nav-pills pull-right">';
 
         foreach ($this->menu as $page => $link) {
-            $html .= "<li "; //TODO why do use "" all the time?
+            $html .= '<li ';
             if ($currentPage === $page) {
-                $html .= "class=\"active\"";
+                $html .= 'class="active"';
             }
-            $html .= "><a href=\"" . $link . "\">$page</a></li>";
+            $html .= '><a href="' . $link . '">$page</a></li>';
         }
 
-        $html .= "</ul>";
+        $html .= '</ul>';
         return $html;
     }
 }

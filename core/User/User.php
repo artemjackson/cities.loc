@@ -2,10 +2,6 @@
 
 namespace Core\User;
 
-/**
- * Class User
- * @package Core\User
- */
 use Core\Db\Db;
 use Core\User\Role\Role;
 
@@ -26,14 +22,9 @@ class User
     protected $data = array();
 
     /**
-     * @return mixed
+     * @param $email
+     * @return User|null
      */
-    public function getData()
-    {
-        return $this->data;
-    }
-
-    //TODO it must be in UserModel
     public static function getUserByEmail($email)
     {
         $sql = "SELECT * FROM users WHERE eamil = :email";
@@ -52,18 +43,11 @@ class User
         }
     }
 
-    public function hasRole($name)
-    {
-        return isset($this->roles[$name]);
-    }
+    //TODO it must be in UserModel
 
-    public function setData(array $data = array())
-    {
-        $this->data = $data;
-        return $this;
-    }
-
-    //TODO all queries in models
+    /**
+     *
+     */
     public function initRoles()
     {
         $sql = "SELECT t1.role_id, t2.role_name FROM users_roles as t1
@@ -79,9 +63,42 @@ class User
         }
     }
 
+    /**
+     * @param $name
+     * @param $role
+     */
     public function setRole($name, $role)
     {
         $this->roles[$name] = $role;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getData()
+    {
+        return $this->data;
+    }
+
+    //TODO all queries in models
+
+    /**
+     * @param array $data
+     * @return $this
+     */
+    public function setData(array $data = array())
+    {
+        $this->data = $data;
+        return $this;
+    }
+
+    /**
+     * @param $name
+     * @return bool
+     */
+    public function hasRole($name)
+    {
+        return isset($this->roles[$name]);
     }
 
     /**

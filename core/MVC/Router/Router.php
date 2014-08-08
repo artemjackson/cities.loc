@@ -3,7 +3,6 @@
 namespace Core\MVC\Router;
 
 use Core\App;
-use Core\Exceptions\ConfigurationException;
 use Core\MVC\Router\Exceptions\ControllerException;
 
 
@@ -33,6 +32,9 @@ class Router
      */
     protected $actionShortName;
 
+    /**
+     * @var array
+     */
     protected $params = array();
 
     /**
@@ -111,17 +113,12 @@ class Router
         }
     }
 
+    /**
+     * @param $param
+     */
     public function addParam($param)
     {
         array_push($this->params, $param);
-    }
-
-    /**
-     * @return array
-     */
-    public function getParams()
-    {
-        return $this->params;
     }
 
     /**
@@ -158,6 +155,14 @@ class Router
     {
         $this->actionShortName = $actionShortName;
         return $this;
+    }
+
+    /**
+     * @return array
+     */
+    public function getParams()
+    {
+        return $this->params;
     }
 
     /**

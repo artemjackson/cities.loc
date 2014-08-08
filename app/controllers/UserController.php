@@ -32,13 +32,16 @@ class UserController extends Controller
 
         if ($form->isValid()) {
             $auth = new AuthManager();
-            if ($auth->authenticate($data)) { // TODO this method should take only email and password not array with params
+            if ($auth->authenticate(
+                $data
+            )
+            ) { // TODO this method should take only email and password not array with params
                 $this->redirect("home");
             } else {
-                $this->flashMessager->addErrorMessage($auth->getMessage());
+                $this->flashMessenger->addErrorMessage($auth->getMessage());
             }
         } else {
-            $this->flashMessager->addWarningMessages($form->getMessages());
+            $this->flashMessenger->addWarningMessages($form->getMessages());
         }
         return $view;
     }
@@ -48,11 +51,8 @@ class UserController extends Controller
      */
     public function logoutAction()
     {
-        $view = new View();
-
         if (!isset($this->session->loggedIn)) {
-            $view->setTemplate("errors/404");
-            return $view;
+            return $this->notFound();
         }
 
         unset($this->session->loggedIn);
