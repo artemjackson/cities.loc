@@ -1,6 +1,6 @@
 <?php
 
-$pagesNumber = 5;
+$pagesNumber = 5; //TODO it should be constant
 
 $available = ceil($itemsTotal / $itemsPerPage);
 $set = ceil($activePage / $pagesNumber);
@@ -12,7 +12,7 @@ $next = $activePage + 1 <= $available? $activePage + 1 : $available;
     <li><a href="#" class="page" data-page=1><<</a></li>
     <li><a href="#" class="page" data-page=<?php echo $previous; ?>><</a></li>
     <?php for ($i = $set; ($i < $set + $pagesNumber) && ($i <= $available); $i++) : ?>
-        <li<?php if ($i == $activePage) {
+        <li<?php if ($i == $activePage) { //TODO echo ($i == $activePage) ? 'class="active"' : '';
             echo " class=\"active\"";
         } ?>><a href="#" class="page" data-page=<?php echo $i; ?>><?php echo $i; ?></a></li>
     <?php endfor; ?>

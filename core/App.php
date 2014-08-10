@@ -79,6 +79,7 @@ final class App
         try {
             $router->run();
         } catch (ControllerException $e) {
+            //TODO refactor
             $view = new View();
             $view->setTemplate('errors/404');
             $view->render();

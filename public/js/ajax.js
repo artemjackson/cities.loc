@@ -9,14 +9,14 @@ $(document).ready(function () {
             $.ajax({
                 type: 'POST',
                 dataType: 'json',
-                url: '/ajax/updatePagination',
+                url: '/ajax/updatePagination', //TODO it must be set from options
                 data: {
                     activePage: id,
                     type: type
                 },
                 success: function (response) {
                     $("#" + type + "Pagination").html(response.html);
-                    window.history.replaceState("", "", "/admin/" + type + "/page/" + id);
+                    window.history.replaceState("", "", "/admin/" + type + "/page/" + id); //TODO it must be set from options
                 }
             });
             return this;
@@ -29,7 +29,7 @@ $(document).ready(function () {
             options = $.extend({}, options, params);
             var table = options.table;
             var id = options.id;
-            var url = "/ajax/load" + table;
+            var url = "/ajax/load" + table; //TODO it must be set from options
             $.ajax({
                 type: 'POST',
                 dataType: 'json',
@@ -67,6 +67,7 @@ $(document).ready(function () {
     }).change();
 
     $('#citiesPagination').on('click', '.page', function () {
+        //TODO var $this = $(this);
         var id = $(this).data('page');
         if (!$(this).parent().hasClass('active')) {
             $(this).updatePagination({id: id, type: 'cities'}).updateTable({table: 'cities', id: id});
@@ -75,6 +76,7 @@ $(document).ready(function () {
     });
 
     $('#regionsPagination').on('click', '.page', function () {
+        //TODO var $this = $(this);
         var id = $(this).data('page');
         if (!$(this).parent().hasClass('active')) {
             $(this).updatePagination({id: id, type: 'regions'}).updateTable({table: 'regions', id: id});

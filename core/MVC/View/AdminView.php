@@ -2,6 +2,7 @@
 
 namespace Core\MVC\View;
 
+//TODO it shouldnot be in a Core
 
 /**
  * Class AdminView
