@@ -57,6 +57,7 @@ class CitiesActionController extends Controller
      */
     public function edit($cityId)
     {
+
         if ($this->getRequest()->isPost()) {
             $post = $this->getRequest()->getPost();
             if (isset($post['city_name'])) {
@@ -65,7 +66,7 @@ class CitiesActionController extends Controller
                     MapManager::saveCity($post) ?
                         $this->flashMessenger->addSuccessMessage("City name was changed successfully\n") :
                         $this->flashMessenger->addErrorMessage("City name has not been changed\n");
-                    $this->redirect("admin/cities");
+                    $this->redirect('admin/cities');
                 } else {
                     $this->flashMessenger->addWarningMessages($form->getMessages());
                 }
@@ -85,7 +86,7 @@ class CitiesActionController extends Controller
             if (isset($post['city_name'])) {
                 $form = new CityForm($post);
                 if ($form->isValid()) {
-                    MapManager::saveCity($post['city_name'], $post['region_id']) ?
+                    MapManager::saveCity($post) ?
                         $this->flashMessenger->addSuccessMessage("New city was successfully added\n") :
                         $this->flashMessenger->addErrorMessage("New city hasn't been added\n");
                     $this->redirect("admin/cities");

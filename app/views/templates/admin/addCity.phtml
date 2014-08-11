@@ -1,31 +1,46 @@
 <?php use App\Managers\MapManager; ?>
 <?php
-    //TODO use the same template as for edit city
-    $regions = MapManager::getRegions();
-
+//TODO use the same template as for edit city
+$regions = MapManager::getRegions();
 ?>
-
+<script src="/js/gmap.js"></script>
+<script src="/js/gmap.admin.js"></script>
 <div class="jumbotron">
     <p class="lead">New city addition</p>
-    <form method="POST" class="cityForm" id="cityForm" action="/admin/cities/add">
-        <select name="region_id" class="selectpicker">
-            <?php if (!empty($regions)): ?>
-                <?php foreach ($regions as $region): ?>
-                    <option value="<?php echo $region['region_id']; ?>"><?php echo $region['region_name']; ?></option>
-                <?php endforeach; ?>
-            <?php endif; ?>
-        </select>
-        <br />
-        <br />
 
-        <input class="form-control input-block-level" name="city_name" type="text"  placeholder="City name">
-        <div id="errors"></div>
-        <br />
-        <input class="form-control input-block-level" name="city_latitude" type="text"  placeholder="City latitude">
-        <br />
-        <input class="form-control input-block-level" name="city_longitude" type="text"  placeholder="City longitude">
-        <div id="errors"></div>
-        <br />
-        <button class="btn btn-primary" id="additionSubmit" type="submit">Add</button>
+    <form method="POST" id="cityForm" action="/admin/cities/add">
+        <div class="cityForm">
+            <select name="region_id" class="selectpicker">
+                <?php if (!empty($regions)): ?>
+                    <?php foreach ($regions as $region): ?>
+                        <option
+                            value="<?php echo $region['region_id']; ?>"><?php echo $region['region_name']; ?></option>
+                    <?php endforeach; ?>
+                <?php endif; ?>
+            </select>
+            <br/>
+            <br/>
+
+            <input class="form-control input-block-level" name="city_name" type="text" placeholder="City name">
+
+            <div id="errors"></div>
+            <br/>
+            <input class="form-control input-block-level" data-geo="lat" value="53.9" name="latitude" type="hidden" placeholder="City latitude">
+            <br/>
+            <input class="form-control input-block-level" data-geo="lng" value="27.566667000000052" name="longitude" type="hidden" placeholder="City longitude">
+
+            <div id="errors"></div>
+        </div>
+        <br/>
+
+        <div id="frame">
+            <input class="form-control input-block-level" id="geocomplete">
+
+            <div id="map_canvas"></div>
+        </div>
+        <br/>
+        <button class="btn btn-primary" id="editionSubmit" type="submit">
+            Edit
+        </button>
     </form>
 </div>

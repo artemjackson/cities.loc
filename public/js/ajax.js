@@ -50,24 +50,6 @@ $(document).ready(function () {
         };
     })(jQuery);
 
-    $('.selectpicker#regions').change(function () {
-        var value = $(this).val();
-        $.ajax({
-            type: 'POST',
-            dataType: 'json',
-            url: '/ajax/updateCities',
-            data: {id: value},
-
-            success: function (response) {
-                console.log(response);
-                $('#cities').html(response.html);
-                $('.selectpicker#cities').selectpicker("refresh");
-            }
-        });
-    }).change();
-
-
-
     $('#citiesPagination').on('click', '.page', function () {
         //TODO var $this = $(this);
         var id = $(this).data('page');

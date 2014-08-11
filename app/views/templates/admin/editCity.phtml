@@ -3,33 +3,44 @@
 <?php $cords = MapManager::getCityCordsById($cityId); ?>
 <?php $cityLatitude = $cords['latitude']; ?>
 <?php $cityLongitude = $cords['longitude']; ?>
-
 <?php $regions = MapManager::getRegions(); ?>
-
+<script src="/js/gmap.js"></script>
+<script src="/js/gmap.admin.js"></script>
 <div class="jumbotron">
     <p class="lead">City #<?php echo $cityId; ?> information editing </p>
 
-    <form method="POST" class="cityForm" id="cityForm" action="/admin/cities/edit/<?php echo $cityId; ?>">
-        <select name="region_id" class="selectpicker">
-            <?php if (!empty($regions)): ?>
-                <?php foreach ($regions as $region): ?>
-                    <option value="<?php echo $region['region_id']; ?>"><?php echo $region['region_name']; ?></option>
-                <?php endforeach; ?>
-            <?php endif; ?>
-        </select>
+    <form method="POST" id="cityForm" action="/admin/cities/edit/<?php echo $cityId; ?>">
+        <div class="cityForm">
+            <select name="region_id" class="selectpicker">
+                <?php if (!empty($regions)): ?>
+                    <?php foreach ($regions as $region): ?>
+                        <option
+                            value="<?php echo $region['region_id']; ?>"><?php echo $region['region_name']; ?></option>
+                    <?php endforeach; ?>
+                <?php endif; ?>
+            </select>
+            <br/>
+            <br/>
+            <input class="form-control input-block-level" name="city_name" type="text"
+                   placeholder="City name"
+                   value="<?= $cityName ?>">
+            <input class="form-control input-block-level" data-geo="lat" name="latitude"
+                   value="<?php echo $cords['latitude']; ?>" type="hidden" placeholder="City latitude">
+
+            <input class="form-control input-block-level" data-geo="lng" name="longitude"
+                   value="<?php echo $cords['longitude']; ?>" type="hidden" placeholder="City longitude">
+
+            <div id="errors"></div>
+        </div>
         <br/>
+        <div id="frame">
+            <input class="form-control input-block-level" id="geocomplete">
+
+            <div id="map_canvas"></div>
+        </div>
         <br/>
-        <input class="form-control input-block-level" name="city_name" type="text" placeholder="City name"
-               value="<?= $cityName ?>">
+        <button class="btn btn-primary" name="city_id" value="<?php echo $cityId; ?>" id="editionSubmit" type="submit">
+            Edit
+        </button>
     </form>
-    <br/>
-
-    <div id="frame">
-        <div id="map_canvas"></div>
-    </div>
-    <br/>
-    <button class="btn btn-primary" name="city_id" value="<?php echo $cityId; ?>" id="editionSubmit" type="submit">
-        Edit
-    </button>
-
 </div>
