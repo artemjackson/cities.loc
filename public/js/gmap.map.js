@@ -14,7 +14,12 @@ $(document).ready(function () {
                 $('.selectpicker#cities option').each(function () {
                     var lat = $(this).data('lat');
                     var lng = $(this).data('lng');
-                    $('#map_canvas').gmap('addMarker', {'position': lat + ',' + lng, 'bounds': false});
+                    var text = $(this).text();
+                    $('#map_canvas').gmap('addMarker', {'position': lat + ',' + lng, 'bounds': false}).mouseover(function () {
+                        $('#map_canvas').gmap('openInfoWindow', {'content': text}, this)
+                    }).mouseout(function () {
+                        $('#map_canvas').gmap('closeInfoWindow');
+                    });
                 });
             }
         });
