@@ -65,7 +65,7 @@ class MapManager
     {
         $model = new RegionModel();
         $result = $model->getCityById($id);
-        return $result ? $result[0]['city_name'] : null;
+        return $result ? $result[0] : null;
     }
 
     /**

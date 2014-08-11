@@ -12,17 +12,7 @@ use Core\MVC\Model\Model;
  */
 class RegionModel extends Model
 {
-    //TODO by the name of this method i expect to get the whole info about region
-    public static function getCityCordsById($id)
-    {
-        $sql = "SELECT latitude, longitude FROM cities WHERE city_id = :id";
-        Db::prepare($sql);
-        return Db::execute(
-            array(
-                ':id' => $id
-            )
-        );
-    }
+
 
     /**
      * @param $id
@@ -137,7 +127,7 @@ class RegionModel extends Model
      */
     public function getCityById($id)
     {
-        $sql = "SELECT city_name FROM cities WHERE city_id = :city_id";
+        $sql = "SELECT * FROM cities WHERE city_id = :city_id";
         Db::prepare($sql);
         return Db::execute(array(':city_id' => $id));
 

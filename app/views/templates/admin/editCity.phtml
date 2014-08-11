@@ -1,8 +1,5 @@
 <?php use App\Managers\MapManager; ?>
-<?php $cityName = MapManager::getCityById($cityId); ?>
-<?php $cords = MapManager::getCityCordsById($cityId); ?>
-<?php $cityLatitude = $cords['latitude']; ?>
-<?php $cityLongitude = $cords['longitude']; ?>
+<?php $city = MapManager::getCityById($cityId); ?>
 <?php $regions = MapManager::getRegions(); ?>
 <script src="/js/gmap.js"></script>
 <script src="/js/gmap.admin.js"></script>
@@ -14,7 +11,7 @@
             <select name="region_id" class="selectpicker">
                 <?php if (!empty($regions)): ?>
                     <?php foreach ($regions as $region): ?>
-                        <option
+                        <option <?php if ($region['region_id'] === $city['region_id']) { echo 'selected="selected"'; } ?>
                             value="<?php echo $region['region_id']; ?>"><?php echo $region['region_name']; ?></option>
                     <?php endforeach; ?>
                 <?php endif; ?>
@@ -23,16 +20,17 @@
             <br/>
             <input class="form-control input-block-level" name="city_name" type="text"
                    placeholder="City name"
-                   value="<?= $cityName ?>">
+                   value="<?= $city['city_name'] ?>">
             <input class="form-control input-block-level" data-geo="lat" name="latitude"
-                   value="<?php echo $cords['latitude']; ?>" type="hidden" placeholder="City latitude">
+                   value="<?php echo $city['latitude']; ?>" type="hidden" placeholder="City latitude">
 
             <input class="form-control input-block-level" data-geo="lng" name="longitude"
-                   value="<?php echo $cords['longitude']; ?>" type="hidden" placeholder="City longitude">
+                   value="<?php echo $city['longitude']; ?>" type="hidden" placeholder="City longitude">
 
             <div id="errors"></div>
         </div>
         <br/>
+
         <div id="frame">
             <input class="form-control input-block-level" id="geocomplete">
 
