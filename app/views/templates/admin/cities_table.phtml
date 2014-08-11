@@ -5,6 +5,7 @@
 </div>
 <table class="table table-striped table-bordered table-hover">
     <tr>
+        <?php //TODO what is it? ?>
         <col width="10%">
         <col width="30%">
         <col width="30%">
@@ -21,7 +22,7 @@
     <?php foreach ($cities as $city): ?>
         <tr>
             <?php foreach ($city as $data): ?>
-                <?php echo "<td>$data</td>"; ?>
+                <?php echo "<td>$data</td>"; //TODO why td in echo? ?>
             <?php endforeach; ?>
             <td>
                 <form method="POST" action="/admin/cities/edit/<?php echo $city['city_id']; ?>">

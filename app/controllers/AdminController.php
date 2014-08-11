@@ -29,7 +29,7 @@ class AdminController extends Controller
         return Identifier::isAdmin() ? new AdminView() : $this->accessForbidden();
     }
 
-
+    //TODO refactor move to routers config
     /**
      * @param $name
      * @param array $arguments

@@ -33,7 +33,7 @@ class Session
      * @return bool
      */
     public function startSession()
-    {
+    {//TODO Notice: A session had already been started - ignoring session_start() in D:\xampp\htdocs\projects\intern-custom-mvc-framework\custom-php-mvc-framework\core\Session\Session.php on line 38
         if (self::$sessionState === self::SESSION_NOT_STARTED) {
             self::$sessionState = session_start();
         }

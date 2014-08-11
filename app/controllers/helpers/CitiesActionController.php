@@ -16,7 +16,7 @@ class CitiesActionController extends Controller
     /**
      *
      */
-    const itemsPerPage = 10;
+    const itemsPerPage = 10; //TODO PSR?
 
     /**
      * @return $this|AdminView

@@ -96,6 +96,13 @@ class AjaxController extends Controller
      */
     public function updateCitiesAction()
     {
+        /*
+         *  TODO
+         *  if (!$this->getRequest()->isAjax()) {
+         *      return $this->accessForbidden();
+         *  }
+         *
+         * */
         if ($this->getRequest()->isAjax()) {
             $id = isset($_POST['id']) ? $_POST['id'] : null;
 
