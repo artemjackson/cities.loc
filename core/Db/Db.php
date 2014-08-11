@@ -4,6 +4,7 @@ namespace Core\Db;
 
 use Core\App;
 use Core\Db\Exceptions\DbException;
+use Core\Loggers\FileLogger\FileLogger;
 
 /**
  * Class Db
@@ -23,13 +24,7 @@ final class Db
      * @var null
      */
     protected static $query = null;
-
-    /**
-     *
-     */
-    protected function __construct()
-    {
-    }
+    protected static $logger = null;
 
     /**
      * @param $query
@@ -37,6 +32,7 @@ final class Db
     public static function prepare($query)
     {
         self::init();
+        self::$logger->log('Query preparation: ' . $query);
         self::$query = $query;
         self::$sth = self::$dbh->prepare($query);
     }
@@ -46,6 +42,10 @@ final class Db
      */
     protected static function init()
     {
+        if (self::$logger == null) {
+            self::$logger = new FileLogger('db_actions.log');
+        }
+
         if (self::$dbh !== null) {
             return;
         }
@@ -66,7 +66,8 @@ final class Db
             self::$dbh = new \PDO($dsn, $user, $password);
             self::$dbh->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
         } catch (\PDOException $e) {
-            throw new DbException("Failed to connect to '{$dbName}' Db", 403, $e);
+            self::$logger->error("Can not connect to db : '$dbName' please check config file");
+            throw new DbException("Failed to connect to '$dbName' db", 403, $e);
         }
     }
 
@@ -77,7 +78,20 @@ final class Db
     public static function execute(array $input_parameters = array())
     {
         self::init();
-        $status = self::$sth->execute($input_parameters);
+        self::$logger->begin();
+        if ($input_parameters) {
+            self::$logger->log("Query execution with params:");
+            self::$logger->log($input_parameters);
+        }
+
+        self::$sth->execute($input_parameters);
+        $status = self::$sth->rowCount();
+        if ($status) {
+            self::$logger->log("Query execution finished successfully");
+        } else {
+            self::$logger->error("Query execution failed");
+        }
+        self::$logger->commit();
         return substr(self::$query, 0, 6) === 'SELECT' ? self::$sth->fetchAll(
             \PDO::FETCH_ASSOC
         ) : $status; //TODO refactor it

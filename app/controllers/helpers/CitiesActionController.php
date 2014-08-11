@@ -62,7 +62,7 @@ class CitiesActionController extends Controller
             if (isset($post['city_name'])) {
                 $form = new CityForm($post);
                 if ($form->isValid()) {
-                    MapManager::saveCity($post['city_name'], $post['region_id'], $post['city_id']) ?
+                    MapManager::saveCity($post) ?
                         $this->flashMessenger->addSuccessMessage("City name was changed successfully\n") :
                         $this->flashMessenger->addErrorMessage("City name has not been changed\n");
                     $this->redirect("admin/cities");

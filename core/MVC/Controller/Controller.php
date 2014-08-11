@@ -3,6 +3,7 @@
 namespace Core\MVC\Controller;
 
 use Core\HTTP\Request;
+use Core\Loggers\FileLogger\FileLogger;
 use Core\Managers\FlashMessagesManager;
 use Core\MVC\View\View;
 use Core\Session\Session;
@@ -31,6 +32,7 @@ abstract class Controller
      * @var \Core\Session\Session
      */
     protected $session;
+    protected $logger;
 
     /**
      *
@@ -39,6 +41,22 @@ abstract class Controller
     {
         $this->flashMessenger = new FlashMessagesManager();
         $this->session = new Session();
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getLogger()
+    {
+        return $this->logger;
+    }
+
+    /**
+     * @param mixed $logger
+     */
+    public function setLogger($logger)
+    {
+        $this->logger = $logger;
     }
 
     /**
@@ -54,6 +72,14 @@ abstract class Controller
      */
     public function accessForbidden()
     {
+        $backtrace = debug_backtrace();
+        $method = isset($backtrace[1]['function']) ? $backtrace[1]['function'] : '';
+        $class = isset($backtrace[1]['class']) ? $backtrace[1]['class'] : '';
+
+        if ($method && $class) {
+            $this->logger = new FileLogger("controllers.log");
+            $this->logger->error("Unallowed access to '$method' of class '$class'!");
+        }
         return (new View())->setTemplate("errors/403");
     }
 

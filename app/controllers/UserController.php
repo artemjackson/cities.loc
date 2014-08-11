@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Form\SingInForm;
 use App\Managers\AuthManager;
+use Core\Loggers\FileLogger\FileLogger;
 use Core\MVC\Controller\Controller;
 use Core\MVC\View\View;
 
@@ -13,6 +14,11 @@ use Core\MVC\View\View;
  */
 class UserController extends Controller
 {
+    public function __construct()
+    {
+        parent::__construct();
+        $this->logger = new FileLogger("user_controller.log");
+    }
     /**
      * @return View
      */
@@ -32,10 +38,8 @@ class UserController extends Controller
 
         if ($form->isValid()) {
             $auth = new AuthManager();
-            if ($auth->authenticate(
-                $data
-            )
-            ) { // TODO this method should take only email and password not array with params
+            if ($auth->authenticate($data)) { // TODO this method should take only email and password not array with params
+                $this->getLogger()->log('User entered', FileLogger::SUCCESS); // IT'S A TEMPORARY SOLUTION: $data['first_name'] . $data['last_name']
                 $this->redirect("home");
             } else {
                 $this->flashMessenger->addErrorMessage($auth->getMessage());
@@ -56,6 +60,7 @@ class UserController extends Controller
         }
 
         unset($this->session->loggedIn);
+        $this->getLogger()->log('User exited');
         $this->redirect("home");
     }
 }

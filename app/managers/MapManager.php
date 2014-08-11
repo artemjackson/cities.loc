@@ -39,22 +39,21 @@ class MapManager
      * @param null $id
      * @return mixed
      */
-    public static function saveRegion($name, $id = null) 
+    public static function saveRegion($name, $id = null)
     {
         $model = new RegionModel();
         return $id ? $model->updateRegion($name, $id) : $model->saveRegion($name);
     }
 
-    /**
-     * @param $cityName
-     * @param $regionId
-     * @param null $cityId
-     * @return mixed
-     */
-    public static function saveCity($cityName, $regionId, $cityId = null)
+    public static function saveCity(array $data = array())
     {
+        $cityId = isset($data['city_id']) ? $data['city_id'] : null;
+        $cityName = isset($data['city_name']) ? $data['city_name'] : null;
+        $regionId = isset($data['region_id']) ? $data['region_id'] : null;
+        $latitude = isset($data['latitude']) ? $data['latitude'] : null;
+        $longitude = isset($data['longitude']) ? $data['longitude'] : null;
         $model = new RegionModel();
-        return $cityId ? $model->updateCity($cityName, $regionId, $cityId) : $model->saveCity($cityName, $regionId);
+        return $cityId ? $model->updateCity($cityName, $regionId, $cityId, $latitude, $longitude) : $model->saveCity($cityName, $regionId, $latitude, $longitude);
     }
 
     //TODO see comment to getRegionByID
@@ -77,6 +76,13 @@ class MapManager
     {
         $model = new RegionModel();
         return $model->deleteCity($id);
+    }
+
+    public static function getCityCordsById($id)
+    {
+        $model = new RegionModel();
+        $result = $model->getCityCordsById($id);
+        return $result[0];
     }
 
     /**

@@ -62,7 +62,7 @@ class AdminDashboard extends AbstractHelper
             if ($currentPage === $page) {
                 $html .= 'class="active"';
             }
-            $html .= '><a href="' . $link . '">$page</a></li>';
+            $html .= '><a href="' . $link . '">' . $page . '</a></li>';
         }
 
         $html .= '</ul>';

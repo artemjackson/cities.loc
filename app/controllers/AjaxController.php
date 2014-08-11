@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Controllers\Helpers\CitiesActionController;
 use App\Controllers\Helpers\RegionsActionController;
 use App\Managers\MapManager;
+use Core\Loggers\FileLogger\FileLogger;
 use Core\MVC\Controller\Controller;
 use Core\MVC\View\JsonView;
 
@@ -14,10 +15,16 @@ use Core\MVC\View\JsonView;
  */
 class AjaxController extends Controller
 {
+    public function __construct()
+    {
+        parent::__construct();
+        $this->logger = new FileLogger("ajax_controller.log");
+    }
     /**
      * @return $this
      */
-    public function loadCitiesAction()
+
+     public function loadCitiesAction()
     {
         if ($this->getRequest()->isAjax()) {
             $page = isset($_POST['activePage']) ? $_POST['activePage'] : null;

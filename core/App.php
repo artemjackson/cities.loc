@@ -2,9 +2,9 @@
 
 namespace Core;
 
+use Core\Loggers\FileLogger\FileLogger;
 use Core\MVC\Router\Exceptions\ControllerException;
 use Core\MVC\Router\Router;
-use Core\MVC\View\JsonView;
 use Core\MVC\View\View;
 
 /**
@@ -17,10 +17,12 @@ final class App
      * @var
      */
     protected static $instance;
+
     /**
      * @var array
      */
     private static $config = array();
+    private static $logger = null;
 
     /**
      *
@@ -65,6 +67,7 @@ final class App
     {
         if (is_null(self::$instance)) {
             self::$instance = new self;
+            self::$logger = new FileLogger('app.log');
         }
         return self::$instance;
     }
@@ -88,15 +91,23 @@ final class App
         $controller = $router->getController();
         $action = $router->getAction();
         $params = $router->getParams();
-        $view = $controller->$action($params);
 
-        if (!$view->getTemplate()) {
-            $folder = $router->getControllerShortName();
-            $file = $router->getActionShortName();
-            $template = $folder . DIRECTORY_SEPARATOR . $file;
-            $view->setTemplate($template);
+        try {
+            $view = $controller->$action($params);
+            if (!$view->getTemplate()) {
+                $folder = $router->getControllerShortName();
+                $file = $router->getActionShortName();
+                $template = $folder . DIRECTORY_SEPARATOR . $file;
+                $view->setTemplate($template);
+            }
+
+            $view->render();
+        } catch (\Exception $e) {
+            self::$logger->error("Exception in App work: {$e->getMessage()}");
+            $view = new View();
+            $view->setTemplate('errors/404')->render();
         }
 
-        $view->render();
+
     }
 }

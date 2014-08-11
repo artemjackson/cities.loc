@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use Core\Identifier\Identifier;
+use Core\Loggers\FileLogger\FileLogger;
 use Core\MVC\Controller\Controller;
 use Core\MVC\View\AdminView;
 use Core\MVC\View\View;
@@ -13,6 +14,13 @@ use Core\MVC\View\View;
  */
 class AdminController extends Controller
 {
+
+    public function __construct()
+    {
+        parent::__construct();
+        $this->logger = new FileLogger("admin_controller.log");
+    }
+
     /**
      * @return View
      */
@@ -38,6 +46,7 @@ class AdminController extends Controller
         try {
             $helper = new $helperName();
         } catch (\AutoloaderException $e) {
+            $this->getLogger()->log("Undefined helper '$name'' was called");
             return $this->notFound();
         }
 
@@ -48,6 +57,7 @@ class AdminController extends Controller
         if (method_exists($helper, $action)) {
             return $helper->$action($args);
         } else {
+            $this->getLogger()->log("Undefined action '$action' of '$name' helper was called");
             return $this->notFound();
         }
     }

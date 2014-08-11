@@ -13,6 +13,17 @@ use Core\MVC\Model\Model;
 class RegionModel extends Model
 {
     //TODO by the name of this method i expect to get the whole info about region
+    public static function getCityCordsById($id)
+    {
+        $sql = "SELECT latitude, longitude FROM cities WHERE city_id = :id";
+        Db::prepare($sql);
+        return Db::execute(
+            array(
+                ':id' => $id
+            )
+        );
+    }
+
     /**
      * @param $id
      * @return mixed
@@ -64,7 +75,7 @@ class RegionModel extends Model
      */
     public function getCities($shift = null, $count = null)
     {
-        $sql = "SELECT cities.city_id, regions.region_name, cities.city_name FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY cities.city_name";
+        $sql = "SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY cities.city_name";
 
         if ($shift !== null && $count !== null) {
             $sql .= " LIMIT $shift, $count";
@@ -154,38 +165,33 @@ class RegionModel extends Model
         return Db::execute(array(':region_id' => $id));
     }
 
-    /**
-     * @param $cityName
-     * @param $regionId
-     * @param $cityId
-     * @return mixed
-     */
-    public function updateCity($cityName, $regionId, $cityId)
+    public function updateCity($cityName, $regionId, $cityId, $latitude, $longitude)
     {
-        $sql = "UPDATE cities SET city_name = :city_name, region_id = :region_id  WHERE city_id = :city_id";
+        $sql = "UPDATE cities SET city_name = :city_name, region_id = :region_id,
+                latitude = :latitude, longitude = :longitude WHERE city_id = :city_id";
         Db::prepare($sql);
         return Db::execute(
             array(
                 ':city_name' => $cityName,
                 ':region_id' => $regionId,
-                ':city_id' => $cityId
+                ':city_id' => $cityId,
+                ':latitude' => $latitude,
+                ':longitude' => $longitude
             )
         );
     }
 
-    /**
-     * @param $cityName
-     * @param $regionId
-     * @return mixed
-     */
-    public function saveCity($cityName, $regionId)
+
+    public function saveCity($cityName, $regionId, $latitude, $longitude)
     {
-        $sql = "INSERT INTO cities (city_name, region_id) VALUES (:city_name, :region_id)";
+        $sql = "INSERT INTO cities (city_name, region_id, latitude, longitude) VALUES (:city_name, :region_id, :latitude, :longitude)";
         Db::prepare($sql);
         return Db::execute(
             array(
                 ':city_name' => $cityName,
                 ':region_id' => $regionId,
+                ':latitude' => $latitude,
+                ':longitude' => $longitude
             )
         );
     }

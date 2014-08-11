@@ -5,6 +5,7 @@ namespace App\Controllers;
 
 use App\Form\RegistrationForm;
 use App\Managers\UserManager;
+use Core\Loggers\FileLogger\FileLogger;
 use Core\MVC\Controller\Controller;
 use Core\MVC\View\View;
 
@@ -14,6 +15,11 @@ use Core\MVC\View\View;
  */
 class RegistrationController extends Controller
 {
+    public function __construct()
+    {
+        parent::__construct();
+        $this->logger = new FileLogger("registration_controller.log");
+    }
     /**
      * @return View
      */
@@ -26,6 +32,7 @@ class RegistrationController extends Controller
             if ($form->isValid()) {
                 if (UserManager::saveUser($data)) {
                     $this->flashMessenger->addSuccessMessage("Congratulations! You have successfully registered!\n");
+                    $this->getLogger()->log('New user ' . $data['first_name'] . ' ' . $data['last_name'] . ' successfully registered', FileLogger::SUCCESS);
                     $this->redirect('registration');
                 } else {
                     $this->flashMessenger->addErrorMessage("Unfortunately this email is already in use!\n");

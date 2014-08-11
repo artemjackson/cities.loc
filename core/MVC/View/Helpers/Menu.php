@@ -46,17 +46,17 @@ class Menu extends AbstractHelper
             unset($menu['Logout']);
         }
 
-        $html = "<ul class=\"nav nav-pills pull-right\">";
+        $html = '<ul class="nav nav-pills pull-right">';
 
         foreach ($menu as $page => $link) {
-            $html .= "<li ";
+            $html .= '<li ';
             if ($currentPage === $page) {
-                $html .= "class=\"active\"";
+                $html .= 'class="active"';
             }
-            $html .= "><a href=\"" . $link . "\">$page</a></li>";
+            $html .= '><a href="' . $link . '">' . $page . '</a></li>';
         }
 
-        $html .= "</ul>";
+        $html .= '</ul>';
         return $html;
     }
 }

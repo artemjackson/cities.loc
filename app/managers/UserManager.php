@@ -20,8 +20,7 @@ class UserManager
         $userEmail = isset($userData['email']) ? $userData['email'] : null;
 
         if (false == $model->emailExists($userEmail)) { //TODO this should do Validator. Method saveUser only creates or updates user and doesn't validate data. And also it must return User class
-            $model->saveUser($userData);
-            return true;
+            return $model->saveUser($userData);
         }
         return false;
     }
