@@ -73,6 +73,7 @@ class Router
 
 
         // OK it's a real hard code but it works :)
+        // start magic
         $redirection = array();
         foreach (App::getConfig('router', 'redirect') as $key => $value) {
             if (substr_count($uri, $key)) {
@@ -86,11 +87,12 @@ class Router
                     $data[count($data) - 1] = lcfirst($data[count($data) - 1]);
                 }
 
-                $redirection['shortName'] = implode('/', $data);
-                $redirection['controllerName'] = $value;
+                $redirection['shortName'] = implode('/', $data);        // short name by that we can obtain a template of View
+                $redirection['controllerName'] = $value;                // real Controlller name with namespaces
                 $uri = str_replace($key, '', $uri);
             }
         }
+        // end magic
 
         // Getting the name of controller if it exists
         if ($redirection) {
