@@ -57,7 +57,6 @@ class CitiesActionController extends Controller
      */
     public function edit($cityId)
     {
-
         if ($this->getRequest()->isPost()) {
             $post = $this->getRequest()->getPost();
             if (isset($post['city_name'])) {

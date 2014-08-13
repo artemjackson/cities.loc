@@ -33,6 +33,5 @@ $(document).ready(function () {
         var latLng = new google.maps.LatLng(selected.data('lat'), selected.data('lng'));
         $('#map_canvas').gmap('option', 'center', latLng);
         $('#map_canvas').gmap('option', 'zoom', 10);
-        $('#map_canvas').gmap('addMarker', {position: latLng, bounds: false});
     });
 });
