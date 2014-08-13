@@ -2,8 +2,8 @@
 
 namespace App\Controllers;
 
-use App\Controllers\Helpers\CitiesActionController;
-use App\Controllers\Helpers\RegionsActionController;
+use App\Controllers\Admin\CitiesController;
+use App\Controllers\Admin\RegionsController;
 use App\Managers\MapManager;
 use Core\Loggers\FileLogger\FileLogger;
 use Core\MVC\Controller\Controller;
@@ -28,12 +28,12 @@ class AjaxController extends Controller
     {
         if ($this->getRequest()->isAjax()) {
             $page = isset($_POST['activePage']) ? $_POST['activePage'] : null;
-            $count = CitiesActionController::itemsPerPage;
+            $count = CitiesController::itemsPerPage;
             return (new JsonView(
                 array(
                     'cities' => MapManager::getCities(($page - 1) * $count, $count)
                 )
-            ))->setTemplate('admin/cities_table');
+            ))->setTemplate('admin/cities/cities_table');
         } else {
             return $this->accessForbidden();
         }
@@ -46,12 +46,12 @@ class AjaxController extends Controller
     {
         if ($this->getRequest()->isAjax()) {
             $page = isset($_POST['activePage']) ? $_POST['activePage'] : null;
-            $count = RegionsActionController::itemsPerPage;
+            $count = RegionsController::itemsPerPage;
             return (new JsonView(
                 array(
                     'regions' => MapManager::getRegions(($page - 1) * $count, $count),
                 )
-            ))->setTemplate('admin/regions_table');
+            ))->setTemplate('admin/regions/regions_table');
 
         } else {
             return $this->accessForbidden();
@@ -72,10 +72,10 @@ class AjaxController extends Controller
 
             if ($type == 'cities') {
                 $count = MapManager::countCities();
-                $itemsPerPage = CitiesActionController::itemsPerPage;
+                $itemsPerPage = CitiesController::itemsPerPage;
             } elseif ($type = 'regions') {
                 $count = MapManager::countRegions();
-                $itemsPerPage = RegionsActionController::itemsPerPage;
+                $itemsPerPage = RegionsController::itemsPerPage;
             }
 
             return (new JsonView(

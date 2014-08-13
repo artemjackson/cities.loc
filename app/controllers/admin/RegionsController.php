@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controllers\Helpers;
+namespace App\Controllers\Admin;
 
 use App\Form\RegionForm;
 use App\Managers\MapManager;
@@ -11,7 +11,7 @@ use Core\MVC\View\AdminView;
  * Class RegionsActionController
  * @package App\Controllers\Helpers
  */
-class RegionsActionController extends Controller
+class RegionsController extends Controller
 {
     /**
      *
@@ -21,16 +21,16 @@ class RegionsActionController extends Controller
     /**
      * @return $this|AdminView
      */
-    public function index()
+    public function indexAction()
     {
-        return $this->page(1);
+        return $this->pageAction(1);
     }
 
     /**
      * @param null $id
      * @return $this|AdminView
      */
-    public function page($id = null)
+    public function pageAction($id = null)
     {
         $totalItems = MapManager::countRegions();
 
@@ -40,7 +40,7 @@ class RegionsActionController extends Controller
 
         $id = $id > 0 ? $id : 1;
 
-        return new AdminView(array(
+        return (new AdminView(array(
             'regions' => MapManager::getRegions(
                     ($id - 1) * self::itemsPerPage,
                     self::itemsPerPage
@@ -48,14 +48,14 @@ class RegionsActionController extends Controller
             'activePage' => $id,
             'itemsTotal' => $totalItems,
             'itemsPerPage' => self::itemsPerPage
-        ));
+        )))->setTemplate('admin/regions/index');
     }
 
     /**
      * @param $regionId
      * @return $this
      */
-    public function edit($regionId)
+    public function editAction($regionId)
     {
         if ($this->getRequest()->isPost()) {
             $post = $this->getRequest()->getPost();
@@ -78,13 +78,13 @@ class RegionsActionController extends Controller
                 $this->redirect();
             }
         }
-        return (new AdminView(array('regionId' => $regionId)))->setTemplate('admin/editRegion');
+        return (new AdminView(array('regionId' => $regionId)));
     }
 
     /**
      * @return $this
      */
-    public function add()
+    public function addAction()
     {
         if ($this->getRequest()->isPost()) {
             $post = $this->getRequest()->getPost();
@@ -102,13 +102,13 @@ class RegionsActionController extends Controller
             }
         }
 
-        return (new AdminView())->setTemplate("admin/addRegion");
+        return (new AdminView());
     }
 
     /**
      *
      */
-    public function delete()
+    public function deleteAction()
     {
         if ($this->getRequest()->isPost()) {
             $post = $this->getRequest()->getPost();

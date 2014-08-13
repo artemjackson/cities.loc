@@ -35,7 +35,7 @@ class Router
     /**
      * @var array
      */
-    protected $params = array();
+    protected $param = null;
 
     /**
      * @return mixed
@@ -68,25 +68,36 @@ class Router
         $this->setControllerShortName($defaultController);
         $this->setActionShortName($defaultAction);
 
-        // Separating request URI
-        $uri = trim($_SERVER['REQUEST_URI'], '/');
-        $routes = explode('/', $uri);
+        // Getting request URI
+        $uri = $_SERVER['REQUEST_URI'];
+
+        $redirection = array();
+        foreach (App::getConfig('router', 'redirect') as $key => $value) {
+            if (substr_count($uri, $key)) {
+                $redirection['path'] = $key;
+                $redirection['controller'] = $value;
+            }
+        }
 
         // Getting the name of controller if it exists
-        if (!empty($routes[0])) {
-            $this->setControllerShortName($routes[0]);
+        if ($redirection) {
+            $routes = explode('/', str_replace($redirection['path'], '', $uri));
+            $this->setControllerShortName($redirection['path']);
+        } else {
+            $routes = explode('/', trim($uri, '/'));
+            if (!empty($routes[0])) {
+                $this->setControllerShortName($routes[0]);
+            }
         }
 
         // Getting the name of action if it exists
         if (!empty($routes[1])) {
             $this->setActionShortName($routes[1]);
         }
+
         // Checking if there are any params
         if (isset($routes[2])) {
-            // Getting params
-            for ($i = 2, $size = count($routes); $i < $size; $i++) {
-                $this->addParam($routes[$i]);
-            }
+            $this->setParam($routes[2]);
         }
 
         //  Recreating path to controllers into namespaces
@@ -100,25 +111,26 @@ class Router
         $prefix = implode('\\', $namespaces);
 
         // Prefixes addition and taking upper case first letter in controller name
-        $controllerName = $prefix . ucfirst($this->getControllerShortName()) . 'Controller';
+        if ($redirection) {
+            $controllerName = $prefix . $redirection['controller'];
+        } else {
+            $controllerName = $prefix . ucfirst($this->getControllerShortName()) . 'Controller';
+        }
+
         $actionName = $this->getActionShortName() . 'Action';
 
         //creating controller
         try {
             $testController = new $controllerName;
             $this->setController($testController);
-            $this->action = $actionName;
+            if (method_exists($testController, $actionName)) {
+                $this->action = $actionName;
+            } else {
+                throw new ControllerException("Undefined method '{$actionName}' in controller '{$controllerName}'.\n");
+            }
         } catch (\AutoloaderException $e) {
-            throw new  ControllerException("Undefined controller: {$controllerName}.\n", 404, $e);
+            throw new  ControllerException("Undefined controller: '{$controllerName}'.\n", 404, $e);
         }
-    }
-
-    /**
-     * @param $param
-     */
-    public function addParam($param)
-    {
-        array_push($this->params, $param);
     }
 
     /**
@@ -160,9 +172,17 @@ class Router
     /**
      * @return array
      */
-    public function getParams()
+    public function getParam()
     {
-        return $this->params;
+        return $this->param;
+    }
+
+    /**
+     * @param $param
+     */
+    public function setParam($param)
+    {
+        $this->param = $param;
     }
 
     /**

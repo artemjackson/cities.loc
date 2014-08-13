@@ -60,6 +60,14 @@ final class App
         return self::getInstance();
     }
 
+    public static function init(array $config = array())
+    {
+        self::getInstance();
+        self::setConfig($config);
+        return self::getInstance();
+
+    }
+
     /**
      * @return App
      */
@@ -91,15 +99,18 @@ final class App
 
         $controller = $router->getController();
         $action = $router->getAction();
-        $params = $router->getParams();
+        $param = $router->getParam();
 
         try {
-            $view = $controller->$action($params);
+
+            $view = $controller->$action($param);
+
             if (!$view->getTemplate()) {
                 $folder = $router->getControllerShortName();
                 $file = $router->getActionShortName();
                 $template = $folder . DIRECTORY_SEPARATOR . $file;
                 $view->setTemplate($template);
+            //    print_r($view);die;
             }
 
             $view->render();

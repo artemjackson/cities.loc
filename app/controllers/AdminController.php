@@ -29,13 +29,7 @@ class AdminController extends Controller
         return Identifier::isAdmin() ? new AdminView() : $this->accessForbidden();
     }
 
-    //TODO refactor move to routers config
-    /**
-     * @param $name
-     * @param array $arguments
-     * @return $this
-     */
-    public function __call($name, array $arguments = array())
+   /* public function __call($name, array $arguments = array())
     {
         if (!Identifier::isAdmin()) {
             return $this->accessForbidden();
@@ -60,5 +54,5 @@ class AdminController extends Controller
             $this->getLogger()->log("Undefined action '$action' of '$name' helper was called");
             return $this->notFound();
         }
-    }
+    }*/
 }

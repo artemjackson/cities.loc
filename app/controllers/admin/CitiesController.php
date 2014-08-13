@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controllers\Helpers;
+namespace App\Controllers\Admin;
 
 use App\Form\CityForm;
 use App\Managers\MapManager;
@@ -11,7 +11,7 @@ use Core\MVC\View\AdminView;
  * Class CitiesActionController
  * @package App\Controllers\Helpers
  */
-class CitiesActionController extends Controller
+class CitiesController extends Controller
 {
     /**
      *
@@ -21,16 +21,16 @@ class CitiesActionController extends Controller
     /**
      * @return $this|AdminView
      */
-    public function index()
+    public function indexAction()
     {
-        return $this->page(1);
+        return $this->pageAction(1);
     }
 
     /**
      * @param null $id
      * @return $this|AdminView
      */
-    public function page($id = null)
+    public function pageAction($id = null)
     {
         $totalItems = MapManager::countCities();
 
@@ -40,7 +40,7 @@ class CitiesActionController extends Controller
 
         $id = $id > 0 ? $id : 1;
 
-        return new AdminView(array(
+        return (new AdminView(array(
             'cities' => MapManager::getCities(
                     ($id - 1) * self::itemsPerPage,
                     self::itemsPerPage
@@ -48,16 +48,17 @@ class CitiesActionController extends Controller
             'activePage' => $id,
             'itemsTotal' => $totalItems,
             'itemsPerPage' => self::itemsPerPage
-        ));
+        )))->setTemplate('admin/cities/index');
     }
 
     /**
      * @param $cityId
      * @return $this
      */
-    public function edit($cityId)
+    public function editAction($cityId)
     {
         if ($this->getRequest()->isPost()) {
+
             $post = $this->getRequest()->getPost();
             if (isset($post['city_name'])) {
                 $form = new CityForm($post);
@@ -65,20 +66,20 @@ class CitiesActionController extends Controller
                     MapManager::saveCity($post) ?
                         $this->flashMessenger->addSuccessMessage("City name was changed successfully\n") :
                         $this->flashMessenger->addErrorMessage("City name has not been changed\n");
-                    $this->redirect('admin/cities');
                 } else {
                     $this->flashMessenger->addWarningMessages($form->getMessages());
                 }
-                $this->redirect();
+                $this->redirect('admin/cities');
             }
+
         }
-        return (new AdminView(array('cityId' => $cityId)))->setTemplate("admin/editCity");
+        return (new AdminView(array('cityId' => $cityId)));
     }
 
     /**
      * @return $this
      */
-    public function add()
+    public function addAction()
     {
         if ($this->getRequest()->isPost()) {
             $post = $this->getRequest()->getPost();
@@ -95,13 +96,13 @@ class CitiesActionController extends Controller
                 }
             }
         }
-        return (new AdminView())->setTemplate("admin/addCity");
+        return (new AdminView());
     }
 
     /**
      *
      */
-    public function delete()
+    public function deleteAction()
     {
         if ($this->getRequest()->isPost()) {
             $post = $this->getRequest()->getPost();

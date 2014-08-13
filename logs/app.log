@@ -1,2 +1,10 @@
 [12 August 2014 13:11:01][ERROR] Exception in App work: SQLSTATE[HY000]: General error: 1205 Lock wait timeout exceeded; try restarting transaction
 [12 August 2014 13:12:41][ERROR] Exception in App work: SQLSTATE[HY000]: General error: 1205 Lock wait timeout exceeded; try restarting transaction
+[13 August 2014 14:56:58][ERROR] Exception in App work: Unable to load app/controllers/helpers/CitiesActionController.php
+[13 August 2014 14:56:58][ERROR] Exception in App work: Unable to load app/controllers/helpers/CitiesActionController.php
+[13 August 2014 14:57:01][ERROR] Exception in App work: Unable to load app/controllers/helpers/CitiesActionController.php
+[13 August 2014 14:57:01][ERROR] Exception in App work: Unable to load app/controllers/helpers/CitiesActionController.php
+[13 August 2014 14:57:02][ERROR] Exception in App work: Unable to load app/controllers/helpers/CitiesActionController.php
+[13 August 2014 14:57:02][ERROR] Exception in App work: Unable to load app/controllers/helpers/CitiesActionController.php
+[13 August 2014 14:57:17][ERROR] Exception in App work: Unable to load app/controllers/helpers/CitiesActionController.php
+[13 August 2014 14:57:17][ERROR] Exception in App work: Unable to load app/controllers/helpers/CitiesActionController.php

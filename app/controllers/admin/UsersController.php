@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controllers\Helpers;
+namespace App\Controllers\Admin;
 
 use App\Managers\UserManager;
 use Core\Identifier\Identifier;
@@ -12,12 +12,12 @@ use Core\MVC\View\View;
  * Class UsersActionController
  * @package App\Controllers\Helpers
  */
-class UsersActionController extends Controller
+class UsersController extends Controller
 {
     /**
      * @return AdminView
      */
-    public function index()
+    public function indexAction()
     {
         return new AdminView(array('users' => UserManager::getAllUsers()));
     }
