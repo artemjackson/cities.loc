@@ -91,6 +91,7 @@ final class App
             $router->run();
         } catch (ControllerException $e) {
             //TODO refactor
+            self::$logger->error("Exception in App work: {$e->getMessage()}");
             $view = new View();
             $view->setTemplate('errors/404');
             $view->render();

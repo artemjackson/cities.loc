@@ -3,9 +3,12 @@
 return array(
     'router' => array(
         'redirect' => array(
-            '/admin/cities' => 'Admin\\CitiesController',
-            '/admin/regions' => 'Admin\\RegionsController',
-            '/admin/users' => 'Admin\\UsersController',
+            '/admin/cities' => 'admin/CitiesController',
+            '/admin/regions' => 'admin/RegionsController',
+            '/admin/users' => 'admin/UsersController',
+            /*You can even do something like this */
+            // '/people' => 'admin/UsersController',
+            // 'staff' => 'MapController',
         )
     )
 );

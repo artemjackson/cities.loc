@@ -71,18 +71,31 @@ class Router
         // Getting request URI
         $uri = $_SERVER['REQUEST_URI'];
 
+
+        // OK it's a real hard code but it works :)
         $redirection = array();
         foreach (App::getConfig('router', 'redirect') as $key => $value) {
             if (substr_count($uri, $key)) {
-                $redirection['path'] = $key;
-                $redirection['controller'] = $value;
+
+                $value = rtrim($value, 'Controller');
+                $data = explode('/', $value);
+
+                $value = ucfirst(implode('\\', $data));
+
+                if (!empty($data[count($data) - 1])) {
+                    $data[count($data) - 1] = lcfirst($data[count($data) - 1]);
+                }
+
+                $redirection['shortName'] = implode('/', $data);
+                $redirection['controllerName'] = $value;
+                $uri = str_replace($key, '', $uri);
             }
         }
 
         // Getting the name of controller if it exists
         if ($redirection) {
-            $routes = explode('/', str_replace($redirection['path'], '', $uri));
-            $this->setControllerShortName($redirection['path']);
+            $routes = explode('/', $uri);
+            $this->setControllerShortName($redirection['shortName']);
         } else {
             $routes = explode('/', trim($uri, '/'));
             if (!empty($routes[0])) {
@@ -112,7 +125,7 @@ class Router
 
         // Prefixes addition and taking upper case first letter in controller name
         if ($redirection) {
-            $controllerName = $prefix . $redirection['controller'];
+            $controllerName = $prefix . $redirection['controllerName'] . 'Controller';
         } else {
             $controllerName = $prefix . ucfirst($this->getControllerShortName()) . 'Controller';
         }
