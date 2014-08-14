@@ -51,3 +51,113 @@
 [14 August 2014 17:41:22][DEBUG] Query execution finished successfully
 [14 August 2014 17:41:22][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY city_name ASC LIMIT 0, 10
 [14 August 2014 17:41:22][DEBUG] Query execution finished successfully
+[14 August 2014 17:44:12][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities
+        JOIN regions ON cities.region_id = regions.region_id WHERE city_name LIKE '%Минск%' OR region_name LIKE '%Минск%' ORDER BY city_name
+[14 August 2014 17:44:12][DEBUG] Query execution finished successfully
+[14 August 2014 17:44:45][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities
+        JOIN regions ON cities.region_id = regions.region_id WHERE city_name LIKE '%Борисов%' OR region_name LIKE '%Борисов%' ORDER BY city_name
+[14 August 2014 17:44:45][DEBUG] Query execution finished successfully
+[14 August 2014 17:44:49][DEBUG] Query preparation: SELECT COUNT(city_id) FROM cities
+[14 August 2014 17:44:49][DEBUG] Query execution finished successfully
+[14 August 2014 17:44:49][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY city_name ASC LIMIT 0, 10
+[14 August 2014 17:44:49][DEBUG] Query execution finished successfully
+[14 August 2014 17:45:29][DEBUG] Query preparation: SELECT COUNT(city_id) FROM cities
+[14 August 2014 17:45:29][DEBUG] Query execution finished successfully
+[14 August 2014 17:45:29][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY city_name ASC LIMIT 10, 10
+[14 August 2014 17:45:29][DEBUG] Query execution finished successfully
+[14 August 2014 17:45:30][DEBUG] Query preparation: SELECT COUNT(city_id) FROM cities
+[14 August 2014 17:45:30][DEBUG] Query execution finished successfully
+[14 August 2014 17:45:30][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY city_name ASC LIMIT 20, 10
+[14 August 2014 17:45:30][DEBUG] Query execution finished successfully
+[14 August 2014 17:45:30][DEBUG] Query preparation: SELECT COUNT(city_id) FROM cities
+[14 August 2014 17:45:30][DEBUG] Query execution finished successfully
+[14 August 2014 17:45:30][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY city_name ASC LIMIT 30, 10
+[14 August 2014 17:45:30][DEBUG] Query execution finished successfully
+[14 August 2014 17:45:31][DEBUG] Query preparation: SELECT COUNT(city_id) FROM cities
+[14 August 2014 17:45:31][DEBUG] Query execution finished successfully
+[14 August 2014 17:45:31][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY city_name ASC LIMIT 40, 10
+[14 August 2014 17:45:31][DEBUG] Query execution finished successfully
+[14 August 2014 17:45:33][DEBUG] Query preparation: SELECT COUNT(city_id) FROM cities
+[14 August 2014 17:45:33][DEBUG] Query execution finished successfully
+[14 August 2014 17:45:33][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY city_name ASC LIMIT 0, 10
+[14 August 2014 17:45:33][DEBUG] Query execution finished successfully
+[14 August 2014 17:45:35][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY city_id ASC LIMIT 0, 10
+[14 August 2014 17:45:35][DEBUG] Query execution finished successfully
+[14 August 2014 17:45:37][DEBUG] Query preparation: SELECT COUNT(city_id) FROM cities
+[14 August 2014 17:45:37][DEBUG] Query execution finished successfully
+[14 August 2014 17:45:37][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY city_id ASC LIMIT 10, 10
+[14 August 2014 17:45:37][DEBUG] Query execution finished successfully
+[14 August 2014 17:45:41][DEBUG] Query preparation: SELECT COUNT(city_id) FROM cities
+[14 August 2014 17:45:41][DEBUG] Query execution finished successfully
+[14 August 2014 17:45:41][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY city_id ASC LIMIT 20, 10
+[14 August 2014 17:45:41][DEBUG] Query execution finished successfully
+[14 August 2014 17:45:43][DEBUG] Query preparation: SELECT COUNT(city_id) FROM cities
+[14 August 2014 17:45:43][DEBUG] Query execution finished successfully
+[14 August 2014 17:45:43][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY city_id ASC LIMIT 30, 10
+[14 August 2014 17:45:43][DEBUG] Query execution finished successfully
+[14 August 2014 17:45:43][DEBUG] Query preparation: SELECT COUNT(city_id) FROM cities
+[14 August 2014 17:45:43][DEBUG] Query execution finished successfully
+[14 August 2014 17:45:43][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY city_id ASC LIMIT 40, 10
+[14 August 2014 17:45:43][DEBUG] Query execution finished successfully
+[14 August 2014 17:45:51][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY city_id DESC LIMIT 40, 10
+[14 August 2014 17:45:51][DEBUG] Query execution finished successfully
+[14 August 2014 17:45:53][DEBUG] Query preparation: SELECT COUNT(city_id) FROM cities
+[14 August 2014 17:45:53][DEBUG] Query execution finished successfully
+[14 August 2014 17:45:53][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY city_id DESC LIMIT 30, 10
+[14 August 2014 17:45:53][DEBUG] Query execution finished successfully
+[14 August 2014 17:45:54][DEBUG] Query preparation: SELECT COUNT(city_id) FROM cities
+[14 August 2014 17:45:54][DEBUG] Query execution finished successfully
+[14 August 2014 17:45:54][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY city_id DESC LIMIT 20, 10
+[14 August 2014 17:45:54][DEBUG] Query execution finished successfully
+[14 August 2014 17:45:55][DEBUG] Query preparation: SELECT COUNT(city_id) FROM cities
+[14 August 2014 17:45:55][DEBUG] Query execution finished successfully
+[14 August 2014 17:45:55][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY city_id DESC LIMIT 10, 10
+[14 August 2014 17:45:55][DEBUG] Query execution finished successfully
+[14 August 2014 17:45:55][DEBUG] Query preparation: SELECT COUNT(city_id) FROM cities
+[14 August 2014 17:45:55][DEBUG] Query execution finished successfully
+[14 August 2014 17:45:55][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY city_id DESC LIMIT 0, 10
+[14 August 2014 17:45:55][DEBUG] Query execution finished successfully
+[14 August 2014 17:48:48][DEBUG] Query preparation: SELECT user_id, first_name, last_name, email FROM users 
+[14 August 2014 17:48:48][DEBUG] Query execution finished successfully
+[14 August 2014 17:48:49][DEBUG] Query preparation: SELECT COUNT(region_id) FROM regions
+[14 August 2014 17:48:49][DEBUG] Query execution finished successfully
+[14 August 2014 17:48:49][DEBUG] Query preparation: SELECT * FROM regions ORDER BY region_name LIMIT 0, 3
+[14 August 2014 17:48:49][DEBUG] Query execution finished successfully
+[14 August 2014 17:48:50][DEBUG] Query preparation: SELECT COUNT(city_id) FROM cities
+[14 August 2014 17:48:50][DEBUG] Query execution finished successfully
+[14 August 2014 17:48:50][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY city_name ASC LIMIT 0, 10
+[14 August 2014 17:48:50][DEBUG] Query execution finished successfully
+[14 August 2014 17:50:30][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities
+        JOIN regions ON cities.region_id = regions.region_id WHERE city_name LIKE '%Минск%' OR region_name LIKE '%Минск%' ORDER BY city_name
+[14 August 2014 17:50:30][DEBUG] Query execution finished successfully
+[14 August 2014 17:51:05][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities
+        JOIN regions ON cities.region_id = regions.region_id WHERE city_name LIKE '%Брестс%' OR region_name LIKE '%Брестс%' ORDER BY city_name
+[14 August 2014 17:51:05][DEBUG] Query execution finished successfully
+[14 August 2014 17:51:16][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY region_name ASC LIMIT 0, 10
+[14 August 2014 17:51:16][DEBUG] Query execution finished successfully
+[14 August 2014 17:51:24][DEBUG] Query preparation: SELECT COUNT(city_id) FROM cities
+[14 August 2014 17:51:24][DEBUG] Query execution finished successfully
+[14 August 2014 17:51:24][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY city_name ASC LIMIT 0, 10
+[14 August 2014 17:51:24][DEBUG] Query execution finished successfully
+[14 August 2014 17:52:20][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities
+        JOIN regions ON cities.region_id = regions.region_id WHERE city_name LIKE '%брест%' OR region_name LIKE '%брест%' ORDER BY city_name
+[14 August 2014 17:52:20][DEBUG] Query execution finished successfully
+[14 August 2014 17:52:23][DEBUG] Query preparation: SELECT COUNT(city_id) FROM cities
+[14 August 2014 17:52:23][DEBUG] Query execution finished successfully
+[14 August 2014 17:52:23][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY city_name ASC LIMIT 0, 10
+[14 August 2014 17:52:23][DEBUG] Query execution finished successfully
+[14 August 2014 17:52:25][DEBUG] Query preparation: SELECT COUNT(city_id) FROM cities
+[14 August 2014 17:52:25][DEBUG] Query execution finished successfully
+[14 August 2014 17:52:25][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY city_name ASC LIMIT 0, 10
+[14 August 2014 17:52:25][DEBUG] Query execution finished successfully
+[14 August 2014 17:52:36][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities
+        JOIN regions ON cities.region_id = regions.region_id WHERE city_name LIKE '%минск%' OR region_name LIKE '%минск%' ORDER BY city_name
+[14 August 2014 17:52:36][DEBUG] Query execution finished successfully
+[14 August 2014 17:52:45][DEBUG] Query preparation: SELECT COUNT(city_id) FROM cities
+[14 August 2014 17:52:45][DEBUG] Query execution finished successfully
+[14 August 2014 17:52:45][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY city_name ASC LIMIT 0, 10
+[14 August 2014 17:52:45][DEBUG] Query execution finished successfully
+[14 August 2014 17:52:53][DEBUG] Query preparation: SELECT COUNT(city_id) FROM cities
+[14 August 2014 17:52:53][DEBUG] Query execution finished successfully
+[14 August 2014 17:52:53][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY city_name ASC LIMIT 0, 10
+[14 August 2014 17:52:53][DEBUG] Query execution finished successfully

@@ -53,6 +53,7 @@ $(document).ready(function () {
                     $('.dark').fadeOut(100);
                 }, 100);
                 $('#citiesPagination').css('display','none');
+                $('.sort').css('display','none');
 
             }
         });
