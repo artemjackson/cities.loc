@@ -1,0 +1,1444 @@
+[14 August 2014 14:22:33][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->pageAction(1)
+[14 August 2014 14:22:33][SUCCESS] Redirected successfully
+[14 August 2014 14:22:35][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:22:35][SUCCESS] Redirected successfully
+[14 August 2014 14:22:36][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:22:36][SUCCESS] Redirected successfully
+[14 August 2014 14:22:37][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:22:37][SUCCESS] Redirected successfully
+[14 August 2014 14:22:38][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:22:38][SUCCESS] Redirected successfully
+[14 August 2014 14:22:39][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:22:39][SUCCESS] Redirected successfully
+[14 August 2014 14:22:40][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:22:40][SUCCESS] Redirected successfully
+[14 August 2014 14:22:41][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:22:41][SUCCESS] Redirected successfully
+[14 August 2014 14:22:43][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:22:43][SUCCESS] Redirected successfully
+[14 August 2014 14:22:45][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:22:45][SUCCESS] Redirected successfully
+[14 August 2014 14:22:53][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:22:53][SUCCESS] Redirected successfully
+[14 August 2014 14:22:54][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:22:54][SUCCESS] Redirected successfully
+[14 August 2014 14:22:55][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:22:55][SUCCESS] Redirected successfully
+[14 August 2014 14:22:56][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:22:56][SUCCESS] Redirected successfully
+[14 August 2014 14:22:58][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:22:58][SUCCESS] Redirected successfully
+[14 August 2014 14:22:58][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:22:58][SUCCESS] Redirected successfully
+[14 August 2014 14:23:02][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[14 August 2014 14:23:02][SUCCESS] Redirected successfully
+[14 August 2014 14:23:02][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:23:02][SUCCESS] Redirected successfully
+[14 August 2014 14:23:07][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:23:07][SUCCESS] Redirected successfully
+[14 August 2014 14:23:09][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:23:09][SUCCESS] Redirected successfully
+[14 August 2014 14:23:11][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:23:11][SUCCESS] Redirected successfully
+[14 August 2014 14:23:14][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:23:14][SUCCESS] Redirected successfully
+[14 August 2014 14:23:15][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:23:15][SUCCESS] Redirected successfully
+[14 August 2014 14:23:16][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:23:16][SUCCESS] Redirected successfully
+[14 August 2014 14:23:18][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:23:18][SUCCESS] Redirected successfully
+[14 August 2014 14:23:19][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:23:19][SUCCESS] Redirected successfully
+[14 August 2014 14:23:21][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:23:21][SUCCESS] Redirected successfully
+[14 August 2014 14:23:24][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:23:24][SUCCESS] Redirected successfully
+[14 August 2014 14:24:30][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:24:30][SUCCESS] Redirected successfully
+[14 August 2014 14:32:13][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->pageAction(4)
+[14 August 2014 14:32:13][SUCCESS] Redirected successfully
+[14 August 2014 14:34:01][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->pageAction(4)
+[14 August 2014 14:34:01][SUCCESS] Redirected successfully
+[14 August 2014 14:34:20][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->pageAction(4)
+[14 August 2014 14:34:20][SUCCESS] Redirected successfully
+[14 August 2014 14:34:33][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 14:34:33][SUCCESS] Redirected successfully
+[14 August 2014 14:34:36][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:34:36][SUCCESS] Redirected successfully
+[14 August 2014 14:34:37][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:34:37][SUCCESS] Redirected successfully
+[14 August 2014 14:34:55][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 14:34:55][SUCCESS] Redirected successfully
+[14 August 2014 14:35:18][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->pageAction(4)
+[14 August 2014 14:35:18][SUCCESS] Redirected successfully
+[14 August 2014 14:35:19][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:35:19][SUCCESS] Redirected successfully
+[14 August 2014 14:35:20][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:35:20][SUCCESS] Redirected successfully
+[14 August 2014 14:35:21][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:35:21][SUCCESS] Redirected successfully
+[14 August 2014 14:35:24][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:35:24][SUCCESS] Redirected successfully
+[14 August 2014 14:35:28][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 14:35:28][SUCCESS] Redirected successfully
+[14 August 2014 14:35:40][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 14:35:40][SUCCESS] Redirected successfully
+[14 August 2014 14:35:41][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:35:41][SUCCESS] Redirected successfully
+[14 August 2014 14:36:22][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 14:36:22][SUCCESS] Redirected successfully
+[14 August 2014 14:36:38][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 14:36:38][SUCCESS] Redirected successfully
+[14 August 2014 14:36:48][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 14:36:48][SUCCESS] Redirected successfully
+[14 August 2014 14:36:57][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 14:36:57][SUCCESS] Redirected successfully
+[14 August 2014 14:37:00][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 14:37:00][SUCCESS] Redirected successfully
+[14 August 2014 14:37:58][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 14:37:58][SUCCESS] Redirected successfully
+[14 August 2014 14:38:17][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 14:38:17][SUCCESS] Redirected successfully
+[14 August 2014 14:38:30][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 14:38:30][SUCCESS] Redirected successfully
+[14 August 2014 14:39:35][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 14:39:35][SUCCESS] Redirected successfully
+[14 August 2014 14:39:39][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:39:39][SUCCESS] Redirected successfully
+[14 August 2014 14:39:44][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:39:44][SUCCESS] Redirected successfully
+[14 August 2014 14:43:26][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 14:43:26][SUCCESS] Redirected successfully
+[14 August 2014 14:43:29][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:43:29][SUCCESS] Redirected successfully
+[14 August 2014 14:43:42][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 14:43:42][SUCCESS] Redirected successfully
+[14 August 2014 14:44:40][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 14:44:40][SUCCESS] Redirected successfully
+[14 August 2014 14:44:43][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:44:43][SUCCESS] Redirected successfully
+[14 August 2014 14:44:44][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 14:44:44][SUCCESS] Redirected successfully
+[14 August 2014 14:44:46][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[14 August 2014 14:44:46][SUCCESS] Redirected successfully
+[14 August 2014 14:44:46][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:44:46][SUCCESS] Redirected successfully
+[14 August 2014 14:44:49][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[14 August 2014 14:44:49][SUCCESS] Redirected successfully
+[14 August 2014 14:44:49][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:44:49][SUCCESS] Redirected successfully
+[14 August 2014 14:44:49][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[14 August 2014 14:44:49][SUCCESS] Redirected successfully
+[14 August 2014 14:44:49][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:44:49][SUCCESS] Redirected successfully
+[14 August 2014 14:44:50][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[14 August 2014 14:44:50][SUCCESS] Redirected successfully
+[14 August 2014 14:44:50][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:44:50][SUCCESS] Redirected successfully
+[14 August 2014 14:44:51][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[14 August 2014 14:44:51][SUCCESS] Redirected successfully
+[14 August 2014 14:44:51][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:44:51][SUCCESS] Redirected successfully
+[14 August 2014 14:44:52][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[14 August 2014 14:44:52][SUCCESS] Redirected successfully
+[14 August 2014 14:44:52][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:44:52][SUCCESS] Redirected successfully
+[14 August 2014 14:44:53][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[14 August 2014 14:44:53][SUCCESS] Redirected successfully
+[14 August 2014 14:44:53][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:44:53][SUCCESS] Redirected successfully
+[14 August 2014 14:44:53][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[14 August 2014 14:44:53][SUCCESS] Redirected successfully
+[14 August 2014 14:44:53][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:44:53][SUCCESS] Redirected successfully
+[14 August 2014 14:44:54][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[14 August 2014 14:44:54][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:44:54][SUCCESS] Redirected successfully
+[14 August 2014 14:44:54][SUCCESS] Redirected successfully
+[14 August 2014 14:48:17][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->pageAction(4)
+[14 August 2014 14:48:17][SUCCESS] Redirected successfully
+[14 August 2014 14:48:19][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[14 August 2014 14:48:19][SUCCESS] Redirected successfully
+[14 August 2014 14:48:19][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:48:19][SUCCESS] Redirected successfully
+[14 August 2014 14:50:00][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->pageAction(1)
+[14 August 2014 14:50:00][SUCCESS] Redirected successfully
+[14 August 2014 14:50:06][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->pageAction(1)
+[14 August 2014 14:50:06][SUCCESS] Redirected successfully
+[14 August 2014 14:50:08][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[14 August 2014 14:50:08][SUCCESS] Redirected successfully
+[14 August 2014 14:50:08][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:50:08][SUCCESS] Redirected successfully
+[14 August 2014 14:50:50][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 14:50:50][SUCCESS] Redirected successfully
+[14 August 2014 14:50:51][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:50:51][SUCCESS] Redirected successfully
+[14 August 2014 14:50:53][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 14:50:53][SUCCESS] Redirected successfully
+[14 August 2014 14:50:57][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:50:57][SUCCESS] Redirected successfully
+[14 August 2014 14:51:00][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:51:00][SUCCESS] Redirected successfully
+[14 August 2014 14:51:02][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:51:02][SUCCESS] Redirected successfully
+[14 August 2014 14:51:03][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:51:03][SUCCESS] Redirected successfully
+[14 August 2014 14:51:04][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:51:04][SUCCESS] Redirected successfully
+[14 August 2014 14:51:04][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:51:04][SUCCESS] Redirected successfully
+[14 August 2014 14:51:06][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:51:06][SUCCESS] Redirected successfully
+[14 August 2014 14:51:07][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:51:07][SUCCESS] Redirected successfully
+[14 August 2014 14:51:08][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:51:08][SUCCESS] Redirected successfully
+[14 August 2014 14:51:20][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->pageAction(1)
+[14 August 2014 14:51:20][SUCCESS] Redirected successfully
+[14 August 2014 14:51:23][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:51:23][SUCCESS] Redirected successfully
+[14 August 2014 14:51:49][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 14:51:49][SUCCESS] Redirected successfully
+[14 August 2014 14:51:50][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:51:50][SUCCESS] Redirected successfully
+[14 August 2014 14:52:07][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->pageAction(1)
+[14 August 2014 14:52:07][SUCCESS] Redirected successfully
+[14 August 2014 14:52:09][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[14 August 2014 14:52:09][SUCCESS] Redirected successfully
+[14 August 2014 14:52:09][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:52:09][SUCCESS] Redirected successfully
+[14 August 2014 14:53:22][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 14:53:22][SUCCESS] Redirected successfully
+[14 August 2014 14:53:33][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 14:53:33][SUCCESS] Redirected successfully
+[14 August 2014 14:53:39][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 14:53:39][SUCCESS] Redirected successfully
+[14 August 2014 14:53:40][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 14:53:40][SUCCESS] Redirected successfully
+[14 August 2014 14:53:42][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[14 August 2014 14:53:42][SUCCESS] Redirected successfully
+[14 August 2014 14:53:42][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:53:42][SUCCESS] Redirected successfully
+[14 August 2014 14:54:31][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->pageAction(2)
+[14 August 2014 14:54:31][SUCCESS] Redirected successfully
+[14 August 2014 14:54:33][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[14 August 2014 14:54:33][SUCCESS] Redirected successfully
+[14 August 2014 14:54:33][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:54:33][SUCCESS] Redirected successfully
+[14 August 2014 14:54:56][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->pageAction(1)
+[14 August 2014 14:54:56][SUCCESS] Redirected successfully
+[14 August 2014 14:54:58][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[14 August 2014 14:54:58][SUCCESS] Redirected successfully
+[14 August 2014 14:54:58][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:54:58][SUCCESS] Redirected successfully
+[14 August 2014 14:55:26][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->pageAction(2)
+[14 August 2014 14:55:26][SUCCESS] Redirected successfully
+[14 August 2014 14:56:04][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->pageAction(2)
+[14 August 2014 14:56:04][SUCCESS] Redirected successfully
+[14 August 2014 14:56:15][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->pageAction(2)
+[14 August 2014 14:56:15][SUCCESS] Redirected successfully
+[14 August 2014 14:57:08][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->pageAction(2)
+[14 August 2014 14:57:08][SUCCESS] Redirected successfully
+[14 August 2014 14:58:17][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->pageAction(2)
+[14 August 2014 14:58:17][SUCCESS] Redirected successfully
+[14 August 2014 14:58:47][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->pageAction(2)
+[14 August 2014 14:58:47][SUCCESS] Redirected successfully
+[14 August 2014 14:59:03][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->pageAction(2)
+[14 August 2014 14:59:03][SUCCESS] Redirected successfully
+[14 August 2014 14:59:06][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[14 August 2014 14:59:06][SUCCESS] Redirected successfully
+[14 August 2014 14:59:07][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:59:07][SUCCESS] Redirected successfully
+[14 August 2014 14:59:11][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[14 August 2014 14:59:11][SUCCESS] Redirected successfully
+[14 August 2014 14:59:11][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:59:11][SUCCESS] Redirected successfully
+[14 August 2014 14:59:12][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[14 August 2014 14:59:12][SUCCESS] Redirected successfully
+[14 August 2014 14:59:12][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:59:12][SUCCESS] Redirected successfully
+[14 August 2014 14:59:13][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[14 August 2014 14:59:13][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:59:13][SUCCESS] Redirected successfully
+[14 August 2014 14:59:13][SUCCESS] Redirected successfully
+[14 August 2014 14:59:43][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->pageAction(1)
+[14 August 2014 14:59:43][SUCCESS] Redirected successfully
+[14 August 2014 14:59:45][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:59:45][SUCCESS] Redirected successfully
+[14 August 2014 14:59:46][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:59:46][SUCCESS] Redirected successfully
+[14 August 2014 14:59:47][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:59:47][SUCCESS] Redirected successfully
+[14 August 2014 14:59:48][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 14:59:48][SUCCESS] Redirected successfully
+[14 August 2014 14:59:59][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->pageAction(1)
+[14 August 2014 14:59:59][SUCCESS] Redirected successfully
+[14 August 2014 15:00:01][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:00:01][SUCCESS] Redirected successfully
+[14 August 2014 15:00:02][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:00:02][SUCCESS] Redirected successfully
+[14 August 2014 15:00:04][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:00:04][SUCCESS] Redirected successfully
+[14 August 2014 15:00:05][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:00:05][SUCCESS] Redirected successfully
+[14 August 2014 15:00:06][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:00:06][SUCCESS] Redirected successfully
+[14 August 2014 15:00:07][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:00:07][SUCCESS] Redirected successfully
+[14 August 2014 15:01:08][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->pageAction(1)
+[14 August 2014 15:01:08][SUCCESS] Redirected successfully
+[14 August 2014 15:01:09][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:01:09][SUCCESS] Redirected successfully
+[14 August 2014 15:01:11][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:01:11][SUCCESS] Redirected successfully
+[14 August 2014 15:01:12][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:01:12][SUCCESS] Redirected successfully
+[14 August 2014 15:01:19][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->pageAction(1)
+[14 August 2014 15:01:19][SUCCESS] Redirected successfully
+[14 August 2014 15:01:20][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:01:20][SUCCESS] Redirected successfully
+[14 August 2014 15:01:35][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->pageAction(1)
+[14 August 2014 15:01:35][SUCCESS] Redirected successfully
+[14 August 2014 15:01:36][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:01:36][SUCCESS] Redirected successfully
+[14 August 2014 15:01:41][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->pageAction(1)
+[14 August 2014 15:01:41][SUCCESS] Redirected successfully
+[14 August 2014 15:01:42][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:01:42][SUCCESS] Redirected successfully
+[14 August 2014 15:01:43][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:01:43][SUCCESS] Redirected successfully
+[14 August 2014 15:02:11][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->pageAction(1)
+[14 August 2014 15:02:11][SUCCESS] Redirected successfully
+[14 August 2014 15:02:12][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:02:12][SUCCESS] Redirected successfully
+[14 August 2014 15:02:12][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:02:12][SUCCESS] Redirected successfully
+[14 August 2014 15:02:27][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->pageAction(1)
+[14 August 2014 15:02:27][SUCCESS] Redirected successfully
+[14 August 2014 15:02:28][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:02:28][SUCCESS] Redirected successfully
+[14 August 2014 15:02:30][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:02:30][SUCCESS] Redirected successfully
+[14 August 2014 15:02:31][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:02:31][SUCCESS] Redirected successfully
+[14 August 2014 15:02:32][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:02:32][SUCCESS] Redirected successfully
+[14 August 2014 15:02:33][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:02:33][SUCCESS] Redirected successfully
+[14 August 2014 15:02:47][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:02:47][SUCCESS] Redirected successfully
+[14 August 2014 15:02:48][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:02:48][SUCCESS] Redirected successfully
+[14 August 2014 15:03:27][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->pageAction(1)
+[14 August 2014 15:03:27][SUCCESS] Redirected successfully
+[14 August 2014 15:03:27][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->pageAction(1)
+[14 August 2014 15:03:27][SUCCESS] Redirected successfully
+[14 August 2014 15:03:29][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:03:29][SUCCESS] Redirected successfully
+[14 August 2014 15:03:30][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:03:30][SUCCESS] Redirected successfully
+[14 August 2014 15:03:30][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:03:30][SUCCESS] Redirected successfully
+[14 August 2014 15:03:31][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:03:31][SUCCESS] Redirected successfully
+[14 August 2014 15:03:32][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:03:32][SUCCESS] Redirected successfully
+[14 August 2014 15:03:33][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:03:33][SUCCESS] Redirected successfully
+[14 August 2014 15:03:34][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:03:34][SUCCESS] Redirected successfully
+[14 August 2014 15:03:35][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:03:35][SUCCESS] Redirected successfully
+[14 August 2014 15:03:36][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:03:36][SUCCESS] Redirected successfully
+[14 August 2014 15:04:07][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->pageAction(1)
+[14 August 2014 15:04:07][SUCCESS] Redirected successfully
+[14 August 2014 15:04:08][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:04:08][SUCCESS] Redirected successfully
+[14 August 2014 15:04:09][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:04:09][SUCCESS] Redirected successfully
+[14 August 2014 15:04:15][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->pageAction(1)
+[14 August 2014 15:04:15][SUCCESS] Redirected successfully
+[14 August 2014 15:04:16][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:04:16][SUCCESS] Redirected successfully
+[14 August 2014 15:04:17][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:04:17][SUCCESS] Redirected successfully
+[14 August 2014 15:04:18][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:04:18][SUCCESS] Redirected successfully
+[14 August 2014 15:06:36][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->pageAction(1)
+[14 August 2014 15:06:36][SUCCESS] Redirected successfully
+[14 August 2014 15:06:38][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[14 August 2014 15:06:38][SUCCESS] Redirected successfully
+[14 August 2014 15:06:38][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:06:38][SUCCESS] Redirected successfully
+[14 August 2014 15:06:53][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->pageAction(2)
+[14 August 2014 15:06:53][SUCCESS] Redirected successfully
+[14 August 2014 15:06:54][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[14 August 2014 15:06:54][SUCCESS] Redirected successfully
+[14 August 2014 15:06:54][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:06:54][SUCCESS] Redirected successfully
+[14 August 2014 15:09:56][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->pageAction(1)
+[14 August 2014 15:09:56][SUCCESS] Redirected successfully
+[14 August 2014 15:09:57][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[14 August 2014 15:09:57][SUCCESS] Redirected successfully
+[14 August 2014 15:09:57][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:09:57][SUCCESS] Redirected successfully
+[14 August 2014 15:10:00][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[14 August 2014 15:10:00][SUCCESS] Redirected successfully
+[14 August 2014 15:10:00][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:10:00][SUCCESS] Redirected successfully
+[14 August 2014 15:10:07][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->pageAction(3)
+[14 August 2014 15:10:07][SUCCESS] Redirected successfully
+[14 August 2014 15:10:08][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[14 August 2014 15:10:08][SUCCESS] Redirected successfully
+[14 August 2014 15:10:08][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:10:08][SUCCESS] Redirected successfully
+[14 August 2014 15:10:10][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[14 August 2014 15:10:10][SUCCESS] Redirected successfully
+[14 August 2014 15:10:10][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:10:10][SUCCESS] Redirected successfully
+[14 August 2014 15:11:22][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->pageAction(1)
+[14 August 2014 15:11:22][SUCCESS] Redirected successfully
+[14 August 2014 15:11:23][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[14 August 2014 15:11:23][SUCCESS] Redirected successfully
+[14 August 2014 15:11:23][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:11:23][SUCCESS] Redirected successfully
+[14 August 2014 15:11:26][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[14 August 2014 15:11:26][SUCCESS] Redirected successfully
+[14 August 2014 15:11:26][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:11:26][SUCCESS] Redirected successfully
+[14 August 2014 15:11:27][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[14 August 2014 15:11:27][SUCCESS] Redirected successfully
+[14 August 2014 15:11:27][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:11:27][SUCCESS] Redirected successfully
+[14 August 2014 15:11:27][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[14 August 2014 15:11:27][SUCCESS] Redirected successfully
+[14 August 2014 15:11:27][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:11:27][SUCCESS] Redirected successfully
+[14 August 2014 15:11:28][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[14 August 2014 15:11:28][SUCCESS] Redirected successfully
+[14 August 2014 15:11:28][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:11:28][SUCCESS] Redirected successfully
+[14 August 2014 15:11:50][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->pageAction(1)
+[14 August 2014 15:11:50][SUCCESS] Redirected successfully
+[14 August 2014 15:11:53][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->pageAction(1)
+[14 August 2014 15:11:53][SUCCESS] Redirected successfully
+[14 August 2014 15:11:56][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->pageAction(2)
+[14 August 2014 15:11:56][SUCCESS] Redirected successfully
+[14 August 2014 15:11:56][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->pageAction(2)
+[14 August 2014 15:11:56][SUCCESS] Redirected successfully
+[14 August 2014 15:11:59][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:11:59][SUCCESS] Redirected successfully
+[14 August 2014 15:12:00][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:12:00][SUCCESS] Redirected successfully
+[14 August 2014 15:12:01][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:12:01][SUCCESS] Redirected successfully
+[14 August 2014 15:12:03][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:12:03][SUCCESS] Redirected successfully
+[14 August 2014 15:12:04][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:12:04][SUCCESS] Redirected successfully
+[14 August 2014 15:12:04][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:12:04][SUCCESS] Redirected successfully
+[14 August 2014 15:12:19][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->pageAction(2)
+[14 August 2014 15:12:19][SUCCESS] Redirected successfully
+[14 August 2014 15:12:21][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:12:21][SUCCESS] Redirected successfully
+[14 August 2014 15:12:22][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:12:22][SUCCESS] Redirected successfully
+[14 August 2014 15:12:22][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:12:22][SUCCESS] Redirected successfully
+[14 August 2014 15:12:30][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:12:30][SUCCESS] Redirected successfully
+[14 August 2014 15:12:30][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->pageAction(2)
+[14 August 2014 15:12:30][SUCCESS] Redirected successfully
+[14 August 2014 15:12:31][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:12:31][SUCCESS] Redirected successfully
+[14 August 2014 15:12:35][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:12:35][SUCCESS] Redirected successfully
+[14 August 2014 15:12:36][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:12:36][SUCCESS] Redirected successfully
+[14 August 2014 15:12:42][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->pageAction(2)
+[14 August 2014 15:12:42][SUCCESS] Redirected successfully
+[14 August 2014 15:12:44][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:12:44][SUCCESS] Redirected successfully
+[14 August 2014 15:12:45][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:12:45][SUCCESS] Redirected successfully
+[14 August 2014 15:12:51][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:12:51][SUCCESS] Redirected successfully
+[14 August 2014 15:12:58][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:12:58][SUCCESS] Redirected successfully
+[14 August 2014 15:12:58][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:12:58][SUCCESS] Redirected successfully
+[14 August 2014 15:12:59][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:12:59][SUCCESS] Redirected successfully
+[14 August 2014 15:13:00][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->pageAction(2)
+[14 August 2014 15:13:00][SUCCESS] Redirected successfully
+[14 August 2014 15:13:01][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:13:01][SUCCESS] Redirected successfully
+[14 August 2014 15:13:01][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:13:01][SUCCESS] Redirected successfully
+[14 August 2014 15:13:02][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:13:02][SUCCESS] Redirected successfully
+[14 August 2014 15:13:03][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->pageAction(2)
+[14 August 2014 15:13:03][SUCCESS] Redirected successfully
+[14 August 2014 15:13:05][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:13:05][SUCCESS] Redirected successfully
+[14 August 2014 15:13:06][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->pageAction(2)
+[14 August 2014 15:13:06][SUCCESS] Redirected successfully
+[14 August 2014 15:13:08][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:13:08][SUCCESS] Redirected successfully
+[14 August 2014 15:13:09][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->pageAction(2)
+[14 August 2014 15:13:09][SUCCESS] Redirected successfully
+[14 August 2014 15:13:11][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:13:11][SUCCESS] Redirected successfully
+[14 August 2014 15:13:12][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:13:12][SUCCESS] Redirected successfully
+[14 August 2014 15:13:14][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:13:14][SUCCESS] Redirected successfully
+[14 August 2014 15:13:15][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:13:15][SUCCESS] Redirected successfully
+[14 August 2014 15:13:16][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[14 August 2014 15:13:16][SUCCESS] Redirected successfully
+[14 August 2014 15:13:16][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:13:16][SUCCESS] Redirected successfully
+[14 August 2014 15:13:17][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[14 August 2014 15:13:17][SUCCESS] Redirected successfully
+[14 August 2014 15:13:17][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:13:17][SUCCESS] Redirected successfully
+[14 August 2014 15:13:18][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:13:18][SUCCESS] Redirected successfully
+[14 August 2014 15:13:21][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->pageAction(1)
+[14 August 2014 15:13:21][SUCCESS] Redirected successfully
+[14 August 2014 15:13:23][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->pageAction(1)
+[14 August 2014 15:13:23][SUCCESS] Redirected successfully
+[14 August 2014 15:13:28][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:13:28][SUCCESS] Redirected successfully
+[14 August 2014 15:13:30][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:13:30][SUCCESS] Redirected successfully
+[14 August 2014 15:13:39][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:13:39][SUCCESS] Redirected successfully
+[14 August 2014 15:13:42][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:13:42][SUCCESS] Redirected successfully
+[14 August 2014 15:13:45][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:13:45][SUCCESS] Redirected successfully
+[14 August 2014 15:14:37][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:14:37][SUCCESS] Redirected successfully
+[14 August 2014 15:14:39][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:14:39][SUCCESS] Redirected successfully
+[14 August 2014 15:15:34][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:15:34][SUCCESS] Redirected successfully
+[14 August 2014 15:15:35][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:15:35][SUCCESS] Redirected successfully
+[14 August 2014 15:15:36][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:15:36][SUCCESS] Redirected successfully
+[14 August 2014 15:15:38][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:15:38][SUCCESS] Redirected successfully
+[14 August 2014 15:15:38][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:15:38][SUCCESS] Redirected successfully
+[14 August 2014 15:15:54][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:15:54][SUCCESS] Redirected successfully
+[14 August 2014 15:15:56][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:15:56][SUCCESS] Redirected successfully
+[14 August 2014 15:16:24][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:16:24][SUCCESS] Redirected successfully
+[14 August 2014 15:16:47][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:16:47][SUCCESS] Redirected successfully
+[14 August 2014 15:16:50][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:16:50][SUCCESS] Redirected successfully
+[14 August 2014 15:16:53][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:16:53][SUCCESS] Redirected successfully
+[14 August 2014 15:16:56][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->editAction(62)
+[14 August 2014 15:16:56][SUCCESS] Redirected successfully
+[14 August 2014 15:16:58][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:16:58][SUCCESS] Redirected successfully
+[14 August 2014 15:17:10][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:17:10][SUCCESS] Redirected successfully
+[14 August 2014 15:17:11][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:17:11][SUCCESS] Redirected successfully
+[14 August 2014 15:17:12][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:17:12][SUCCESS] Redirected successfully
+[14 August 2014 15:17:15][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:17:15][SUCCESS] Redirected successfully
+[14 August 2014 15:17:15][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:17:15][SUCCESS] Redirected successfully
+[14 August 2014 15:17:16][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:17:16][SUCCESS] Redirected successfully
+[14 August 2014 15:17:17][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:17:17][SUCCESS] Redirected successfully
+[14 August 2014 15:17:31][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:17:31][SUCCESS] Redirected successfully
+[14 August 2014 15:17:34][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:17:34][SUCCESS] Redirected successfully
+[14 August 2014 15:17:35][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:17:35][SUCCESS] Redirected successfully
+[14 August 2014 15:17:38][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:17:38][SUCCESS] Redirected successfully
+[14 August 2014 15:18:04][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:18:04][SUCCESS] Redirected successfully
+[14 August 2014 15:18:05][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:18:05][SUCCESS] Redirected successfully
+[14 August 2014 15:18:06][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:18:06][SUCCESS] Redirected successfully
+[14 August 2014 15:18:44][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:18:44][SUCCESS] Redirected successfully
+[14 August 2014 15:19:00][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:19:00][SUCCESS] Redirected successfully
+[14 August 2014 15:19:03][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:19:03][SUCCESS] Redirected successfully
+[14 August 2014 15:19:16][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:19:16][SUCCESS] Redirected successfully
+[14 August 2014 15:19:22][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:19:22][SUCCESS] Redirected successfully
+[14 August 2014 15:19:29][DEBUG] Trying redirect: App\Controllers\HomeController->indexAction()
+[14 August 2014 15:19:29][SUCCESS] Redirected successfully
+[14 August 2014 15:19:31][DEBUG] Trying redirect: App\Controllers\AdminController->indexAction()
+[14 August 2014 15:19:31][SUCCESS] Redirected successfully
+[14 August 2014 15:19:33][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:19:33][SUCCESS] Redirected successfully
+[14 August 2014 15:19:34][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:19:34][SUCCESS] Redirected successfully
+[14 August 2014 15:19:35][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:19:35][SUCCESS] Redirected successfully
+[14 August 2014 15:19:37][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:19:37][SUCCESS] Redirected successfully
+[14 August 2014 15:19:38][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:19:38][SUCCESS] Redirected successfully
+[14 August 2014 15:19:40][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:19:40][SUCCESS] Redirected successfully
+[14 August 2014 15:19:40][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:19:40][SUCCESS] Redirected successfully
+[14 August 2014 15:20:04][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:20:04][SUCCESS] Redirected successfully
+[14 August 2014 15:20:24][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:20:24][SUCCESS] Redirected successfully
+[14 August 2014 15:20:25][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:20:25][SUCCESS] Redirected successfully
+[14 August 2014 15:20:38][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:20:38][SUCCESS] Redirected successfully
+[14 August 2014 15:20:48][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:20:48][SUCCESS] Redirected successfully
+[14 August 2014 15:20:53][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:20:53][SUCCESS] Redirected successfully
+[14 August 2014 15:21:04][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:21:04][SUCCESS] Redirected successfully
+[14 August 2014 15:21:18][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:21:18][SUCCESS] Redirected successfully
+[14 August 2014 15:21:19][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:21:19][SUCCESS] Redirected successfully
+[14 August 2014 15:21:20][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:21:20][SUCCESS] Redirected successfully
+[14 August 2014 15:21:21][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:21:21][SUCCESS] Redirected successfully
+[14 August 2014 15:21:22][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:21:22][SUCCESS] Redirected successfully
+[14 August 2014 15:21:24][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:21:24][SUCCESS] Redirected successfully
+[14 August 2014 15:21:26][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:21:26][SUCCESS] Redirected successfully
+[14 August 2014 15:21:27][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:21:27][SUCCESS] Redirected successfully
+[14 August 2014 15:21:28][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:21:28][SUCCESS] Redirected successfully
+[14 August 2014 15:21:31][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[14 August 2014 15:21:31][SUCCESS] Redirected successfully
+[14 August 2014 15:21:31][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:21:31][SUCCESS] Redirected successfully
+[14 August 2014 15:21:34][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:21:34][SUCCESS] Redirected successfully
+[14 August 2014 15:21:35][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:21:35][SUCCESS] Redirected successfully
+[14 August 2014 15:21:38][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[14 August 2014 15:21:38][SUCCESS] Redirected successfully
+[14 August 2014 15:21:38][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:21:38][SUCCESS] Redirected successfully
+[14 August 2014 15:21:40][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:21:40][SUCCESS] Redirected successfully
+[14 August 2014 15:21:42][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:21:42][SUCCESS] Redirected successfully
+[14 August 2014 15:21:45][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:21:45][SUCCESS] Redirected successfully
+[14 August 2014 15:21:46][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:21:46][SUCCESS] Redirected successfully
+[14 August 2014 15:21:49][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[14 August 2014 15:21:49][SUCCESS] Redirected successfully
+[14 August 2014 15:21:49][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:21:49][SUCCESS] Redirected successfully
+[14 August 2014 15:21:50][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:21:50][SUCCESS] Redirected successfully
+[14 August 2014 15:21:51][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:21:51][SUCCESS] Redirected successfully
+[14 August 2014 15:21:53][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[14 August 2014 15:21:53][SUCCESS] Redirected successfully
+[14 August 2014 15:21:53][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:21:53][SUCCESS] Redirected successfully
+[14 August 2014 15:21:54][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[14 August 2014 15:21:54][SUCCESS] Redirected successfully
+[14 August 2014 15:21:54][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:21:54][SUCCESS] Redirected successfully
+[14 August 2014 15:21:56][DEBUG] Trying redirect: App\Controllers\Admin\RegionsController->indexAction()
+[14 August 2014 15:21:56][SUCCESS] Redirected successfully
+[14 August 2014 15:21:58][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:21:58][SUCCESS] Redirected successfully
+[14 August 2014 15:21:59][DEBUG] Trying redirect: App\Controllers\Admin\RegionsController->indexAction()
+[14 August 2014 15:21:59][SUCCESS] Redirected successfully
+[14 August 2014 15:22:00][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:22:00][SUCCESS] Redirected successfully
+[14 August 2014 15:23:30][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:23:30][SUCCESS] Redirected successfully
+[14 August 2014 15:23:45][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:23:45][SUCCESS] Redirected successfully
+[14 August 2014 15:23:49][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:23:49][SUCCESS] Redirected successfully
+[14 August 2014 15:23:52][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:23:52][SUCCESS] Redirected successfully
+[14 August 2014 15:23:57][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:23:57][SUCCESS] Redirected successfully
+[14 August 2014 15:25:26][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:25:26][SUCCESS] Redirected successfully
+[14 August 2014 15:26:08][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:26:08][SUCCESS] Redirected successfully
+[14 August 2014 15:26:09][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.woffAction()
+[14 August 2014 15:26:09][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 15:26:09][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.ttfAction()
+[14 August 2014 15:26:09][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 15:26:09][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.svgAction()
+[14 August 2014 15:26:09][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 15:26:15][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->?srch-term=Action()
+[14 August 2014 15:26:15][ERROR] Aborted: Undefined method '?srch-term=Action' in controller 'App\Controllers\Admin\CitiesController'.
+
+[14 August 2014 15:26:17][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:26:17][SUCCESS] Redirected successfully
+[14 August 2014 15:26:17][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.woffAction()
+[14 August 2014 15:26:17][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 15:26:18][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.ttfAction()
+[14 August 2014 15:26:18][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 15:26:18][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.svgAction()
+[14 August 2014 15:26:18][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 15:28:00][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:28:00][SUCCESS] Redirected successfully
+[14 August 2014 15:28:05][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:28:05][SUCCESS] Redirected successfully
+[14 August 2014 15:28:09][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:28:09][SUCCESS] Redirected successfully
+[14 August 2014 15:28:09][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.woffAction()
+[14 August 2014 15:28:09][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 15:28:09][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.ttfAction()
+[14 August 2014 15:28:09][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 15:28:09][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.svgAction()
+[14 August 2014 15:28:09][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 15:28:16][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:28:16][SUCCESS] Redirected successfully
+[14 August 2014 15:28:25][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:28:25][SUCCESS] Redirected successfully
+[14 August 2014 15:28:28][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:28:28][SUCCESS] Redirected successfully
+[14 August 2014 15:28:35][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:28:35][SUCCESS] Redirected successfully
+[14 August 2014 15:28:37][DEBUG] Trying redirect: App\Controllers\AjaxController->searchAction()
+[14 August 2014 15:28:37][ERROR] Aborted: Undefined method 'searchAction' in controller 'App\Controllers\AjaxController'.
+
+[14 August 2014 15:28:38][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:28:38][SUCCESS] Redirected successfully
+[14 August 2014 15:29:03][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:29:03][SUCCESS] Redirected successfully
+[14 August 2014 15:29:16][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:29:16][SUCCESS] Redirected successfully
+[14 August 2014 15:29:23][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:29:23][SUCCESS] Redirected successfully
+[14 August 2014 15:29:31][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:29:31][SUCCESS] Redirected successfully
+[14 August 2014 15:29:39][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:29:39][SUCCESS] Redirected successfully
+[14 August 2014 15:29:54][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:29:54][SUCCESS] Redirected successfully
+[14 August 2014 15:30:11][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:30:11][SUCCESS] Redirected successfully
+[14 August 2014 15:30:27][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:30:27][SUCCESS] Redirected successfully
+[14 August 2014 15:30:32][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:30:32][SUCCESS] Redirected successfully
+[14 August 2014 15:30:39][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:30:39][SUCCESS] Redirected successfully
+[14 August 2014 15:30:40][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:30:40][SUCCESS] Redirected successfully
+[14 August 2014 15:30:52][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:30:52][SUCCESS] Redirected successfully
+[14 August 2014 15:31:02][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:31:02][SUCCESS] Redirected successfully
+[14 August 2014 15:31:08][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:31:08][SUCCESS] Redirected successfully
+[14 August 2014 15:31:12][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:31:12][SUCCESS] Redirected successfully
+[14 August 2014 15:31:17][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:31:17][SUCCESS] Redirected successfully
+[14 August 2014 15:31:21][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[14 August 2014 15:31:21][SUCCESS] Redirected successfully
+[14 August 2014 15:31:21][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:31:21][SUCCESS] Redirected successfully
+[14 August 2014 15:31:22][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[14 August 2014 15:31:22][SUCCESS] Redirected successfully
+[14 August 2014 15:31:22][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:31:22][SUCCESS] Redirected successfully
+[14 August 2014 15:31:23][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[14 August 2014 15:31:23][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 15:31:23][SUCCESS] Redirected successfully
+[14 August 2014 15:31:23][SUCCESS] Redirected successfully
+[14 August 2014 15:32:29][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->pageAction(1)
+[14 August 2014 15:32:29][SUCCESS] Redirected successfully
+[14 August 2014 15:32:35][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->pageAction(1)
+[14 August 2014 15:32:35][SUCCESS] Redirected successfully
+[14 August 2014 15:32:51][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->pageAction(1)
+[14 August 2014 15:32:51][SUCCESS] Redirected successfully
+[14 August 2014 15:32:58][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->pageAction(1)
+[14 August 2014 15:32:58][SUCCESS] Redirected successfully
+[14 August 2014 15:33:11][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->pageAction(1)
+[14 August 2014 15:33:11][SUCCESS] Redirected successfully
+[14 August 2014 15:33:21][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->pageAction(1)
+[14 August 2014 15:33:21][SUCCESS] Redirected successfully
+[14 August 2014 15:33:25][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:33:25][SUCCESS] Redirected successfully
+[14 August 2014 15:33:35][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->pageAction(1)
+[14 August 2014 15:33:35][SUCCESS] Redirected successfully
+[14 August 2014 15:33:36][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:33:36][SUCCESS] Redirected successfully
+[14 August 2014 15:33:37][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:33:37][SUCCESS] Redirected successfully
+[14 August 2014 15:33:38][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:33:38][SUCCESS] Redirected successfully
+[14 August 2014 15:33:55][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->pageAction(1)
+[14 August 2014 15:33:55][SUCCESS] Redirected successfully
+[14 August 2014 15:33:57][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:33:57][SUCCESS] Redirected successfully
+[14 August 2014 15:35:39][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:35:39][SUCCESS] Redirected successfully
+[14 August 2014 15:35:40][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:35:40][SUCCESS] Redirected successfully
+[14 August 2014 15:35:43][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->pageAction(1)
+[14 August 2014 15:35:43][SUCCESS] Redirected successfully
+[14 August 2014 15:36:15][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->pageAction(1)
+[14 August 2014 15:36:15][SUCCESS] Redirected successfully
+[14 August 2014 15:36:15][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.woffAction()
+[14 August 2014 15:36:15][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 15:36:15][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.ttfAction()
+[14 August 2014 15:36:15][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 15:36:15][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.svgAction()
+[14 August 2014 15:36:15][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 15:36:17][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:36:17][SUCCESS] Redirected successfully
+[14 August 2014 15:36:18][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.woffAction()
+[14 August 2014 15:36:18][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 15:36:18][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.ttfAction()
+[14 August 2014 15:36:18][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 15:36:25][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->pageAction(1)
+[14 August 2014 15:36:25][SUCCESS] Redirected successfully
+[14 August 2014 15:36:25][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.woffAction()
+[14 August 2014 15:36:25][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 15:36:25][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.ttfAction()
+[14 August 2014 15:36:25][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 15:36:25][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.svgAction()
+[14 August 2014 15:36:25][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 15:36:26][DEBUG] Trying redirect: App\Controllers\AjaxController->searchAction()
+[14 August 2014 15:36:26][ERROR] Aborted: Undefined method 'searchAction' in controller 'App\Controllers\AjaxController'.
+
+[14 August 2014 15:36:28][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 15:36:28][SUCCESS] Redirected successfully
+[14 August 2014 15:36:28][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.woffAction()
+[14 August 2014 15:36:28][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 15:36:28][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.ttfAction()
+[14 August 2014 15:36:28][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 15:36:29][DEBUG] Trying redirect: App\Controllers\AjaxController->searchAction()
+[14 August 2014 15:36:29][ERROR] Aborted: Undefined method 'searchAction' in controller 'App\Controllers\AjaxController'.
+
+[14 August 2014 15:36:31][DEBUG] Trying redirect: App\Controllers\AjaxController->searchAction()
+[14 August 2014 15:36:31][ERROR] Aborted: Undefined method 'searchAction' in controller 'App\Controllers\AjaxController'.
+
+[14 August 2014 16:08:59][DEBUG] Trying redirect: App\Controllers\AdminController->indexAction()
+[14 August 2014 16:08:59][SUCCESS] Redirected successfully
+[14 August 2014 16:09:00][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 16:09:00][SUCCESS] Redirected successfully
+[14 August 2014 16:09:00][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.woffAction()
+[14 August 2014 16:09:00][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:09:00][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.ttfAction()
+[14 August 2014 16:09:00][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:09:03][DEBUG] Trying redirect: App\Controllers\AjaxController->searchAction()
+[14 August 2014 16:09:03][ERROR] Aborted: Undefined method 'searchAction' in controller 'App\Controllers\AjaxController'.
+
+[14 August 2014 16:10:45][DEBUG] Trying redirect: App\Controllers\AdminController->indexAction()
+[14 August 2014 16:10:45][SUCCESS] Redirected successfully
+[14 August 2014 16:10:46][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 16:10:46][SUCCESS] Redirected successfully
+[14 August 2014 16:10:46][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.woffAction()
+[14 August 2014 16:10:46][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:10:47][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.ttfAction()
+[14 August 2014 16:10:47][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:10:47][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.svgAction()
+[14 August 2014 16:10:47][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:10:48][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->?srch-term=Action()
+[14 August 2014 16:10:48][ERROR] Aborted: Undefined method '?srch-term=Action' in controller 'App\Controllers\Admin\CitiesController'.
+
+[14 August 2014 16:10:50][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 16:10:50][SUCCESS] Redirected successfully
+[14 August 2014 16:10:50][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.woffAction()
+[14 August 2014 16:10:50][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:10:51][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.ttfAction()
+[14 August 2014 16:10:51][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:10:51][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.svgAction()
+[14 August 2014 16:10:51][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:11:00][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->?srch-term=Action()
+[14 August 2014 16:11:01][ERROR] Aborted: Undefined method '?srch-term=Action' in controller 'App\Controllers\Admin\CitiesController'.
+
+[14 August 2014 16:11:07][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->?Action()
+[14 August 2014 16:11:07][ERROR] Aborted: Undefined method '?Action' in controller 'App\Controllers\Admin\CitiesController'.
+
+[14 August 2014 16:11:14][DEBUG] Trying redirect: App\Controllers\HomeController->indexAction()
+[14 August 2014 16:11:14][SUCCESS] Redirected successfully
+[14 August 2014 16:11:16][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 16:11:16][SUCCESS] Redirected successfully
+[14 August 2014 16:11:16][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.woffAction()
+[14 August 2014 16:11:16][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:11:16][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.ttfAction()
+[14 August 2014 16:11:16][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:11:16][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.svgAction()
+[14 August 2014 16:11:16][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:11:18][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->?Action()
+[14 August 2014 16:11:18][ERROR] Aborted: Undefined method '?Action' in controller 'App\Controllers\Admin\CitiesController'.
+
+[14 August 2014 16:11:19][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 16:11:19][SUCCESS] Redirected successfully
+[14 August 2014 16:11:20][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.woffAction()
+[14 August 2014 16:11:20][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:11:20][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.ttfAction()
+[14 August 2014 16:11:20][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:11:20][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.svgAction()
+[14 August 2014 16:11:20][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:11:21][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->?Action()
+[14 August 2014 16:11:21][ERROR] Aborted: Undefined method '?Action' in controller 'App\Controllers\Admin\CitiesController'.
+
+[14 August 2014 16:16:37][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->?Action()
+[14 August 2014 16:16:37][ERROR] Aborted: Undefined method '?Action' in controller 'App\Controllers\Admin\CitiesController'.
+
+[14 August 2014 16:16:41][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 16:16:41][SUCCESS] Redirected successfully
+[14 August 2014 16:16:41][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.woffAction()
+[14 August 2014 16:16:41][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:16:42][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.ttfAction()
+[14 August 2014 16:16:42][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:16:42][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.svgAction()
+[14 August 2014 16:16:42][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:16:44][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->?Action()
+[14 August 2014 16:16:44][ERROR] Aborted: Undefined method '?Action' in controller 'App\Controllers\Admin\CitiesController'.
+
+[14 August 2014 16:16:48][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 16:16:48][SUCCESS] Redirected successfully
+[14 August 2014 16:16:49][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.woffAction()
+[14 August 2014 16:16:49][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:16:49][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.ttfAction()
+[14 August 2014 16:16:49][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:16:49][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.svgAction()
+[14 August 2014 16:16:49][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:16:50][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->?Action()
+[14 August 2014 16:16:50][ERROR] Aborted: Undefined method '?Action' in controller 'App\Controllers\Admin\CitiesController'.
+
+[14 August 2014 16:17:17][DEBUG] Trying redirect: App\Controllers\AdminController->citiesAction()
+[14 August 2014 16:17:17][ERROR] Aborted: Undefined method 'citiesAction' in controller 'App\Controllers\AdminController'.
+
+[14 August 2014 16:17:22][DEBUG] Trying redirect: App\Controllers\AdminController->citiesAction()
+[14 August 2014 16:17:22][ERROR] Aborted: Undefined method 'citiesAction' in controller 'App\Controllers\AdminController'.
+
+[14 August 2014 16:17:26][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 16:17:26][SUCCESS] Redirected successfully
+[14 August 2014 16:17:26][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.woffAction()
+[14 August 2014 16:17:26][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:17:26][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.ttfAction()
+[14 August 2014 16:17:26][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:17:26][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.svgAction()
+[14 August 2014 16:17:26][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:19:23][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 16:19:23][SUCCESS] Redirected successfully
+[14 August 2014 16:19:24][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.woffAction()
+[14 August 2014 16:19:24][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:19:24][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.ttfAction()
+[14 August 2014 16:19:24][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:19:24][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.svgAction()
+[14 August 2014 16:19:24][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:19:26][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->?Action()
+[14 August 2014 16:19:26][ERROR] Aborted: Undefined method '?Action' in controller 'App\Controllers\Admin\CitiesController'.
+
+[14 August 2014 16:19:30][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 16:19:30][SUCCESS] Redirected successfully
+[14 August 2014 16:19:30][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.woffAction()
+[14 August 2014 16:19:30][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:19:30][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.ttfAction()
+[14 August 2014 16:19:30][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:19:30][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.svgAction()
+[14 August 2014 16:19:30][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:19:32][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->?Action()
+[14 August 2014 16:19:32][ERROR] Aborted: Undefined method '?Action' in controller 'App\Controllers\Admin\CitiesController'.
+
+[14 August 2014 16:20:16][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 16:20:16][SUCCESS] Redirected successfully
+[14 August 2014 16:20:16][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.woffAction()
+[14 August 2014 16:20:16][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:20:16][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.ttfAction()
+[14 August 2014 16:20:16][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:20:16][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.svgAction()
+[14 August 2014 16:20:16][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:20:39][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 16:20:39][SUCCESS] Redirected successfully
+[14 August 2014 16:20:39][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.woffAction()
+[14 August 2014 16:20:39][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:20:40][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.ttfAction()
+[14 August 2014 16:20:40][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:20:40][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.svgAction()
+[14 August 2014 16:20:40][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:21:00][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 16:21:00][SUCCESS] Redirected successfully
+[14 August 2014 16:21:00][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.woffAction()
+[14 August 2014 16:21:00][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:21:00][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.ttfAction()
+[14 August 2014 16:21:00][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:21:00][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.svgAction()
+[14 August 2014 16:21:00][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:21:03][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 16:21:03][SUCCESS] Redirected successfully
+[14 August 2014 16:21:03][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.woffAction()
+[14 August 2014 16:21:03][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:21:03][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.ttfAction()
+[14 August 2014 16:21:03][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:21:03][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.svgAction()
+[14 August 2014 16:21:03][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:21:07][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 16:21:07][SUCCESS] Redirected successfully
+[14 August 2014 16:21:08][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.woffAction()
+[14 August 2014 16:21:08][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:21:08][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.ttfAction()
+[14 August 2014 16:21:08][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:21:08][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.svgAction()
+[14 August 2014 16:21:08][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:21:10][DEBUG] Trying redirect: App\Controllers\Admin\UsersController->indexAction()
+[14 August 2014 16:21:10][SUCCESS] Redirected successfully
+[14 August 2014 16:21:11][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 16:21:11][SUCCESS] Redirected successfully
+[14 August 2014 16:21:11][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.woffAction()
+[14 August 2014 16:21:11][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:21:11][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.ttfAction()
+[14 August 2014 16:21:11][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:21:11][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.svgAction()
+[14 August 2014 16:21:11][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:21:12][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 16:21:12][SUCCESS] Redirected successfully
+[14 August 2014 16:21:12][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.woffAction()
+[14 August 2014 16:21:12][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:21:12][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.ttfAction()
+[14 August 2014 16:21:12][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:21:12][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.svgAction()
+[14 August 2014 16:21:12][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:21:12][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 16:21:12][SUCCESS] Redirected successfully
+[14 August 2014 16:21:12][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.woffAction()
+[14 August 2014 16:21:12][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:21:13][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.ttfAction()
+[14 August 2014 16:21:13][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:21:13][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.svgAction()
+[14 August 2014 16:21:13][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:21:15][DEBUG] Trying redirect: App\Controllers\AjaxController->searchAction()
+[14 August 2014 16:21:15][ERROR] Aborted: Undefined method 'searchAction' in controller 'App\Controllers\AjaxController'.
+
+[14 August 2014 16:21:18][DEBUG] Trying redirect: App\Controllers\AdminController->indexAction()
+[14 August 2014 16:21:18][SUCCESS] Redirected successfully
+[14 August 2014 16:21:19][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 16:21:19][SUCCESS] Redirected successfully
+[14 August 2014 16:21:19][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.woffAction()
+[14 August 2014 16:21:19][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:21:19][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.ttfAction()
+[14 August 2014 16:21:19][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:23:22][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 16:23:22][SUCCESS] Redirected successfully
+[14 August 2014 16:23:22][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.woffAction()
+[14 August 2014 16:23:22][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:23:22][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.ttfAction()
+[14 August 2014 16:23:22][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:23:22][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.svgAction()
+[14 August 2014 16:23:22][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:23:23][DEBUG] Trying redirect: App\Controllers\AjaxController->findAnyMatchesAction()
+[14 August 2014 16:23:23][SUCCESS] Redirected successfully
+[14 August 2014 16:23:23][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->?Action()
+[14 August 2014 16:23:23][ERROR] Aborted: Undefined method '?Action' in controller 'App\Controllers\Admin\CitiesController'.
+
+[14 August 2014 16:23:58][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->?Action()
+[14 August 2014 16:23:58][ERROR] Aborted: Undefined method '?Action' in controller 'App\Controllers\Admin\CitiesController'.
+
+[14 August 2014 16:24:01][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 16:24:01][SUCCESS] Redirected successfully
+[14 August 2014 16:24:01][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.woffAction()
+[14 August 2014 16:24:01][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:24:01][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.ttfAction()
+[14 August 2014 16:24:01][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:24:01][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.svgAction()
+[14 August 2014 16:24:01][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:24:03][DEBUG] Trying redirect: App\Controllers\AjaxController->findAnyMatchesAction()
+[14 August 2014 16:24:03][SUCCESS] Redirected successfully
+[14 August 2014 16:24:03][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->?Action()
+[14 August 2014 16:24:03][ERROR] Aborted: Undefined method '?Action' in controller 'App\Controllers\Admin\CitiesController'.
+
+[14 August 2014 16:24:26][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->?Action()
+[14 August 2014 16:24:26][ERROR] Aborted: Undefined method '?Action' in controller 'App\Controllers\Admin\CitiesController'.
+
+[14 August 2014 16:24:29][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 16:24:29][SUCCESS] Redirected successfully
+[14 August 2014 16:24:29][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.woffAction()
+[14 August 2014 16:24:29][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:24:29][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.ttfAction()
+[14 August 2014 16:24:29][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:24:29][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.svgAction()
+[14 August 2014 16:24:29][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:24:31][DEBUG] Trying redirect: App\Controllers\AjaxController->findAnyMatchesAction()
+[14 August 2014 16:24:31][SUCCESS] Redirected successfully
+[14 August 2014 16:24:35][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 16:24:35][SUCCESS] Redirected successfully
+[14 August 2014 16:24:35][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.woffAction()
+[14 August 2014 16:24:35][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:24:36][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.ttfAction()
+[14 August 2014 16:24:36][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:24:36][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.svgAction()
+[14 August 2014 16:24:36][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:24:45][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 16:24:45][SUCCESS] Redirected successfully
+[14 August 2014 16:24:45][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.woffAction()
+[14 August 2014 16:24:45][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:24:45][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.ttfAction()
+[14 August 2014 16:24:45][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:24:46][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 16:24:46][SUCCESS] Redirected successfully
+[14 August 2014 16:24:46][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.woffAction()
+[14 August 2014 16:24:46][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:24:46][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.ttfAction()
+[14 August 2014 16:24:46][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:24:47][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 16:24:47][SUCCESS] Redirected successfully
+[14 August 2014 16:24:47][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.woffAction()
+[14 August 2014 16:24:47][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:24:47][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.ttfAction()
+[14 August 2014 16:24:47][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:24:47][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.svgAction()
+[14 August 2014 16:24:47][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:24:48][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 16:24:48][SUCCESS] Redirected successfully
+[14 August 2014 16:24:48][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.woffAction()
+[14 August 2014 16:24:48][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:24:48][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.ttfAction()
+[14 August 2014 16:24:48][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:24:48][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.svgAction()
+[14 August 2014 16:24:48][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:24:58][DEBUG] Trying redirect: App\Controllers\AjaxController->findAnyMatchesAction()
+[14 August 2014 16:24:58][SUCCESS] Redirected successfully
+[14 August 2014 16:25:13][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 16:25:13][SUCCESS] Redirected successfully
+[14 August 2014 16:25:14][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.woffAction()
+[14 August 2014 16:25:14][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:25:14][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.ttfAction()
+[14 August 2014 16:25:14][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:25:14][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.svgAction()
+[14 August 2014 16:25:14][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:25:55][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 16:25:55][SUCCESS] Redirected successfully
+[14 August 2014 16:25:55][DEBUG] Trying redirect: App\Controllers\AjaxController->findAnyMatchesAction()
+[14 August 2014 16:25:55][SUCCESS] Redirected successfully
+[14 August 2014 16:25:55][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.woffAction()
+[14 August 2014 16:25:55][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:25:55][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.ttfAction()
+[14 August 2014 16:25:55][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:25:55][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.svgAction()
+[14 August 2014 16:25:55][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:26:04][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 16:26:04][SUCCESS] Redirected successfully
+[14 August 2014 16:26:04][DEBUG] Trying redirect: App\Controllers\AjaxController->findAnyMatchesAction()
+[14 August 2014 16:26:04][SUCCESS] Redirected successfully
+[14 August 2014 16:26:04][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.woffAction()
+[14 August 2014 16:26:04][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:26:04][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.ttfAction()
+[14 August 2014 16:26:04][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:26:04][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.svgAction()
+[14 August 2014 16:26:04][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:26:11][DEBUG] Trying redirect: App\Controllers\AjaxController->findAnyMatchesAction()
+[14 August 2014 16:26:11][SUCCESS] Redirected successfully
+[14 August 2014 16:26:37][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 16:26:37][SUCCESS] Redirected successfully
+[14 August 2014 16:26:37][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.woffAction()
+[14 August 2014 16:26:37][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:26:37][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.ttfAction()
+[14 August 2014 16:26:37][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:26:37][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.svgAction()
+[14 August 2014 16:26:37][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:26:42][DEBUG] Trying redirect: App\Controllers\AjaxController->findAnyMatchesAction()
+[14 August 2014 16:26:42][SUCCESS] Redirected successfully
+[14 August 2014 16:27:58][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 16:27:58][SUCCESS] Redirected successfully
+[14 August 2014 16:27:59][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.woffAction()
+[14 August 2014 16:27:59][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:27:59][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.ttfAction()
+[14 August 2014 16:27:59][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:27:59][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.svgAction()
+[14 August 2014 16:27:59][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:28:05][DEBUG] Trying redirect: App\Controllers\AjaxController->findAnyMatchesAction()
+[14 August 2014 16:28:05][SUCCESS] Redirected successfully
+[14 August 2014 16:28:34][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 16:28:34][SUCCESS] Redirected successfully
+[14 August 2014 16:28:35][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.woffAction()
+[14 August 2014 16:28:35][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:28:35][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.ttfAction()
+[14 August 2014 16:28:35][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:28:35][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.svgAction()
+[14 August 2014 16:28:35][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:28:49][DEBUG] Trying redirect: App\Controllers\AjaxController->findAnyMatchesAction()
+[14 August 2014 16:29:05][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 16:29:05][SUCCESS] Redirected successfully
+[14 August 2014 16:29:05][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.woffAction()
+[14 August 2014 16:29:05][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:29:05][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.ttfAction()
+[14 August 2014 16:29:05][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:29:05][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.svgAction()
+[14 August 2014 16:29:05][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:29:10][DEBUG] Trying redirect: App\Controllers\AjaxController->findAnyMatchesAction()
+[14 August 2014 16:29:10][SUCCESS] Redirected successfully
+[14 August 2014 16:29:42][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 16:29:42][SUCCESS] Redirected successfully
+[14 August 2014 16:29:43][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.woffAction()
+[14 August 2014 16:29:43][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:29:43][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.ttfAction()
+[14 August 2014 16:29:43][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:29:43][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.svgAction()
+[14 August 2014 16:29:43][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:29:47][DEBUG] Trying redirect: App\Controllers\AjaxController->findAnyMatchesAction()
+[14 August 2014 16:29:47][SUCCESS] Redirected successfully
+[14 August 2014 16:30:01][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 16:30:01][SUCCESS] Redirected successfully
+[14 August 2014 16:30:02][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.woffAction()
+[14 August 2014 16:30:02][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:30:02][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.ttfAction()
+[14 August 2014 16:30:02][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:30:02][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.svgAction()
+[14 August 2014 16:30:02][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:30:05][DEBUG] Trying redirect: App\Controllers\AjaxController->findAnyMatchesAction()
+[14 August 2014 16:30:05][SUCCESS] Redirected successfully
+[14 August 2014 16:30:14][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 16:30:14][SUCCESS] Redirected successfully
+[14 August 2014 16:30:14][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.woffAction()
+[14 August 2014 16:30:14][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:30:14][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.ttfAction()
+[14 August 2014 16:30:14][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:30:14][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.svgAction()
+[14 August 2014 16:30:14][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:30:15][DEBUG] Trying redirect: App\Controllers\AjaxController->findAnyMatchesAction()
+[14 August 2014 16:30:15][SUCCESS] Redirected successfully
+[14 August 2014 16:30:17][DEBUG] Trying redirect: App\Controllers\AjaxController->findAnyMatchesAction()
+[14 August 2014 16:30:17][SUCCESS] Redirected successfully
+[14 August 2014 16:30:44][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 16:30:44][SUCCESS] Redirected successfully
+[14 August 2014 16:30:44][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.woffAction()
+[14 August 2014 16:30:44][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:30:44][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.ttfAction()
+[14 August 2014 16:30:44][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:30:44][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.svgAction()
+[14 August 2014 16:30:44][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:30:48][DEBUG] Trying redirect: App\Controllers\AjaxController->findAnyMatchesAction()
+[14 August 2014 16:30:48][SUCCESS] Redirected successfully
+[14 August 2014 16:31:01][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 16:31:01][SUCCESS] Redirected successfully
+[14 August 2014 16:31:01][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.woffAction()
+[14 August 2014 16:31:01][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:31:02][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.ttfAction()
+[14 August 2014 16:31:02][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:31:02][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.svgAction()
+[14 August 2014 16:31:02][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:31:03][DEBUG] Trying redirect: App\Controllers\AjaxController->findAnyMatchesAction()
+[14 August 2014 16:31:03][SUCCESS] Redirected successfully
+[14 August 2014 16:33:21][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 16:33:21][SUCCESS] Redirected successfully
+[14 August 2014 16:33:21][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.woffAction()
+[14 August 2014 16:33:21][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:33:21][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.ttfAction()
+[14 August 2014 16:33:21][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:33:21][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.svgAction()
+[14 August 2014 16:33:21][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:33:23][DEBUG] Trying redirect: App\Controllers\AjaxController->findAnyMatchesAction()
+[14 August 2014 16:33:23][SUCCESS] Redirected successfully
+[14 August 2014 16:34:47][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 16:34:47][SUCCESS] Redirected successfully
+[14 August 2014 16:34:48][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.woffAction()
+[14 August 2014 16:34:48][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:34:48][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.ttfAction()
+[14 August 2014 16:34:48][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:34:48][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.svgAction()
+[14 August 2014 16:34:48][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:34:50][DEBUG] Trying redirect: App\Controllers\AjaxController->findAnyMatchesAction()
+[14 August 2014 16:34:50][SUCCESS] Redirected successfully
+[14 August 2014 16:35:17][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 16:35:17][SUCCESS] Redirected successfully
+[14 August 2014 16:35:17][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.woffAction()
+[14 August 2014 16:35:17][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:35:18][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.ttfAction()
+[14 August 2014 16:35:18][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:35:18][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.svgAction()
+[14 August 2014 16:35:18][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:35:20][DEBUG] Trying redirect: App\Controllers\AjaxController->findAnyMatchesAction()
+[14 August 2014 16:35:20][SUCCESS] Redirected successfully
+[14 August 2014 16:35:47][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 16:35:47][SUCCESS] Redirected successfully
+[14 August 2014 16:35:47][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.woffAction()
+[14 August 2014 16:35:47][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:35:47][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.ttfAction()
+[14 August 2014 16:35:47][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:35:47][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.svgAction()
+[14 August 2014 16:35:47][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:35:48][DEBUG] Trying redirect: App\Controllers\AjaxController->findAnyMatchesAction()
+[14 August 2014 16:35:48][SUCCESS] Redirected successfully
+[14 August 2014 16:36:55][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 16:36:55][SUCCESS] Redirected successfully
+[14 August 2014 16:36:56][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.woffAction()
+[14 August 2014 16:36:56][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:36:56][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.ttfAction()
+[14 August 2014 16:36:56][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:36:56][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.svgAction()
+[14 August 2014 16:36:56][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:36:57][DEBUG] Trying redirect: App\Controllers\AjaxController->findAnyMatchesAction()
+[14 August 2014 16:36:57][SUCCESS] Redirected successfully
+[14 August 2014 16:37:14][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 16:37:14][SUCCESS] Redirected successfully
+[14 August 2014 16:37:14][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.woffAction()
+[14 August 2014 16:37:14][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:37:14][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.ttfAction()
+[14 August 2014 16:37:14][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:37:14][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.svgAction()
+[14 August 2014 16:37:14][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:37:16][DEBUG] Trying redirect: App\Controllers\AjaxController->findAnyMatchesAction()
+[14 August 2014 16:37:16][SUCCESS] Redirected successfully
+[14 August 2014 16:37:34][DEBUG] Trying redirect: App\Controllers\AjaxController->findAnyMatchesAction()
+[14 August 2014 16:37:34][SUCCESS] Redirected successfully
+[14 August 2014 16:37:39][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 16:37:39][SUCCESS] Redirected successfully
+[14 August 2014 16:37:41][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 16:37:41][SUCCESS] Redirected successfully
+[14 August 2014 16:37:47][DEBUG] Trying redirect: App\Controllers\AjaxController->findAnyMatchesAction()
+[14 August 2014 16:37:47][SUCCESS] Redirected successfully
+[14 August 2014 16:37:53][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 16:37:53][SUCCESS] Redirected successfully
+[14 August 2014 16:37:53][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[14 August 2014 16:37:53][SUCCESS] Redirected successfully
+[14 August 2014 16:37:54][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[14 August 2014 16:37:54][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 16:37:54][SUCCESS] Redirected successfully
+[14 August 2014 16:37:54][SUCCESS] Redirected successfully
+[14 August 2014 16:38:07][DEBUG] Trying redirect: App\Controllers\AjaxController->findAnyMatchesAction()
+[14 August 2014 16:38:07][SUCCESS] Redirected successfully
+[14 August 2014 16:38:32][DEBUG] Trying redirect: App\Controllers\AjaxController->findAnyMatchesAction()
+[14 August 2014 16:38:32][SUCCESS] Redirected successfully
+[14 August 2014 16:38:48][DEBUG] Trying redirect: App\Controllers\AjaxController->findAnyMatchesAction()
+[14 August 2014 16:38:48][SUCCESS] Redirected successfully
+[14 August 2014 16:38:49][DEBUG] Trying redirect: App\Controllers\AjaxController->findAnyMatchesAction()
+[14 August 2014 16:38:49][SUCCESS] Redirected successfully
+[14 August 2014 16:38:54][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 16:38:54][SUCCESS] Redirected successfully
+[14 August 2014 16:38:56][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 16:38:56][SUCCESS] Redirected successfully
+[14 August 2014 16:39:00][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 16:39:00][SUCCESS] Redirected successfully
+[14 August 2014 16:39:01][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 16:39:01][SUCCESS] Redirected successfully
+[14 August 2014 16:39:02][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 16:39:02][SUCCESS] Redirected successfully
+[14 August 2014 16:39:08][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 16:39:08][SUCCESS] Redirected successfully
+[14 August 2014 16:39:09][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 16:39:09][SUCCESS] Redirected successfully
+[14 August 2014 16:39:10][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 16:39:10][SUCCESS] Redirected successfully
+[14 August 2014 16:40:36][DEBUG] Trying redirect: App\Controllers\AjaxController->findAnyMatchesAction()
+[14 August 2014 16:40:36][SUCCESS] Redirected successfully
+[14 August 2014 16:40:51][DEBUG] Trying redirect: App\Controllers\AjaxController->findAnyMatchesAction()
+[14 August 2014 16:40:51][SUCCESS] Redirected successfully
+[14 August 2014 16:40:53][DEBUG] Trying redirect: App\Controllers\AjaxController->findAnyMatchesAction()
+[14 August 2014 16:40:53][SUCCESS] Redirected successfully
+[14 August 2014 16:41:20][DEBUG] Trying redirect: App\Controllers\Admin\RegionsController->indexAction()
+[14 August 2014 16:41:20][SUCCESS] Redirected successfully
+[14 August 2014 16:41:22][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 16:41:22][SUCCESS] Redirected successfully
+[14 August 2014 16:41:22][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.woffAction()
+[14 August 2014 16:41:22][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:41:22][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.ttfAction()
+[14 August 2014 16:41:22][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:41:22][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.svgAction()
+[14 August 2014 16:41:22][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:41:26][DEBUG] Trying redirect: App\Controllers\AjaxController->findAnyMatchesAction()
+[14 August 2014 16:41:26][SUCCESS] Redirected successfully
+[14 August 2014 16:41:32][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[14 August 2014 16:41:32][SUCCESS] Redirected successfully
+[14 August 2014 16:41:32][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 16:41:32][SUCCESS] Redirected successfully
+[14 August 2014 16:41:35][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 16:41:35][SUCCESS] Redirected successfully
+[14 August 2014 16:41:36][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.woffAction()
+[14 August 2014 16:41:36][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:41:36][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.ttfAction()
+[14 August 2014 16:41:36][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:41:36][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.svgAction()
+[14 August 2014 16:41:36][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:41:58][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 16:41:58][SUCCESS] Redirected successfully
+[14 August 2014 16:41:58][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.woffAction()
+[14 August 2014 16:41:58][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:41:58][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.ttfAction()
+[14 August 2014 16:41:58][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:42:03][DEBUG] Trying redirect: App\Controllers\AjaxController->findAnyMatchesAction()
+[14 August 2014 16:42:03][SUCCESS] Redirected successfully
+[14 August 2014 16:42:09][DEBUG] Trying redirect: App\Controllers\AjaxController->findAnyMatchesAction()
+[14 August 2014 16:42:09][SUCCESS] Redirected successfully
+[14 August 2014 16:42:16][DEBUG] Trying redirect: App\Controllers\AjaxController->findAnyMatchesAction()
+[14 August 2014 16:42:16][SUCCESS] Redirected successfully
+[14 August 2014 16:42:22][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 16:42:22][SUCCESS] Redirected successfully
+[14 August 2014 16:42:23][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.woffAction()
+[14 August 2014 16:42:23][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:42:23][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.ttfAction()
+[14 August 2014 16:42:23][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:43:22][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 16:43:22][SUCCESS] Redirected successfully
+[14 August 2014 16:43:24][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 16:43:24][SUCCESS] Redirected successfully
+[14 August 2014 16:43:25][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 16:43:25][SUCCESS] Redirected successfully
+[14 August 2014 16:43:34][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 16:43:34][SUCCESS] Redirected successfully
+[14 August 2014 16:43:38][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 16:43:38][SUCCESS] Redirected successfully
+[14 August 2014 16:44:08][DEBUG] Trying redirect: App\Controllers\Admin\RegionsController->indexAction()
+[14 August 2014 16:44:08][SUCCESS] Redirected successfully
+[14 August 2014 16:44:13][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 16:44:13][SUCCESS] Redirected successfully
+[14 August 2014 16:44:13][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.woffAction()
+[14 August 2014 16:44:13][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:44:13][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.ttfAction()
+[14 August 2014 16:44:13][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:44:13][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.svgAction()
+[14 August 2014 16:44:13][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:44:17][DEBUG] Trying redirect: App\Controllers\Admin\RegionsController->indexAction()
+[14 August 2014 16:44:17][SUCCESS] Redirected successfully
+[14 August 2014 16:44:18][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 16:44:18][SUCCESS] Redirected successfully
+[14 August 2014 16:44:18][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.woffAction()
+[14 August 2014 16:44:18][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:44:18][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.ttfAction()
+[14 August 2014 16:44:18][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:44:18][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.svgAction()
+[14 August 2014 16:44:18][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:44:19][DEBUG] Trying redirect: App\Controllers\Admin\RegionsController->indexAction()
+[14 August 2014 16:44:19][SUCCESS] Redirected successfully
+[14 August 2014 16:44:20][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 16:44:20][SUCCESS] Redirected successfully
+[14 August 2014 16:44:20][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.woffAction()
+[14 August 2014 16:44:20][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:44:20][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.ttfAction()
+[14 August 2014 16:44:20][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
+[14 August 2014 16:44:20][DEBUG] Trying redirect: App\Controllers\FontsController->glyphicons-halflings-regular.svgAction()
+[14 August 2014 16:44:20][ERROR] Aborted: Undefined controller: 'App\Controllers\FontsController'
