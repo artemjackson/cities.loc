@@ -52,6 +52,8 @@ $(document).ready(function () {
                     $('#citiesTable').empty().html(response.html);
                     $('.dark').fadeOut(100);
                 }, 100);
+                $('#citiesPagination').css('display','none');
+
             }
         });
     });
