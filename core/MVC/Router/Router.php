@@ -3,6 +3,7 @@
 namespace Core\MVC\Router;
 
 use Core\App;
+use Core\Loggers\FileLogger\FileLogger;
 use Core\MVC\Router\Exceptions\ControllerException;
 
 
@@ -16,43 +17,38 @@ class Router
      * @var
      */
     protected $controller;
-
+    /**
+     * @var
+     */
+    protected $logger;
     /**
      * @var
      */
     protected $controllerShortName;
-
+    /**
+     * @var
+     */
+    protected $controllerFullName;
+    /**
+     * @var
+     */
+    protected $controllersPath;
     /**
      * @var
      */
     protected $action;
-
     /**
      * @var
      */
     protected $actionShortName;
-
     /**
      * @var array
      */
     protected $param = null;
 
-    /**
-     * @return mixed
-     */
-    public function getAction()
+    public function __construct()
     {
-        return $this->action;
-    }
-
-    /**
-     * @param $action
-     * @return $this
-     */
-    public function setAction($action)
-    {
-        $this->action = $action;
-        return $this;
+        $this->setLogger(new FileLogger("router.log"));
     }
 
     /**
@@ -60,92 +56,103 @@ class Router
      */
     public function run()
     {
-        $defaultController = App::getConfig('controller', 'defaultController');
-        $defaultAction = App::getConfig('controller', 'defaultAction');
-        $controllersPath = App::getConfig('controller', 'controllersPath');
-
-        // Controller and action by default
-        $this->setControllerShortName($defaultController);
-        $this->setActionShortName($defaultAction);
+        // initializing with default Controller and Action
+        $this->init();
 
         // Getting request URI
         $uri = $_SERVER['REQUEST_URI'];
 
+        if (!$this->checkRedirection($uri)) { // trying to get redirect if it exists
+            $uriParts = explode('/', trim($uri, '/'));
 
-        // OK it's a real hard code but it works :)
-        // start magic
-        $redirection = array();
-        foreach (App::getConfig('router', 'redirect') as $key => $value) {
-            if (substr_count($uri, $key)) {
+            if (!empty($uriParts[0])) {
+                $this->setControllerShortName($uriParts[0]);
+            }
 
-                $value = rtrim($value, 'Controller');
-                $data = explode('/', $value);
+            if (!empty($uriParts[0])) {
+                $this->setControllerFullName($this->toNamespace($this->getControllersPath()) . ucfirst($uriParts[0]) . 'Controller');
+            }
 
-                $value = ucfirst(implode('\\', $data));
+            if (!empty($uriParts[1])) {
+                $this->setActionShortName($uriParts[1]);
+            }
 
-                if (!empty($data[count($data) - 1])) {
-                    $data[count($data) - 1] = lcfirst($data[count($data) - 1]);
-                }
+            if (!empty($uriParts[1])) {
+                $this->setAction($uriParts[1] . 'Action');
+            }
 
-                $redirection['shortName'] = implode('/', $data);        // short name by that we can obtain a template of View
-                $redirection['controllerName'] = $value;                // real Controlller name with namespaces
-                $uri = str_replace($key, '', $uri);
+            if (!empty($uriParts[2])) {
+                $this->setParam($uriParts[2]);
             }
         }
-        // end magic
+        $this->getLogger()->log('Trying redirect: ' . $this->getControllerFullName() . "->" . $this->getAction() . '(' . $this->getParam() . ')');
+        $controllerName = $this->getControllerFullName();
 
-        // Getting the name of controller if it exists
-        if ($redirection) {
-            $routes = explode('/', $uri);
-            $this->setControllerShortName($redirection['shortName']);
-        } else {
-            $routes = explode('/', trim($uri, '/'));
-            if (!empty($routes[0])) {
-                $this->setControllerShortName($routes[0]);
-            }
+        //  trying to create Controller
+        try {
+            $testController = new $controllerName();
+        } catch (\AutoloaderException $e) {
+            $this->getLogger()->error("Aborted: Undefined controller: '{$this->getControllerFullName()}'");
+            throw new  ControllerException("Undefined controller: '{$this->getControllerFullName()}'.\n", 404, $e);
         }
 
-        // Getting the name of action if it exists
-        if (!empty($routes[1])) {
-            $this->setActionShortName($routes[1]);
+        // checking action existence
+        if (!method_exists($testController, $this->getAction())) {
+            $this->getLogger()->error("Aborted: Undefined method '{$this->getAction()}' in controller '{$controllerName}'.\n");
+            throw new ControllerException("Undefined method '{$this->getAction()}' in controller '{$controllerName}'.\n");
         }
 
-        // Checking if there are any params
-        if (isset($routes[2])) {
-            $this->setParam($routes[2]);
-        }
+        $this->setController($testController);
+        $this->getLogger()->log("Redirected successfully", FileLogger::SUCCESS);
+    }
 
-        //  Recreating path to controllers into namespaces
-        $namespaces = explode('/', $controllersPath);
+    /**
+     *
+     */
+    public function init()
+    {
+        // Controller and action by default
+        $this->setControllersPath(App::getConfig('controller', 'controllersPath'));
+
+        $this->setControllerShortName(App::getConfig('controller', 'defaultController'));
+        $this->setControllerFullName($this->toNamespace($this->getControllersPath()) . ucfirst($this->getControllerShortName()) . 'Controller');
+
+        $this->setActionShortName(App::getConfig('controller', 'defaultAction'));
+        $this->setAction($this->getActionShortName() . 'Action');
+    }
+
+    /**
+     * @param $directory
+     * @return string
+     */
+    public function toNamespace($directory)
+    {
+        $namespaceParts = explode('/', $directory);
 
         // Namespaces should start from capital letter
-        for ($i = 0, $size = count($namespaces); $i < $size; $i++) {
-            $namespaces[$i] = ucfirst($namespaces[$i]);
+        foreach ($namespaceParts as &$part) {
+            $part = ucfirst($part);
         }
 
-        $prefix = implode('\\', $namespaces);
+        return implode('\\', $namespaceParts);
+    }
 
-        // Prefixes addition and taking upper case first letter in controller name
-        if ($redirection) {
-            $controllerName = $prefix . $redirection['controllerName'] . 'Controller';
-        } else {
-            $controllerName = $prefix . ucfirst($this->getControllerShortName()) . 'Controller';
-        }
+    /**
+     * @return mixed
+     */
+    public function getControllersPath()
+    {
+        return $this->controllersPath;
+    }
 
-        $actionName = $this->getActionShortName() . 'Action';
-
-        //creating controller
-        try {
-            $testController = new $controllerName;
-            $this->setController($testController);
-            if (method_exists($testController, $actionName)) {
-                $this->action = $actionName;
-            } else {
-                throw new ControllerException("Undefined method '{$actionName}' in controller '{$controllerName}'.\n");
-            }
-        } catch (\AutoloaderException $e) {
-            throw new  ControllerException("Undefined controller: '{$controllerName}'.\n", 404, $e);
-        }
+    /**
+     * @param $controllersPath
+     * @return $this
+     */
+    public function setControllersPath($controllersPath)
+    {
+        $this->controllersPath = $controllersPath;
+        return $this;
     }
 
     /**
@@ -181,6 +188,94 @@ class Router
     public function setActionShortName($actionShortName)
     {
         $this->actionShortName = $actionShortName;
+        return $this;
+    }
+
+    /**
+     * @param $uri
+     * @return bool
+     */
+    public function checkRedirection($uri)
+    {
+        foreach (App::getConfig('router', 'redirect') as $key => $value) {
+            if (substr_count($uri, $key)) {
+                $shortNameParts = explode('\\', str_replace('Controller', '', $value));
+                foreach ($shortNameParts as &$part) {
+                    $part = lcfirst($part);
+                }
+                $this->setControllerShortName(implode($shortNameParts, DIRECTORY_SEPARATOR));
+                $this->setControllerFullName($this->toNamespace($this->getControllersPath()) . $value);
+
+                // Getting action and parameter
+                $uri = str_replace($key, '', $uri);
+                $uriParts = explode('/', $uri);
+
+                if (!empty($uriParts[0])) {
+                    $this->setActionShortName($uriParts[0]);
+                }
+
+                if (!empty($uriParts[0])) {
+                    $this->setAction($uriParts[0] . 'Action');
+                }
+
+                if (!empty($uriParts[1])) {
+                    $this->setParam($uriParts[1]);
+                }
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getLogger()
+    {
+        return $this->logger;
+    }
+
+    /**
+     * @param mixed $logger
+     */
+    public function setLogger($logger)
+    {
+        $this->logger = $logger;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getControllerFullName()
+    {
+        return $this->controllerFullName;
+    }
+
+    /**
+     * @param $controllerFullName
+     * @return $this
+     */
+    public function setControllerFullName($controllerFullName)
+    {
+        $this->controllerFullName = $controllerFullName;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getAction()
+    {
+        return $this->action;
+    }
+
+    /**
+     * @param $action
+     * @return $this
+     */
+    public function setAction($action)
+    {
+        $this->action = $action;
         return $this;
     }
 

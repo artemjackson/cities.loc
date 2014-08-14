@@ -24,14 +24,33 @@ class AjaxController extends Controller
      * @return $this
      */
 
+    public function findAnyMatchesAction()
+    {
+        if ($this->getRequest()->isAjax()) {
+            $needle = isset($_POST['needle']) ? $_POST['needle'] : null;
+            return (new JsonView(
+                array(
+                    'cities' => MapManager::findAnyMatches($needle)
+                )
+            ))->setTemplate('admin/cities/cities_table');
+
+        } else {
+            return $this->accessForbidden();
+        }
+    }
+
      public function loadCitiesAction()
     {
         if ($this->getRequest()->isAjax()) {
             $page = isset($_POST['activePage']) ? $_POST['activePage'] : null;
+            $order = isset($_POST['order']) ? $_POST['order'] : 'ASC';
+            $column = isset($_POST['column']) ? $_POST['column'] : null;
+
             $count = CitiesController::itemsPerPage;
+
             return (new JsonView(
                 array(
-                    'cities' => MapManager::getCities(($page - 1) * $count, $count)
+                    'cities' => MapManager::getCities(($page - 1) * $count, $count, $column, $order)
                 )
             ))->setTemplate('admin/cities/cities_table');
         } else {

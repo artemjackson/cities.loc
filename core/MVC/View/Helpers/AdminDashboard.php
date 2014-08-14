@@ -44,7 +44,6 @@ class AdminDashboard extends AbstractHelper
         'Users' => '/admin/users/',
         'Regions' => '/admin/regions/',
         'Cities' => '/admin/cities/',
-        'Back to site' => '/home/',
         'Logout' => '/user/logout',
     );
 

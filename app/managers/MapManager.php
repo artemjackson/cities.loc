@@ -123,14 +123,15 @@ class MapManager
         return $model->getCitiesByRegionId($id);
     }
 
-    /**
-     * @param null $shift
-     * @param null $count
-     * @return mixed
-     */
-    public static function getCities($shift = null, $count = null)
+    public static function findAnyMatches($needle)
     {
         $model = new RegionModel();
-        return $model->getCities($shift, $count);
+        return $model->findAnyMatches($needle);
+    }
+
+    public static function getCities($shift = null, $count = null, $column = 'city_name', $order = 'ASC')
+    {
+        $model = new RegionModel();
+        return $model->getCities($shift, $count, $column, $order);
     }
 }

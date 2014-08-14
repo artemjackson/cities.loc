@@ -58,14 +58,10 @@ class RegionModel extends Model
         );
     }
 
-    /**
-     * @param null $shift
-     * @param null $count
-     * @return mixed
-     */
-    public function getCities($shift = null, $count = null)
+
+    public function getCities($shift = null, $count = null, $column = 'city_name', $order = 'ASC')
     {
-        $sql = "SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY cities.city_name";
+        $sql = "SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY $column $order";
 
         if ($shift !== null && $count !== null) {
             $sql .= " LIMIT $shift, $count";
@@ -86,6 +82,16 @@ class RegionModel extends Model
         return Db::execute();
     }
 
+    public function findAnyMatches($needle)
+    {
+
+        $sql = "SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities
+        JOIN regions ON cities.region_id = regions.region_id WHERE city_name LIKE '%{$needle}%' OR region_name LIKE '%{$needle}%' ORDER BY city_name";
+
+        Db::prepare($sql);
+
+        return Db::execute();
+    }
     /**
      * @return mixed
      */
