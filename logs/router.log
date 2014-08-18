@@ -120,3 +120,305 @@
 [14 August 2014 17:52:45][SUCCESS] Redirected successfully
 [14 August 2014 17:52:53][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
 [14 August 2014 17:52:53][SUCCESS] Redirected successfully
+[14 August 2014 17:53:45][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 17:53:45][SUCCESS] Redirected successfully
+[14 August 2014 17:53:46][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 17:53:46][SUCCESS] Redirected successfully
+[14 August 2014 17:53:46][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[14 August 2014 17:53:46][SUCCESS] Redirected successfully
+[14 August 2014 17:53:47][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 17:53:47][SUCCESS] Redirected successfully
+[14 August 2014 17:53:57][DEBUG] Trying redirect: App\Controllers\AjaxController->findAnyMatchesAction()
+[14 August 2014 17:53:57][SUCCESS] Redirected successfully
+[14 August 2014 17:54:10][DEBUG] Trying redirect: App\Controllers\AjaxController->findAnyMatchesAction()
+[14 August 2014 17:54:10][SUCCESS] Redirected successfully
+[14 August 2014 17:54:15][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 17:54:15][SUCCESS] Redirected successfully
+[14 August 2014 22:34:46][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[14 August 2014 22:34:46][SUCCESS] Redirected successfully
+[16 August 2014 20:42:56][DEBUG] Trying redirect: App\Controllers\HomeController->indexAction()
+[16 August 2014 20:42:56][SUCCESS] Redirected successfully
+[18 August 2014 16:49:42][DEBUG] Trying redirect: App\Controllers\HomeController->indexAction()
+[18 August 2014 16:49:42][SUCCESS] Redirected successfully
+[18 August 2014 16:49:47][DEBUG] Trying redirect: App\Controllers\MapController->indexAction()
+[18 August 2014 16:49:47][SUCCESS] Redirected successfully
+[18 August 2014 16:49:47][DEBUG] Trying redirect: App\Controllers\AjaxController->updateCitiesAction()
+[18 August 2014 16:49:47][SUCCESS] Redirected successfully
+[18 August 2014 16:49:59][DEBUG] Trying redirect: App\Controllers\AjaxController->updateCitiesAction()
+[18 August 2014 16:49:59][SUCCESS] Redirected successfully
+[18 August 2014 16:50:10][DEBUG] Trying redirect: App\Controllers\AjaxController->updateCitiesAction()
+[18 August 2014 16:50:10][SUCCESS] Redirected successfully
+[18 August 2014 16:50:22][DEBUG] Trying redirect: App\Controllers\AboutController->indexAction()
+[18 August 2014 16:50:22][SUCCESS] Redirected successfully
+[18 August 2014 16:50:25][DEBUG] Trying redirect: App\Controllers\RegistrationController->indexAction()
+[18 August 2014 16:50:25][SUCCESS] Redirected successfully
+[18 August 2014 16:51:12][DEBUG] Trying redirect: App\Controllers\RegistrationController->indexAction()
+[18 August 2014 16:51:12][SUCCESS] Redirected successfully
+[18 August 2014 16:51:33][DEBUG] Trying redirect: App\Controllers\RegistrationController->indexAction()
+[18 August 2014 16:51:33][SUCCESS] Redirected successfully
+[18 August 2014 16:51:33][DEBUG] Trying redirect: App\Controllers\RegistrationController->indexAction()
+[18 August 2014 16:51:33][SUCCESS] Redirected successfully
+[18 August 2014 16:51:39][DEBUG] Trying redirect: App\Controllers\UserController->loginAction()
+[18 August 2014 16:51:39][SUCCESS] Redirected successfully
+[18 August 2014 16:51:50][DEBUG] Trying redirect: App\Controllers\UserController->loginAction()
+[18 August 2014 16:51:50][SUCCESS] Redirected successfully
+[18 August 2014 16:51:51][DEBUG] Trying redirect: App\Controllers\HomeController->indexAction()
+[18 August 2014 16:51:51][SUCCESS] Redirected successfully
+[18 August 2014 16:52:00][DEBUG] Trying redirect: App\Controllers\UserController->logoutAction()
+[18 August 2014 16:52:00][SUCCESS] Redirected successfully
+[18 August 2014 16:52:00][DEBUG] Trying redirect: App\Controllers\HomeController->indexAction()
+[18 August 2014 16:52:00][SUCCESS] Redirected successfully
+[18 August 2014 16:52:02][DEBUG] Trying redirect: App\Controllers\UserController->loginAction()
+[18 August 2014 16:52:02][SUCCESS] Redirected successfully
+[18 August 2014 16:52:07][DEBUG] Trying redirect: App\Controllers\UserController->loginAction()
+[18 August 2014 16:52:07][SUCCESS] Redirected successfully
+[18 August 2014 16:52:19][DEBUG] Trying redirect: App\Controllers\UserController->loginAction()
+[18 August 2014 16:52:19][SUCCESS] Redirected successfully
+[18 August 2014 16:52:24][DEBUG] Trying redirect: App\Controllers\UserController->loginAction()
+[18 August 2014 16:52:24][SUCCESS] Redirected successfully
+[18 August 2014 16:52:24][DEBUG] Trying redirect: App\Controllers\HomeController->indexAction()
+[18 August 2014 16:52:24][SUCCESS] Redirected successfully
+[18 August 2014 16:52:29][DEBUG] Trying redirect: App\Controllers\AdminController->indexAction()
+[18 August 2014 16:52:29][SUCCESS] Redirected successfully
+[18 August 2014 16:52:34][DEBUG] Trying redirect: App\Controllers\Admin\UsersController->indexAction()
+[18 August 2014 16:52:34][SUCCESS] Redirected successfully
+[18 August 2014 16:52:43][DEBUG] Trying redirect: App\Controllers\Admin\RegionsController->indexAction()
+[18 August 2014 16:52:43][SUCCESS] Redirected successfully
+[18 August 2014 16:52:45][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[18 August 2014 16:52:45][SUCCESS] Redirected successfully
+[18 August 2014 16:52:45][DEBUG] Trying redirect: App\Controllers\AjaxController->loadregionsAction()
+[18 August 2014 16:52:45][SUCCESS] Redirected successfully
+[18 August 2014 16:52:46][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[18 August 2014 16:52:46][SUCCESS] Redirected successfully
+[18 August 2014 16:52:46][DEBUG] Trying redirect: App\Controllers\AjaxController->loadregionsAction()
+[18 August 2014 16:52:46][SUCCESS] Redirected successfully
+[18 August 2014 16:52:47][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[18 August 2014 16:52:47][SUCCESS] Redirected successfully
+[18 August 2014 16:52:47][DEBUG] Trying redirect: App\Controllers\AjaxController->loadregionsAction()
+[18 August 2014 16:52:47][SUCCESS] Redirected successfully
+[18 August 2014 16:52:48][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[18 August 2014 16:52:48][SUCCESS] Redirected successfully
+[18 August 2014 16:52:48][DEBUG] Trying redirect: App\Controllers\AjaxController->loadregionsAction()
+[18 August 2014 16:52:48][SUCCESS] Redirected successfully
+[18 August 2014 16:52:48][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[18 August 2014 16:52:48][DEBUG] Trying redirect: App\Controllers\AjaxController->loadregionsAction()
+[18 August 2014 16:52:48][SUCCESS] Redirected successfully
+[18 August 2014 16:52:48][SUCCESS] Redirected successfully
+[18 August 2014 16:52:49][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[18 August 2014 16:52:49][DEBUG] Trying redirect: App\Controllers\AjaxController->loadregionsAction()
+[18 August 2014 16:52:49][SUCCESS] Redirected successfully
+[18 August 2014 16:52:49][SUCCESS] Redirected successfully
+[18 August 2014 16:52:50][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[18 August 2014 16:52:50][SUCCESS] Redirected successfully
+[18 August 2014 16:52:50][DEBUG] Trying redirect: App\Controllers\AjaxController->loadregionsAction()
+[18 August 2014 16:52:50][SUCCESS] Redirected successfully
+[18 August 2014 16:52:50][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[18 August 2014 16:52:50][DEBUG] Trying redirect: App\Controllers\AjaxController->loadregionsAction()
+[18 August 2014 16:52:50][SUCCESS] Redirected successfully
+[18 August 2014 16:52:50][SUCCESS] Redirected successfully
+[18 August 2014 16:52:52][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[18 August 2014 16:52:52][SUCCESS] Redirected successfully
+[18 August 2014 16:52:52][DEBUG] Trying redirect: App\Controllers\AjaxController->loadregionsAction()
+[18 August 2014 16:52:52][SUCCESS] Redirected successfully
+[18 August 2014 16:52:53][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[18 August 2014 16:52:53][SUCCESS] Redirected successfully
+[18 August 2014 16:52:55][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[18 August 2014 16:52:55][SUCCESS] Redirected successfully
+[18 August 2014 16:52:55][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[18 August 2014 16:52:55][SUCCESS] Redirected successfully
+[18 August 2014 16:52:56][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[18 August 2014 16:52:56][SUCCESS] Redirected successfully
+[18 August 2014 16:52:56][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[18 August 2014 16:52:56][SUCCESS] Redirected successfully
+[18 August 2014 16:52:57][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[18 August 2014 16:52:57][SUCCESS] Redirected successfully
+[18 August 2014 16:52:57][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[18 August 2014 16:52:57][SUCCESS] Redirected successfully
+[18 August 2014 16:53:06][DEBUG] Trying redirect: App\Controllers\AjaxController->findAnyMatchesAction()
+[18 August 2014 16:53:06][SUCCESS] Redirected successfully
+[18 August 2014 16:53:11][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[18 August 2014 16:53:11][SUCCESS] Redirected successfully
+[18 August 2014 16:53:13][DEBUG] Trying redirect: App\Controllers\Admin\RegionsController->indexAction()
+[18 August 2014 16:53:13][SUCCESS] Redirected successfully
+[18 August 2014 16:53:15][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[18 August 2014 16:53:15][SUCCESS] Redirected successfully
+[18 August 2014 16:53:15][DEBUG] Trying redirect: App\Controllers\AjaxController->loadregionsAction()
+[18 August 2014 16:53:15][SUCCESS] Redirected successfully
+[18 August 2014 16:53:16][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[18 August 2014 16:53:16][SUCCESS] Redirected successfully
+[18 August 2014 16:53:16][DEBUG] Trying redirect: App\Controllers\AjaxController->loadregionsAction()
+[18 August 2014 16:53:16][SUCCESS] Redirected successfully
+[18 August 2014 16:53:16][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[18 August 2014 16:53:16][SUCCESS] Redirected successfully
+[18 August 2014 16:53:16][DEBUG] Trying redirect: App\Controllers\AjaxController->loadregionsAction()
+[18 August 2014 16:53:16][SUCCESS] Redirected successfully
+[18 August 2014 16:53:17][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[18 August 2014 16:53:17][SUCCESS] Redirected successfully
+[18 August 2014 16:53:17][DEBUG] Trying redirect: App\Controllers\AjaxController->loadregionsAction()
+[18 August 2014 16:53:17][SUCCESS] Redirected successfully
+[18 August 2014 16:53:19][DEBUG] Trying redirect: App\Controllers\Admin\RegionsController->editAction(2)
+[18 August 2014 16:53:19][SUCCESS] Redirected successfully
+[18 August 2014 16:53:22][DEBUG] Trying redirect: App\Controllers\Admin\RegionsController->indexAction()
+[18 August 2014 16:53:22][SUCCESS] Redirected successfully
+[18 August 2014 16:53:27][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[18 August 2014 16:53:27][SUCCESS] Redirected successfully
+[18 August 2014 16:53:28][DEBUG] Trying redirect: App\Controllers\Admin\RegionsController->indexAction()
+[18 August 2014 16:53:28][SUCCESS] Redirected successfully
+[18 August 2014 16:53:29][DEBUG] Trying redirect: App\Controllers\Admin\RegionsController->addAction()
+[18 August 2014 16:53:29][SUCCESS] Redirected successfully
+[18 August 2014 16:53:31][DEBUG] Trying redirect: App\Controllers\Admin\RegionsController->indexAction()
+[18 August 2014 16:53:31][SUCCESS] Redirected successfully
+[18 August 2014 16:53:32][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[18 August 2014 16:53:32][SUCCESS] Redirected successfully
+[18 August 2014 16:53:37][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->editAction(63)
+[18 August 2014 16:53:37][SUCCESS] Redirected successfully
+[18 August 2014 16:53:55][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->editAction(63)
+[18 August 2014 16:53:55][SUCCESS] Redirected successfully
+[18 August 2014 16:53:55][DEBUG] Trying redirect: App\Controllers\AdminController->citiesAction()
+[18 August 2014 16:53:55][ERROR] Aborted: Undefined method 'citiesAction' in controller 'App\Controllers\AdminController'.
+
+[18 August 2014 16:54:02][DEBUG] Trying redirect: App\Controllers\AdminController->indexAction()
+[18 August 2014 16:54:02][SUCCESS] Redirected successfully
+[18 August 2014 16:54:03][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[18 August 2014 16:54:03][SUCCESS] Redirected successfully
+[18 August 2014 16:54:06][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->editAction(63)
+[18 August 2014 16:54:06][SUCCESS] Redirected successfully
+[18 August 2014 16:54:15][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[18 August 2014 16:54:15][SUCCESS] Redirected successfully
+[18 August 2014 16:54:23][DEBUG] Trying redirect: App\Controllers\AjaxController->findAnyMatchesAction()
+[18 August 2014 16:54:23][SUCCESS] Redirected successfully
+[18 August 2014 16:54:27][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[18 August 2014 16:54:27][SUCCESS] Redirected successfully
+[18 August 2014 16:54:30][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[18 August 2014 16:54:30][SUCCESS] Redirected successfully
+[18 August 2014 16:54:31][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[18 August 2014 16:54:31][SUCCESS] Redirected successfully
+[18 August 2014 16:54:33][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[18 August 2014 16:54:33][SUCCESS] Redirected successfully
+[18 August 2014 16:54:35][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[18 August 2014 16:54:35][SUCCESS] Redirected successfully
+[18 August 2014 16:54:37][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[18 August 2014 16:54:37][SUCCESS] Redirected successfully
+[18 August 2014 16:54:38][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[18 August 2014 16:54:38][SUCCESS] Redirected successfully
+[18 August 2014 16:54:42][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[18 August 2014 16:54:42][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[18 August 2014 16:54:42][SUCCESS] Redirected successfully
+[18 August 2014 16:54:42][SUCCESS] Redirected successfully
+[18 August 2014 16:54:43][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[18 August 2014 16:54:43][SUCCESS] Redirected successfully
+[18 August 2014 16:54:47][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[18 August 2014 16:54:47][SUCCESS] Redirected successfully
+[18 August 2014 16:54:49][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[18 August 2014 16:54:49][SUCCESS] Redirected successfully
+[18 August 2014 16:54:50][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[18 August 2014 16:54:50][SUCCESS] Redirected successfully
+[18 August 2014 16:54:50][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[18 August 2014 16:54:50][SUCCESS] Redirected successfully
+[18 August 2014 16:54:51][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[18 August 2014 16:54:51][SUCCESS] Redirected successfully
+[18 August 2014 16:54:51][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[18 August 2014 16:54:51][SUCCESS] Redirected successfully
+[18 August 2014 16:54:52][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[18 August 2014 16:54:52][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[18 August 2014 16:54:52][SUCCESS] Redirected successfully
+[18 August 2014 16:54:52][SUCCESS] Redirected successfully
+[18 August 2014 16:54:54][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[18 August 2014 16:54:54][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[18 August 2014 16:54:54][SUCCESS] Redirected successfully
+[18 August 2014 16:54:54][SUCCESS] Redirected successfully
+[18 August 2014 16:54:58][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[18 August 2014 16:54:58][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[18 August 2014 16:54:58][SUCCESS] Redirected successfully
+[18 August 2014 16:54:58][SUCCESS] Redirected successfully
+[18 August 2014 16:55:04][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[18 August 2014 16:55:04][SUCCESS] Redirected successfully
+[18 August 2014 16:55:04][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[18 August 2014 16:55:04][SUCCESS] Redirected successfully
+[18 August 2014 16:55:05][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[18 August 2014 16:55:05][SUCCESS] Redirected successfully
+[18 August 2014 16:55:05][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[18 August 2014 16:55:05][SUCCESS] Redirected successfully
+[18 August 2014 16:55:06][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[18 August 2014 16:55:06][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[18 August 2014 16:55:06][SUCCESS] Redirected successfully
+[18 August 2014 16:55:06][SUCCESS] Redirected successfully
+[18 August 2014 16:55:10][DEBUG] Trying redirect: App\Controllers\Admin\UsersController->indexAction()
+[18 August 2014 16:55:10][SUCCESS] Redirected successfully
+[18 August 2014 16:55:13][DEBUG] Trying redirect: App\Controllers\Admin\RegionsController->indexAction()
+[18 August 2014 16:55:13][SUCCESS] Redirected successfully
+[18 August 2014 16:55:22][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[18 August 2014 16:55:22][SUCCESS] Redirected successfully
+[18 August 2014 16:57:04][DEBUG] Trying redirect: App\Controllers\Admin\RegionsController->indexAction()
+[18 August 2014 16:57:04][SUCCESS] Redirected successfully
+[18 August 2014 16:57:04][DEBUG] Trying redirect: App\Controllers\Admin\RegionsController->indexAction()
+[18 August 2014 16:57:05][SUCCESS] Redirected successfully
+[18 August 2014 16:57:06][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[18 August 2014 16:57:06][SUCCESS] Redirected successfully
+[18 August 2014 16:57:06][DEBUG] Trying redirect: App\Controllers\AjaxController->loadregionsAction()
+[18 August 2014 16:57:06][SUCCESS] Redirected successfully
+[18 August 2014 16:57:07][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[18 August 2014 16:57:07][SUCCESS] Redirected successfully
+[18 August 2014 16:57:07][DEBUG] Trying redirect: App\Controllers\AjaxController->loadregionsAction()
+[18 August 2014 16:57:07][SUCCESS] Redirected successfully
+[18 August 2014 16:57:10][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[18 August 2014 16:57:10][SUCCESS] Redirected successfully
+[18 August 2014 16:57:10][DEBUG] Trying redirect: App\Controllers\AjaxController->loadregionsAction()
+[18 August 2014 16:57:10][SUCCESS] Redirected successfully
+[18 August 2014 16:57:54][DEBUG] Trying redirect: App\Controllers\Admin\RegionsController->pageAction(2)
+[18 August 2014 16:57:54][SUCCESS] Redirected successfully
+[18 August 2014 16:57:57][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[18 August 2014 16:57:57][SUCCESS] Redirected successfully
+[18 August 2014 16:57:57][DEBUG] Trying redirect: App\Controllers\AjaxController->loadregionsAction()
+[18 August 2014 16:57:57][SUCCESS] Redirected successfully
+[18 August 2014 16:57:58][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[18 August 2014 16:57:58][SUCCESS] Redirected successfully
+[18 August 2014 16:57:58][DEBUG] Trying redirect: App\Controllers\AjaxController->loadregionsAction()
+[18 August 2014 16:57:58][SUCCESS] Redirected successfully
+[18 August 2014 16:57:58][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[18 August 2014 16:57:59][DEBUG] Trying redirect: App\Controllers\AjaxController->loadregionsAction()
+[18 August 2014 16:57:59][SUCCESS] Redirected successfully
+[18 August 2014 16:57:59][SUCCESS] Redirected successfully
+[18 August 2014 16:58:00][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[18 August 2014 16:58:00][DEBUG] Trying redirect: App\Controllers\AjaxController->loadregionsAction()
+[18 August 2014 16:58:00][SUCCESS] Redirected successfully
+[18 August 2014 16:58:00][SUCCESS] Redirected successfully
+[18 August 2014 16:58:01][DEBUG] Trying redirect: App\Controllers\AjaxController->updatePaginationAction()
+[18 August 2014 16:58:01][SUCCESS] Redirected successfully
+[18 August 2014 16:58:01][DEBUG] Trying redirect: App\Controllers\AjaxController->loadregionsAction()
+[18 August 2014 16:58:01][SUCCESS] Redirected successfully
+[18 August 2014 16:58:02][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[18 August 2014 16:58:02][SUCCESS] Redirected successfully
+[18 August 2014 16:58:18][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->editAction(63)
+[18 August 2014 16:58:18][SUCCESS] Redirected successfully
+[18 August 2014 16:58:25][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->editAction(63)
+[18 August 2014 16:58:25][SUCCESS] Redirected successfully
+[18 August 2014 16:58:26][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->indexAction()
+[18 August 2014 16:58:26][SUCCESS] Redirected successfully
+[18 August 2014 16:58:35][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[18 August 2014 16:58:35][SUCCESS] Redirected successfully
+[18 August 2014 16:58:36][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[18 August 2014 16:58:36][SUCCESS] Redirected successfully
+[18 August 2014 16:58:38][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[18 August 2014 16:58:38][SUCCESS] Redirected successfully
+[18 August 2014 16:58:39][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[18 August 2014 16:58:39][SUCCESS] Redirected successfully
+[18 August 2014 16:58:41][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[18 August 2014 16:58:41][SUCCESS] Redirected successfully
+[18 August 2014 16:58:43][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[18 August 2014 16:58:43][SUCCESS] Redirected successfully
+[18 August 2014 16:58:47][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[18 August 2014 16:58:47][SUCCESS] Redirected successfully
+[18 August 2014 16:58:48][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[18 August 2014 16:58:48][SUCCESS] Redirected successfully
+[18 August 2014 16:58:51][DEBUG] Trying redirect: App\Controllers\AjaxController->loadcitiesAction()
+[18 August 2014 16:58:51][SUCCESS] Redirected successfully
+[18 August 2014 16:58:57][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->addAction()
+[18 August 2014 16:58:57][SUCCESS] Redirected successfully
+[18 August 2014 16:59:45][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->addAction()
+[18 August 2014 16:59:45][SUCCESS] Redirected successfully
+[18 August 2014 17:00:52][DEBUG] Trying redirect: App\Controllers\Admin\CitiesController->addAction()
+[18 August 2014 17:00:52][SUCCESS] Redirected successfully
+[18 August 2014 17:00:52][DEBUG] Trying redirect: App\Controllers\AdminController->citiesAction()
+[18 August 2014 17:00:52][ERROR] Aborted: Undefined method 'citiesAction' in controller 'App\Controllers\AdminController'.
+

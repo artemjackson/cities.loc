@@ -161,3 +161,457 @@
 [14 August 2014 17:52:53][DEBUG] Query execution finished successfully
 [14 August 2014 17:52:53][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY city_name ASC LIMIT 0, 10
 [14 August 2014 17:52:53][DEBUG] Query execution finished successfully
+[14 August 2014 17:53:45][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY city_id ASC LIMIT 0, 10
+[14 August 2014 17:53:45][DEBUG] Query execution finished successfully
+[14 August 2014 17:53:46][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY city_id DESC LIMIT 0, 10
+[14 August 2014 17:53:46][DEBUG] Query execution finished successfully
+[14 August 2014 17:53:46][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY region_name ASC LIMIT 0, 10
+[14 August 2014 17:53:47][DEBUG] Query execution finished successfully
+[14 August 2014 17:53:47][DEBUG] Query preparation: SELECT COUNT(city_id) FROM cities
+[14 August 2014 17:53:47][DEBUG] Query execution finished successfully
+[14 August 2014 17:53:47][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY city_name ASC LIMIT 0, 10
+[14 August 2014 17:53:47][DEBUG] Query execution finished successfully
+[14 August 2014 17:53:57][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities
+        JOIN regions ON cities.region_id = regions.region_id WHERE city_name LIKE '%минск%' OR region_name LIKE '%минск%' ORDER BY city_name
+[14 August 2014 17:53:57][DEBUG] Query execution finished successfully
+[14 August 2014 17:54:10][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities
+        JOIN regions ON cities.region_id = regions.region_id WHERE city_name LIKE '%Барановичи%' OR region_name LIKE '%Барановичи%' ORDER BY city_name
+[14 August 2014 17:54:10][DEBUG] Query execution finished successfully
+[14 August 2014 17:54:15][DEBUG] Query preparation: SELECT COUNT(city_id) FROM cities
+[14 August 2014 17:54:15][DEBUG] Query execution finished successfully
+[14 August 2014 17:54:15][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY city_name ASC LIMIT 0, 10
+[14 August 2014 17:54:15][DEBUG] Query execution finished successfully
+[14 August 2014 22:34:46][DEBUG] Query preparation: SELECT COUNT(city_id) FROM cities
+[14 August 2014 22:34:46][DEBUG] Query execution finished successfully
+[14 August 2014 22:34:46][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY city_name ASC LIMIT 0, 10
+[14 August 2014 22:34:46][DEBUG] Query execution finished successfully
+[18 August 2014 16:49:47][DEBUG] Query preparation: SELECT * FROM regions ORDER BY region_name
+[18 August 2014 16:49:47][DEBUG] Query execution finished successfully
+[18 August 2014 16:49:47][DEBUG] Query preparation: SELECT * FROM cities WHERE region_id = :id ORDER BY city_name
+[18 August 2014 16:49:47][DEBUG] Query execution with params:
+[18 August 2014 16:49:47][DEBUG] Array
+(
+    [:id] => 2
+)
+[18 August 2014 16:49:47][DEBUG] Query execution finished successfully
+[18 August 2014 16:49:59][DEBUG] Query preparation: SELECT * FROM cities WHERE region_id = :id ORDER BY city_name
+[18 August 2014 16:49:59][DEBUG] Query execution with params:
+[18 August 2014 16:49:59][DEBUG] Array
+(
+    [:id] => 5
+)
+[18 August 2014 16:49:59][DEBUG] Query execution finished successfully
+[18 August 2014 16:50:10][DEBUG] Query preparation: SELECT * FROM cities WHERE region_id = :id ORDER BY city_name
+[18 August 2014 16:50:10][DEBUG] Query execution with params:
+[18 August 2014 16:50:10][DEBUG] Array
+(
+    [:id] => 2
+)
+[18 August 2014 16:50:10][DEBUG] Query execution finished successfully
+[18 August 2014 16:51:33][DEBUG] Query preparation: SELECT user_id FROM users WHERE email = :email
+[18 August 2014 16:51:33][DEBUG] Query execution with params:
+[18 August 2014 16:51:33][DEBUG] Array
+(
+    [:email] => alex@gmail.com
+)
+[18 August 2014 16:51:33][ERROR] Query execution failed
+[18 August 2014 16:51:33][DEBUG] Query preparation: INSERT INTO users (first_name, last_name, email, password) VALUES (:first_name, :last_name, :email, :password)
+[18 August 2014 16:51:33][DEBUG] Query execution with params:
+[18 August 2014 16:51:33][DEBUG] Array
+(
+    [:first_name] => Алексей
+    [:last_name] => kovalevsky
+    [:email] => alex@gmail.com
+    [:password] => $2y$10$auvR7HfaD.C4MIQz.vith.3uljN4RHzuc7so6udqkflK.fWQrTwMS
+)
+[18 August 2014 16:51:33][DEBUG] Query execution finished successfully
+[18 August 2014 16:51:50][DEBUG] Query preparation: SELECT * FROM users WHERE email = :email
+[18 August 2014 16:51:50][DEBUG] Query execution with params:
+[18 August 2014 16:51:50][DEBUG] Array
+(
+    [:email] => alex@gmail.com
+)
+[18 August 2014 16:51:50][DEBUG] Query execution finished successfully
+[18 August 2014 16:51:50][DEBUG] Query preparation: SELECT t1.role_id, t2.role_name FROM users_roles as t1
+                JOIN roles as t2 ON t1.role_id = t2.role_id
+                WHERE t1.user_id = :user_id
+[18 August 2014 16:51:50][DEBUG] Query execution with params:
+[18 August 2014 16:51:50][DEBUG] Array
+(
+    [:user_id] => 15
+)
+[18 August 2014 16:51:51][ERROR] Query execution failed
+[18 August 2014 16:52:07][DEBUG] Query preparation: SELECT * FROM users WHERE email = :email
+[18 August 2014 16:52:07][DEBUG] Query execution with params:
+[18 August 2014 16:52:07][DEBUG] Array
+(
+    [:email] => cities_admin@gmail.com
+)
+[18 August 2014 16:52:07][DEBUG] Query execution finished successfully
+[18 August 2014 16:52:19][DEBUG] Query preparation: SELECT * FROM users WHERE email = :email
+[18 August 2014 16:52:19][DEBUG] Query execution with params:
+[18 August 2014 16:52:19][DEBUG] Array
+(
+    [:email] => cities_admin@gmail.com
+)
+[18 August 2014 16:52:19][DEBUG] Query execution finished successfully
+[18 August 2014 16:52:24][DEBUG] Query preparation: SELECT * FROM users WHERE email = :email
+[18 August 2014 16:52:24][DEBUG] Query execution with params:
+[18 August 2014 16:52:24][DEBUG] Array
+(
+    [:email] => cities_admin@gmail.com
+)
+[18 August 2014 16:52:24][DEBUG] Query execution finished successfully
+[18 August 2014 16:52:24][DEBUG] Query preparation: SELECT t1.role_id, t2.role_name FROM users_roles as t1
+                JOIN roles as t2 ON t1.role_id = t2.role_id
+                WHERE t1.user_id = :user_id
+[18 August 2014 16:52:24][DEBUG] Query execution with params:
+[18 August 2014 16:52:24][DEBUG] Array
+(
+    [:user_id] => 13
+)
+[18 August 2014 16:52:24][DEBUG] Query execution finished successfully
+[18 August 2014 16:52:24][DEBUG] Query preparation: SELECT t2.perm_desc FROM role_perm as t1
+                JOIN permissions as t2 ON t1.perm_id = t2.perm_id
+                WHERE t1.role_id = :role_id
+[18 August 2014 16:52:24][DEBUG] Query execution with params:
+[18 August 2014 16:52:24][DEBUG] Array
+(
+    [:role_id] => 1
+)
+[18 August 2014 16:52:24][ERROR] Query execution failed
+[18 August 2014 16:52:24][DEBUG] Query preparation: SELECT t2.perm_desc FROM role_perm as t1
+                JOIN permissions as t2 ON t1.perm_id = t2.perm_id
+                WHERE t1.role_id = :role_id
+[18 August 2014 16:52:24][DEBUG] Query execution with params:
+[18 August 2014 16:52:24][DEBUG] Array
+(
+    [:role_id] => 1
+)
+[18 August 2014 16:52:24][ERROR] Query execution failed
+[18 August 2014 16:52:34][DEBUG] Query preparation: SELECT user_id, first_name, last_name, email FROM users 
+[18 August 2014 16:52:34][DEBUG] Query execution finished successfully
+[18 August 2014 16:52:43][DEBUG] Query preparation: SELECT COUNT(region_id) FROM regions
+[18 August 2014 16:52:43][DEBUG] Query execution finished successfully
+[18 August 2014 16:52:43][DEBUG] Query preparation: SELECT * FROM regions ORDER BY region_name LIMIT 0, 3
+[18 August 2014 16:52:43][DEBUG] Query execution finished successfully
+[18 August 2014 16:52:45][DEBUG] Query preparation: SELECT COUNT(region_id) FROM regions
+[18 August 2014 16:52:45][DEBUG] Query execution finished successfully
+[18 August 2014 16:52:45][DEBUG] Query preparation: SELECT * FROM regions ORDER BY region_name LIMIT 3, 3
+[18 August 2014 16:52:45][DEBUG] Query execution finished successfully
+[18 August 2014 16:52:46][DEBUG] Query preparation: SELECT COUNT(region_id) FROM regions
+[18 August 2014 16:52:46][DEBUG] Query execution finished successfully
+[18 August 2014 16:52:46][DEBUG] Query preparation: SELECT * FROM regions ORDER BY region_name LIMIT 6, 3
+[18 August 2014 16:52:46][DEBUG] Query execution finished successfully
+[18 August 2014 16:52:47][DEBUG] Query preparation: SELECT COUNT(region_id) FROM regions
+[18 August 2014 16:52:47][DEBUG] Query execution finished successfully
+[18 August 2014 16:52:47][DEBUG] Query preparation: SELECT * FROM regions ORDER BY region_name LIMIT 0, 3
+[18 August 2014 16:52:47][DEBUG] Query execution finished successfully
+[18 August 2014 16:52:48][DEBUG] Query preparation: SELECT COUNT(region_id) FROM regions
+[18 August 2014 16:52:48][DEBUG] Query execution finished successfully
+[18 August 2014 16:52:48][DEBUG] Query preparation: SELECT * FROM regions ORDER BY region_name LIMIT 3, 3
+[18 August 2014 16:52:48][DEBUG] Query execution finished successfully
+[18 August 2014 16:52:48][DEBUG] Query preparation: SELECT COUNT(region_id) FROM regions
+[18 August 2014 16:52:48][DEBUG] Query execution finished successfully
+[18 August 2014 16:52:48][DEBUG] Query preparation: SELECT * FROM regions ORDER BY region_name LIMIT 6, 3
+[18 August 2014 16:52:48][DEBUG] Query execution finished successfully
+[18 August 2014 16:52:49][DEBUG] Query preparation: SELECT COUNT(region_id) FROM regions
+[18 August 2014 16:52:49][DEBUG] Query execution finished successfully
+[18 August 2014 16:52:49][DEBUG] Query preparation: SELECT * FROM regions ORDER BY region_name LIMIT 6, 3
+[18 August 2014 16:52:49][DEBUG] Query execution finished successfully
+[18 August 2014 16:52:50][DEBUG] Query preparation: SELECT COUNT(region_id) FROM regions
+[18 August 2014 16:52:50][DEBUG] Query execution finished successfully
+[18 August 2014 16:52:50][DEBUG] Query preparation: SELECT * FROM regions ORDER BY region_name LIMIT 3, 3
+[18 August 2014 16:52:50][DEBUG] Query execution finished successfully
+[18 August 2014 16:52:50][DEBUG] Query preparation: SELECT COUNT(region_id) FROM regions
+[18 August 2014 16:52:50][DEBUG] Query execution finished successfully
+[18 August 2014 16:52:50][DEBUG] Query preparation: SELECT * FROM regions ORDER BY region_name LIMIT 0, 3
+[18 August 2014 16:52:50][DEBUG] Query execution finished successfully
+[18 August 2014 16:52:52][DEBUG] Query preparation: SELECT COUNT(region_id) FROM regions
+[18 August 2014 16:52:52][DEBUG] Query execution finished successfully
+[18 August 2014 16:52:52][DEBUG] Query preparation: SELECT * FROM regions ORDER BY region_name LIMIT 3, 3
+[18 August 2014 16:52:52][DEBUG] Query execution finished successfully
+[18 August 2014 16:52:53][DEBUG] Query preparation: SELECT COUNT(city_id) FROM cities
+[18 August 2014 16:52:53][DEBUG] Query execution finished successfully
+[18 August 2014 16:52:53][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY city_name ASC LIMIT 0, 10
+[18 August 2014 16:52:53][DEBUG] Query execution finished successfully
+[18 August 2014 16:52:55][DEBUG] Query preparation: SELECT COUNT(city_id) FROM cities
+[18 August 2014 16:52:55][DEBUG] Query execution finished successfully
+[18 August 2014 16:52:55][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY city_name ASC LIMIT 10, 10
+[18 August 2014 16:52:55][DEBUG] Query execution finished successfully
+[18 August 2014 16:52:56][DEBUG] Query preparation: SELECT COUNT(city_id) FROM cities
+[18 August 2014 16:52:56][DEBUG] Query execution finished successfully
+[18 August 2014 16:52:56][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY city_name ASC LIMIT 20, 10
+[18 August 2014 16:52:56][DEBUG] Query execution finished successfully
+[18 August 2014 16:52:57][DEBUG] Query preparation: SELECT COUNT(city_id) FROM cities
+[18 August 2014 16:52:57][DEBUG] Query execution finished successfully
+[18 August 2014 16:52:57][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY city_name ASC LIMIT 0, 10
+[18 August 2014 16:52:57][DEBUG] Query execution finished successfully
+[18 August 2014 16:53:06][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities
+        JOIN regions ON cities.region_id = regions.region_id WHERE city_name LIKE '%Брест%' OR region_name LIKE '%Брест%' ORDER BY city_name
+[18 August 2014 16:53:06][DEBUG] Query execution finished successfully
+[18 August 2014 16:53:11][DEBUG] Query preparation: SELECT COUNT(city_id) FROM cities
+[18 August 2014 16:53:11][DEBUG] Query execution finished successfully
+[18 August 2014 16:53:11][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY city_name ASC LIMIT 0, 10
+[18 August 2014 16:53:11][DEBUG] Query execution finished successfully
+[18 August 2014 16:53:13][DEBUG] Query preparation: SELECT COUNT(region_id) FROM regions
+[18 August 2014 16:53:13][DEBUG] Query execution finished successfully
+[18 August 2014 16:53:13][DEBUG] Query preparation: SELECT * FROM regions ORDER BY region_name LIMIT 0, 3
+[18 August 2014 16:53:13][DEBUG] Query execution finished successfully
+[18 August 2014 16:53:15][DEBUG] Query preparation: SELECT COUNT(region_id) FROM regions
+[18 August 2014 16:53:15][DEBUG] Query execution finished successfully
+[18 August 2014 16:53:15][DEBUG] Query preparation: SELECT * FROM regions ORDER BY region_name LIMIT 3, 3
+[18 August 2014 16:53:15][DEBUG] Query execution finished successfully
+[18 August 2014 16:53:16][DEBUG] Query preparation: SELECT COUNT(region_id) FROM regions
+[18 August 2014 16:53:16][DEBUG] Query execution finished successfully
+[18 August 2014 16:53:16][DEBUG] Query preparation: SELECT * FROM regions ORDER BY region_name LIMIT 6, 3
+[18 August 2014 16:53:16][DEBUG] Query execution finished successfully
+[18 August 2014 16:53:16][DEBUG] Query preparation: SELECT COUNT(region_id) FROM regions
+[18 August 2014 16:53:16][DEBUG] Query execution finished successfully
+[18 August 2014 16:53:16][DEBUG] Query preparation: SELECT * FROM regions ORDER BY region_name LIMIT 3, 3
+[18 August 2014 16:53:16][DEBUG] Query execution finished successfully
+[18 August 2014 16:53:17][DEBUG] Query preparation: SELECT COUNT(region_id) FROM regions
+[18 August 2014 16:53:17][DEBUG] Query execution finished successfully
+[18 August 2014 16:53:17][DEBUG] Query preparation: SELECT * FROM regions ORDER BY region_name LIMIT 0, 3
+[18 August 2014 16:53:17][DEBUG] Query execution finished successfully
+[18 August 2014 16:53:19][DEBUG] Query preparation: SELECT region_name FROM regions WHERE region_id = :region_id
+[18 August 2014 16:53:19][DEBUG] Query execution with params:
+[18 August 2014 16:53:19][DEBUG] Array
+(
+    [:region_id] => 2
+)
+[18 August 2014 16:53:19][DEBUG] Query execution finished successfully
+[18 August 2014 16:53:22][DEBUG] Query preparation: SELECT COUNT(region_id) FROM regions
+[18 August 2014 16:53:22][DEBUG] Query execution finished successfully
+[18 August 2014 16:53:22][DEBUG] Query preparation: SELECT * FROM regions ORDER BY region_name LIMIT 0, 3
+[18 August 2014 16:53:22][DEBUG] Query execution finished successfully
+[18 August 2014 16:53:27][DEBUG] Query preparation: SELECT COUNT(city_id) FROM cities
+[18 August 2014 16:53:27][DEBUG] Query execution finished successfully
+[18 August 2014 16:53:27][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY city_name ASC LIMIT 0, 10
+[18 August 2014 16:53:27][DEBUG] Query execution finished successfully
+[18 August 2014 16:53:28][DEBUG] Query preparation: SELECT COUNT(region_id) FROM regions
+[18 August 2014 16:53:28][DEBUG] Query execution finished successfully
+[18 August 2014 16:53:28][DEBUG] Query preparation: SELECT * FROM regions ORDER BY region_name LIMIT 0, 3
+[18 August 2014 16:53:28][DEBUG] Query execution finished successfully
+[18 August 2014 16:53:31][DEBUG] Query preparation: SELECT COUNT(region_id) FROM regions
+[18 August 2014 16:53:31][DEBUG] Query execution finished successfully
+[18 August 2014 16:53:31][DEBUG] Query preparation: SELECT * FROM regions ORDER BY region_name LIMIT 0, 3
+[18 August 2014 16:53:31][DEBUG] Query execution finished successfully
+[18 August 2014 16:53:32][DEBUG] Query preparation: SELECT COUNT(city_id) FROM cities
+[18 August 2014 16:53:32][DEBUG] Query execution finished successfully
+[18 August 2014 16:53:32][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY city_name ASC LIMIT 0, 10
+[18 August 2014 16:53:32][DEBUG] Query execution finished successfully
+[18 August 2014 16:53:37][DEBUG] Query preparation: SELECT * FROM cities WHERE city_id = :city_id
+[18 August 2014 16:53:37][DEBUG] Query execution with params:
+[18 August 2014 16:53:37][DEBUG] Array
+(
+    [:city_id] => 63
+)
+[18 August 2014 16:53:37][DEBUG] Query execution finished successfully
+[18 August 2014 16:53:37][DEBUG] Query preparation: SELECT * FROM regions ORDER BY region_name
+[18 August 2014 16:53:37][DEBUG] Query execution finished successfully
+[18 August 2014 16:53:55][DEBUG] Query preparation: UPDATE cities SET city_name = :city_name, region_id = :region_id,
+                latitude = :latitude, longitude = :longitude WHERE city_id = :city_id
+[18 August 2014 16:53:55][DEBUG] Query execution with params:
+[18 August 2014 16:53:55][DEBUG] Array
+(
+    [:city_name] => TestCityThree
+    [:region_id] => 18
+    [:city_id] => 63
+    [:latitude] => 53.08863589876794
+    [:longitude] => 25.326146075891074
+)
+[18 August 2014 16:53:55][DEBUG] Query execution finished successfully
+[18 August 2014 16:54:03][DEBUG] Query preparation: SELECT COUNT(city_id) FROM cities
+[18 August 2014 16:54:03][DEBUG] Query execution finished successfully
+[18 August 2014 16:54:03][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY city_name ASC LIMIT 0, 10
+[18 August 2014 16:54:03][DEBUG] Query execution finished successfully
+[18 August 2014 16:54:06][DEBUG] Query preparation: SELECT * FROM cities WHERE city_id = :city_id
+[18 August 2014 16:54:06][DEBUG] Query execution with params:
+[18 August 2014 16:54:06][DEBUG] Array
+(
+    [:city_id] => 63
+)
+[18 August 2014 16:54:06][DEBUG] Query execution finished successfully
+[18 August 2014 16:54:06][DEBUG] Query preparation: SELECT * FROM regions ORDER BY region_name
+[18 August 2014 16:54:06][DEBUG] Query execution finished successfully
+[18 August 2014 16:54:15][DEBUG] Query preparation: SELECT COUNT(city_id) FROM cities
+[18 August 2014 16:54:15][DEBUG] Query execution finished successfully
+[18 August 2014 16:54:15][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY city_name ASC LIMIT 0, 10
+[18 August 2014 16:54:15][DEBUG] Query execution finished successfully
+[18 August 2014 16:54:23][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities
+        JOIN regions ON cities.region_id = regions.region_id WHERE city_name LIKE '%Барановичи%' OR region_name LIKE '%Барановичи%' ORDER BY city_name
+[18 August 2014 16:54:23][DEBUG] Query execution finished successfully
+[18 August 2014 16:54:27][DEBUG] Query preparation: SELECT COUNT(city_id) FROM cities
+[18 August 2014 16:54:27][DEBUG] Query execution finished successfully
+[18 August 2014 16:54:27][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY city_name ASC LIMIT 0, 10
+[18 August 2014 16:54:27][DEBUG] Query execution finished successfully
+[18 August 2014 16:54:30][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY city_id ASC LIMIT 0, 10
+[18 August 2014 16:54:30][DEBUG] Query execution finished successfully
+[18 August 2014 16:54:31][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY city_id DESC LIMIT 0, 10
+[18 August 2014 16:54:31][DEBUG] Query execution finished successfully
+[18 August 2014 16:54:33][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY region_name ASC LIMIT 0, 10
+[18 August 2014 16:54:33][DEBUG] Query execution finished successfully
+[18 August 2014 16:54:35][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY region_name DESC LIMIT 0, 10
+[18 August 2014 16:54:35][DEBUG] Query execution finished successfully
+[18 August 2014 16:54:37][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY city_name ASC LIMIT 0, 10
+[18 August 2014 16:54:37][DEBUG] Query execution finished successfully
+[18 August 2014 16:54:38][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY city_name DESC LIMIT 0, 10
+[18 August 2014 16:54:38][DEBUG] Query execution finished successfully
+[18 August 2014 16:54:42][DEBUG] Query preparation: SELECT COUNT(city_id) FROM cities
+[18 August 2014 16:54:42][DEBUG] Query execution finished successfully
+[18 August 2014 16:54:42][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY city_name DESC LIMIT 10, 10
+[18 August 2014 16:54:42][DEBUG] Query execution finished successfully
+[18 August 2014 16:54:43][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY city_id ASC LIMIT 10, 10
+[18 August 2014 16:54:43][DEBUG] Query execution finished successfully
+[18 August 2014 16:54:47][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY city_id DESC LIMIT 10, 10
+[18 August 2014 16:54:47][DEBUG] Query execution finished successfully
+[18 August 2014 16:54:49][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY city_id ASC LIMIT 10, 10
+[18 August 2014 16:54:49][DEBUG] Query execution finished successfully
+[18 August 2014 16:54:50][DEBUG] Query preparation: SELECT COUNT(city_id) FROM cities
+[18 August 2014 16:54:50][DEBUG] Query execution finished successfully
+[18 August 2014 16:54:50][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY city_id ASC LIMIT 20, 10
+[18 August 2014 16:54:50][DEBUG] Query execution finished successfully
+[18 August 2014 16:54:51][DEBUG] Query preparation: SELECT COUNT(city_id) FROM cities
+[18 August 2014 16:54:51][DEBUG] Query execution finished successfully
+[18 August 2014 16:54:51][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY city_id ASC LIMIT 30, 10
+[18 August 2014 16:54:51][DEBUG] Query execution finished successfully
+[18 August 2014 16:54:52][DEBUG] Query preparation: SELECT COUNT(city_id) FROM cities
+[18 August 2014 16:54:52][DEBUG] Query execution finished successfully
+[18 August 2014 16:54:52][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY city_id ASC LIMIT 40, 10
+[18 August 2014 16:54:52][DEBUG] Query execution finished successfully
+[18 August 2014 16:54:54][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY city_id ASC LIMIT 30, 10
+[18 August 2014 16:54:54][DEBUG] Query execution finished successfully
+[18 August 2014 16:54:54][DEBUG] Query preparation: SELECT COUNT(city_id) FROM cities
+[18 August 2014 16:54:54][DEBUG] Query execution finished successfully
+[18 August 2014 16:54:58][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY city_id ASC LIMIT 20, 10
+[18 August 2014 16:54:58][DEBUG] Query execution finished successfully
+[18 August 2014 16:54:58][DEBUG] Query preparation: SELECT COUNT(city_id) FROM cities
+[18 August 2014 16:54:58][DEBUG] Query execution finished successfully
+[18 August 2014 16:55:04][DEBUG] Query preparation: SELECT COUNT(city_id) FROM cities
+[18 August 2014 16:55:04][DEBUG] Query execution finished successfully
+[18 August 2014 16:55:04][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY city_id ASC LIMIT 30, 10
+[18 August 2014 16:55:04][DEBUG] Query execution finished successfully
+[18 August 2014 16:55:05][DEBUG] Query preparation: SELECT COUNT(city_id) FROM cities
+[18 August 2014 16:55:05][DEBUG] Query execution finished successfully
+[18 August 2014 16:55:05][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY city_id ASC LIMIT 40, 10
+[18 August 2014 16:55:05][DEBUG] Query execution finished successfully
+[18 August 2014 16:55:06][DEBUG] Query preparation: SELECT COUNT(city_id) FROM cities
+[18 August 2014 16:55:06][DEBUG] Query execution finished successfully
+[18 August 2014 16:55:06][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY city_id ASC LIMIT 50, 10
+[18 August 2014 16:55:06][DEBUG] Query execution finished successfully
+[18 August 2014 16:55:10][DEBUG] Query preparation: SELECT user_id, first_name, last_name, email FROM users 
+[18 August 2014 16:55:10][DEBUG] Query execution finished successfully
+[18 August 2014 16:55:13][DEBUG] Query preparation: SELECT COUNT(region_id) FROM regions
+[18 August 2014 16:55:13][DEBUG] Query execution finished successfully
+[18 August 2014 16:55:13][DEBUG] Query preparation: SELECT * FROM regions ORDER BY region_name LIMIT 0, 3
+[18 August 2014 16:55:13][DEBUG] Query execution finished successfully
+[18 August 2014 16:55:22][DEBUG] Query preparation: SELECT COUNT(city_id) FROM cities
+[18 August 2014 16:55:22][DEBUG] Query execution finished successfully
+[18 August 2014 16:55:22][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY city_name ASC LIMIT 0, 10
+[18 August 2014 16:55:22][DEBUG] Query execution finished successfully
+[18 August 2014 16:57:04][DEBUG] Query preparation: SELECT COUNT(region_id) FROM regions
+[18 August 2014 16:57:04][DEBUG] Query execution finished successfully
+[18 August 2014 16:57:04][DEBUG] Query preparation: SELECT * FROM regions ORDER BY region_name LIMIT 0, 3
+[18 August 2014 16:57:04][DEBUG] Query execution finished successfully
+[18 August 2014 16:57:05][DEBUG] Query preparation: SELECT COUNT(region_id) FROM regions
+[18 August 2014 16:57:05][DEBUG] Query execution finished successfully
+[18 August 2014 16:57:05][DEBUG] Query preparation: SELECT * FROM regions ORDER BY region_name LIMIT 0, 3
+[18 August 2014 16:57:05][DEBUG] Query execution finished successfully
+[18 August 2014 16:57:06][DEBUG] Query preparation: SELECT COUNT(region_id) FROM regions
+[18 August 2014 16:57:06][DEBUG] Query execution finished successfully
+[18 August 2014 16:57:06][DEBUG] Query preparation: SELECT * FROM regions ORDER BY region_name LIMIT 3, 3
+[18 August 2014 16:57:06][DEBUG] Query execution finished successfully
+[18 August 2014 16:57:07][DEBUG] Query preparation: SELECT COUNT(region_id) FROM regions
+[18 August 2014 16:57:07][DEBUG] Query execution finished successfully
+[18 August 2014 16:57:07][DEBUG] Query preparation: SELECT * FROM regions ORDER BY region_name LIMIT 0, 3
+[18 August 2014 16:57:07][DEBUG] Query execution finished successfully
+[18 August 2014 16:57:10][DEBUG] Query preparation: SELECT COUNT(region_id) FROM regions
+[18 August 2014 16:57:10][DEBUG] Query execution finished successfully
+[18 August 2014 16:57:10][DEBUG] Query preparation: SELECT * FROM regions ORDER BY region_name LIMIT 3, 3
+[18 August 2014 16:57:10][DEBUG] Query execution finished successfully
+[18 August 2014 16:57:54][DEBUG] Query preparation: SELECT COUNT(region_id) FROM regions
+[18 August 2014 16:57:54][DEBUG] Query execution finished successfully
+[18 August 2014 16:57:54][DEBUG] Query preparation: SELECT * FROM regions ORDER BY region_name LIMIT 3, 3
+[18 August 2014 16:57:54][DEBUG] Query execution finished successfully
+[18 August 2014 16:57:57][DEBUG] Query preparation: SELECT COUNT(region_id) FROM regions
+[18 August 2014 16:57:57][DEBUG] Query execution finished successfully
+[18 August 2014 16:57:57][DEBUG] Query preparation: SELECT * FROM regions ORDER BY region_name LIMIT 0, 3
+[18 August 2014 16:57:57][DEBUG] Query execution finished successfully
+[18 August 2014 16:57:58][DEBUG] Query preparation: SELECT COUNT(region_id) FROM regions
+[18 August 2014 16:57:58][DEBUG] Query execution finished successfully
+[18 August 2014 16:57:58][DEBUG] Query preparation: SELECT * FROM regions ORDER BY region_name LIMIT 3, 3
+[18 August 2014 16:57:58][DEBUG] Query execution finished successfully
+[18 August 2014 16:57:59][DEBUG] Query preparation: SELECT COUNT(region_id) FROM regions
+[18 August 2014 16:57:59][DEBUG] Query execution finished successfully
+[18 August 2014 16:57:59][DEBUG] Query preparation: SELECT * FROM regions ORDER BY region_name LIMIT 6, 3
+[18 August 2014 16:57:59][DEBUG] Query execution finished successfully
+[18 August 2014 16:58:00][DEBUG] Query preparation: SELECT COUNT(region_id) FROM regions
+[18 August 2014 16:58:00][DEBUG] Query execution finished successfully
+[18 August 2014 16:58:00][DEBUG] Query preparation: SELECT * FROM regions ORDER BY region_name LIMIT 3, 3
+[18 August 2014 16:58:00][DEBUG] Query execution finished successfully
+[18 August 2014 16:58:01][DEBUG] Query preparation: SELECT COUNT(region_id) FROM regions
+[18 August 2014 16:58:01][DEBUG] Query execution finished successfully
+[18 August 2014 16:58:01][DEBUG] Query preparation: SELECT * FROM regions ORDER BY region_name LIMIT 0, 3
+[18 August 2014 16:58:01][DEBUG] Query execution finished successfully
+[18 August 2014 16:58:02][DEBUG] Query preparation: SELECT COUNT(city_id) FROM cities
+[18 August 2014 16:58:02][DEBUG] Query execution finished successfully
+[18 August 2014 16:58:02][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY city_name ASC LIMIT 0, 10
+[18 August 2014 16:58:02][DEBUG] Query execution finished successfully
+[18 August 2014 16:58:18][DEBUG] Query preparation: SELECT * FROM cities WHERE city_id = :city_id
+[18 August 2014 16:58:18][DEBUG] Query execution with params:
+[18 August 2014 16:58:18][DEBUG] Array
+(
+    [:city_id] => 63
+)
+[18 August 2014 16:58:18][DEBUG] Query execution finished successfully
+[18 August 2014 16:58:18][DEBUG] Query preparation: SELECT * FROM regions ORDER BY region_name
+[18 August 2014 16:58:18][DEBUG] Query execution finished successfully
+[18 August 2014 16:58:25][DEBUG] Query preparation: UPDATE cities SET city_name = :city_name, region_id = :region_id,
+                latitude = :latitude, longitude = :longitude WHERE city_id = :city_id
+[18 August 2014 16:58:25][DEBUG] Query execution with params:
+[18 August 2014 16:58:25][DEBUG] Array
+(
+    [:city_name] => TestCityThree
+    [:region_id] => 18
+    [:city_id] => 63
+    [:latitude] => 53.09153152010369
+    [:longitude] => 25.316855941772474
+)
+[18 August 2014 16:58:26][DEBUG] Query execution finished successfully
+[18 August 2014 16:58:26][DEBUG] Query preparation: SELECT COUNT(city_id) FROM cities
+[18 August 2014 16:58:26][DEBUG] Query execution finished successfully
+[18 August 2014 16:58:26][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY city_name ASC LIMIT 0, 10
+[18 August 2014 16:58:26][DEBUG] Query execution finished successfully
+[18 August 2014 16:58:35][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY city_name DESC LIMIT 0, 10
+[18 August 2014 16:58:35][DEBUG] Query execution finished successfully
+[18 August 2014 16:58:36][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY city_name ASC LIMIT 0, 10
+[18 August 2014 16:58:36][DEBUG] Query execution finished successfully
+[18 August 2014 16:58:38][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY region_name DESC LIMIT 0, 10
+[18 August 2014 16:58:38][DEBUG] Query execution finished successfully
+[18 August 2014 16:58:39][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY region_name ASC LIMIT 0, 10
+[18 August 2014 16:58:39][DEBUG] Query execution finished successfully
+[18 August 2014 16:58:41][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY region_name DESC LIMIT 0, 10
+[18 August 2014 16:58:41][DEBUG] Query execution finished successfully
+[18 August 2014 16:58:43][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY city_name ASC LIMIT 0, 10
+[18 August 2014 16:58:43][DEBUG] Query execution finished successfully
+[18 August 2014 16:58:47][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY city_name DESC LIMIT 0, 10
+[18 August 2014 16:58:47][DEBUG] Query execution finished successfully
+[18 August 2014 16:58:48][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY city_name ASC LIMIT 0, 10
+[18 August 2014 16:58:48][DEBUG] Query execution finished successfully
+[18 August 2014 16:58:51][DEBUG] Query preparation: SELECT cities.city_id, regions.region_name, cities.city_name, cities.latitude, cities.longitude FROM cities JOIN regions ON cities.region_id = regions.region_id ORDER BY city_id ASC LIMIT 0, 10
+[18 August 2014 16:58:51][DEBUG] Query execution finished successfully
+[18 August 2014 16:58:57][DEBUG] Query preparation: SELECT * FROM regions ORDER BY region_name
+[18 August 2014 16:58:57][DEBUG] Query execution finished successfully
+[18 August 2014 16:59:45][DEBUG] Query preparation: SELECT * FROM regions ORDER BY region_name
+[18 August 2014 16:59:45][DEBUG] Query execution finished successfully
+[18 August 2014 17:00:52][DEBUG] Query preparation: INSERT INTO cities (city_name, region_id, latitude, longitude) VALUES (:city_name, :region_id, :latitude, :longitude)
+[18 August 2014 17:00:52][DEBUG] Query execution with params:
+[18 August 2014 17:00:52][DEBUG] Array
+(
+    [:city_name] => Пружаны
+    [:region_id] => 2
+    [:latitude] => 52.55604079904836
+    [:longitude] => 24.435261565917926
+)
+[18 August 2014 17:00:52][DEBUG] Query execution finished successfully

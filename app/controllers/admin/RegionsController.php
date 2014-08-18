@@ -71,7 +71,7 @@ class RegionsController extends Controller
                         ) : //TODO Suggest to wrap $this->flashMessenger->addSuccessMessage to $this->success('message')
                         $this->flashMessenger->addErrorMessage("Region name has not been changed\n");
                     //TODO Suggest to wrap $this->flashMessenger->addErrorMessage to $this->error('message')
-                    $this->redirect("admin/regions");
+                    $this->redirect("admin/regions/");
                 } else {
                     $this->flashMessenger->addWarningMessages($form->getMessages());
                 }
@@ -94,7 +94,7 @@ class RegionsController extends Controller
                     MapManager::saveRegion($post['region_name']) ?
                         $this->flashMessenger->addSuccessMessage("New region was successfully added\n") :
                         $this->flashMessenger->addErrorMessage("New region hasn't been added\n");
-                    $this->redirect("admin/regions");
+                    $this->redirect("admin/regions/");
                 } else {
                     $this->flashMessenger->addWarningMessages($form->getMessages());
                 }
@@ -116,7 +116,7 @@ class RegionsController extends Controller
                 MapManager::deleteRegion($post['region']) ?
                     $this->flashMessenger->addSuccessMessage("Region was successfully deleted\n") :
                     $this->flashMessenger->addErrorMessage("Region has not been deleted\n");
-                $this->redirect("admin/regions");
+                $this->redirect("admin/regions/");
             }
         }
     }

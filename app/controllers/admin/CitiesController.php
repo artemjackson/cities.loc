@@ -48,7 +48,7 @@ class CitiesController extends Controller
             'activePage' => $id,
             'itemsTotal' => $totalItems,
             'itemsPerPage' => self::itemsPerPage
-        )))->setTemplate('admin/cities/index');
+        )))->setTemplate('admin/cities/index/');
     }
 
     /**
@@ -69,7 +69,7 @@ class CitiesController extends Controller
                 } else {
                     $this->flashMessenger->addWarningMessages($form->getMessages());
                 }
-                $this->redirect('admin/cities');
+                $this->redirect('admin/cities/');
             }
 
         }
@@ -89,7 +89,7 @@ class CitiesController extends Controller
                     MapManager::saveCity($post) ?
                         $this->flashMessenger->addSuccessMessage("New city was successfully added\n") :
                         $this->flashMessenger->addErrorMessage("New city hasn't been added\n");
-                    $this->redirect("admin/cities");
+                    $this->redirect("admin/cities/");
                 } else {
                     $this->flashMessenger->addWarningMessages($form->getMessages());
                     $this->redirect();
@@ -110,7 +110,7 @@ class CitiesController extends Controller
                 MapManager::deleteCity($post['city']) ?
                     $this->flashMessenger->addSuccessMessage("City was successfully deleted\n") :
                     $this->flashMessenger->addErrorMessage("City  has not been changed\n");
-                $this->redirect("admin/cities");
+                $this->redirect("admin/cities/");
             }
         }
     }
